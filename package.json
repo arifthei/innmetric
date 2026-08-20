@@ -1,0 +1,11 @@
+{
+  "name": "innmetric-site",
+  "private": true,
+  "description": "innmetric.com static site",
+  "scripts": {
+    "deploy": "netlify deploy --prod --dir ."
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.11.1"
+  }
+}
