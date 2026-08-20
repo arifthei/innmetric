@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnMetric | Hotel Sales Audit & OTA Performance Check</title>
+  <meta name="description" content="InnMetric helps hotels, boutique properties, apartments and short-term rentals identify issues blocking online sales across Booking.com, Airbnb and Google. Audit report delivered within 48 hours." />
+  <meta property="og:title" content="InnMetric | Hotel Sales Audit & OTA Performance Check" />
+  <meta property="og:description" content="Find what blocks your hotel sales. Practical audit of your Booking.com, Airbnb and Google profiles — delivered within 48 hours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://innmetric.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card2: #0d1526;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --muted2: #cbd5e1;
+      --line: rgba(255,255,255,.1);
+      --accent: #38bdf8;
+      --accent-soft: #bae6fd;
+      --accent-bg: rgba(56,189,248,.1);
+      --accent-border: rgba(56,189,248,.22);
+      --dark-text: #0f172a;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(15,23,42,.94);
+      backdrop-filter: blur(14px);
+      z-index: 20;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      color: var(--white);
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--white); transition: color .15s; }
+
+    .language-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(255,255,255,.04);
+    }
+
+    .language-switch button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 7px 11px;
+      font-size: 13px;
+      font-family: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .15s;
+    }
+
+    .language-switch button.active {
+      background: var(--accent);
+      color: #082f49;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: #082f49;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      transition: .2s ease;
+      white-space: nowrap;
+    }
+
+    .button:hover { background: var(--accent-soft); transform: translateY(-1px); }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .button.secondary:hover { background: rgba(255,255,255,.07); }
+
+    .button.lg { padding: 14px 26px; font-size: 15px; }
+
+    /* ── Shared ── */
+    section { padding: 80px 0; }
+
+    .section-eyebrow {
+      display: inline-block;
+      color: var(--accent-soft);
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 40px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.1;
+      margin: 0 0 14px;
+      letter-spacing: -.04em;
+    }
+
+    .section-head p {
+      color: var(--muted2);
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* ── Hero ── */
+    .hero { padding: 88px 0 72px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      color: var(--accent-soft);
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.5vw, 64px);
+      line-height: 1.04;
+      margin: 0 0 22px;
+      letter-spacing: -.05em;
+    }
+
+    h1 em { font-style: normal; color: var(--accent); }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted2);
+      margin: 0 0 32px;
+      max-width: 600px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .trust-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-right: 4px;
+    }
+
+    .trust-tag {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      color: var(--muted2);
+    }
+
+    /* Audit card */
+    .audit-card {
+      background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 28px 26px;
+      box-shadow: 0 20px 72px rgba(0,0,0,.3);
+    }
+
+    .audit-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted2);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .checklist li:last-child { border-bottom: 0; }
+
+    .checklist li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    /* ── Problem section ── */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .problem-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .problem-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .problem-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      letter-spacing: -.02em;
+    }
+
+    .problem-card p { color: var(--muted2); margin: 0; font-size: 15px; }
+
+    /* ── What is checked ── */
+    .checks-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .check-cat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px 24px;
+    }
+
+    .check-cat-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent-soft);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .check-items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .check-items li {
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      color: var(--muted2);
+      font-size: 14px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .check-items li:last-child { border-bottom: none; }
+
+    .check-items li::before {
+      content: "→";
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Services cards ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .card-num {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 50%;
+      margin-bottom: 14px;
+    }
+
+    .card h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.02em; }
+    .card p { color: var(--muted2); margin: 0; font-size: 15px; }
+
+    /* ── Who it's for ── */
+    .who-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .who-block h3 {
+      font-size: 22px;
+      letter-spacing: -.03em;
+      margin: 0 0 20px;
+    }
+
+    .who-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted2);
+      font-size: 16px;
+    }
+
+    .who-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .not-block {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .not-block h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 0 0 16px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: 12px;
+    }
+
+    .not-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .not-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .not-list li::before {
+      content: "✕";
+      color: rgba(255,255,255,.25);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── Process steps ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      position: relative;
+    }
+
+    .step-num {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: #082f49;
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+
+    .step h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: -.02em; }
+    .step p { color: var(--muted2); margin: 0; font-size: 14px; }
+
+    /* ── Deliverables ── */
+    .del-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .del-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .del-num {
+      background: var(--accent);
+      color: #082f49;
+      font-weight: 800;
+      font-size: 13px;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .del-item p { color: var(--muted2); margin: 0; font-size: 15px; }
+
+    /* ── Pricing ── */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .price-card {
+      background: var(--white);
+      color: var(--dark-text);
+      border-radius: 24px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-card.featured {
+      outline: 3px solid var(--accent);
+      transform: translateY(-6px);
+    }
+
+    .price-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #082f49;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+
+    .price-card h3 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      letter-spacing: -.03em;
+    }
+
+    .price-card .price-sub {
+      color: #64748b;
+      font-size: 14px;
+      margin: 0 0 14px;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      margin: 8px 0 18px;
+      color: var(--dark-text);
+    }
+
+    .price-card ul {
+      padding-left: 0;
+      list-style: none;
+      margin: 0 0 24px;
+      color: #334155;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .price-card li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 14px;
+    }
+
+    .price-card li::before {
+      content: "✓";
+      color: #0ea5e9;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .price-card .button {
+      margin-top: 8px;
+      width: 100%;
+      font-size: 15px;
+      padding: 13px 20px;
+    }
+
+    /* ── FAQ ── */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+
+    details[open] { border-color: var(--accent-border); }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.4;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 400;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    details p {
+      color: var(--muted2);
+      margin: 12px 0 0;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* ── Contact / CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, rgba(56,189,248,.14), rgba(14,165,233,.04));
+      border: 1px solid var(--accent-border);
+      border-radius: 28px;
+      padding: 52px;
+    }
+
+    .cta-header { margin-bottom: 36px; }
+
+    .cta-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -.04em;
+      line-height: 1.1;
+      margin: 0 0 12px;
+    }
+
+    .cta-header p {
+      color: var(--muted2);
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .cta-layout {
+      display: grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Form */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted2);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 12px;
+      padding: 11px 14px;
+      color: var(--text);
+      font-size: 15px;
+      font-family: inherit;
+      transition: border-color .2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--muted); }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    .form-group select option { background: #1e293b; color: var(--text); }
+
+    .form-group textarea { min-height: 90px; resize: vertical; }
+
+    .honeypot-field { display: none !important; }
+
+    .form-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .form-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .form-success {
+      display: none;
+      background: rgba(56,189,248,.1);
+      border: 1px solid rgba(56,189,248,.3);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: var(--accent-soft);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .form-error {
+      display: none;
+      background: rgba(239,68,68,.08);
+      border: 1px solid rgba(239,68,68,.25);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #fca5a5;
+      font-size: 14px;
+    }
+
+    .contact-alt {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      margin-top: 4px;
+    }
+
+    .contact-alt p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+
+    .contact-alt a {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* Right side of CTA */
+    .cta-side {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .cta-side h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 16px;
+      letter-spacing: -.02em;
+    }
+
+    .cta-side-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cta-side-list li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--muted2);
+    }
+
+    .cta-side-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .who-wrap,
+      .cta-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .problem-grid,
+      .checks-grid,
+      .del-grid,
+      .pricing,
+      .faq-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card.featured { transform: none; }
+      .cta-section { padding: 36px 24px; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 56px 0; }
+      .hero { padding: 60px 0 52px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">Inn<span>Metric</span></a>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="#service" data-i18n="navService">Hizmet</a>
+          <a href="#checks" data-i18n="navChecks">Kontrol Listesi</a>
+          <a href="#pricing" data-i18n="navPricing">Paketler</a>
+          <a href="#faq" data-i18n="navFaq">SSS</a>
+          <a href="#contact" class="button" data-i18n="navCta">Denetim talep et</a>
+        </nav>
+        <div class="language-switch" aria-label="Language switcher">
+          <button type="button" id="btn-tr" class="active" onclick="setLanguage('tr')">TR</button>
+          <button type="button" id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-eyebrow" data-i18n="eyebrow">48 saat içinde teslim — uygulanabilir satış denetim raporu</span>
+          <h1 data-i18n="heroTitle">Otel satışınızı <em>engelleyen hataları</em> görün.</h1>
+          <p class="hero-sub" data-i18n="heroText">
+            InnMetric; oteller, butik tesisler, apartlar ve kısa dönem kiralıklar için Booking.com, Airbnb ve Google profillerinde satışa engel olan hataları tespit eder. Net bulgular, uygulanabilir öneriler, 48 saat içinde teslim.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="button lg" data-i18n="heroPrimary">Denetim talep et</a>
+            <a href="#pricing" class="button secondary lg" data-i18n="heroSecondary">Paketleri incele</a>
+          </div>
+          <div class="trust-row">
+            <span class="trust-label" data-i18n="trustLabel">Uygun tesisler:</span>
+            <span class="trust-tag" data-i18n="trust1">Küçük otel</span>
+            <span class="trust-tag" data-i18n="trust2">Butik tesis</span>
+            <span class="trust-tag" data-i18n="trust3">Apart</span>
+            <span class="trust-tag" data-i18n="trust4">Bungalov</span>
+            <span class="trust-tag" data-i18n="trust5">Günlük kiralık</span>
+          </div>
+        </div>
+
+        <aside class="audit-card">
+          <div class="audit-card-title" data-i18n="auditTitle">Kontrol edilen başlıklar</div>
+          <ul class="checklist" id="hero-checklist">
+            <!-- Rendered by JS -->
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══ PROBLEM ═══ -->
+    <section id="service">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" data-i18n="problemEyebrow">Neden kontrol gerekir?</span>
+          <h2 data-i18n="problemTitle">Her gün rezervasyon kaçırıyor olabilirsiniz</h2>
+          <p data-i18n="problemText">Birçok konaklama tesisi müsaitliği açık, fiyatı uygun görünse de sistematik hatalar yüzünden beklentisinin altında rezervasyon alıyor. Bu hataların büyük çoğunluğu dışarıdan görünmez; ancak profil içinde net biçimde tespit edilebilir.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <span class="problem-icon">🔍</span>
+            <h3 data-i18n="prob1Title">Görünürlük açıkları</h3>
+            <p data-i18n="prob1Text">Profil eksiklikleri, yanlış kategori seçimi veya tamamlanmamış Google kaydı tesisinizi arama sonuçlarından uzaklaştırıyor olabilir.</p>
+          </div>
+          <div class="problem-card">
+            <span class="problem-icon">⚙️</span>
+            <h3 data-i18n="prob2Title">Fiyat ve kısıtlama hataları</h3>
+            <p data-i18n="prob2Text">Yanlış bağlanmış fiyat planları, gereksiz minimum konaklama kısıtlamaları veya stop sell hataları sessizce rezervasyon bloke edebilir.</p>
+          </div>
+          <div class="problem-card">
+            <span class="problem-icon">📷</span>
+            <h3 data-i18n="prob3Title">İçerik ve görsel zayıflıklar</h3>
+            <p data-i18n="prob3Text">Yanlış sıralanmış fotoğraflar, eksik oda açıklamaları veya tamamlanmamış olanak listesi rezervasyon kararını olumsuz etkiler.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT IS CHECKED ═══ -->
+    <section id="checks">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" data-i18n="checksEyebrow">Denetim kapsamı</span>
+          <h2 data-i18n="checksTitle">Ne kontrol edilir?</h2>
+          <p data-i18n="checksText">Rapor; OTA profili, oda ve fiyat yapısı, içerik kalitesi ve pazar konumlandırması olmak üzere dört ana alanda hazırlanır.</p>
+        </div>
+        <div class="checks-grid" id="checks-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHO IT'S FOR ═══ -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" data-i18n="whoEyebrow">Bu hizmet kime göre?</span>
+          <h2 data-i18n="whoTitle">Küçük ve bağımsız konaklama tesisleri için</h2>
+        </div>
+        <div class="who-wrap">
+          <div class="who-block">
+            <h3 data-i18n="whoSubTitle">Hizmet verilen tesis türleri</h3>
+            <ul class="who-list" id="who-list">
+              <!-- Rendered by JS -->
+            </ul>
+          </div>
+          <div class="not-block">
+            <h3 data-i18n="notTitle">Bu hizmet ne değil?</h3>
+            <ul class="not-list" id="not-list">
+              <!-- Rendered by JS -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROCESS ═══ -->
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" data-i18n="processEyebrow">Süreç</span>
+          <h2 data-i18n="processTitle">Nasıl çalışır?</h2>
+          <p data-i18n="processText">Dört adımda basit, hızlı ve çıktısı net bir süreç.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3 data-i18n="step1Title">Bilgi paylaşımı</h3>
+            <p data-i18n="step1Text">Tesis linki, kullandığınız kanallar ve varsa özel sorunlarınızı paylaşırsınız.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3 data-i18n="step2Title">Kapsamlı inceleme</h3>
+            <p data-i18n="step2Text">Tüm denetim başlıkları sistematik olarak gözden geçirilir.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3 data-i18n="step3Title">Raporun teslimi</h3>
+            <p data-i18n="step3Text">Önceliklendirilmiş bulgu ve öneri listesi 48 saat içinde e-posta ile gönderilir.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3 data-i18n="step4Title">Uygulama ve takip</h3>
+            <p data-i18n="step4Text">Seçilen pakete göre uygulama yönlendirmesi ve isteğe bağlı takip değerlendirmesi yapılır.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DELIVERABLES ═══ -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" data-i18n="delEyebrow">Ne alırsınız?</span>
+          <h2 data-i18n="delTitle">Rapor içeriği ve çıktılar</h2>
+          <p data-i18n="delText">Her denetim, belirli bulgular ve uygulanabilir öneriler içeren yapılandırılmış bir yazılı rapor olarak teslim edilir.</p>
+        </div>
+        <div class="del-grid" id="del-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PRICING ═══ -->
+    <section id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow" data-i18n="pricingEyebrow">Paketler</span>
+          <h2 data-i18n="pricingTitle">Tesisinize uygun paketi seçin</h2>
+          <p data-i18n="pricingText">Her tesisin ihtiyacı farklıdır. Tek kanal denetiminden uygulamalı danışmanlığa kadar üç farklı seçenek.</p>
+        </div>
+        <div class="pricing" id="pricing-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="faqTitle">Sık sorulan sorular</h2>
+        </div>
+        <div class="faq-grid" id="faq-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact">
+      <div class="container">
+        <div class="cta-section">
+          <div class="cta-header">
+            <span class="section-eyebrow" data-i18n="ctaEyebrow">Başlayın</span>
+            <h2 data-i18n="ctaTitle">Online satış profilinizi 48 saat içinde kontrol ettirin.</h2>
+            <p data-i18n="ctaText">Tesisinizin hangi kanalda, hangi başlıkta sorun yaşadığını belirleyelim.</p>
+          </div>
+          <div class="cta-layout">
+            <div>
+              <form id='contact-form' method='POST' name='audit-request'>
+                <input type="hidden" name="form-name" value="audit-request" />
+                <p class="honeypot-field">
+                  <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="prop-name" data-i18n="formPropName">Tesis adı</label>
+                    <input type="text" id="prop-name" name="property-name" required data-i18n-placeholder="formPropNamePh" placeholder="Tesisinizin adı" />
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-name" data-i18n="formYourName">Adınız</label>
+                    <input type="text" id="contact-name" name="contact-name" required data-i18n-placeholder="formYourNamePh" placeholder="Adınız ve soyadınız" />
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-email" data-i18n="formEmail">E-posta adresiniz</label>
+                    <input type="email" id="contact-email" name="email" required placeholder="ornek@tesisiniz.com" />
+                  </div>
+                  <div class="form-group">
+                    <label for="prop-type" data-i18n="formPropType">Tesis türü</label>
+                    <select id="prop-type" name="property-type" required>
+                      <!-- Options rendered by JS -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="pkg-select" data-i18n="formPackage">İlgilendiğiniz paket</label>
+                    <select id="pkg-select" name="package" required>
+                      <!-- Options rendered by JS -->
+                    </select>
+                  </div>
+                  <div class="form-group full">
+                    <label for="msg" data-i18n="formMessage">Eklemek istedikleriniz <span style="font-weight:400;color:var(--muted)" data-i18n="formOptional">(isteğe bağlı)</span></label>
+                    <textarea id="msg" name="message" data-i18n-placeholder="formMsgPh" placeholder="Özel bir sorun veya odaklanmamızı istediğiniz bir konu varsa belirtebilirsiniz."></textarea>
+                  </div>
+                </div>
+                <div class="form-submit-row" style="margin-top:16px">
+                  <button type="submit" class="button lg" data-i18n="formSubmit">Talebi gönder</button>
+                  <span class="form-note" data-i18n="formNote">24 saat içinde dönüş yapılır.</span>
+                </div>
+                <div class="form-success" id="form-success" data-i18n="formSuccess">
+                  Talebiniz alındı. En geç 24 saat içinde dönüş yapılacak.
+                </div>
+                <div class="form-error" id="form-error" data-i18n="formError">
+                  Bir sorun oluştu. Lütfen doğrudan e-posta gönderin.
+                </div>
+              </form>
+              <div class="contact-alt" style="margin-top:20px">
+                <p data-i18n="ctaOrEmail">Ya da doğrudan e-posta gönderin:</p>
+                <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>
+              </div>
+            </div>
+
+            <div class="cta-side">
+              <h3 data-i18n="ctaSideTitle">Denetim paketine dahil:</h3>
+              <ul class="cta-side-list" id="cta-side-list">
+                <!-- Rendered by JS -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <span class="logo" style="font-size:17px">Inn<span style="color:var(--accent)">Metric</span></span>
+      </div>
+      <div data-i18n="footerRight">© 2026 InnMetric. Tüm hakları saklıdır.</div>
+      <div><a href="mailto:hello@innmetric.com" style="color:var(--accent);font-weight:600;">hello@innmetric.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const T = {
+      tr: {
+        // Nav
+        navService: "Hizmet",
+        navChecks: "Kontrol Listesi",
+        navPricing: "Paketler",
+        navFaq: "SSS",
+        navCta: "Denetim talep et",
+        // Hero
+        eyebrow: "48 saat içinde teslim — uygulanabilir satış denetim raporu",
+        heroTitle: "Otel satışınızı engelleyen hataları görün.",
+        heroText: "InnMetric; oteller, butik tesisler, apartlar ve kısa dönem kiralıklar için Booking.com, Airbnb ve Google profillerinde satışa engel olan hataları tespit eder. Net bulgular, uygulanabilir öneriler, 48 saat içinde teslim.",
+        heroPrimary: "Denetim talep et",
+        heroSecondary: "Paketleri incele",
+        trustLabel: "Uygun tesisler:",
+        trust1: "Küçük otel",
+        trust2: "Butik tesis",
+        trust3: "Apart",
+        trust4: "Bungalov",
+        trust5: "Günlük kiralık",
+        auditTitle: "Kontrol edilen başlıklar",
+        // Problem
+        problemEyebrow: "Neden kontrol gerekir?",
+        problemTitle: "Her gün rezervasyon kaçırıyor olabilirsiniz",
+        problemText: "Birçok konaklama tesisi müsaitliği açık, fiyatı uygun görünse de sistematik hatalar yüzünden beklentisinin altında rezervasyon alıyor. Bu hataların büyük çoğunluğu dışarıdan görünmez; ancak profil içinde net biçimde tespit edilebilir.",
+        prob1Title: "Görünürlük açıkları",
+        prob1Text: "Profil eksiklikleri, yanlış kategori seçimi veya tamamlanmamış Google kaydı tesisinizi arama sonuçlarından uzaklaştırıyor olabilir.",
+        prob2Title: "Fiyat ve kısıtlama hataları",
+        prob2Text: "Yanlış bağlanmış fiyat planları, gereksiz minimum konaklama kısıtlamaları veya stop sell hataları sessizce rezervasyon bloke edebilir.",
+        prob3Title: "İçerik ve görsel zayıflıklar",
+        prob3Text: "Yanlış sıralanmış fotoğraflar, eksik oda açıklamaları veya tamamlanmamış olanak listesi rezervasyon kararını olumsuz etkiler.",
+        // Checks
+        checksEyebrow: "Denetim kapsamı",
+        checksTitle: "Ne kontrol edilir?",
+        checksText: "Rapor; OTA profili, oda ve fiyat yapısı, içerik kalitesi ve pazar konumlandırması olmak üzere dört ana alanda hazırlanır.",
+        // Who
+        whoEyebrow: "Bu hizmet kime göre?",
+        whoTitle: "Küçük ve bağımsız konaklama tesisleri için",
+        whoSubTitle: "Hizmet verilen tesis türleri",
+        notTitle: "Bu hizmet ne değil?",
+        // Process
+        processEyebrow: "Süreç",
+        processTitle: "Nasıl çalışır?",
+        processText: "Dört adımda basit, hızlı ve çıktısı net bir süreç.",
+        step1Title: "Bilgi paylaşımı",
+        step1Text: "Tesis linki, kullandığınız kanallar ve varsa özel sorunlarınızı paylaşırsınız.",
+        step2Title: "Kapsamlı inceleme",
+        step2Text: "Tüm denetim başlıkları sistematik olarak gözden geçirilir.",
+        step3Title: "Raporun teslimi",
+        step3Text: "Önceliklendirilmiş bulgu ve öneri listesi 48 saat içinde e-posta ile gönderilir.",
+        step4Title: "Uygulama ve takip",
+        step4Text: "Seçilen pakete göre uygulama yönlendirmesi ve isteğe bağlı takip değerlendirmesi yapılır.",
+        // Deliverables
+        delEyebrow: "Ne alırsınız?",
+        delTitle: "Rapor içeriği ve çıktılar",
+        delText: "Her denetim, belirli bulgular ve uygulanabilir öneriler içeren yapılandırılmış bir yazılı rapor olarak teslim edilir.",
+        // Pricing
+        pricingEyebrow: "Paketler",
+        pricingTitle: "Tesisinize uygun paketi seçin",
+        pricingText: "Her tesisin ihtiyacı farklıdır. Tek kanal denetiminden uygulamalı danışmanlığa kadar üç farklı seçenek.",
+        // FAQ
+        faqTitle: "Sık sorulan sorular",
+        // Contact
+        ctaEyebrow: "Başlayın",
+        ctaTitle: "Online satış profilinizi 48 saat içinde kontrol ettirin.",
+        ctaText: "Tesisinizin hangi kanalda, hangi başlıkta sorun yaşadığını belirleyelim.",
+        ctaSideTitle: "Denetim paketine dahil:",
+        ctaOrEmail: "Ya da doğrudan e-posta gönderin:",
+        // Form
+        formPropName: "Tesis adı",
+        formPropNamePh: "Tesisinizin adı",
+        formYourName: "Adınız",
+        formYourNamePh: "Adınız ve soyadınız",
+        formEmail: "E-posta adresiniz",
+        formPropType: "Tesis türü",
+        formPackage: "İlgilendiğiniz paket",
+        formMessage: "Eklemek istedikleriniz",
+        formOptional: "(isteğe bağlı)",
+        formMsgPh: "Özel bir sorun veya odaklanmamızı istediğiniz bir konu varsa belirtebilirsiniz.",
+        formSubmit: "Talebi gönder",
+        formNote: "24 saat içinde dönüş yapılır.",
+        formSuccess: "Talebiniz alındı. En geç 24 saat içinde dönüş yapılacak.",
+        formError: "Bir sorun oluştu. Lütfen doğrudan e-posta gönderin: hello@innmetric.com",
+        // Footer
+        footerRight: "© 2026 InnMetric. Tüm hakları saklıdır.",
+
+        // ── Structured data ──
+        heroChecklist: [
+          "Booking.com profil kalitesi ve oda yapısı",
+          "Airbnb ilan içeriği ve fiyatlandırma",
+          "Google Business Profile görünürlüğü",
+          "Fiyat planı ve kısıtlama yapısı",
+          "Fotoğraf sıralaması ve kapak görseli",
+          "Rakip fiyat pozisyonu",
+          "İnceleme puanı görünürlüğü",
+          "Doğrudan rezervasyon hazırlığı"
+        ],
+
+        checkCategories: [
+          {
+            title: "OTA Profil Denetimi",
+            items: [
+              "Booking.com profil kalitesi ve tamamlanma durumu",
+              "Booking.com oda isimleri ve açıklamaları",
+              "Airbnb ilan içeriği ve konum doğruluğu",
+              "Airbnb fiyatlandırma ve Instant Book yapısı"
+            ]
+          },
+          {
+            title: "Oda, Fiyat ve Kısıtlama Yapısı",
+            items: [
+              "Oda kategorileri ve kapasite tanımları",
+              "Fiyat planı yapısı (iade edilebilir / iade edilemez)",
+              "Müsaitlik ve stop sell kontrolleri",
+              "Minimum / maksimum konaklama kısıtlamaları",
+              "Kahvaltılı / oda dahil fiyat ayrımı"
+            ]
+          },
+          {
+            title: "İçerik ve Görsel Kalite",
+            items: [
+              "Fotoğraf kapak görseli ve sıralama etkisi",
+              "Fotoğraf kalitesi ve kapsam değerlendirmesi",
+              "Olanaklar ve servisler listesi eksiksizliği",
+              "Açıklama metni okunabilirliği ve doğruluğu"
+            ]
+          },
+          {
+            title: "Google ve Doğrudan Satış",
+            items: [
+              "Google Business Profile durumu ve tamamlanma oranı",
+              "Google Oteller görünürlüğü",
+              "Web sitesi ve doğrudan rezervasyon bağlantısı kontrolü",
+              "İnceleme puanı ve yanıt görünürlüğü"
+            ]
+          },
+          {
+            title: "Pazar Konumlandırması",
+            items: [
+              "Rakip fiyat pozisyonu anlık kıyaslaması",
+              "Fiyat-değer algısı değerlendirmesi",
+              "Temel gelir artırma fırsatları (basit düzey)"
+            ]
+          }
+        ],
+
+        whoItems: [
+          "Küçük ve butik oteller (1–50 oda)",
+          "Apart ve süit tesisler",
+          "Bungalov ve villa işletmeleri",
+          "Günlük ve kısa dönem kiralık tesisler",
+          "Pansiyon ve oda-kahvaltı tesisleri",
+          "OTA üzerinden satış yapan her ölçekte konaklama işletmesi"
+        ],
+
+        notItems: [
+          "Kanal yöneticisi kurulum veya entegrasyon hizmeti değil",
+          "Aylık abonelik gerektiren revenue management hizmeti değil",
+          "Sosyal medya veya reklam yönetimi değil",
+          "Web sitesi tasarım veya geliştirme hizmeti değil",
+          "Uzun vadeli danışmanlık taahhüdü değil"
+        ],
+
+        deliverables: [
+          "PDF veya Google Docs formatında yazılı denetim raporu",
+          "Etkiye göre sıralanmış aksiyon listesi (yüksek / orta / düşük öncelik)",
+          "Kanal bazlı bulgular: Booking.com, Airbnb, Google",
+          "Spesifik ve uygulanabilir öneriler — belirsiz genel tavsiyeler değil",
+          "Rakip fiyat anlık görüntüsü",
+          "Kontrol sonrası destek (pakete göre değişir)"
+        ],
+
+        packages: [
+          {
+            name: "Hızlı Kontrol",
+            badge: null,
+            price: "2.500 ₺",
+            sub: "Tek kanal için odaklanmış denetim",
+            items: [
+              "1 kanal denetimi (Booking.com veya Airbnb)",
+              "Oda ve fiyat planı kontrolü",
+              "Müsaitlik ve kısıtlama kontrolü",
+              "Fotoğraf ve içerik değerlendirmesi",
+              "Öncelikli aksiyon listesi",
+              "PDF raporu — 48 saat içinde teslim"
+            ],
+            cta: "Başlat",
+            featured: false
+          },
+          {
+            name: "Tam Denetim",
+            badge: "En çok tercih edilen",
+            price: "5.000 ₺",
+            sub: "Tüm ana kanallar için kapsamlı satış denetimi",
+            items: [
+              "Booking.com profil ve yapı denetimi",
+              "Airbnb ilan denetimi",
+              "Google Business Profile kontrolü",
+              "Oda, fiyat ve kısıtlama yapısı analizi",
+              "İçerik ve fotoğraf kalite değerlendirmesi",
+              "Rakip fiyat konumlandırma kıyaslaması",
+              "Doğrudan rezervasyon hazırlığı kontrolü",
+              "Önceliklendirilmiş aksiyon raporu (PDF, 48 saat)"
+            ],
+            cta: "Bu paketi seç",
+            featured: true
+          },
+          {
+            name: "Denetim + Danışmanlık",
+            badge: null,
+            price: "10.000 ₺",
+            sub: "Kapsamlı denetim ve uygulama rehberliği",
+            items: [
+              "Tam Denetim paketindeki tüm başlıklar",
+              "60 dakikalık canlı danışmanlık görüşmesi",
+              "Adım adım uygulama yönlendirmesi",
+              "7 gün e-posta destek ve takip",
+              "Değişiklik sonrası takip değerlendirmesi"
+            ],
+            cta: "Başlat",
+            featured: false
+          }
+        ],
+
+        faqs: [
+          {
+            q: "Bu hizmet kanal yöneticisi kurulum hizmeti midir?",
+            a: "Hayır. Bu çalışma, kanal yöneticisi kurulumu veya entegrasyonu içermez. Online satış profillerinizde satışa engel olabilecek hataları tespit eder ve öncelikli aksiyon listesi sunar."
+          },
+          {
+            q: "Rezervasyon artışı garanti ediliyor mu?",
+            a: "Rezervasyon artışı garanti edilmez. Mevcut durum analiz edilir, iyileştirme alanları belirlenir ve uygulanabilir öneriler sunulur. Ne yapılması gerektiği netleştiğinde doğru adımları atmak size kalmış."
+          },
+          {
+            q: "Şifre veya erişim bilgisi paylaşmak gerekir mi?",
+            a: "Hızlı Kontrol ve Tam Denetim paketlerinde çoğu kontrol kamuya açık bilgilerden yapılabilir. Detaylı ayarlara bakılması gerektiğinde ekran paylaşımı yöntemi tercih edilir — giriş bilgisi istenmez."
+          },
+          {
+            q: "Rapor nasıl teslim edilir?",
+            a: "Denetim raporu PDF veya Google Docs formatında, net bir aksiyon listesiyle birlikte e-posta ile teslim edilir."
+          },
+          {
+            q: "Denetim süreci ne kadar sürer?",
+            a: "Tesis bilgileri alındıktan itibaren 48 saat içinde teslim edilir. Yoğunluğa göre çoğunlukla daha erken tamamlanır."
+          },
+          {
+            q: "Airbnb kullanmıyorum, yalnızca Booking.com'dayım. Yine de faydalı olur mu?",
+            a: "Evet. Hızlı Kontrol paketi tek kanal odaklıdır ve yalnızca Booking.com üzerine de çalışılabilir. Önemli olan, kullandığınız kanalın satış performansını doğru değerlendirmektir."
+          },
+          {
+            q: "Zaten kanal yöneticisi kullanıyoruz. Bu denetim bize ne katar?",
+            a: "Kanal yöneticisi araç olarak doğru çalışıyor olabilir, ancak içerik kalitesi, fiyat planı yapısı ve profil tamamlanma durumu ayrı bir konudur. Denetim bu alanlardaki görünmez hataları ortaya çıkarır."
+          },
+          {
+            q: "Bu hizmet hangi büyüklükteki tesisler için uygundur?",
+            a: "Genellikle 1–80 oda arasındaki küçük ve orta ölçekli tesisler için tasarlanmıştır: butik oteller, apartlar, bungalovlar ve kısa dönem kiralık tesisler."
+          }
+        ],
+
+        propTypeOptions: [
+          { value: "", label: "Tesis türünü seçin" },
+          { value: "boutique-hotel", label: "Küçük / butik otel" },
+          { value: "apartment", label: "Apart / süit" },
+          { value: "bungalow", label: "Bungalov / villa" },
+          { value: "short-term", label: "Günlük kiralık" },
+          { value: "guesthouse", label: "Pansiyon / B&B" },
+          { value: "other", label: "Diğer" }
+        ],
+
+        packageOptions: [
+          { value: "", label: "Paket seçin" },
+          { value: "quick-check", label: "Hızlı Kontrol — 2.500 ₺" },
+          { value: "full-audit", label: "Tam Denetim — 5.000 ₺" },
+          { value: "audit-advisory", label: "Denetim + Danışmanlık — 10.000 ₺" },
+          { value: "unsure", label: "Henüz karar vermedim" }
+        ],
+
+        ctaSideItems: [
+          "PDF veya Google Docs raporu",
+          "Önceliklendirilmiş aksiyon listesi",
+          "Kanal bazlı bulgular",
+          "48 saat içinde teslim"
+        ]
+      },
+
+      en: {
+        // Nav
+        navService: "Services",
+        navChecks: "Audit Scope",
+        navPricing: "Packages",
+        navFaq: "FAQ",
+        navCta: "Request an Audit",
+        // Hero
+        eyebrow: "Practical hotel sales audit — delivered within 48 hours",
+        heroTitle: "Find what blocks your hotel sales.",
+        heroText: "InnMetric reviews your Booking.com, Airbnb and Google profiles to identify issues that are blocking reservations. Rooms, rates, availability, photos and visibility — all checked and reported within 48 hours.",
+        heroPrimary: "Request an audit",
+        heroSecondary: "View packages",
+        trustLabel: "Ideal for:",
+        trust1: "Small hotels",
+        trust2: "Boutique properties",
+        trust3: "Apartments",
+        trust4: "Bungalows",
+        trust5: "Short-term rentals",
+        auditTitle: "What we check",
+        // Problem
+        problemEyebrow: "Why an audit?",
+        problemTitle: "You may be losing bookings every day without knowing it",
+        problemText: "Many properties look open for bookings — rates set, calendar available — and still underperform. Most of these issues are invisible from the outside. You need to look inside the profile to find them.",
+        prob1Title: "Visibility gaps",
+        prob1Text: "Incomplete profiles, wrong category settings or an unclaimed Google listing can keep your property out of search results entirely.",
+        prob2Title: "Rate and restriction errors",
+        prob2Text: "Misconfigured rate plans, unnecessary minimum stay settings or stop-sell errors silently block bookings day after day.",
+        prob3Title: "Content and photo weaknesses",
+        prob3Text: "Wrong cover photo, incomplete amenity lists or vague room descriptions reduce guest confidence and push potential bookings to competitors.",
+        // Checks
+        checksEyebrow: "Audit scope",
+        checksTitle: "What is checked?",
+        checksText: "The audit covers four main areas: OTA profiles, room and rate setup, content quality, and market positioning.",
+        // Who
+        whoEyebrow: "Who is this for?",
+        whoTitle: "Built for small and independent properties",
+        whoSubTitle: "Properties this service works for",
+        notTitle: "What this is not",
+        // Process
+        processEyebrow: "Process",
+        processTitle: "How it works",
+        processText: "Four steps. Simple, quick, and with a clear output.",
+        step1Title: "Share your property details",
+        step1Text: "Send your channel links, property type and any specific concerns.",
+        step2Title: "Full audit review",
+        step2Text: "All audit areas are reviewed systematically.",
+        step3Title: "Report delivery",
+        step3Text: "Your prioritized findings and action list are delivered within 48 hours.",
+        step4Title: "Implementation and follow-up",
+        step4Text: "Guidance on applying changes, with optional follow-up support based on your package.",
+        // Deliverables
+        delEyebrow: "What you receive",
+        delTitle: "Your audit report and deliverables",
+        delText: "Every audit is delivered as a structured written report with specific findings and clear, actionable recommendations.",
+        // Pricing
+        pricingEyebrow: "Packages",
+        pricingTitle: "Choose the right package for your property",
+        pricingText: "Every property is different. Three options — from a single-channel check to hands-on advisory.",
+        // FAQ
+        faqTitle: "Frequently asked questions",
+        // Contact
+        ctaEyebrow: "Get started",
+        ctaTitle: "Get your online sales profile audited within 48 hours.",
+        ctaText: "Let's identify exactly where your property is losing bookings.",
+        ctaSideTitle: "Every audit includes:",
+        ctaOrEmail: "Or send a direct email:",
+        // Form
+        formPropName: "Property name",
+        formPropNamePh: "Your property name",
+        formYourName: "Your name",
+        formYourNamePh: "Your full name",
+        formEmail: "Your email address",
+        formPropType: "Property type",
+        formPackage: "Package of interest",
+        formMessage: "Anything you'd like to add",
+        formOptional: "(optional)",
+        formMsgPh: "Any specific issues or areas you'd like us to focus on.",
+        formSubmit: "Send request",
+        formNote: "We respond within 24 hours.",
+        formSuccess: "Your request has been received. We will be in touch within 24 hours.",
+        formError: "Something went wrong. Please send a direct email to: hello@innmetric.com",
+        // Footer
+        footerRight: "© 2026 InnMetric. All rights reserved.",
+
+        // ── Structured data ──
+        heroChecklist: [
+          "Booking.com profile quality and room setup",
+          "Airbnb listing content and pricing",
+          "Google Business Profile visibility",
+          "Rate plan structure and restrictions",
+          "Photo order and cover image quality",
+          "Competitor price positioning",
+          "Review score visibility",
+          "Direct booking readiness"
+        ],
+
+        checkCategories: [
+          {
+            title: "OTA Profile Audit",
+            items: [
+              "Booking.com profile completeness and quality",
+              "Booking.com room names and descriptions",
+              "Airbnb listing content and location accuracy",
+              "Airbnb pricing setup and Instant Book configuration"
+            ]
+          },
+          {
+            title: "Room, Rate and Restriction Setup",
+            items: [
+              "Room categories and capacity definitions",
+              "Rate plan structure (refundable / non-refundable)",
+              "Availability and stop-sell checks",
+              "Minimum and maximum stay restrictions",
+              "Breakfast and meal plan rate separation"
+            ]
+          },
+          {
+            title: "Content and Visual Quality",
+            items: [
+              "Cover photo and photo order effectiveness",
+              "Photo coverage and overall quality",
+              "Amenities and facilities list completeness",
+              "Description readability and accuracy"
+            ]
+          },
+          {
+            title: "Google and Direct Bookings",
+            items: [
+              "Google Business Profile status and completeness",
+              "Google Hotel visibility check",
+              "Website and direct booking link review",
+              "Review score and response presence"
+            ]
+          },
+          {
+            title: "Market Positioning",
+            items: [
+              "Competitor pricing snapshot",
+              "Price-to-value perception check",
+              "Basic revenue opportunity identification"
+            ]
+          }
+        ],
+
+        whoItems: [
+          "Small and boutique hotels (1–50 rooms)",
+          "Apartment and suite properties",
+          "Bungalows and villas",
+          "Short-term and holiday rentals",
+          "Guesthouses and bed & breakfast properties",
+          "Any OTA-dependent accommodation business"
+        ],
+
+        notItems: [
+          "Not a channel manager setup or integration service",
+          "Not a monthly revenue management subscription",
+          "Not a social media or advertising service",
+          "Not a website design or development service",
+          "Not a long-term consulting commitment"
+        ],
+
+        deliverables: [
+          "Written audit report in PDF or Google Docs format",
+          "Action list ranked by impact: high / medium / low priority",
+          "Channel-by-channel findings: Booking.com, Airbnb, Google",
+          "Specific, actionable recommendations — not vague suggestions",
+          "Competitor pricing snapshot",
+          "Post-audit support included based on package"
+        ],
+
+        packages: [
+          {
+            name: "Quick Check",
+            badge: null,
+            price: "€129",
+            sub: "A focused audit of one channel",
+            items: [
+              "1 channel audit (Booking.com or Airbnb)",
+              "Room and rate plan review",
+              "Availability and restriction check",
+              "Photo and content assessment",
+              "Prioritized action list",
+              "PDF report — delivered within 48 hours"
+            ],
+            cta: "Get started",
+            featured: false
+          },
+          {
+            name: "Full Audit",
+            badge: "Most popular",
+            price: "€249",
+            sub: "Complete sales audit across all main channels",
+            items: [
+              "Booking.com profile and setup audit",
+              "Airbnb listing audit",
+              "Google Business Profile review",
+              "Room, rate and restriction structure analysis",
+              "Content and photo quality assessment",
+              "Competitor pricing snapshot",
+              "Direct booking readiness check",
+              "Prioritized action report (PDF, 48 hours)"
+            ],
+            cta: "Choose this package",
+            featured: true
+          },
+          {
+            name: "Audit + Advisory",
+            badge: null,
+            price: "€449",
+            sub: "Full audit with hands-on implementation guidance",
+            items: [
+              "Everything in the Full Audit",
+              "60-minute live advisory call",
+              "Step-by-step implementation guidance",
+              "7 days of email follow-up support",
+              "Follow-up check after changes are applied"
+            ],
+            cta: "Get started",
+            featured: false
+          }
+        ],
+
+        faqs: [
+          {
+            q: "Is this a channel manager setup service?",
+            a: "No. This audit does not include channel manager setup or integration. It identifies the issues that may block online sales and delivers a clear, prioritized action list."
+          },
+          {
+            q: "Do you guarantee more bookings?",
+            a: "No bookings or revenue increase is guaranteed. The audit identifies what is working and what needs improvement — acting on those recommendations is what drives results."
+          },
+          {
+            q: "Do we need to share login credentials?",
+            a: "For Quick Check and Full Audit, most checks are completed using publicly available information. If detailed settings need to be reviewed, screen sharing is used — no login credentials are required."
+          },
+          {
+            q: "How is the report delivered?",
+            a: "The report is delivered by email as a clear, structured PDF or Google Docs document with a prioritized action list."
+          },
+          {
+            q: "How long does the audit take?",
+            a: "The report is delivered within 48 hours of receiving your property details. Most audits are completed sooner."
+          },
+          {
+            q: "I am only on Booking.com, not Airbnb. Can you still help?",
+            a: "Yes. The Quick Check package is focused on a single channel and works equally well for Booking.com-only properties."
+          },
+          {
+            q: "We already use a channel manager. Is this still useful?",
+            a: "Yes. A channel manager handles distribution — it does not evaluate content quality, rate plan structure or profile completeness. That is exactly what this audit covers."
+          },
+          {
+            q: "What size property is this suitable for?",
+            a: "The audit is designed for small and independent properties — typically 1 to 80 rooms: boutique hotels, apartments, bungalows and short-term rental operations."
+          }
+        ],
+
+        propTypeOptions: [
+          { value: "", label: "Select property type" },
+          { value: "boutique-hotel", label: "Small / boutique hotel" },
+          { value: "apartment", label: "Apartment / suite property" },
+          { value: "bungalow", label: "Bungalow / villa" },
+          { value: "short-term", label: "Short-term rental" },
+          { value: "guesthouse", label: "Guesthouse / B&B" },
+          { value: "other", label: "Other" }
+        ],
+
+        packageOptions: [
+          { value: "", label: "Select a package" },
+          { value: "quick-check", label: "Quick Check — €129" },
+          { value: "full-audit", label: "Full Audit — €249" },
+          { value: "audit-advisory", label: "Audit + Advisory — €449" },
+          { value: "unsure", label: "Not sure yet" }
+        ],
+
+        ctaSideItems: [
+          "PDF or Google Docs report",
+          "Prioritized action list",
+          "Channel-by-channel findings",
+          "Delivered within 48 hours"
+        ]
+      }
+    };
+
+    // ── Render functions ──
+    function renderChecklist(lang) {
+      const el = document.getElementById('hero-checklist');
+      if (!el) return;
+      el.innerHTML = T[lang].heroChecklist.map(item =>
+        `<li>${item}</li>`
+      ).join('');
+    }
+
+    function renderChecks(lang) {
+      const el = document.getElementById('checks-grid');
+      if (!el) return;
+      el.innerHTML = T[lang].checkCategories.map(cat => `
+        <div class="check-cat">
+          <div class="check-cat-title">${cat.title}</div>
+          <ul class="check-items">
+            ${cat.items.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+    }
+
+    function renderWho(lang) {
+      const whoEl = document.getElementById('who-list');
+      const notEl = document.getElementById('not-list');
+      if (whoEl) {
+        whoEl.innerHTML = T[lang].whoItems.map(item =>
+          `<li>${item}</li>`
+        ).join('');
+      }
+      if (notEl) {
+        notEl.innerHTML = T[lang].notItems.map(item =>
+          `<li>${item}</li>`
+        ).join('');
+      }
+    }
+
+    function renderDeliverables(lang) {
+      const el = document.getElementById('del-grid');
+      if (!el) return;
+      el.innerHTML = T[lang].deliverables.map((item, i) => `
+        <div class="del-item">
+          <div class="del-num">${i + 1}</div>
+          <p>${item}</p>
+        </div>
+      `).join('');
+    }
+
+    function renderPricing(lang) {
+      const el = document.getElementById('pricing-grid');
+      if (!el) return;
+      el.innerHTML = T[lang].packages.map(pkg => `
+        <div class="price-card${pkg.featured ? ' featured' : ''}">
+          ${pkg.badge ? `<div class="price-badge">${pkg.badge}</div>` : ''}
+          <h3>${pkg.name}</h3>
+          <p class="price-sub">${pkg.sub}</p>
+          <div class="price">${pkg.price}</div>
+          <ul>
+            ${pkg.items.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+          <a href="#contact" class="button">${pkg.cta}</a>
+        </div>
+      `).join('');
+    }
+
+    function renderFaq(lang) {
+      const el = document.getElementById('faq-grid');
+      if (!el) return;
+      el.innerHTML = T[lang].faqs.map(faq => `
+        <details>
+          <summary>${faq.q}</summary>
+          <p>${faq.a}</p>
+        </details>
+      `).join('');
+    }
+
+    function renderFormOptions(lang) {
+      const propType = document.getElementById('prop-type');
+      const pkgSelect = document.getElementById('pkg-select');
+      if (propType) {
+        propType.innerHTML = T[lang].propTypeOptions.map(opt =>
+          `<option value="${opt.value}">${opt.label}</option>`
+        ).join('');
+      }
+      if (pkgSelect) {
+        pkgSelect.innerHTML = T[lang].packageOptions.map(opt =>
+          `<option value="${opt.value}">${opt.label}</option>`
+        ).join('');
+      }
+    }
+
+    function renderCtaSide(lang) {
+      const el = document.getElementById('cta-side-list');
+      if (!el) return;
+      el.innerHTML = T[lang].ctaSideItems.map(item =>
+        `<li>${item}</li>`
+      ).join('');
+    }
+
+    function renderPlaceholders(lang) {
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (T[lang][key]) el.placeholder = T[lang][key];
+      });
+    }
+
+    // ── Main language setter ──
+    function setLanguage(lang) {
+      const dict = T[lang];
+
+      // Simple text replacements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+
+      // Render complex sections
+      renderChecklist(lang);
+      renderChecks(lang);
+      renderWho(lang);
+      renderDeliverables(lang);
+      renderPricing(lang);
+      renderFaq(lang);
+      renderFormOptions(lang);
+      renderCtaSide(lang);
+      renderPlaceholders(lang);
+
+      // Update metadata
+      document.documentElement.lang = lang;
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      localStorage.setItem('innmetric-lang', lang);
+
+      document.title = lang === 'tr'
+        ? 'InnMetric | Oteller için Online Satış Denetimi'
+        : 'InnMetric | Hotel Sales Audit & OTA Performance Check';
+
+      document.querySelector('meta[name="description"]').content = lang === 'tr'
+        ? 'InnMetric, oteller ve kısa dönem kiralık tesisler için Booking.com, Airbnb ve Google profillerinde satışa engel hataları tespit eder. 48 saat içinde teslim.'
+        : 'InnMetric helps hotels, boutique properties and short-term rentals identify issues blocking online sales. Audit delivered within 48 hours.';
+    }
+
+    // ── Form AJAX submission ──
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.style.opacity = '.6';
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+
+        try {
+          const resp = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString()
+          });
+
+          if (resp.ok) {
+            form.reset();
+            successMsg.style.display = 'block';
+          } else {
+            errorMsg.style.display = 'block';
+          }
+        } catch (_) {
+          errorMsg.style.display = 'block';
+        } finally {
+          btn.disabled = false;
+          btn.style.opacity = '1';
+        }
+      });
+    }
+
+    // ── Init ──
+    (function init() {
+      const saved = localStorage.getItem('innmetric-lang');
+      const browserLang = navigator.language ? navigator.language.slice(0, 2) : 'tr';
+      const lang = saved || (browserLang === 'tr' ? 'tr' : 'en');
+      setLanguage(lang);
+    })();
+  </script>
+</body>
+</html>

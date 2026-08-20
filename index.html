@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnMetric | Hotel distribution control for independent GCC hotels</title>
+  <meta name="description" content="InnMetric audits, repairs with approval, verifies live results, and monitors hotel distribution across PMS, channel manager, booking engine, and OTA accounts. Independent hotels in the GCC." />
+  <meta property="og:title" content="InnMetric | Hotel distribution control" />
+  <meta property="og:description" content="Vendor-neutral distribution control for independent GCC hotels. Conversation first. No invented revenue claims." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://innmetric.com" />
+  <link rel="canonical" href="https://innmetric.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card2: #0d1526;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --muted2: #cbd5e1;
+      --line: rgba(255,255,255,.1);
+      --accent: #38bdf8;
+      --accent-soft: #bae6fd;
+      --dark-text: #0f172a;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    header {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(15,23,42,.94);
+      backdrop-filter: blur(14px);
+      z-index: 20;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .logo { font-size: 21px; font-weight: 800; letter-spacing: -.04em; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 22px; align-items: center; font-size: 14px; font-weight: 500; color: var(--muted); }
+    .nav-links a:hover { color: var(--white); }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--accent); color: #082f49;
+      font-family: inherit; font-weight: 700; font-size: 14px;
+      padding: 11px 18px; border-radius: 999px; border: 0; cursor: pointer;
+    }
+    .button:hover { filter: brightness(1.05); }
+    .button.ghost {
+      background: transparent; color: var(--white);
+      border: 1px solid var(--line);
+    }
+    .button.lg { padding: 13px 22px; font-size: 15px; }
+    .button:disabled { opacity: .6; cursor: not-allowed; }
+    .hero { padding: 72px 0 56px; }
+    .eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent-soft); margin-bottom: 16px;
+    }
+    h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.12; letter-spacing: -.04em; margin: 0 0 20px; }
+    .lede { font-size: 18px; color: var(--muted2); max-width: 640px; margin: 0 0 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .chip {
+      font-size: 13px; color: var(--muted2); border: 1px solid var(--line);
+      border-radius: 999px; padding: 6px 12px; background: rgba(255,255,255,.03);
+    }
+    section { padding: 64px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: clamp(24px, 3vw, 34px); letter-spacing: -.03em; margin: 0 0 12px; }
+    .section-lead { color: var(--muted); max-width: 620px; margin: 0 0 32px; }
+    .grid-3, .grid-2 { display: grid; gap: 16px; }
+    @media (min-width: 800px) {
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 16px; padding: 22px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 17px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .steps { counter-reset: step; display: grid; gap: 14px; }
+    @media (min-width: 800px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+    .step { background: var(--card2); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+    .step::before {
+      counter-increment: step; content: counter(step);
+      display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center;
+      border-radius: 999px; background: var(--accent); color: #082f49;
+      font-weight: 800; font-size: 13px; margin-bottom: 12px;
+    }
+    .step h3 { margin: 0 0 8px; font-size: 16px; }
+    .step p { margin: 0; color: var(--muted); font-size: 14px; }
+    .not-list { margin: 0; padding-left: 18px; color: var(--muted); }
+    .not-list li { margin: 6px 0; }
+    .founders { display: grid; gap: 16px; }
+    @media (min-width: 800px) { .founders { grid-template-columns: 1fr 1fr; } }
+    .form-grid { display: grid; gap: 14px; }
+    @media (min-width: 700px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: 1 / -1; }
+    label { font-size: 13px; font-weight: 600; color: var(--muted2); }
+    input, select, textarea {
+      font-family: inherit; font-size: 15px; color: var(--text);
+      background: #0b1220; border: 1px solid var(--line); border-radius: 10px;
+      padding: 11px 12px;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    .honeypot { position: absolute; left: -9999px; }
+    .form-note { color: var(--muted); font-size: 13px; margin-left: 12px; }
+    .form-success, .form-error { display: none; margin-top: 14px; padding: 12px 14px; border-radius: 10px; font-size: 14px; }
+    .form-success { background: rgba(56,189,248,.12); border: 1px solid rgba(56,189,248,.3); }
+    .form-error { background: rgba(248,113,113,.12); border: 1px solid rgba(248,113,113,.35); }
+    .cta-layout { display: grid; gap: 28px; }
+    @media (min-width: 900px) { .cta-layout { grid-template-columns: 1.4fr .8fr; } }
+    .side-card { background: var(--card2); border: 1px solid var(--line); border-radius: 16px; padding: 22px; height: fit-content; }
+    .side-card ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+    footer a { color: var(--accent); font-weight: 600; }
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+      .hero { padding: 48px 0 36px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">Inn<span>Metric</span></a>
+      <nav class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#work">What we do</a>
+        <a href="#who">Who it is for</a>
+        <a href="#founders">Founders</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button" href="#contact">Request a conversation</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container">
+        <span class="eyebrow">Independent hotels · GCC · Riyadh and Jeddah first</span>
+        <h1>Your systems can be connected and still commercially wrong.</h1>
+        <p class="lede">InnMetric is a vendor-neutral distribution-control service. We audit the live sales setup across your PMS, channel manager, booking engine, and OTA accounts, implement only approved corrections, verify the guest-facing result, and watch whether the issue returns.</p>
+        <div class="hero-actions">
+          <a class="button lg" href="#contact">Request a conversation</a>
+          <a class="button ghost lg" href="#work">How the work runs</a>
+        </div>
+        <div class="chips">
+          <span class="chip">Not a PMS</span>
+          <span class="chip">Not a channel manager</span>
+          <span class="chip">Not SaaS yet</span>
+          <span class="chip">Founder-delivered</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="problem">
+      <div class="container">
+        <span class="eyebrow">The gap</span>
+        <h2>Platforms move the configuration they are given. They do not own the commercial result.</h2>
+        <p class="section-lead">A hotel can show as connected while rooms are invisible on sellable dates, rate plans are mapped incorrectly, restrictions block demand, or a correction is later reversed. No single vendor is fully accountable for checking the guest-facing outcome across the stack.</p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Sellability</h3>
+            <p>Inventory and price exist, but a stop-sell, stay restriction, or incomplete mapping keeps the room off a channel.</p>
+          </article>
+          <article class="card">
+            <h3>Rate structure</h3>
+            <p>Derived rates drop, promotions stack, occupancy pricing drifts, or refundable and non-refundable plans fall out of relationship.</p>
+          </article>
+          <article class="card">
+            <h3>Control</h3>
+            <p>A fix is undocumented, reversed, or recreated. The same problem returns and nobody can show what changed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <span class="eyebrow">The control loop</span>
+        <h2>Detect, evidence, approve, repair, verify, monitor.</h2>
+        <p class="section-lead">We do not promise that every correction increases revenue. We promise a disciplined review, documented and approved changes, live verification, and a record of what was found, changed, and confirmed.</p>
+        <div class="steps">
+          <article class="step">
+            <h3>Baseline</h3>
+            <p>Map the stack and test the live guest journey under recorded dates, occupancy, currency, and locale.</p>
+          </article>
+          <article class="step">
+            <h3>Evidence</h3>
+            <p>Show what appeared on which surface, with conditions attached. Root cause stays unknown until we have authorized access.</p>
+          </article>
+          <article class="step">
+            <h3>Approved repair</h3>
+            <p>Only the hotel approves live changes. High-risk work is logged with a rollback path.</p>
+          </article>
+          <article class="step">
+            <h3>Live check</h3>
+            <p>We retest the guest-facing result and can keep watching for recurrence if the hotel wants ongoing control.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="who">
+      <div class="container">
+        <span class="eyebrow">Fit</span>
+        <h2>Built for independent hotels that cannot staff a full distribution team.</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>This is for</h3>
+            <p>Independent urban hotels, serviced apartments, aparthotels, and small local groups. Typically 20–150 rooms. Direct sales plus at least two OTAs. A GM, owner, or revenue lead who can approve access.</p>
+          </article>
+          <article class="card">
+            <h3>This is not</h3>
+            <ul class="not-list">
+              <li>A replacement for HotelRunner, SiteMinder, or your booking engine</li>
+              <li>A revenue-management robot or “AI auditor”</li>
+              <li>A marketing, SEO, or review-management agency</li>
+              <li>A fit for large international chains in this first cohort</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="founders">
+      <div class="container">
+        <span class="eyebrow">Who you speak with</span>
+        <h2>Two founders. Domain judgment and operational productization.</h2>
+        <div class="founders">
+          <article class="card">
+            <h3>Tunahan Aras</h3>
+            <p>Hotel distribution operator. Rate, restriction, mapping, reservation, and integration work across live partner cases. He decides whether a public difference is a real control problem.</p>
+          </article>
+          <article class="card">
+            <h3>Mert Carikci</h3>
+            <p>Product owner and systems analyst. Turns messy operational work into states, evidence, approvals, QA, and a repeatable delivery record.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <span class="eyebrow">Start</span>
+        <h2>Request a short conversation.</h2>
+        <p class="section-lead">Tell us the property and who owns distribution. We will reply and, if there is a fit, book a meeting. This is not an automated audit and not a price menu.</p>
+        <div class="cta-layout">
+          <form id="contact-form" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="inquiry" />
+            <p class="honeypot">
+              <label>Leave blank <input name="bot-field" /></label>
+            </p>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="property-name">Property name</label>
+                <input id="property-name" name="property-name" type="text" required maxlength="120" placeholder="Hotel or serviced apartment" />
+              </div>
+              <div class="form-group">
+                <label for="contact-name">Your name</label>
+                <input id="contact-name" name="contact-name" type="text" required maxlength="100" />
+              </div>
+              <div class="form-group">
+                <label for="email">Work email</label>
+                <input id="email" name="email" type="email" required maxlength="254" />
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" maxlength="80" placeholder="Riyadh, Jeddah, …" />
+              </div>
+              <div class="form-group">
+                <label for="role">Your role</label>
+                <select id="role" name="role" required>
+                  <option value="">Select</option>
+                  <option>Owner / managing director</option>
+                  <option>General manager</option>
+                  <option>Revenue / e-commerce / distribution</option>
+                  <option>Operations / cluster</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="channels">Active channels (if known)</label>
+                <input id="channels" name="channels" type="text" maxlength="200" placeholder="Direct, Booking.com, Expedia, …" />
+              </div>
+              <div class="form-group full">
+                <label for="message">What you want us to look at <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+                <textarea id="message" name="message" maxlength="5000" placeholder="A recent overbooking, a room missing on one OTA, a rate that will not sync — whatever is on your mind."></textarea>
+              </div>
+            </div>
+            <div style="margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+              <button class="button lg" type="submit">Send inquiry</button>
+              <span class="form-note">We reply to hello@innmetric.com inquiries directly.</span>
+            </div>
+            <div class="form-success" id="form-success">Thank you. Your inquiry has been sent. We will reply by email.</div>
+            <div class="form-error" id="form-error">The form could not be sent. Email us at hello@innmetric.com.</div>
+          </form>
+          <aside class="side-card">
+            <h3 style="margin:0 0 8px;font-size:17px">What happens next</h3>
+            <ul>
+              <li>We confirm the property and who decides.</li>
+              <li>If there is a fit, we book a short call.</li>
+              <li>Scope and price are discussed with you — not guessed on this page.</li>
+              <li>No live change is made without named approval.</li>
+            </ul>
+            <p style="margin:18px 0 0;color:var(--muted);font-size:14px">Prefer email: <a href="mailto:hello@innmetric.com">hello@innmetric.com</a></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <span class="logo" style="font-size:17px">Inn<span>Metric</span></span>
+      <div>Distribution control for independent hotels. English site. <a href="/tr/">Previous Turkish page</a></div>
+      <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const success = document.getElementById("form-success");
+    const error = document.getElementById("form-error");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+      success.style.display = "none";
+      error.style.display = "none";
+
+      try {
+        const body = new URLSearchParams(new FormData(form)).toString();
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body
+        });
+        if (!response.ok) throw new Error("submit failed");
+        form.reset();
+        success.style.display = "block";
+      } catch (_) {
+        error.style.display = "block";
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
