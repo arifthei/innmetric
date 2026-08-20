@@ -3,238 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InnMetric | Hotel distribution control for independent GCC hotels</title>
-  <meta name="description" content="InnMetric audits, repairs with approval, verifies live results, and monitors hotel distribution across PMS, channel manager, booking engine, and OTA accounts. Independent hotels in the GCC." />
-  <meta property="og:title" content="InnMetric | Hotel distribution control" />
-  <meta property="og:description" content="Vendor-neutral distribution control for independent GCC hotels. Conversation first. No invented revenue claims." />
+  <title>InnMetric | Distribution control for independent GCC hotels</title>
+  <meta name="description" content="InnMetric audits hotel pricing, availability, restrictions, mapping and channel outcomes. We implement approved corrections then verify the live booking result." />
+  <meta property="og:title" content="InnMetric | Distribution control for independent GCC hotels" />
+  <meta property="og:description" content="InnMetric audits hotel pricing, availability, restrictions, mapping and channel outcomes. We implement approved corrections then verify the live booking result." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://innmetric.com" />
+  <meta property="og:url" content="https://innmetric.com/" />
+  <meta property="og:image" content="https://innmetric.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://innmetric.com/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --card2: #0d1526;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --muted2: #cbd5e1;
-      --line: rgba(255,255,255,.1);
-      --accent: #38bdf8;
-      --accent-soft: #bae6fd;
-      --dark-text: #0f172a;
-      --white: #ffffff;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, 92%); margin: 0 auto; }
-    header {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      background: rgba(15,23,42,.94);
-      backdrop-filter: blur(14px);
-      z-index: 20;
-    }
-    .nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
-    .logo { font-size: 21px; font-weight: 800; letter-spacing: -.04em; }
-    .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 22px; align-items: center; font-size: 14px; font-weight: 500; color: var(--muted); }
-    .nav-links a:hover { color: var(--white); }
-    .button {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: var(--accent); color: #082f49;
-      font-family: inherit; font-weight: 700; font-size: 14px;
-      padding: 11px 18px; border-radius: 999px; border: 0; cursor: pointer;
-    }
-    .button:hover { filter: brightness(1.05); }
-    .button.ghost {
-      background: transparent; color: var(--white);
-      border: 1px solid var(--line);
-    }
-    .button.lg { padding: 13px 22px; font-size: 15px; }
-    .button:disabled { opacity: .6; cursor: not-allowed; }
-    .hero { padding: 72px 0 56px; }
-    .eyebrow {
-      display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--accent-soft); margin-bottom: 16px;
-    }
-    h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.12; letter-spacing: -.04em; margin: 0 0 20px; }
-    .lede { font-size: 18px; color: var(--muted2); max-width: 640px; margin: 0 0 28px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-    .chip {
-      font-size: 13px; color: var(--muted2); border: 1px solid var(--line);
-      border-radius: 999px; padding: 6px 12px; background: rgba(255,255,255,.03);
-    }
-    section { padding: 64px 0; border-top: 1px solid var(--line); }
-    h2 { font-size: clamp(24px, 3vw, 34px); letter-spacing: -.03em; margin: 0 0 12px; }
-    .section-lead { color: var(--muted); max-width: 620px; margin: 0 0 32px; }
-    .grid-3, .grid-2 { display: grid; gap: 16px; }
-    @media (min-width: 800px) {
-      .grid-3 { grid-template-columns: repeat(3, 1fr); }
-      .grid-2 { grid-template-columns: 1fr 1fr; }
-    }
-    .card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: 16px; padding: 22px;
-    }
-    .card h3 { margin: 0 0 8px; font-size: 17px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
-    .steps { counter-reset: step; display: grid; gap: 14px; }
-    @media (min-width: 800px) { .steps { grid-template-columns: repeat(4, 1fr); } }
-    .step { background: var(--card2); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
-    .step::before {
-      counter-increment: step; content: counter(step);
-      display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center;
-      border-radius: 999px; background: var(--accent); color: #082f49;
-      font-weight: 800; font-size: 13px; margin-bottom: 12px;
-    }
-    .step h3 { margin: 0 0 8px; font-size: 16px; }
-    .step p { margin: 0; color: var(--muted); font-size: 14px; }
-    .not-list { margin: 0; padding-left: 18px; color: var(--muted); }
-    .not-list li { margin: 6px 0; }
-    .founders { display: grid; gap: 16px; }
-    @media (min-width: 800px) { .founders { grid-template-columns: 1fr 1fr; } }
-    .form-grid { display: grid; gap: 14px; }
-    @media (min-width: 700px) { .form-grid { grid-template-columns: 1fr 1fr; } }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group.full { grid-column: 1 / -1; }
-    label { font-size: 13px; font-weight: 600; color: var(--muted2); }
-    input, select, textarea {
-      font-family: inherit; font-size: 15px; color: var(--text);
-      background: #0b1220; border: 1px solid var(--line); border-radius: 10px;
-      padding: 11px 12px;
-    }
-    textarea { min-height: 110px; resize: vertical; }
-    .honeypot { position: absolute; left: -9999px; }
-    .form-note { color: var(--muted); font-size: 13px; margin-left: 12px; }
-    .form-success, .form-error { display: none; margin-top: 14px; padding: 12px 14px; border-radius: 10px; font-size: 14px; }
-    .form-success { background: rgba(56,189,248,.12); border: 1px solid rgba(56,189,248,.3); }
-    .form-error { background: rgba(248,113,113,.12); border: 1px solid rgba(248,113,113,.35); }
-    .cta-layout { display: grid; gap: 28px; }
-    @media (min-width: 900px) { .cta-layout { grid-template-columns: 1.4fr .8fr; } }
-    .side-card { background: var(--card2); border: 1px solid var(--line); border-radius: 16px; padding: 22px; height: fit-content; }
-    .side-card ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); }
-    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
-    .footer-grid { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
-    footer a { color: var(--accent); font-weight: 600; }
-    @media (max-width: 720px) {
-      .nav-links { display: none; }
-      .hero { padding: 48px 0 36px; }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "InnMetric",
+    "url": "https://innmetric.com/",
+    "logo": "https://innmetric.com/assets/favicon.svg",
+    "email": "hello@innmetric.com",
+    "areaServed": "GCC",
+    "founder": [
+      { "@type": "Person", "name": "Tunahan Aras" },
+      { "@type": "Person", "name": "Mert Carikci" }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip" href="#content">Skip to content</a>
   <header>
     <div class="container nav">
       <a class="logo" href="/">Inn<span>Metric</span></a>
-      <nav class="nav-links">
-        <a href="#problem">Problem</a>
-        <a href="#work">What we do</a>
-        <a href="#who">Who it is for</a>
-        <a href="#founders">Founders</a>
-        <a href="#contact">Contact</a>
+      <nav id="site-nav" class="nav-links" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
       </nav>
-      <a class="button" href="#contact">Request a conversation</a>
+      <a class="button nav-cta" href="/contact/">Request a distribution review</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <div class="hero">
       <div class="container">
-        <span class="eyebrow">Independent hotels · GCC · Riyadh and Jeddah first</span>
-        <h1>Your systems can be connected and still commercially wrong.</h1>
-        <p class="lede">InnMetric is a vendor-neutral distribution-control service. We audit the live sales setup across your PMS, channel manager, booking engine, and OTA accounts, implement only approved corrections, verify the guest-facing result, and watch whether the issue returns.</p>
+        <span class="eyebrow">Hotel distribution control for independent GCC hotels</span>
+        <h1>Connected does not always mean correct.</h1>
+        <p class="lede">Your PMS, channel manager, booking engine and OTA accounts may all be connected while a room remains unsellable, a rate plan drifts, a restriction blocks demand or a corrected issue returns.</p>
+        <p class="lede">InnMetric finds the defect, documents the evidence, implements only approved changes and verifies the live result.</p>
         <div class="hero-actions">
-          <a class="button lg" href="#contact">Request a conversation</a>
-          <a class="button ghost lg" href="#work">How the work runs</a>
+          <a class="button lg" href="/contact/">Request a distribution review</a>
+          <a class="button ghost lg" href="/how-it-works/">See how the control loop works</a>
         </div>
-        <div class="chips">
-          <span class="chip">Not a PMS</span>
-          <span class="chip">Not a channel manager</span>
-          <span class="chip">Not SaaS yet</span>
-          <span class="chip">Founder-delivered</span>
-        </div>
+        <p class="support-line">Works with your existing systems. Founder delivered. Every change is logged.</p>
       </div>
     </div>
 
     <section id="problem">
       <div class="container">
-        <span class="eyebrow">The gap</span>
-        <h2>Platforms move the configuration they are given. They do not own the commercial result.</h2>
-        <p class="section-lead">A hotel can show as connected while rooms are invisible on sellable dates, rate plans are mapped incorrectly, restrictions block demand, or a correction is later reversed. No single vendor is fully accountable for checking the guest-facing outcome across the stack.</p>
+        <span class="eyebrow">The ownership gap</span>
+        <h2>Several systems can work as designed while the hotel still sells the wrong offer.</h2>
+        <p class="section-lead">Distribution defects rarely sit inside one screen. They emerge from the combined behavior of room types, rate plans, occupancy rules, restrictions, inventory, promotions, taxes and channel mappings. Each vendor sees part of the chain. The hotel is left to prove what happened then coordinate the correction.</p>
         <div class="grid-3">
           <article class="card">
-            <h3>Sellability</h3>
-            <p>Inventory and price exist, but a stop-sell, stay restriction, or incomplete mapping keeps the room off a channel.</p>
+            <h3>A room exists but cannot be bought</h3>
+            <p>Inventory appears open in one system while a stop sell, length-of-stay rule or incomplete mapping removes it from a channel.</p>
           </article>
           <article class="card">
-            <h3>Rate structure</h3>
-            <p>Derived rates drop, promotions stack, occupancy pricing drifts, or refundable and non-refundable plans fall out of relationship.</p>
+            <h3>The public offer drifts</h3>
+            <p>Refundable and non-refundable rates lose their intended relationship. Occupancy pricing breaks. Promotions stack in a way nobody intended.</p>
           </article>
           <article class="card">
-            <h3>Control</h3>
-            <p>A fix is undocumented, reversed, or recreated. The same problem returns and nobody can show what changed.</p>
+            <h3>A fix does not stay fixed</h3>
+            <p>A change is applied without a complete record. Another update reverses it. The original problem returns without a clear owner.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="work">
+    <section id="outcomes">
       <div class="container">
-        <span class="eyebrow">The control loop</span>
-        <h2>Detect, evidence, approve, repair, verify, monitor.</h2>
-        <p class="section-lead">We do not promise that every correction increases revenue. We promise a disciplined review, documented and approved changes, live verification, and a record of what was found, changed, and confirmed.</p>
-        <div class="steps">
-          <article class="step">
-            <h3>Baseline</h3>
-            <p>Map the stack and test the live guest journey under recorded dates, occupancy, currency, and locale.</p>
+        <span class="eyebrow">What InnMetric controls</span>
+        <h2>From visible symptom to verified closure.</h2>
+        <p class="section-lead">InnMetric creates one evidence trail across the booking journey and the authorized hotel systems behind it.</p>
+        <ul class="checklist">
+          <li>A baseline of the current live setup</li>
+          <li>Reproducible evidence with dates, occupancy, currency and channel conditions</li>
+          <li>Root-cause investigation after authorized access</li>
+          <li>A named correction plan with risk and approval status</li>
+          <li>Implementation inside agreed systems</li>
+          <li>Guest-facing verification after each material change</li>
+          <li>A recurrence check on the agreed schedule</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h2>Three ways the work is scoped.</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Distribution Baseline Audit</h3>
+            <p>Understand what is wrong, what is only suspected and what should be fixed first.</p>
+            <a class="inline" href="/services/#baseline">Explore the baseline audit</a>
           </article>
-          <article class="step">
-            <h3>Evidence</h3>
-            <p>Show what appeared on which surface, with conditions attached. Root cause stays unknown until we have authorized access.</p>
+          <article class="card">
+            <h3>Approved Repair Sprint</h3>
+            <p>Turn approved findings into controlled changes with QA and a rollback record.</p>
+            <a class="inline" href="/services/#repair">Explore implementation</a>
           </article>
-          <article class="step">
-            <h3>Approved repair</h3>
-            <p>Only the hotel approves live changes. High-risk work is logged with a rollback path.</p>
-          </article>
-          <article class="step">
-            <h3>Live check</h3>
-            <p>We retest the guest-facing result and can keep watching for recurrence if the hotel wants ongoing control.</p>
+          <article class="card">
+            <h3>Ongoing Distribution Control</h3>
+            <p>Maintain pricing, availability, mapping and channel consistency after the baseline.</p>
+            <a class="inline" href="/services/#control">Explore ongoing control</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="who">
+    <section id="method">
       <div class="container">
-        <span class="eyebrow">Fit</span>
-        <h2>Built for independent hotels that cannot staff a full distribution team.</h2>
+        <span class="eyebrow">The method</span>
+        <h2>Detect. Evidence. Approve. Repair. Verify. Recheck.</h2>
+        <div class="steps steps-6">
+          <article class="step">
+            <h3>Establish the baseline</h3>
+            <p>We map the stack and test the live guest journey under recorded conditions.</p>
+          </article>
+          <article class="step">
+            <h3>Separate facts from hypotheses</h3>
+            <p>We document what appeared publicly. Internal cause remains unknown until access confirms it.</p>
+          </article>
+          <article class="step">
+            <h3>Obtain named approval</h3>
+            <p>The hotel decides which changes may be made. High-risk actions require an explicit rollback path.</p>
+          </article>
+          <article class="step">
+            <h3>Apply the correction</h3>
+            <p>We update the agreed PMS, channel-manager, booking-engine or OTA configuration.</p>
+          </article>
+          <article class="step">
+            <h3>Verify the live result</h3>
+            <p>We retest the guest-facing outcome. A back-office change is not treated as complete until the result is visible where the guest buys.</p>
+          </article>
+          <article class="step">
+            <h3>Recheck what matters</h3>
+            <p>We revisit agreed outcomes on a defined cadence. Recurring work begins only after the baseline is understood.</p>
+          </article>
+        </div>
+        <figure class="artifact">
+          <img src="/assets/illustrations/control-loop.svg" alt="Illustrative control loop from detect through recheck" />
+          <figcaption>Illustrative example. Not a client record.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="fit">
+      <div class="container">
+        <span class="eyebrow">Best fit</span>
+        <h2>Built for hotels that need senior distribution control without another full-time department.</h2>
         <div class="grid-2">
           <article class="card">
-            <h3>This is for</h3>
-            <p>Independent urban hotels, serviced apartments, aparthotels, and small local groups. Typically 20–150 rooms. Direct sales plus at least two OTAs. A GM, owner, or revenue lead who can approve access.</p>
+            <h3>Strong fit</h3>
+            <ul class="checklist">
+              <li>Independent hotels and resorts</li>
+              <li>Aparthotels with hotel-style distribution</li>
+              <li>Small local hotel groups</li>
+              <li>Properties selling through a direct booking engine plus two or more OTAs</li>
+              <li>Teams where the owner, GM or commercial lead can approve access and changes</li>
+            </ul>
           </article>
           <article class="card">
-            <h3>This is not</h3>
+            <h3>Usually not a fit</h3>
             <ul class="not-list">
-              <li>A replacement for HotelRunner, SiteMinder, or your booking engine</li>
-              <li>A revenue-management robot or “AI auditor”</li>
-              <li>A marketing, SEO, or review-management agency</li>
-              <li>A fit for large international chains in this first cohort</li>
+              <li>Large international chains with centralized distribution teams</li>
+              <li>Individually listed homes that are not hotel-operated</li>
+              <li>Properties seeking only social media, advertising or review responses</li>
+              <li>Teams that cannot authorize access or name an approver</li>
             </ul>
           </article>
         </div>
@@ -243,86 +194,48 @@
 
     <section id="founders">
       <div class="container">
-        <span class="eyebrow">Who you speak with</span>
-        <h2>Two founders. Domain judgment and operational productization.</h2>
+        <span class="eyebrow">Who does the work</span>
+        <h2>The people in the first call remain accountable for delivery.</h2>
         <div class="founders">
           <article class="card">
             <h3>Tunahan Aras</h3>
-            <p>Hotel distribution operator. Rate, restriction, mapping, reservation, and integration work across live partner cases. He decides whether a public difference is a real control problem.</p>
+            <p>Hotel distribution operator with experience across live rate, restriction, mapping, reservation and partner-support cases inside channel-manager environments.</p>
           </article>
           <article class="card">
             <h3>Mert Carikci</h3>
-            <p>Product owner and systems analyst. Turns messy operational work into states, evidence, approvals, QA, and a repeatable delivery record.</p>
+            <p>Product owner and systems analyst with experience turning complex operational work into controlled states, approval paths, QA evidence and repeatable delivery.</p>
           </article>
+        </div>
+        <p class="support-line"><a class="button ghost" href="/about/">Meet the founders and operating principles</a></p>
+      </div>
+    </section>
+
+    <section id="trust">
+      <div class="container">
+        <h2>No invented revenue claims. No invisible live changes.</h2>
+        <p class="section-lead">InnMetric will not claim that every public difference is a defect. It will not estimate lost revenue without the required hotel data. It will not make a live change without named approval.</p>
+        <p class="section-lead">What you receive is a documented operating record that shows what was observed, what was authorized, what changed and what was verified.</p>
+        <div class="grid-2">
+          <figure class="artifact">
+            <img src="/assets/illustrations/evidence-register.svg" alt="Illustrative evidence register with observation, conditions, status and owner" />
+            <figcaption>Illustrative example. Not a client record.</figcaption>
+          </figure>
+          <figure class="artifact">
+            <img src="/assets/illustrations/change-log.svg" alt="Illustrative change log with approval and live verification" />
+            <figcaption>Illustrative example. Not a client record.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="start">
       <div class="container">
-        <span class="eyebrow">Start</span>
-        <h2>Request a short conversation.</h2>
-        <p class="section-lead">Tell us the property and who owns distribution. We will reply and, if there is a fit, book a meeting. This is not an automated audit and not a price menu.</p>
-        <div class="cta-layout">
-          <form id="contact-form" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="inquiry" />
-            <p class="honeypot">
-              <label>Leave blank <input name="bot-field" /></label>
-            </p>
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="property-name">Property name</label>
-                <input id="property-name" name="property-name" type="text" required maxlength="120" placeholder="Hotel or serviced apartment" />
-              </div>
-              <div class="form-group">
-                <label for="contact-name">Your name</label>
-                <input id="contact-name" name="contact-name" type="text" required maxlength="100" />
-              </div>
-              <div class="form-group">
-                <label for="email">Work email</label>
-                <input id="email" name="email" type="email" required maxlength="254" />
-              </div>
-              <div class="form-group">
-                <label for="city">City</label>
-                <input id="city" name="city" type="text" maxlength="80" placeholder="Riyadh, Jeddah, …" />
-              </div>
-              <div class="form-group">
-                <label for="role">Your role</label>
-                <select id="role" name="role" required>
-                  <option value="">Select</option>
-                  <option>Owner / managing director</option>
-                  <option>General manager</option>
-                  <option>Revenue / e-commerce / distribution</option>
-                  <option>Operations / cluster</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="channels">Active channels (if known)</label>
-                <input id="channels" name="channels" type="text" maxlength="200" placeholder="Direct, Booking.com, Expedia, …" />
-              </div>
-              <div class="form-group full">
-                <label for="message">What you want us to look at <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
-                <textarea id="message" name="message" maxlength="5000" placeholder="A recent overbooking, a room missing on one OTA, a rate that will not sync — whatever is on your mind."></textarea>
-              </div>
-            </div>
-            <div style="margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px">
-              <button class="button lg" type="submit">Send inquiry</button>
-              <span class="form-note">We reply to hello@innmetric.com inquiries directly.</span>
-            </div>
-            <div class="form-success" id="form-success">Thank you. Your inquiry has been sent. We will reply by email.</div>
-            <div class="form-error" id="form-error">The form could not be sent. Email us at hello@innmetric.com.</div>
-          </form>
-          <aside class="side-card">
-            <h3 style="margin:0 0 8px;font-size:17px">What happens next</h3>
-            <ul>
-              <li>We confirm the property and who decides.</li>
-              <li>If there is a fit, we book a short call.</li>
-              <li>Scope and price are discussed with you — not guessed on this page.</li>
-              <li>No live change is made without named approval.</li>
-            </ul>
-            <p style="margin:18px 0 0;color:var(--muted);font-size:14px">Prefer email: <a href="mailto:hello@innmetric.com">hello@innmetric.com</a></p>
-          </aside>
+        <span class="eyebrow">Start with the property</span>
+        <h2>Tell us where distribution control is breaking down.</h2>
+        <p class="section-lead">Share the hotel name, active channels and the problem you are seeing. We will confirm whether a baseline review is the right next step.</p>
+        <div class="hero-actions">
+          <a class="button lg" href="/contact/">Request a distribution review</a>
+          <a class="button ghost lg" href="mailto:hello@innmetric.com">Email hello@innmetric.com</a>
         </div>
       </div>
     </section>
@@ -330,40 +243,15 @@
 
   <footer>
     <div class="container footer-grid">
-      <span class="logo" style="font-size:17px">Inn<span>Metric</span></span>
-      <div>Distribution control for independent hotels. English site. <a href="/tr/">Previous Turkish page</a></div>
+      <a class="logo" href="/" style="font-size:17px">Inn<span>Metric</span></a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
+      </nav>
       <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>
     </div>
   </footer>
-
-  <script>
-    const form = document.getElementById("contact-form");
-    const success = document.getElementById("form-success");
-    const error = document.getElementById("form-error");
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const button = form.querySelector('button[type="submit"]');
-      button.disabled = true;
-      success.style.display = "none";
-      error.style.display = "none";
-
-      try {
-        const body = new URLSearchParams(new FormData(form)).toString();
-        const response = await fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body
-        });
-        if (!response.ok) throw new Error("submit failed");
-        form.reset();
-        success.style.display = "block";
-      } catch (_) {
-        error.style.display = "block";
-      } finally {
-        button.disabled = false;
-      }
-    });
-  </script>
+  <script src="/js/nav.js"></script>
 </body>
 </html>

@@ -1,22 +1,25 @@
 # InnMetric
 
-Public website for [innmetric.com](https://innmetric.com).
+Public website for [innmetric.com](https://innmetric.com). Static HTML on Netlify.
 
 ## Local
 
-Open `index.html` in a browser, or:
-
 ```bash
+npm run lint:copy
 npx --yes serve .
 ```
+
+Routes: `/`, `/services/`, `/how-it-works/`, `/about/`, `/faq/`, `/privacy/`, `/terms/`, `/contact/`, `/thanks/`.
 
 ## Deploy
 
 Linked to the existing Netlify site. From this folder:
 
 ```bash
-npx --yes netlify-cli deploy --prod
+.\deploy.ps1
 ```
+
+`deploy.ps1` runs `npm run lint:copy` then `npx netlify deploy --prod --dir .`. Do not create a second Netlify site.
 
 Git remote (Cursor Origin):
 

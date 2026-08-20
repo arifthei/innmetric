@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="InnMetric hotel distribution control">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="36" y="36" width="1128" height="558" rx="24" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <text x="600" y="300" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="800" fill="#f8fafc">Inn<tspan fill="#38bdf8">Metric</tspan></text>
+  <text x="600" y="360" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4" fill="#bae6fd">HOTEL DISTRIBUTION CONTROL</text>
+</svg>

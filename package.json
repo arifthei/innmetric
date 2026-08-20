@@ -2,8 +2,10 @@
   "name": "innmetric-site",
   "private": true,
   "description": "innmetric.com static site",
+  "type": "module",
   "scripts": {
-    "deploy": "netlify deploy --prod --dir ."
+    "lint:copy": "node scripts/lint-copy.mjs",
+    "deploy": "npm run lint:copy && netlify deploy --prod --dir ."
   },
   "devDependencies": {
     "netlify-cli": "^23.11.1"

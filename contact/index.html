@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a distribution review | InnMetric</title>
+  <meta name="description" content="Share the property, active channels and the problem you are seeing. InnMetric will confirm whether a baseline audit is the right next step." />
+  <meta property="og:title" content="Request a distribution review | InnMetric" />
+  <meta property="og:description" content="Share the property, active channels and the problem you are seeing. InnMetric will confirm whether a baseline audit is the right next step." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://innmetric.com/contact/" />
+  <meta property="og:image" content="https://innmetric.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://innmetric.com/contact/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">Inn<span>Metric</span></a>
+      <nav id="site-nav" class="nav-links" aria-label="Primary">
+        <a href="/services/">Services</a>
+        <a href="/how-it-works/">How it works</a>
+        <a href="/about/">About</a>
+        <a href="/faq/">FAQ</a>
+      </nav>
+      <a class="button nav-cta" href="/contact/" aria-current="page">Request a distribution review</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Request a distribution review</h1>
+        <p class="lede">Tell us enough to determine whether InnMetric is the right fit. Do not send passwords or confidential guest data through this form.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container cta-layout">
+        <form name="distribution-review" method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="distribution-review" />
+          <p class="honeypot">
+            <label>Do not fill this field <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="property-name">Property name</label>
+              <input id="property-name" name="property-name" type="text" required maxlength="120" />
+            </div>
+            <div class="form-group">
+              <label for="city-country">City and country</label>
+              <input id="city-country" name="city-country" type="text" required maxlength="120" />
+            </div>
+            <div class="form-group">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" name="contact-name" type="text" required maxlength="100" />
+            </div>
+            <div class="form-group">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" required maxlength="254" />
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select id="role" name="role" required>
+                <option value="">Select</option>
+                <option>Owner or managing director</option>
+                <option>General manager</option>
+                <option>Revenue, e-commerce or distribution</option>
+                <option>Operations or cluster</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="property-type">Property type</label>
+              <select id="property-type" name="property-type" required>
+                <option value="">Select</option>
+                <option>Independent hotel</option>
+                <option>Resort</option>
+                <option>Aparthotel</option>
+                <option>Small hotel group</option>
+                <option>Other hotel-operated property</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rooms">Number of rooms</label>
+              <input id="rooms" name="rooms" type="text" required maxlength="40" />
+            </div>
+            <div class="form-group">
+              <label for="booking-engine">Direct booking engine</label>
+              <input id="booking-engine" name="booking-engine" type="text" required maxlength="120" />
+            </div>
+            <div class="form-group full">
+              <label for="otas">Active OTAs</label>
+              <input id="otas" name="otas" type="text" required maxlength="240" />
+            </div>
+            <div class="form-group full">
+              <label for="systems">PMS and channel manager if known</label>
+              <input id="systems" name="systems" type="text" maxlength="200" />
+            </div>
+            <div class="form-group full">
+              <label for="summary">Problem summary</label>
+              <textarea id="summary" name="summary" required maxlength="5000" placeholder="What the team sees, which channels are involved and who can approve access."></textarea>
+            </div>
+            <div class="form-group full">
+              <label class="consent" for="consent">
+                <input id="consent" name="consent" type="checkbox" value="yes" required />
+                <span>I agree that InnMetric may contact me about this request.</span>
+              </label>
+            </div>
+          </div>
+          <div style="margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+            <button class="button lg" type="submit">Send review request</button>
+            <span class="form-note">If the form does not send, email hello@innmetric.com and do not include passwords or guest data.</span>
+          </div>
+        </form>
+        <aside class="side-card">
+          <h3 style="margin:0 0 8px;font-size:17px">Privacy notice</h3>
+          <p style="margin:0;color:var(--muted);font-size:14px">InnMetric uses the information in this form only to assess and respond to your request. Do not submit passwords, payment data or guest information. See the <a href="/privacy/">Privacy Notice</a> for retention, deletion and contact details.</p>
+          <p style="margin:18px 0 0;color:var(--muted);font-size:14px">Prefer email: <a href="mailto:hello@innmetric.com">hello@innmetric.com</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <a class="logo" href="/" style="font-size:17px">Inn<span>Metric</span></a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>
+    </div>
+  </footer>
+  <script src="/js/nav.js"></script>
+</body>
+</html>

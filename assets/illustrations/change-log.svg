@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 320" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative change log</title>
+  <desc id="desc">Sample rows for approved live changes with verification state. Illustrative example. Not a client record.</desc>
+  <rect width="920" height="320" rx="16" fill="#0d1526"/>
+  <text x="24" y="40" font-family="Inter, Arial, sans-serif" font-size="13" fill="#bae6fd">CHANGE LOG</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="13">
+    <rect x="24" y="64" width="872" height="36" rx="8" fill="#111827"/>
+    <text x="40" y="87" fill="#f8fafc" font-weight="700">Change</text>
+    <text x="340" y="87" fill="#f8fafc" font-weight="700">System</text>
+    <text x="520" y="87" fill="#f8fafc" font-weight="700">Approval</text>
+    <text x="700" y="87" fill="#f8fafc" font-weight="700">Live result</text>
+    <text x="40" y="140" fill="#a8b8cc">Restore derived BAR</text>
+    <text x="340" y="140" fill="#a8b8cc">Channel manager</text>
+    <text x="520" y="140" fill="#38bdf8">Named GM</text>
+    <text x="700" y="140" fill="#a8b8cc">Verified</text>
+    <text x="40" y="184" fill="#a8b8cc">Open mapped room type</text>
+    <text x="340" y="184" fill="#a8b8cc">OTA extranet</text>
+    <text x="520" y="184" fill="#38bdf8">Named owner</text>
+    <text x="700" y="184" fill="#a8b8cc">Retest pending</text>
+    <text x="40" y="228" fill="#a8b8cc">Clear stop-sell on dates</text>
+    <text x="340" y="228" fill="#a8b8cc">PMS</text>
+    <text x="520" y="228" fill="#38bdf8">Named GM</text>
+    <text x="700" y="228" fill="#a8b8cc">Verified</text>
+  </g>
+  <text x="24" y="292" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">Illustrative example. Not a client record.</text>
+</svg>
