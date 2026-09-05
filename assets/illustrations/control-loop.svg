@@ -1,24 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" role="img" aria-labelledby="title desc">
-  <title id="title">Illustrative distribution control loop</title>
-  <desc id="desc">Six labelled stages from Detect through Recheck. Illustrative example. Not a client record.</desc>
-  <rect width="920" height="280" rx="16" fill="#0d1526"/>
-  <g font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#082f49">
-    <rect x="24" y="90" width="120" height="56" rx="12" fill="#38bdf8"/>
-    <text x="84" y="124" text-anchor="middle">Detect</text>
-    <rect x="176" y="90" width="120" height="56" rx="12" fill="#38bdf8"/>
-    <text x="236" y="124" text-anchor="middle">Evidence</text>
-    <rect x="328" y="90" width="120" height="56" rx="12" fill="#38bdf8"/>
-    <text x="388" y="124" text-anchor="middle">Approve</text>
-    <rect x="480" y="90" width="120" height="56" rx="12" fill="#38bdf8"/>
-    <text x="540" y="124" text-anchor="middle">Repair</text>
-    <rect x="632" y="90" width="120" height="56" rx="12" fill="#38bdf8"/>
-    <text x="692" y="124" text-anchor="middle">Verify</text>
-    <rect x="784" y="90" width="112" height="56" rx="12" fill="#38bdf8"/>
-    <text x="840" y="124" text-anchor="middle">Recheck</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative distribution control record</title>
+  <desc id="desc">Example work file. Independent GCC hotel. Direct and OTA. Open in PMS and not bookable. Illustrative only.</desc>
+  <rect width="920" height="420" rx="16" fill="#0b1220"/>
+  <rect x="1" y="1" width="918" height="418" rx="15" fill="none" stroke="rgba(255,255,255,0.1)"/>
+  <text x="36" y="48" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#bae6fd">CONTROL RECORD</text>
+  <rect x="700" y="28" width="184" height="28" rx="14" fill="#38bdf8"/>
+  <text x="792" y="47" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#082f49">NOT BOOKABLE</text>
+  <line x1="36" y1="72" x2="884" y2="72" stroke="rgba(255,255,255,0.1)"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="36" y="118" font-size="13" fill="#a8b8cc">Property</text>
+    <text x="220" y="118" font-size="18" font-weight="600" fill="#f8fafc">Independent GCC hotel</text>
+    <line x1="36" y1="140" x2="884" y2="140" stroke="rgba(255,255,255,0.08)"/>
+    <text x="36" y="176" font-size="13" fill="#a8b8cc">Channel</text>
+    <text x="220" y="176" font-size="18" font-weight="600" fill="#f8fafc">Direct and OTA</text>
+    <line x1="36" y1="198" x2="884" y2="198" stroke="rgba(255,255,255,0.08)"/>
+    <text x="36" y="234" font-size="13" fill="#a8b8cc">Status</text>
+    <text x="220" y="234" font-size="18" font-weight="600" fill="#f8fafc">Open in PMS / not bookable</text>
+    <line x1="36" y1="256" x2="884" y2="256" stroke="rgba(255,255,255,0.08)"/>
+    <text x="36" y="292" font-size="13" fill="#a8b8cc">Condition</text>
+    <text x="220" y="292" font-size="18" font-weight="600" fill="#f8fafc">Recorded stay dates and occupancy</text>
   </g>
-  <g fill="none" stroke="#94a3b8" stroke-width="2">
-    <path d="M144 118h32M296 118h32M448 118h32M600 118h32M752 118h32"/>
+  <line x1="36" y1="328" x2="884" y2="328" stroke="rgba(255,255,255,0.1)"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#38bdf8">
+    <text x="36" y="368">Observed</text>
+    <text x="196" y="368">Approved</text>
+    <text x="356" y="368">Changed</text>
+    <text x="516" y="368">Verified</text>
+    <text x="676" y="368">Rechecked</text>
   </g>
-  <text x="24" y="40" font-family="Inter, Arial, sans-serif" font-size="13" fill="#bae6fd">CONTROL LOOP</text>
-  <text x="24" y="250" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">Illustrative example. Not a client record.</text>
 </svg>

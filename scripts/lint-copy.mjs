@@ -21,29 +21,29 @@ const bannedPhrases = [
 
 const errors = [];
 
-function walk(dir, out = []) {
+function walk(dir, { skipWeb = false } = {}, out = []) {
   for (const name of readdirSync(dir)) {
-    if (name === "node_modules" || name === ".git" || name === ".netlify") continue;
+    if (
+      name === "node_modules" ||
+      name === ".git" ||
+      name === ".netlify" ||
+      name === "_context" ||
+      name === ".next"
+    ) {
+      continue;
+    }
     const full = join(dir, name);
     const rel = relative(root, full).split(sep).join("/");
     if (rel === "archive" || rel.startsWith("archive/")) continue;
+    if (skipWeb && (rel === "web" || rel.startsWith("web/"))) continue;
     const stat = statSync(full);
-    if (stat.isDirectory()) walk(full, out);
-    else if (name.endsWith(".html")) out.push(full);
+    if (stat.isDirectory()) walk(full, { skipWeb }, out);
+    else out.push(full);
   }
   return out;
 }
 
-const files = walk(root);
-if (!files.length) {
-  console.error("lint-copy: no HTML files found");
-  process.exit(1);
-}
-
-for (const file of files) {
-  const rel = relative(root, file).split(sep).join("/");
-  const text = readFileSync(file, "utf8");
-
+function lintText(rel, text, { requireCta }) {
   if (text.includes("\u2014")) errors.push(`${rel}: em dash`);
   if (text.includes("\u2013")) errors.push(`${rel}: en dash`);
   if (/, and\b/.test(text)) errors.push(`${rel}: Oxford comma (", and")`);
@@ -56,8 +56,47 @@ for (const file of files) {
     }
   }
 
-  if (!text.includes("Request a distribution review")) {
+  if (requireCta && !text.includes("Request a distribution review")) {
     errors.push(`${rel}: missing site-wide CTA`);
+  }
+}
+
+const htmlFiles = walk(root, { skipWeb: true }).filter((file) => file.endsWith(".html"));
+if (!htmlFiles.length) {
+  console.error("lint-copy: no HTML files found");
+  process.exit(1);
+}
+
+for (const file of htmlFiles) {
+  const rel = relative(root, file).split(sep).join("/");
+  lintText(rel, readFileSync(file, "utf8"), { requireCta: true });
+}
+
+const webSrc = join(root, "web", "src");
+let webFiles = [];
+try {
+  webFiles = walk(webSrc).filter((file) => file.endsWith(".ts") || file.endsWith(".tsx"));
+} catch {
+  webFiles = [];
+}
+
+for (const file of webFiles) {
+  const rel = relative(root, file).split(sep).join("/");
+  lintText(rel, readFileSync(file, "utf8"), { requireCta: false });
+}
+
+if (webFiles.length) {
+  const header = webFiles.find((file) =>
+    relative(root, file).split(sep).join("/").endsWith("components/SiteHeader.tsx")
+  );
+  if (!header) {
+    errors.push("web/src/components/SiteHeader.tsx: missing header with site-wide CTA");
+  } else {
+    lintText(
+      "web/src/components/SiteHeader.tsx",
+      readFileSync(header, "utf8"),
+      { requireCta: true }
+    );
   }
 }
 
@@ -67,4 +106,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`lint-copy passed (${files.length} HTML files)`);
+console.log(
+  `lint-copy passed (${htmlFiles.length} HTML files, ${webFiles.length} web/src files)`
+);

@@ -4,6 +4,9 @@
   "description": "innmetric.com static site",
   "type": "module",
   "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build:web": "npm --prefix web run build",
+    "lint": "npm --prefix web run lint",
     "lint:copy": "node scripts/lint-copy.mjs",
     "deploy": "npm run lint:copy && npx --yes netlify-cli deploy --prod --dir ."
   }

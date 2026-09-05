@@ -1,11 +1,11 @@
+.git
 .netlify
 node_modules
 .env
 .env.*
-!.env.example
 *.log
 .DS_Store
 Thumbs.db
-_context/
-web/.next/
-web/out/
+_context
+archive
+web
