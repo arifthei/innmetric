@@ -1,17 +1,19 @@
-/* Layout system measured from paloaltonetworks.com: light ground, full-bleed
-   sections on one inner rail, hairline rules, compact uniform grids. */
+/* Sanzo Wada cartella: kinari paper, byakuroku wash, sumi ink, asagi turquoise. */
 
 :root {
-  --paper: #ffffff;
-  --wash: #f4f4f2;
-  --ink: #141414;
-  --muted: #767676;
-  --line: #d8d8d8;
-  --line-strong: #b9b9b9;
-  --card-bg: #ffffff;
-  --accent: #fa582d;
-  --accent-press: #d8431c;
-  --accent-ink: #ffffff;
+  --paper: #f3ede0;
+  --wash: #d5e4d4;
+  --ink: #1c1917;
+  --muted: #6f6a60;
+  --line: #d6cdb8;
+  --line-strong: #c4baa3;
+  --card-bg: #f7f3ea;
+  --accent: #2f8a84;
+  --accent-press: #2a6b68;
+  --accent-ink: #f3ede0;
+  --warn: #8a4b2e;
+  --warn-ink: #f3ede0;
+  --sumi: #1c1917;
 
   --frame-max: 1320px;
   --gutter: clamp(20px, 7.14285714vw, 120px);
@@ -97,7 +99,7 @@ textarea {
   top: 8px;
   z-index: 100;
   background: var(--ink);
-  color: #fff;
+  color: var(--paper);
   font-size: 13px;
   font-weight: 600;
   padding: 10px 14px;
@@ -125,25 +127,20 @@ textarea {
 }
 
 .section.wash {
-  --card-bg: #ffffff;
+  --card-bg: var(--paper);
   background: var(--wash);
 }
 
 .section.dark {
-  --ink: #ffffff;
-  --muted: rgba(255, 255, 255, 0.7);
-  --line: rgba(255, 255, 255, 0.18);
-  --line-strong: rgba(255, 255, 255, 0.32);
-  --card-bg: rgba(255, 255, 255, 0.04);
-  background-color: #000;
-  background-image: linear-gradient(
-    -145deg,
-    #44180e 0,
-    #3e160d 25%,
-    #1f0b06 50%,
-    #010101 100%
-  );
+  --ink: #f3ede0;
+  --muted: rgba(243, 237, 224, 0.72);
+  --line: rgba(243, 237, 224, 0.18);
+  --line-strong: rgba(243, 237, 224, 0.32);
+  --card-bg: rgba(243, 237, 224, 0.06);
+  background: var(--sumi);
+  background-image: none;
   color: var(--ink);
+  border-block: 1px solid var(--accent);
 }
 
 .section.hair {
@@ -215,7 +212,7 @@ textarea {
   display: flex;
   align-items: center;
   background: var(--ink);
-  color: rgba(255, 255, 255, 0.66);
+  color: rgba(243, 237, 224, 0.7);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -235,7 +232,7 @@ textarea {
 
 header {
   height: var(--nav-h);
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(243, 237, 224, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -266,7 +263,7 @@ header {
   align-items: center;
   justify-content: center;
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
   border-radius: var(--radius);
   font-size: 10px;
   font-weight: 700;
@@ -723,14 +720,14 @@ p {
 .work-file {
   display: flex;
   flex-direction: column;
-  background: var(--card-bg);
+  background: var(--paper);
   border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
+  border-radius: 2px;
   overflow: hidden;
 }
 
 .section.dark .work-file {
-  background: rgba(0, 0, 0, 0.32);
+  background: #261f1c;
 }
 
 .work-file-head {
@@ -749,10 +746,10 @@ p {
 }
 
 .work-file-status {
-  background: var(--accent);
-  color: #fff;
+  background: var(--warn);
+  color: var(--warn-ink);
   padding: 5px 9px;
-  border-radius: var(--radius);
+  border-radius: 2px;
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
@@ -823,7 +820,7 @@ p {
 }
 
 .work-file dl > div.is-hot {
-  background: rgba(250, 88, 45, 0.08);
+  background: rgba(47, 138, 132, 0.12);
   box-shadow: inset 2px 0 0 var(--accent);
 }
 
@@ -1010,8 +1007,8 @@ input[type="checkbox"] {
 .local-notice {
   padding: 14px 16px;
   margin-bottom: 20px;
-  background: rgba(250, 88, 45, 0.07);
-  border: 1px solid rgba(250, 88, 45, 0.3);
+  background: rgba(138, 75, 46, 0.1);
+  border: 1px solid rgba(138, 75, 46, 0.35);
   border-radius: var(--radius);
   font-size: 15px;
 }
@@ -1041,18 +1038,18 @@ input[type="checkbox"] {
 footer {
   margin-top: auto;
   padding: 26px 0;
-  background: var(--ink);
-  color: rgba(255, 255, 255, 0.66);
+  background: var(--sumi);
+  color: rgba(243, 237, 224, 0.7);
   font-size: 14px;
 }
 
 footer .logo {
-  color: #fff;
+  color: var(--paper);
   font-size: 15px;
 }
 
 footer .logo span {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(243, 237, 224, 0.6);
 }
 
 .footer-grid {
@@ -1070,7 +1067,7 @@ footer .logo span {
 }
 
 footer a:hover {
-  color: #fff;
+  color: var(--paper);
 }
 
 /* Scroll reveal. Bidirectional: the observer stays live, so leaving the

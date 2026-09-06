@@ -134,7 +134,7 @@ export default function HomePage() {
       <section className="section dark" id="record">
         <div className="frame stack">
           <Reveal className="intro">
-            <span className="label">The object</span>
+            <span className="label">How a defect closes</span>
             <h2>Observed. Approved. Changed. Verified. Rechecked.</h2>
             <p className="section-lead">
               InnMetric finds the defect, gets named approval, changes the agreed
@@ -186,21 +186,26 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Fit</span>
-            <h2>
-              For hotels that already have systems and still need an owner for the
-              live result.
-            </h2>
+            <h2>You&apos;ll probably enjoy working with us if</h2>
           </Reveal>
           <Reveal index={1}>
             <div className="cols-2">
               <article className="card">
-                <p className="list-head">Strong fit</p>
+                <p className="list-head">This is the work</p>
                 <ul className="checklist">
-                  <li>Independent hotels and resorts</li>
-                  <li>Aparthotels with hotel-style distribution</li>
-                  <li>Small local hotel groups</li>
-                  <li>A direct booking engine plus two or more OTAs</li>
-                  <li>An owner, GM or commercial lead who can approve access</li>
+                  <li>
+                    You already run a PMS, a booking engine and at least two
+                    OTAs. The guest-facing result still drifts.
+                  </li>
+                  <li>You want a named person to approve every live change.</li>
+                  <li>
+                    You care that a room can be bought, not that a push reported
+                    success.
+                  </li>
+                  <li>
+                    You would rather see a recorded observation than an invented
+                    leakage number.
+                  </li>
                 </ul>
               </article>
               <article className="card">

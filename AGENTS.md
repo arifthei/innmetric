@@ -1,6 +1,14 @@
-# InnMetric — agent rules
+# InnMetric agent rules
 
 This repository is the innmetric.com website and git workspace. It is not the sports-assist product. Do not import Google Drive traction packs into this repo.
+
+## Authority and remotes
+
+Mert is the only authority. Agents coordinate through GitHub branches and the files in `docs/`. There is no chief-of-staff role. Latest explicit instruction from Mert wins over an older handoff.
+
+Canonical shared repository: `https://github.com/arifthei/innmetric.git`. The local folder plus that GitHub remote are the source of truth. Cursor Origin may still exist as a leftover remote named `origin`. Do not fetch, push or treat it as canonical.
+
+Read [docs/BRANCHES.md](docs/BRANCHES.md) and [docs/HANDOFF.md](docs/HANDOFF.md) at the start of a website session. Fetch GitHub before assuming a branch is stale.
 
 ## Locked product position
 
@@ -37,6 +45,7 @@ The first offer is a service. Software may follow repeated paid work. Do not pub
 - Primary CTA: `Request a distribution review` to `/contact/`.
 - Never use an em dash or an Oxford comma (`, and` / `, or`).
 - Do not publish founder full names on the homepage. Names belong on `/about/`.
+- Keep H1 `A successful push is not a sellable room.`
 - Run `npm run lint:copy` before deploy.
 
 Approved pattern:
@@ -47,19 +56,27 @@ Approved pattern:
 
 Select a small batch of hotels → inspect → contact a named person politely → website as backup → book a meeting → follow up twice → record whether they would pay. Do not blast thousands of addresses.
 
-## Deploy
+## Deploy and branches
 
-Source of truth is this folder. Cursor Origin remote: `https://origin.cursor.com/arifthei/innMetric.git`. Publish to the **existing** Netlify site with `.\deploy.ps1` or `npx netlify deploy --prod`. Do not create a second Netlify site.
+GitHub `main` is production for the **existing** Netlify site. Do not create a second Netlify site. Do not merge `preview` into `main` until Mert authorizes a cutover. Do not merge [PR #1](https://github.com/arifthei/innmetric/pull/1). That branch is a documentation audit.
 
-Production is the root static HTML. `netlify.toml` still publishes `.`. Do not point Netlify at `web/` until a cutover is approved.
+Production is the root static HTML. `netlify.toml` still publishes `.`. Do not point Netlify at `web/`.
 
-A Next.js preview lives in `web/`. Run `npm run dev` from the repo root. Do not run `.\deploy.ps1` as part of preview work. `.netlifyignore` must list `web` so an accidental prod deploy cannot publish that app.
+A Next.js preview lives in `web/` on **`preview`**. That is the implementation branch for visual and copy work. Run `npm run dev` from the repo root. Do not run `.\deploy.ps1` as part of preview work. `.netlifyignore` must list `web` and `docs` so an accidental prod deploy cannot publish the app or agent notes.
+
+`deploy.ps1` and `npx netlify deploy --prod` publish local files to the live site. Use them only for an authorized manual release of the static root.
+
+## Design on preview
+
+The Next app uses a Sanzo Wada cartella: kinari paper, sumi ink, asagi turquoise. Do not restore HotelRunner orange `#fa582d`. Do not apply the Codex spa palette `#F7F8F2` / `#087F80` / `#CBE7A5`. **Not bookable** must not use brand turquoise.
 
 Inquiry inbox: hello@innmetric.com
 
 ## New website chats
 
 Start from `@_context/website/`. That folder is local-only. It is gitignored and excluded from Netlify. Do not link it from public HTML.
+
+When `web/` is present, read `web/AGENTS.md` before writing Next.js code.
 
 ## New hotel prospecting chats
 
