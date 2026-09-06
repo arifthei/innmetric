@@ -2,7 +2,9 @@
 
 Public website for [innmetric.com](https://innmetric.com). Static HTML on Netlify.
 
-The [preview branch](https://github.com/arifthei/innmetric/tree/preview) contains a Next.js company-page rebuild under `web/` plus changes to the root static site. Mert has asked agents to evaluate that branch without editing it. This main-based documentation branch does not contain `web/`.
+**Read [docs/NOTICE.md](docs/NOTICE.md) first.** Mert lifted the hold on editing `preview`. Implementation continues there. Do not merge this documentation PR.
+
+The [preview branch](https://github.com/arifthei/innmetric/tree/preview) contains the Next.js company-page rebuild under `web/` plus the Sanzo Wada pass. This main-based documentation branch does not contain `web/`.
 
 Shared repository: [arifthei/innmetric](https://github.com/arifthei/innmetric).
 
@@ -12,6 +14,7 @@ Read [AGENTS.md](AGENTS.md) and [the current handoff](docs/HANDOFF.md), then con
 
 | File | Purpose |
 | --- | --- |
+| [NOTICE](docs/NOTICE.md) | 2026-09-06 override: work on `preview`, do not merge this PR |
 | [AGENTS.md](AGENTS.md) | Authority, product rules, branch ownership and checkpoint protocol |
 | [Current handoff](docs/HANDOFF.md) | Completed work, decisions, next task and remaining unknowns |
 | [Repository review](docs/REPOSITORY_REVIEW.md) | Source evidence, preview findings and proposed design |

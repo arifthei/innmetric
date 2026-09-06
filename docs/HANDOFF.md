@@ -1,12 +1,16 @@
 # Current handoff
 
+**Stop and read [NOTICE.md](NOTICE.md) first.** Dated 2026-09-06. Mert lifted the hold on `preview`. Website implementation continues there. Do not merge this PR. Do not apply the spa palette in the review. The audit below is historical.
+
 Checkpoint date: 2026-09-05. Coordinator: ChatGPT/Codex in the InnMetric project conversation. Mert retains final authority. Read `../AGENTS.md` first.
 
 ## Resume here
 
-The repository audit is complete for the revisions below. The next work is a turquoise/light-green design iteration on a new branch using the reviewed preview structure, with any additional PC work reconciled before integration. The exact visual proposal remains a recommendation. Do not repeat the completed audit unless the source has changed or a specific finding needs verification.
+The repository audit on this branch is complete. It is not the current implementation home. Next owner: the agent on `preview`. Fetch GitHub, then read `preview`'s `AGENTS.md`, `docs/BRANCHES.md` and `docs/HANDOFF.md`.
 
-This documentation lives on `codex/coordination-and-design-brief`. Read it there before working from another branch. The Git commit containing this file and the PR's current head identify this documentation revision; do not expect a file to contain its own final commit SHA.
+Do not repeat this audit unless a recorded SHA moved. Do not merge this branch into `main`.
+
+This documentation lives on `codex/coordination-and-design-brief`. Agents on `main` or `preview` will not see it unless they open this branch or [PR #1](https://github.com/arifthei/innmetric/pull/1).
 
 ## Verified source state
 
