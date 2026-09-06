@@ -4,6 +4,13 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Hero wheel and shared intent, 2026-09-06
+
+- Added `docs/INTENT.md` as the human-in-the-loop brief. Same text goes to Drive and to the Codex branch once.
+- Added Codex `docs/CONTRADICTIONS.md`. No NOTICE on every later preview commit.
+- Homepage hero uses a four-card problem wheel. Control-record tabs left the homepage.
+- Wordmark is lowercase innmetric with an asagi square. Public GCC copy removed. Locked H1 and CTA kept.
+
 ### Sanzo Wada preview pass, 2026-09-06
 
 - Set GitHub as the canonical remote in agent docs. Cursor Origin is not the source of truth.

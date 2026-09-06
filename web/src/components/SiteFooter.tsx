@@ -1,12 +1,12 @@
 import Link from "next/link";
+import { SiteLogo } from "@/components/SiteLogo";
 
 export function SiteFooter() {
   return (
     <footer>
       <div className="frame footer-grid">
-        <Link className="logo" href="/" style={{ fontSize: 15 }}>
-          <span className="logo-mark">IM</span>
-          Inn<span>Metric</span>
+        <Link className="logo" href="/" aria-label="innmetric">
+          <SiteLogo compact />
         </Link>
         <nav className="footer-links" aria-label="Footer">
           <Link href="/privacy/">Privacy</Link>

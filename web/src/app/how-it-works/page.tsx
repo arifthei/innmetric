@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CtaBand, PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
-import { WorkFile } from "@/components/WorkFile";
+import { RecordSlip } from "@/components/RecordSlip";
 
 export const metadata: Metadata = {
   title: "How InnMetric audits and repairs hotel distribution",
@@ -59,7 +59,7 @@ export default function HowItWorksPage() {
             </ol>
           </Reveal>
           <Reveal index={1}>
-            <WorkFile />
+            <RecordSlip />
           </Reveal>
         </div>
       </section>

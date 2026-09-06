@@ -8,11 +8,11 @@ Mert is the only authority. Agents coordinate through GitHub branches and the fi
 
 Canonical shared repository: `https://github.com/arifthei/innmetric.git`. The local folder plus that GitHub remote are the source of truth. Cursor Origin may still exist as a leftover remote named `origin`. Do not fetch, push or treat it as canonical.
 
-Read [docs/BRANCHES.md](docs/BRANCHES.md) and [docs/HANDOFF.md](docs/HANDOFF.md) at the start of a website session. Fetch GitHub before assuming a branch is stale.
+Read [docs/INTENT.md](docs/INTENT.md), then [docs/BRANCHES.md](docs/BRANCHES.md) and [docs/HANDOFF.md](docs/HANDOFF.md). Fetch GitHub before assuming a branch is stale. Do not ping the Codex branch on every preview commit. Update Intent and the handoff only when authority, palette, H1, CTA or branch roles change.
 
 ## Locked product position
 
-InnMetric is a founder-delivered, vendor-neutral **distribution-control service** for independent and small-group hotels in the GCC.
+InnMetric is a founder-delivered, vendor-neutral **distribution-control service** for independent and small-group hotels. Internal ICP is still independent GCC hotels. Do not use GCC as a public homepage hook. The public site is read by anyone.
 
 One sentence:
 
@@ -46,6 +46,8 @@ The first offer is a service. Software may follow repeated paid work. Do not pub
 - Never use an em dash or an Oxford comma (`, and` / `, or`).
 - Do not publish founder full names on the homepage. Names belong on `/about/`.
 - Keep H1 `A successful push is not a sellable room.`
+- Do not lead public pages with GCC.
+- Public voice: blunt professional. Self-qualify the reader. InnMetric may decline. Rage at the connected-but-unbookable failure, not at a named vendor.
 - Run `npm run lint:copy` before deploy.
 
 Approved pattern:
@@ -70,11 +72,15 @@ A Next.js preview lives in `web/` on **`preview`**. That is the implementation b
 
 The Next app uses a Sanzo Wada cartella: kinari paper, sumi ink, asagi turquoise. Do not restore HotelRunner orange `#fa582d`. Do not apply the Codex spa palette `#F7F8F2` / `#087F80` / `#CBE7A5`. **Not bookable** must not use brand turquoise.
 
+Wordmark: lowercase `innmetric` with an asagi square glow at the end. No IM box. No Eosyn amber.
+
+Homepage hero: copy plus a four-card problem wheel. Control-record tabs stay off the homepage. `/how-it-works/` may keep a static illustrative slip. Do not copy Eosyn chat chrome or iGaming voice.
+
 Inquiry inbox: hello@innmetric.com
 
 ## New website chats
 
-Start from `@_context/website/`. That folder is local-only. It is gitignored and excluded from Netlify. Do not link it from public HTML.
+Start from [docs/INTENT.md](docs/INTENT.md) and `@_context/website/`. The context folder is local-only. It is gitignored and excluded from Netlify. Do not link it from public HTML.
 
 When `web/` is present, read `web/AGENTS.md` before writing Next.js code.
 

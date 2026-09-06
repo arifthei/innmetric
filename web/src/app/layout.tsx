@@ -14,7 +14,7 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: {
-    default: "InnMetric | Distribution control for independent GCC hotels",
+    default: "InnMetric | A successful push is not a sellable room",
     template: "%s",
   },
   description:
@@ -36,7 +36,6 @@ const jsonLd = {
   name: "InnMetric",
   url: "https://innmetric.com/",
   email: "hello@innmetric.com",
-  areaServed: "GCC",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

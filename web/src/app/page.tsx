@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/PageChrome";
+import { ProblemWheel } from "@/components/ProblemWheel";
 import { Reveal } from "@/components/Reveal";
-import { WorkFile } from "@/components/WorkFile";
 
 export const metadata: Metadata = {
-  title: "InnMetric | Distribution control for independent GCC hotels",
+  title: "InnMetric | A successful push is not a sellable room",
   description:
     "The PMS can show open. The guest still cannot buy. InnMetric finds the defect, gets named approval, changes the agreed system and retests where the guest buys.",
   openGraph: {
@@ -85,12 +85,14 @@ export default function HomePage() {
       <section className="section hero">
         <div className="frame">
           <div className="grid wide-gap">
-            <Reveal className="col-7 hero-copy">
-              <span className="label">
-                Hotel distribution control for independent GCC hotels
-              </span>
+            <Reveal className="col-6 hero-copy">
+              <span className="label">The desk can quote it. The public path still refuses it.</span>
               <h1>A successful push is not a sellable room.</h1>
               <p className="lede">The PMS can show open. The guest still cannot buy.</p>
+              <p className="hero-hook">
+                Connectivity is not a guest who can pay. If the live path is wrong
+                the night audit does not save you.
+              </p>
               <div className="hero-actions">
                 <Link className="button lg" href="/contact/">
                   Request a distribution review
@@ -99,11 +101,18 @@ export default function HomePage() {
                   See how the work closes
                 </Link>
               </div>
-              <p className="verdict">Named approval. Live retest. No invented revenue.</p>
+              <p className="hero-why">
+                Write if you can name the property, the failing path and an
+                approver.
+              </p>
+              <p className="hero-decline">
+                If this is not the work we will say so. We do not take brochure
+                jobs or low-hanging fruit.
+              </p>
             </Reveal>
-            <Reveal className="col-5" index={1}>
-              <WorkFile />
-            </Reveal>
+            <div className="col-6">
+              <ProblemWheel />
+            </div>
           </div>
         </div>
       </section>
@@ -197,7 +206,7 @@ export default function HomePage() {
                     You already run a PMS, a booking engine and at least two
                     OTAs. The guest-facing result still drifts.
                   </li>
-                  <li>You want a named person to approve every live change.</li>
+                  <li>You can name an approver before anyone touches a live system.</li>
                   <li>
                     You care that a room can be bought, not that a push reported
                     success.
@@ -225,7 +234,7 @@ export default function HomePage() {
       <CtaBand
         eyebrow="Start with the property"
         title="Tell us which room, rate or channel is behaving incorrectly."
-        lead="Share the hotel, the active channels and the problem you are seeing. We will confirm whether a baseline review is the right next step. No live change without named approval. No invented revenue claims."
+        lead="Write if you can name the property, the failing path and an approver. If this is not the work we will say so. No live change without named approval. No invented revenue claims."
         email
       />
     </>

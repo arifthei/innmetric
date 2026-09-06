@@ -121,8 +121,8 @@ export default function AboutPage() {
             <h2>Speak directly with the founders about one property.</h2>
             <p className="section-lead">
               InnMetric is an early-stage founder-led service. The first commercial
-              engagements are intentionally scoped around independent GCC hotels
-              where access, approval and live verification can be handled directly.
+              engagements are scoped around independent hotels where access,
+              approval and live verification can be handled directly.
               This site does not publish customer logos, revenue-uplift percentages
               or partner claims.
             </p>

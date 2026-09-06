@@ -6,10 +6,11 @@ Canonical git: [github.com/arifthei/innmetric](https://github.com/arifthei/innme
 
 ## Start or resume
 
-Read [AGENTS.md](AGENTS.md), [docs/BRANCHES.md](docs/BRANCHES.md) and [docs/HANDOFF.md](docs/HANDOFF.md). Fetch GitHub before editing.
+Read [docs/INTENT.md](docs/INTENT.md), [AGENTS.md](AGENTS.md), [docs/BRANCHES.md](docs/BRANCHES.md) and [docs/HANDOFF.md](docs/HANDOFF.md). Fetch GitHub before editing.
 
 | File | Purpose |
 | --- | --- |
+| [docs/INTENT.md](docs/INTENT.md) | Human-in-the-loop brief for website and email copy |
 | [AGENTS.md](AGENTS.md) | Product locks, remotes, branch rules |
 | [docs/BRANCHES.md](docs/BRANCHES.md) | `main` / `preview` / Codex audit |
 | [docs/HANDOFF.md](docs/HANDOFF.md) | Current checkpoint |

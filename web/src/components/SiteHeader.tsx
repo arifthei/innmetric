@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { SiteLogo } from "@/components/SiteLogo";
 
 const NAV = [
   { href: "/services/", label: "Services" },
@@ -32,9 +33,8 @@ export function SiteHeader() {
       </div>
       <header>
         <div className="frame nav">
-          <Link className="logo" href="/">
-            <span className="logo-mark">IM</span>
-            Inn<span>Metric</span>
+          <Link className="logo" href="/" aria-label="innmetric">
+            <SiteLogo />
           </Link>
           <nav
             id="site-nav"

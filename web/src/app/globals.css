@@ -249,30 +249,64 @@ header {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
   color: var(--ink);
+  text-decoration: none;
 }
 
-.logo-mark {
-  width: 24px;
-  height: 24px;
+.wordmark {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent);
-  color: var(--accent-ink);
-  border-radius: var(--radius);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  user-select: none;
 }
 
-.logo span {
-  color: var(--muted);
-  font-weight: 500;
+.wordmark-text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.07em;
+  text-transform: lowercase;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.wordmark-compact .wordmark-text {
+  font-size: 18px;
+}
+
+.wordmark-skew {
+  display: inline-block;
+  transform: skewX(-6deg);
+}
+
+.wordmark-dot {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  margin-bottom: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+  box-shadow: 0 0 14px rgba(47, 138, 132, 0.45);
+  flex-shrink: 0;
+}
+
+.wordmark-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  filter: blur(7px);
+  opacity: 0.65;
+}
+
+footer .wordmark-text {
+  color: var(--paper);
+}
+
+footer .wordmark-dot {
+  box-shadow: 0 0 14px rgba(47, 138, 132, 0.7);
 }
 
 .nav-links {
@@ -477,6 +511,87 @@ p {
   flex-direction: column;
   gap: 18px;
   align-items: flex-start;
+}
+
+.hero-hook {
+  margin: 0;
+  max-width: var(--measure-lede);
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.hero-why,
+.hero-decline {
+  margin: 0;
+  max-width: var(--measure-lede);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero-decline {
+  color: var(--ink);
+}
+
+.problem-wheel {
+  position: relative;
+  min-height: 520px;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.problem-wheel:active {
+  cursor: grabbing;
+}
+
+.problem-wheel-stage {
+  position: relative;
+  height: 520px;
+  perspective: 1100px;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+}
+
+.problem-card-wheel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(280px, 86%);
+  margin: 0;
+}
+
+.problem-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.problem-card {
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  padding: 18px 18px 16px;
+}
+
+.problem-card h3 {
+  margin: 8px 0 10px;
+  font-size: 18px;
+  max-width: 18ch;
+}
+
+.problem-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.problem-wheel .work-file-note {
+  justify-content: center;
+  border: 0;
+  color: var(--muted);
 }
 
 /* Uniform card rows. Equal height is enforced here, not per page. */
@@ -1045,11 +1160,6 @@ footer {
 
 footer .logo {
   color: var(--paper);
-  font-size: 15px;
-}
-
-footer .logo span {
-  color: rgba(243, 237, 224, 0.6);
 }
 
 .footer-grid {
@@ -1146,6 +1256,10 @@ footer a:hover {
 
   .cta-short {
     display: inline;
+  }
+
+  .wordmark-text {
+    font-size: 18px;
   }
 
   .menu-toggle {
