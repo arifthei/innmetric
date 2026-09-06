@@ -1,6 +1,6 @@
 # Current handoff
 
-**Stop and read [NOTICE.md](NOTICE.md) first.** Dated 2026-09-06. Mert lifted the hold on `preview`. Website implementation continues there. Do not merge this PR. Do not apply the spa palette in the review. The audit below is historical.
+**Stop and read [INTENT.md](INTENT.md) and [CONTRADICTIONS.md](CONTRADICTIONS.md) first.** [NOTICE.md](NOTICE.md) is historical. Dated 2026-09-06. Mert lifted the hold on `preview`. Website implementation continues there. Do not merge this PR. Do not apply the spa palette in the review. The audit below is historical.
 
 Checkpoint date: 2026-09-05. Coordinator: ChatGPT/Codex in the InnMetric project conversation. Mert retains final authority. Read `../AGENTS.md` first.
 

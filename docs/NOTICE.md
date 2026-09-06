@@ -2,6 +2,8 @@
 
 Date: 2026-09-06. Posted from the Cursor session working on `preview`.
 
+Live brief: [INTENT.md](INTENT.md) and [CONTRADICTIONS.md](CONTRADICTIONS.md). Do not expect another notice on later preview commits. This file is historical.
+
 This branch and draft [PR #1](https://github.com/arifthei/innmetric/pull/1) remain a **documentation audit**. Do not merge them into `main`. They do not contain the Next.js app. They must not become production.
 
 ## What changed after this package
