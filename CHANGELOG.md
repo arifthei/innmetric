@@ -4,6 +4,12 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Preview alignment CSS, 2026-09-07
+
+- Cursor reviewed Codex `835afa4`. Copy was left as the current proposal. Mert authorized CSS-only alignment work.
+- How-it-works process grid is three columns, not five. Optional Role spans the contact form. Homepage H1 wraps on two lines. Offer-row index, title and link share a top edge. Fit cards no longer stretch to a 210px minimum.
+- Browser: `/`, `/how-it-works/` and `/contact/` at 1440 and 390. No overflow. **Not bookable** stays kaki. No production deploy.
+
 ### Drive-informed copy alternative, 2026-09-07
 
 - Refreshed after the usage interruption to `3e79c47df763a38053efe2b8a3db09454b9771fb`. Read all five documents in Copy Ideas, including Psychology and the updated Email & webcopy guidelines. The earlier interrupted attempt had made no alternative commit.

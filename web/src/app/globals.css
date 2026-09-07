@@ -411,16 +411,18 @@ h3 {
 
 h1 {
   font-size: clamp(34px, 4.4vw, 60px);
-  line-height: 1.05;
+  line-height: 1.12;
   letter-spacing: -0.025em;
   max-width: var(--measure-head);
+  text-wrap: balance;
 }
 
 h2 {
   font-size: clamp(26px, 2.6vw, 38px);
-  line-height: 1.12;
+  line-height: 1.18;
   letter-spacing: -0.02em;
   max-width: 26ch;
+  text-wrap: balance;
 }
 
 h3 {
@@ -476,8 +478,13 @@ p {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: 8px;
+}
+
+.hero-actions .button {
+  min-height: 50px;
 }
 
 .intro-center .hero-actions {
@@ -511,6 +518,13 @@ p {
   flex-direction: column;
   gap: 18px;
   align-items: flex-start;
+}
+
+.hero-copy h1 {
+  max-width: none;
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
 }
 
 .hero-hook {
@@ -579,7 +593,8 @@ p {
 .problem-card h3 {
   margin: 8px 0 10px;
   font-size: 18px;
-  max-width: 18ch;
+  max-width: none;
+  text-wrap: balance;
 }
 
 .problem-card p {
@@ -600,8 +615,8 @@ p {
 .cols-3 {
   display: grid;
   gap: var(--gap);
-  grid-auto-rows: 1fr;
-  align-items: stretch;
+  grid-auto-rows: auto;
+  align-items: start;
 }
 
 .cols-2 {
@@ -616,8 +631,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 100%;
-  min-height: 210px;
+  height: auto;
+  min-height: 0;
   padding: 26px;
   background: var(--card-bg);
   border: 1px solid var(--line);
@@ -659,7 +674,7 @@ p {
 
 .verbs {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
   margin: 0;
   padding: 0;
@@ -669,9 +684,9 @@ p {
 .verbs li {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-height: 150px;
-  padding: 20px 20px 0 0;
+  gap: 12px;
+  min-height: 0;
+  padding: 24px 28px 24px 0;
   border-right: 1px solid var(--line);
 }
 
@@ -683,8 +698,10 @@ p {
 .verbs strong {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
   text-transform: uppercase;
+  text-wrap: balance;
   color: var(--ink);
 }
 
@@ -707,7 +724,7 @@ p {
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr) auto;
   gap: 20px;
-  align-items: center;
+  align-items: start;
   min-height: 96px;
   padding: 22px 0;
   border-bottom: 1px solid var(--line);
@@ -741,6 +758,11 @@ p {
   letter-spacing: 0.1em;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
+  padding-top: 4px;
+}
+
+.row .inline {
+  padding-top: 6px;
 }
 
 .row h2 {
@@ -1013,7 +1035,8 @@ p {
   gap: 7px;
 }
 
-.form-group.full {
+.form-group.full,
+.form-group:has(select) {
   grid-column: 1 / -1;
 }
 
@@ -1220,17 +1243,16 @@ footer a:hover {
   }
 
   .verbs {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .verbs li {
-    min-height: 130px;
-    border-bottom: 1px solid var(--line);
+    min-height: 0;
     padding-right: 20px;
   }
 
-  .verbs li:nth-child(2n) {
-    border-right: 0;
+  .nav-links {
+    gap: 18px;
   }
 
   .col-4,

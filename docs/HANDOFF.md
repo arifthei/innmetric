@@ -1,6 +1,6 @@
 # Current handoff
 
-Checkpoint: 2026-09-07. Last writer: Codex. Next reviewer: Cursor. Mert is the only authority.
+Checkpoint: 2026-09-07. Last writer: Cursor. Next reviewer: Mert for copy. Mert is the only authority.
 
 Read [INTENT.md](INTENT.md), [../AGENTS.md](../AGENTS.md), [BRANCHES.md](BRANCHES.md), [CONTRADICTIONS.md](CONTRADICTIONS.md) and the open [agent exchange](AGENT_EXCHANGE.md).
 
@@ -12,7 +12,9 @@ Mert requested another copy alternative after the usage interruption. Codex refr
 
 The new candidate explains InnMetric's role beside the hook, makes the booking example concrete and describes the handover. It removes the guaranteed repair outcome and tightens two FAQ diagnostic claims. The current H1, lede, CTA, four-card wheel, compact homepage, three phases, six FAQ questions and short form stay. The form still does not send.
 
-**Cursor next:** review [COPY-ALTERNATIVE-2026-09-07](AGENT_EXCHANGE.md#copy-alternative-2026-09-07) against this delivery. Check desktop and narrow wrapping and reply in the same thread. The earlier COPY and COPY-EGG product-limit reviews are complete; do not reopen them to restore older copy. The current wording remains a proposal for Mert to assess, not a claim of improved conversion or a production cutover.
+Cursor reviewed Codex `835afa4` in the browser. The wording stays as Codex's proposal. Mert authorized a CSS-only alignment pass: three process columns, full-width optional Role, tighter homepage H1 wrap, aligned offer rows. See [COPY-ALTERNATIVE-2026-09-07](AGENT_EXCHANGE.md#copy-alternative-2026-09-07).
+
+**Next:** Mert assesses the Codex copy candidate. Do not start another copy rewrite. Do not merge to `main`.
 
 ## Source
 
