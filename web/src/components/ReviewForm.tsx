@@ -10,14 +10,6 @@ const ROLES = [
   "Other",
 ];
 
-const PROPERTY_TYPES = [
-  "Independent hotel",
-  "Resort",
-  "Aparthotel",
-  "Small hotel group",
-  "Other hotel-operated property",
-];
-
 export function ReviewForm() {
   const [sent, setSent] = useState(false);
 
@@ -33,8 +25,8 @@ export function ReviewForm() {
         <h2>The request was not sent.</h2>
         <p className="section-lead">
           This Next.js app does not post to Netlify. Production innmetric.com is
-          unchanged. Email hello@innmetric.com for a live review. Do not include
-          passwords or guest data.
+          unchanged. Email hello@innmetric.com with the hotel and the stay you
+          expected to sell. Do not include passwords or guest data.
         </p>
         <button className="button" type="button" onClick={() => setSent(false)}>
           Return to the form
@@ -56,14 +48,6 @@ export function ReviewForm() {
       </p>
       <div className="form-grid">
         <div className="form-group">
-          <label htmlFor="property-name">Property name</label>
-          <input id="property-name" name="property-name" type="text" required maxLength={120} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="city-country">City and country</label>
-          <input id="city-country" name="city-country" type="text" required maxLength={120} />
-        </div>
-        <div className="form-group">
           <label htmlFor="contact-name">Your name</label>
           <input id="contact-name" name="contact-name" type="text" required maxLength={100} />
         </div>
@@ -71,58 +55,27 @@ export function ReviewForm() {
           <label htmlFor="email">Work email</label>
           <input id="email" name="email" type="email" required maxLength={254} />
         </div>
+        <div className="form-group full">
+          <label htmlFor="hotel">Hotel name or website</label>
+          <input id="hotel" name="hotel" type="text" required maxLength={200} />
+        </div>
         <div className="form-group">
-          <label htmlFor="role">Role</label>
-          <select id="role" name="role" required defaultValue="">
-            <option value="" disabled>
-              Select
-            </option>
+          <label htmlFor="role">Role (optional)</label>
+          <select id="role" name="role" defaultValue="">
+            <option value="">Skip for now</option>
             {ROLES.map((role) => (
               <option key={role}>{role}</option>
             ))}
           </select>
         </div>
-        <div className="form-group">
-          <label htmlFor="property-type">Property type</label>
-          <select id="property-type" name="property-type" required defaultValue="">
-            <option value="" disabled>
-              Select
-            </option>
-            {PROPERTY_TYPES.map((type) => (
-              <option key={type}>{type}</option>
-            ))}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="rooms">Number of rooms</label>
-          <input id="rooms" name="rooms" type="text" required maxLength={40} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="booking-engine">Direct booking engine</label>
-          <input
-            id="booking-engine"
-            name="booking-engine"
-            type="text"
-            required
-            maxLength={120}
-          />
-        </div>
         <div className="form-group full">
-          <label htmlFor="otas">Active OTAs</label>
-          <input id="otas" name="otas" type="text" required maxLength={240} />
-        </div>
-        <div className="form-group full">
-          <label htmlFor="systems">PMS and channel manager if known</label>
-          <input id="systems" name="systems" type="text" maxLength={200} />
-        </div>
-        <div className="form-group full">
-          <label htmlFor="summary">Problem summary</label>
+          <label htmlFor="summary">What to look at</label>
           <textarea
             id="summary"
             name="summary"
             required
             maxLength={5000}
-            placeholder="What the team sees, which channels are involved and who can approve access."
+            placeholder="Which stay. What you expected. What the guest saw."
           />
         </div>
         <div className="form-group full">
@@ -134,11 +87,10 @@ export function ReviewForm() {
       </div>
       <div className="form-actions">
         <button className="button lg" type="submit">
-          Send review request
+          Send the stay
         </button>
         <span className="form-note">
-          If you need a live request, email hello@innmetric.com and do not include
-          passwords or guest data.
+          Prefer email? Write to hello@innmetric.com.
         </span>
       </div>
     </form>

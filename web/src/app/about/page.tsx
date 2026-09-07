@@ -116,14 +116,14 @@ export default function AboutPage() {
         <div className="frame">
           <Reveal className="intro intro-center">
             <span className="label">Working with us</span>
-            <h2>Talk through one property with the people doing the work.</h2>
+            <h2>Talk through one stay with the people doing the work.</h2>
             <p className="section-lead">
-              You speak with us about the property and the stay that fails. Access,
-              approvals and scope are agreed before the work begins.
+              Show us the hotel and the booking you expected to sell. An
+              approver is needed when a live change is on the table.
             </p>
             <div className="hero-actions">
               <Link className="button lg" href="/contact/">
-                Request a distribution review
+                Let&apos;s Solve It!
               </Link>
             </div>
           </Reveal>

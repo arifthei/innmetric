@@ -27,9 +27,8 @@ export default function PrivacyPage() {
         </p>
         <h2>What form data is collected</h2>
         <p>
-          The contact form may collect property name, city and country, your name,
-          work email, role, property type, number of rooms, booking engine, active
-          OTAs, PMS or channel manager if known, a problem summary and consent to
+          The contact form may collect your name, work email, hotel name or
+          website, optional role, a note about the stay to look at and consent to
           be contacted.
         </p>
         <h2>Why the data is used</h2>

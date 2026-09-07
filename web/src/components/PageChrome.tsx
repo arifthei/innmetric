@@ -44,7 +44,7 @@ export function CtaBand({
           {lead ? <p className="section-lead">{lead}</p> : null}
           <div className="hero-actions">
             <Link className="button lg" href="/contact/">
-              Request a distribution review
+              Let&apos;s Solve It!
             </Link>
             {email ? (
               <a className="button ghost lg" href="mailto:hello@innmetric.com">

@@ -69,7 +69,7 @@ export default function ServicesPage() {
         </p>
         <div className="hero-actions">
           <Link className="button lg" href="/contact/">
-            Request a distribution review
+            Let&apos;s Solve It!
           </Link>
         </div>
       </PageHero>
@@ -120,8 +120,8 @@ export default function ServicesPage() {
       </section>
 
       <CtaBand
-        title="Tell us where the booking goes wrong."
-        lead="Name the room or rate, what the guest sees and who can approve a change. We agree the first piece of work before anything is changed."
+        title="Show us the stay."
+        lead="Name the hotel and the booking you expected to sell. An approver is needed when a live change is on the table."
       />
     </>
   );

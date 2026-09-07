@@ -14,11 +14,11 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: {
-    default: "InnMetric | A successful push is not a sellable room",
+    default: "InnMetric | The desk can quote the room. The guest still cannot buy it.",
     template: "%s",
   },
   description:
-    "The PMS can show open. The guest still cannot buy. InnMetric checks that stay with your hotel, applies only approved corrections and tests the same booking again.",
+    "A successful push is not a sellable room. Show us the stay.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
     type: "website",

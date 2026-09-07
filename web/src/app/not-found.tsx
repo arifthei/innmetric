@@ -11,15 +11,15 @@ export default function NotFound() {
   return (
     <PageHero eyebrow="404" title="This path is not on the site.">
       <p className="lede">
-        The page you asked for is not published. Return home or request a
-        distribution review.
+        The page you asked for is not published. Return home or show us the
+        stay.
       </p>
       <div className="hero-actions">
         <Link className="button lg" href="/">
           Return home
         </Link>
         <Link className="button ghost lg" href="/contact/">
-          Request a distribution review
+          Let&apos;s Solve It!
         </Link>
       </div>
     </PageHero>

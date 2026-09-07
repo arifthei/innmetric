@@ -6,22 +6,22 @@ const CARDS = [
   {
     id: "01",
     title: "The room cannot be bought",
-    body: "Your team sees the room for those dates. The booking engine or OTA still shows nothing to book.",
+    body: "The desk can quote those dates. The booking page still shows none.",
   },
   {
     id: "02",
     title: "The public rate drifted",
-    body: "The OTA price is not the one you set. Occupancy, cancellation terms or a promotion can explain it. We check that before we change anything.",
+    body: "The OTA price is not the one the desk is quoting tonight.",
   },
   {
     id: "03",
     title: "The stop-sell never lifted",
-    body: "You opened those dates again. The channel still shows them closed. The restriction needs another check.",
+    body: "You opened those dates again. The channel still shows them closed.",
   },
   {
     id: "04",
     title: "The last fix came undone",
-    body: "The stay was bookable after the correction. A later update brought the problem back. The record shows what changed.",
+    body: "The stay was bookable. A later update brought the problem back.",
   },
 ] as const;
 
@@ -74,15 +74,18 @@ export function ProblemWheel() {
 
   if (!spin) {
     return (
-      <ol className="problem-stack">
-        {CARDS.map((card) => (
-          <li className="problem-card" key={card.id}>
-            <span className="ticket-id">Problem {card.id}</span>
-            <h3>{card.title}</h3>
-            <p>{card.body}</p>
-          </li>
-        ))}
-      </ol>
+      <div>
+        <ol className="problem-stack">
+          {CARDS.map((card) => (
+            <li className="problem-card" key={card.id}>
+              <span className="ticket-id">Problem {card.id}</span>
+              <h3>{card.title}</h3>
+              <p>{card.body}</p>
+            </li>
+          ))}
+        </ol>
+        <p className="work-file-note">Examples. Not a live hotel.</p>
+      </div>
     );
   }
 
@@ -137,7 +140,7 @@ export function ProblemWheel() {
           );
         })}
       </div>
-      <p className="work-file-note">Illustrative cases. Not a live hotel record.</p>
+      <p className="work-file-note">Examples. Not a live hotel.</p>
     </div>
   );
 }

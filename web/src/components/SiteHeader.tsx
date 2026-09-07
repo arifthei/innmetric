@@ -53,8 +53,8 @@ export function SiteHeader() {
             ))}
           </nav>
           <Link className="button nav-cta" href="/contact/">
-            <span className="cta-full">Request a distribution review</span>
-            <span className="cta-short">Request a review</span>
+            <span className="cta-full">Let&apos;s Solve It!</span>
+            <span className="cta-short">Let&apos;s Solve It!</span>
           </Link>
           <button
             type="button"

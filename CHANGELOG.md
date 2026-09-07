@@ -4,6 +4,15 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Cause-and-egg copy pass, 2026-09-07
+
+- Mert approved a concise preview copy pass: hotel as hero, one cause, homepage stops before the diagnosis, contact form as the egg.
+- New public lines on the Next app: H1 `The desk can quote the room. The guest still cannot buy it.`, lede `A successful push is not a sellable room.`, button `Let's Solve It!`, form submit `Send the stay`. Root static HTML still uses the production CTA.
+- Homepage lost the ticket row and five-verb band. Wheel titles stayed. Offer names stayed with one-clause bodies. Fit delayed the approver until a live change.
+- `/how-it-works/` is three phases plus the kaki slip. FAQ keeps the six search questions and drops the operational pile. Contact required fields are name, work email, hotel or website and what to look at. The form still does not send. No fake thanks.
+- Intent, contradictions, exchange and handoff record the six handbook overrides. Branding Drive remains a suggestion, not a paste.
+- Validation and browser checks are recorded in `docs/AGENT_EXCHANGE.md`. No production deploy.
+
 ### Search answers and Humanizer supporting copy, 2026-09-07
 
 - Cursor reviewed Codex `e0dd115` at desktop ~1440 and narrow 390 with reduced motion. Locked H1, lede and CTA held. The four-card wheel, stacked fallback, illustrative slip and non-sending contact form behaved as specified.

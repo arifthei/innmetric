@@ -6,7 +6,8 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
-| [COPY-2026-09-07](#copy-2026-09-07) | Cursor | Codex | responded | Fetch this commit. Check the six search answers against product limits. Close the thread if no concrete issue remains. |
+| [COPY-EGG-2026-09-07](#copy-egg-2026-09-07) | Cursor | Codex | open | Fetch this commit. Confirm six FAQ declines and fit lists still match Intent. Do not restore the old H1 or CTA. |
+| [COPY-2026-09-07](#copy-2026-09-07) | Cursor | Codex | responded | Superseded homepage. Still check the six search answers against product limits, then close if they match. |
 
 ## How to use this file
 
@@ -75,6 +76,15 @@ Checks:
 Remaining issue, if any: none found in the requested layout checks. The six search answers need Codex's product-limit read, not another tone pass.
 Next agent / requested action: Codex. Fetch `preview`, read this reply and the changed FAQ plus fit lists. If the declines still match Intent, mark this thread `closed`. Do not treat that as a cutover.
 
+Date / agent: 2026-09-07 / Cursor
+In reply to: COPY-2026-09-07
+Reviewed commit: later same-day commit on `preview` (cause-and-egg pass). See COPY-EGG-2026-09-07.
+Disposition: adjusted after a later Mert instruction. The six search answers remain. Homepage, H1, lede, CTA, process and contact form changed. Do not restore `Request a distribution review` or the old H1 when closing this thread.
+Files changed, if any: recorded under COPY-EGG-2026-09-07.
+Checks: see that thread.
+Remaining issue, if any: product-limit read of the six FAQ answers is still yours.
+Next agent / requested action: Codex. Close this thread if the six declines still match Intent. Reply on COPY-EGG-2026-09-07 for the new public lines.
+
 Append a later entry using this shape:
 
 ```text
@@ -87,3 +97,33 @@ Checks: command or route + viewport + result; include skipped checks
 Remaining issue, if any:
 Next agent / requested action:
 ```
+
+## COPY-EGG-2026-09-07
+
+**From:** Cursor, 2026-09-07. **To:** Codex. **Status:** open, awaiting Codex's product-limit read.
+
+**Reviewed baseline:** `61b4e34` on GitHub `preview`. Delivery is the commit that contains this thread.
+
+**Mert's request:** concise cause-and-egg copy on preview. Hotel is the hero. Homepage does not diagnose the stay. Contact form is the egg. Layout, palette, wordmark and wheel stay. Do not merge to `main`. Do not wire the form.
+
+### What changed
+
+New public lines on the Next app: H1 `The desk can quote the room. The guest still cannot buy it.`, lede `A successful push is not a sellable room.`, button `Let's Solve It!`, form submit `Send the stay`. Homepage lost the ticket row and five-verb band. How-it-works is three phases plus the kaki slip. FAQ keeps the six search questions. Contact required fields are name, work email, hotel or website and what to look at. Role is optional. The form still does not send.
+
+Six handbook overrides are in [CONTRADICTIONS.md](CONTRADICTIONS.md). Do not restore the old H1 or `Request a distribution review` on the Next preview. Root static HTML still uses the production CTA.
+
+### Replies
+
+Date / agent: 2026-09-07 / Cursor
+In reply to: COPY-EGG-2026-09-07
+Reviewed commit: `61b4e34`. This delivery ships in the same commit as this thread.
+Disposition: implemented the approved cause-and-egg plan. Did not paste Drive copy. Did not activate the form.
+Files changed, if any: homepage, wheel bodies, header/CtaBand CTA, how-it-works, FAQ, contact, ReviewForm, services/about CTAs, privacy field list, lint-copy, Intent, contradictions, this thread, handoff, changelog, release notes, AGENTS.md, README.
+Checks:
+- `npm run lint:copy` passed (10 HTML, 19 web/src). Header CTA required string is `Let's Solve It!`. Root HTML still requires `Request a distribution review`.
+- `npm --prefix web run lint` passed.
+- Browser localhost `npm run dev`. Desktop ~1440: `/` H1, lede and `Let's Solve It!` exact, four-card wheel beside copy, caption `Examples. Not a live hotel.`, no ticket row, no five verbs, no public GCC, no control-record tabs, wordmark intact. `/how-it-works/` three phases, static slip Independent hotel / Open in PMS / not bookable, kaki `rgb(138, 75, 46)`, closing line present. `/services/` three offer names plus role-stop list for RMS, listings and first-time channel-manager install. `/faq/` six search questions only. `/contact/` H1 `Show us the stay.`, local notice that the form does not send, submit shows `The request was not sent.`, URL stays `/contact/`.
+- Narrow 390 plus reduced motion: stacked problem list, menu opens to Services / How it works / About / FAQ, wordmark on one line, header CTA `Let's Solve It!` (134px, no overflow). Contact fields still visible.
+- Skipped: production deploy, form wiring, `metadataBase`, root static HTML, Netlify settings.
+Remaining issue, if any: none found in the requested layout checks. The six search answers still need Codex's product-limit read.
+Next agent / requested action: Codex. Fetch `preview`, read this thread and COPY-2026-09-07. If the FAQ declines and fit lists still match Intent, mark COPY-2026-09-07 `closed` and reply here. Do not restore the old public lines. Do not treat that as a cutover.

@@ -54,10 +54,11 @@ The first offer is a service. Software may follow repeated paid work. Do not pub
 - Do not promise that every correction increases revenue.
 - Do not call the company AI-powered or SaaS on the live site.
 - Do not publish prices as if they were validated.
-- Primary CTA: `Request a distribution review` to `/contact/`.
+- Primary CTA on the Next preview: `Let's Solve It!` to `/contact/`. Root static HTML keeps `Request a distribution review` until cutover.
 - Never use an em dash or an Oxford comma (`, and` / `, or`).
 - Do not publish founder full names on the homepage. Names belong on `/about/`.
-- Keep H1 `A successful push is not a sellable room.`
+- Keep H1 `The desk can quote the room. The guest still cannot buy it.`
+- Keep lede `A successful push is not a sellable room.`
 - Do not lead public pages with GCC.
 - Public voice: clear, natural and professional. Mert's later feedback on 2026-09-06 supersedes the older direction to write with rage. Explain the booking problem and what we do with the hotel's team. Keep useful fit criteria and the ability to decline without belittling the reader or performing an angry persona.
 - Run `npm run lint:copy` before deploy.
@@ -72,14 +73,14 @@ Use [blader/humanizer](https://github.com/blader/humanizer) as an editorial refe
 
 - Read the whole passage aloud. Mix complete sentences naturally; do not make every line a slogan or a clipped warning.
 - Name what the hotel team sees and what InnMetric will do. Prefer familiar booking language over phrases such as "commercial behavior" or "the work closes".
-- Preserve the locked H1, lede and CTA. Keep the current preview layout, palette and wordmark when the task is copy.
+- Preserve the locked H1, lede and CTA in [docs/INTENT.md](docs/INTENT.md). Keep the current preview layout, palette and wordmark when the task is copy. Do not restore the ticket row or the five-verb homepage band.
 - Keep observations separate from possible causes. Compare room, dates, occupancy and terms before implying a fault. Do not invent results, customer stories, staff quotes or financial impact.
 - Explain approval, access and service limits where they help a buyer decide. Remove contempt, threats and repeated declarations of what we refuse to be.
 - Review every revised claim against the source. A scheduled recheck can find recurrence; it cannot guarantee that an issue will never return.
 
 Run the existing copy lint after editing. Check changed pages in their actual layout when browser QA is requested. Distinguish checks that passed from checks still pending. A build does not prove desktop or mobile layout is correct.
 
-Treat the current copy pass as the review candidate. Correct factual errors, unclear wording or a demonstrated layout problem. Do not restart the homepage strategy or rewrite every page to suit a new agent's taste. Once the requested checks pass, close the review thread and wait for Mert's next brief.
+Treat the current cause-and-egg copy pass as the review candidate. Correct factual errors, unclear wording or a demonstrated layout problem. Do not restart the homepage strategy or rewrite every page to suit a new agent's taste. Once the requested checks pass, close the review thread and wait for Mert's next brief.
 
 ## Operating motion (not this repo’s job to automate)
 

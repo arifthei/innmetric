@@ -43,7 +43,7 @@ function walk(dir, { skipWeb = false } = {}, out = []) {
   return out;
 }
 
-function lintText(rel, text, { requireCta }) {
+function lintText(rel, text, { requireCta, ctaString = "Request a distribution review" }) {
   if (text.includes("\u2014")) errors.push(`${rel}: em dash`);
   if (text.includes("\u2013")) errors.push(`${rel}: en dash`);
   if (/, and\b/.test(text)) errors.push(`${rel}: Oxford comma (", and")`);
@@ -56,7 +56,8 @@ function lintText(rel, text, { requireCta }) {
     }
   }
 
-  if (requireCta && !text.includes("Request a distribution review")) {
+  const forCta = text.replace(/&apos;/g, "'");
+  if (requireCta && !forCta.includes(ctaString)) {
     errors.push(`${rel}: missing site-wide CTA`);
   }
 }
@@ -95,7 +96,7 @@ if (webFiles.length) {
     lintText(
       "web/src/components/SiteHeader.tsx",
       readFileSync(header, "utf8"),
-      { requireCta: true }
+      { requireCta: true, ctaString: "Let's Solve It!" }
     );
   }
 }

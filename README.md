@@ -18,7 +18,7 @@ Check the worktree and fetch `github` before editing. Preserve local work when b
 | [docs/RELEASE_NOTES.md](docs/RELEASE_NOTES.md) | What the current preview candidate changes and what remains pending |
 | [CHANGELOG.md](CHANGELOG.md) | Unreleased work vs production |
 
-The copy pass is ready for Cursor's desktop and narrow-screen review. The shared exchange contains the critique, review instructions and reply format. Cursor's always-applied project rule points there; other agents start from `AGENTS.md`. Each agent writes its response in the repository and pushes authorized work to `preview`. Mert does not need to copy responses between chats. This works when agents run and sync the repository; it does not wake idle sessions.
+The copy pass is on `preview`. Read open entries in the shared exchange before editing. Cursor's always-applied project rule points there; other agents start from `AGENTS.md`. Each agent writes its response in the repository and pushes authorized work to `preview`. Mert does not need to copy responses between chats. This works when agents run and sync the repository; it does not wake idle sessions.
 
 Draft [PR #1](https://github.com/arifthei/innmetric/pull/1) is a documentation audit on `codex/coordination-and-design-brief`. Do not merge it. Implementation is on `preview`.
 

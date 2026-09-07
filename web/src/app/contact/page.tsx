@@ -4,13 +4,13 @@ import { Reveal } from "@/components/Reveal";
 import { ReviewForm } from "@/components/ReviewForm";
 
 export const metadata: Metadata = {
-  title: "Request a distribution review | InnMetric",
+  title: "Show us the stay | InnMetric",
   description:
-    "Name the property, the stay that fails and who can approve a change. InnMetric will say if a baseline is the right next step.",
+    "Name the hotel and the booking you expected to sell. InnMetric will reply about fit.",
   openGraph: {
-    title: "Request a distribution review | InnMetric",
+    title: "Show us the stay | InnMetric",
     description:
-      "Name the property, the stay that fails and who can approve a change. InnMetric will say if a baseline is the right next step.",
+      "Name the hotel and the booking you expected to sell. InnMetric will reply about fit.",
     url: "https://innmetric.com/contact/",
   },
   alternates: { canonical: "/contact/" },
@@ -19,11 +19,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero eyebrow="Contact" title="Request a distribution review">
+      <PageHero eyebrow="Contact" title="Show us the stay.">
         <p className="lede">
-          Name the property, the stay that fails and who can approve a change. We
-          will say if it is our work. Keep passwords and guest data out of the
-          message.
+          Name the hotel and the booking you expected to sell. We will reply
+          about fit. This form does not send yet.
         </p>
       </PageHero>
       <section className="section wash">
@@ -43,8 +42,8 @@ export default function ContactPage() {
                   and contact details.
                 </p>
                 <p>
-                  Prefer email:{" "}
-                  <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>
+                  Prefer email? Write to{" "}
+                  <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
                 </p>
               </aside>
             </div>

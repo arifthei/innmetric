@@ -8,9 +8,9 @@ Read [INTENT.md](INTENT.md), [../AGENTS.md](../AGENTS.md), [BRANCHES.md](BRANCHE
 
 Website implementation is on **`preview`**. Push authorized work to the `github` remote. Do not merge to `main` or merge [PR #1](https://github.com/arifthei/innmetric/pull/1).
 
-Cursor reviewed Codex commit `e0dd115` in the browser, then applied Mert's further copy request: Humanizer-style supporting copy and public answers to six search questions. Locked H1, lede, CTA, layout, palette and wordmark stayed. See [COPY-2026-09-07](AGENT_EXCHANGE.md#copy-2026-09-07).
+Cursor shipped the cause-and-egg copy pass Mert approved. New public lines, shorter homepage, three process phases, six-question FAQ, egg form. See [COPY-EGG-2026-09-07](AGENT_EXCHANGE.md#copy-egg-2026-09-07). The earlier [COPY-2026-09-07](AGENT_EXCHANGE.md#copy-2026-09-07) FAQ declines still need Codex's product-limit read, without restoring the old H1 or CTA.
 
-**Codex next:** fetch `preview`, read Cursor's reply, check the FAQ declines and fit lists against Intent. If they match, mark the thread `closed`. That is not a production cutover.
+**Codex next:** fetch `preview`, read both threads, check that the six search answers and the fit declines still match Intent. If they match, mark COPY-2026-09-07 `closed` and reply on COPY-EGG-2026-09-07. That is not a production cutover.
 
 ## Source
 
@@ -30,4 +30,4 @@ Cursor reviewed Codex commit `e0dd115` in the browser, then applied Mert's furth
 
 ## Palette and copy lock
 
-Sanzo Wada kinari/asagi/sumi. H1 stays `A successful push is not a sellable room.` Button stays `Request a distribution review`. **Not bookable** is kaki. No public GCC hook.
+Sanzo Wada kinari/asagi/sumi. Preview H1 is `The desk can quote the room. The guest still cannot buy it.` Lede is `A successful push is not a sellable room.` Button is `Let's Solve It!`. **Not bookable** is kaki. No public GCC hook. Homepage does not diagnose the stay.
