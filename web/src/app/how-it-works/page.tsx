@@ -19,17 +19,17 @@ export const metadata: Metadata = {
 const VERBS = [
   {
     verb: "Observed",
-    body: "under recorded dates, occupancy, currency and channel conditions.",
+    body: "We record the room, dates, guest count, currency and channel.",
   },
-  { verb: "Approved", body: "by a named hotel owner before any live change." },
+  { verb: "Approved", body: "Your named approver agrees the change before we touch a live setting." },
   {
     verb: "Changed",
-    body: "in the agreed PMS, channel manager, booking engine or OTA.",
+    body: "We make the agreed correction and record how to reverse it.",
   },
-  { verb: "Verified", body: "on the live path where the guest buys." },
+  { verb: "Verified", body: "We repeat the booking check and record what the guest sees." },
   {
     verb: "Rechecked",
-    body: "on the agreed schedule so the issue cannot quietly return.",
+    body: "We repeat the agreed checks on schedule and flag anything that has returned.",
   },
 ];
 
@@ -38,11 +38,12 @@ export default function HowItWorksPage() {
     <>
       <PageHero
         eyebrow="How it works"
-        title="A change is not complete until the live result is verified."
+        title="We check the booking again before calling a fix complete."
       >
         <p className="lede">
-          We confirm the property, channels, systems and approver before the
-          baseline. Diagnosis, approval, implementation and QA stay in one record.
+          We agree the property, channels and access with your named approver.
+          You can follow each finding from the first booking check to the agreed
+          correction and the retest.
         </p>
       </PageHero>
 
@@ -69,7 +70,7 @@ export default function HowItWorksPage() {
           <Reveal>
             <div className="cols-2">
               <article className="card">
-                <p className="list-head">Required before work begins</p>
+                <p className="list-head">Before we start</p>
                 <ul className="checklist">
                   <li>Named hotel contact and approver</li>
                   <li>Agreed property and channel scope</li>
@@ -78,7 +79,7 @@ export default function HowItWorksPage() {
                 </ul>
               </article>
               <article className="card">
-                <p className="list-head">How findings are labelled</p>
+                <p className="list-head">What a finding can mean</p>
                 <ul className="checklist">
                   <li>Confirmed defect</li>
                   <li>Expected behavior</li>
@@ -94,22 +95,22 @@ export default function HowItWorksPage() {
       <section className="section wash" id="access">
         <div className="frame stack">
           <Reveal className="intro">
-            <h2>Access and security principles</h2>
+            <h2>How we handle access</h2>
           </Reveal>
           <Reveal index={1}>
             <ul className="checklist">
-              <li>Use least-privilege access where the system supports it</li>
-              <li>Prefer named user accounts over shared credentials</li>
-              <li>Do not request credentials through ordinary email</li>
-              <li>Record who approved each live change</li>
-              <li>Remove access at the end of the agreed scope</li>
-              <li>Do not reuse hotel data for unrelated work</li>
+              <li>Only the access needed for the work, where the system allows it</li>
+              <li>Named user accounts where available</li>
+              <li>Credentials shared through an agreed secure method, never ordinary email</li>
+              <li>A record of the person who approved each live change</li>
+              <li>Access removed when the agreed work ends</li>
+              <li>Hotel data used only for the agreed work</li>
             </ul>
           </Reveal>
         </div>
       </section>
 
-      <CtaBand title="Request a baseline before another undocumented fix." />
+      <CtaBand title="Start with the booking that isn't working." />
     </>
   );
 }

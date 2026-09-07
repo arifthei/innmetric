@@ -21,36 +21,36 @@ const OFFERS = [
     id: "baseline",
     index: "01",
     title: "Distribution Baseline Audit",
-    body: "Create an evidence-backed view of the current commercial setup before anyone changes it. The baseline does not promise a revenue increase.",
+    body: "Before changing settings, we check how the property is being sold and separate confirmed problems from things that still need investigation. You get a clear order for the work that follows.",
     points: [
-      "System and channel map",
-      "Live sellability tests under recorded conditions",
-      "Mapping and restriction review",
-      "Prioritized correction backlog",
+      "A map of your systems and active channels",
+      "Booking checks with the room, dates and guest count recorded",
+      "Room mappings and restrictions checked against the intended setup",
+      "A prioritized list of findings and proposed corrections",
     ],
   },
   {
     id: "repair",
     index: "02",
     title: "Approved Repair Sprint",
-    body: "Implement a defined group of corrections without losing control of the current setup. InnMetric applies only named and approved actions.",
+    body: "Once your hotel approves the change list, we make the agreed corrections and check the booking result again. Each change has a record and a way back if it needs to be reversed.",
     points: [
-      "Named hotel approver before any live change",
-      "Confirmed change list with rollback notes",
-      "Change in the agreed PMS, channel manager, booking engine or OTA",
-      "Live guest-facing verification",
+      "A named hotel approver before any live change",
+      "An agreed change list with instructions for reversing each correction",
+      "Corrections in the agreed PMS, channel manager, booking engine or OTA",
+      "A repeat check of what the guest can see and book",
     ],
   },
   {
     id: "control",
     index: "03",
     title: "Ongoing Distribution Control",
-    body: "Prevent known commercial controls from drifting after the baseline and repair work. Cadence is defined in the contract.",
+    body: "After the initial work, we return to the agreed checks on a schedule set with your team. If something changes or a problem returns, it goes back on the list.",
     points: [
-      "Recheck agreed pricing, availability, mapping and channel outcomes",
-      "Exception list and verified fixes",
-      "Change log and recurrence reporting",
-      "No claim of continuous automated monitoring unless the agreed tools support it",
+      "Repeat checks of agreed rates, availability, mappings and channels",
+      "A record of problems found and corrections verified",
+      "A change log showing when an earlier problem returns",
+      "Check frequency and any monitoring tools defined in the contract",
     ],
   },
 ];
@@ -60,12 +60,12 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Control the live result across the systems you already use."
+        title="Start with the booking problem your team is trying to solve."
       >
         <p className="lede">
-          InnMetric does not ask you to replace a functioning hotel stack. It
-          establishes how that stack behaves today, fixes approved defects and
-          verifies the result where the guest buys.
+          We work inside the PMS, channel manager, booking engine and OTA accounts
+          you already use. First we check what&apos;s happening, then agree which
+          corrections to make and how to verify them.
         </p>
         <div className="hero-actions">
           <Link className="button lg" href="/contact/">
@@ -102,23 +102,23 @@ export default function ServicesPage() {
       <section className="section">
         <div className="frame stack">
           <Reveal className="intro">
-            <h2>What InnMetric is not</h2>
+            <h2>Where our role stops</h2>
           </Reveal>
           <Reveal index={1}>
             <ul className="not-list">
-              <li>Not a PMS or channel manager</li>
-              <li>Not an OTA or booking engine</li>
-              <li>Not a generic digital marketing agency</li>
-              <li>Not a replacement for hotel management</li>
-              <li>Not an automated revenue promise</li>
+              <li>Your existing PMS, channel manager, booking engine and OTA accounts stay in place.</li>
+              <li>Your hotel keeps control of pricing and approvals.</li>
+              <li>Advertising, social media and review responses are outside this service.</li>
+              <li>A booking problem alone does not establish its revenue impact.</li>
+              <li>If a correction needs a vendor, we record that dependency.</li>
             </ul>
           </Reveal>
         </div>
       </section>
 
       <CtaBand
-        title="Start with the problem that keeps returning."
-        lead="Tell us what the team sees, which systems are involved and who owns approval. We will propose the smallest useful first scope."
+        title="Tell us where the booking goes wrong."
+        lead="Share the room or rate involved, what your team sees and who can approve changes. We'll agree the first piece of work before anything is changed."
       />
     </>
   );

@@ -1,6 +1,6 @@
 # InnMetric HITL Intent
 
-Date: 2026-09-06. Owner: Mert. Canonical git: `https://github.com/arifthei/innmetric.git`. Drive copy: https://docs.google.com/document/d/14hJbHK8UQvX735QXRlo265BKGwVLyp5QPsU1go59nPk/edit. Live handbook: this file plus `AGENTS.md` and `docs/HANDOFF.md` on **`preview`**. Do not ask Mert to paste this prompt again.
+Updated: 2026-09-07. Owner: Mert. Canonical git: `https://github.com/arifthei/innmetric.git`. Earlier Drive copy: https://docs.google.com/document/d/14hJbHK8UQvX735QXRlo265BKGwVLyp5QPsU1go59nPk/edit. That copy has not been updated in this pass. The current website handbook is this file plus `AGENTS.md`, `docs/HANDOFF.md` and `docs/AGENT_EXCHANGE.md` on **`preview`**. Latest explicit instructions from Mert take precedence. Do not ask him to paste this prompt again.
 
 This brief is for website copy **and** later email copy. Hotel prospecting stays a separate track. Do not import Drive traction packs into git.
 
@@ -10,9 +10,9 @@ This brief is for website copy **and** later email copy. Hotel prospecting stays
 | --- | --- |
 | `main` | Production static HTML on innmetric.com. Do not push experiments. |
 | `preview` | Implementation home for the Next.js rebuild in `web/`. |
-| `codex/coordination-and-design-brief` | Historical audit. Draft PR #1. Do not merge. Read `docs/CONTRADICTIONS.md` there. |
+| `codex/coordination-and-design-brief` | Historical audit. Draft PR #1. Do not merge. Current overrides live in `docs/CONTRADICTIONS.md` on `preview`. |
 
-Cursor Origin is not the source of truth. Fetch GitHub before assuming a branch is stale. Do not write a Codex NOTICE on every preview commit. Update this Intent and `docs/HANDOFF.md` only when authority, palette, H1, CTA or branch roles change.
+Cursor Origin is not the source of truth. Fetch GitHub before assuming a branch is stale. Do not write a Codex NOTICE on every preview commit. Update this Intent when an accepted decision changes or an older instruction needs correction. Keep `docs/HANDOFF.md` current with the next action and use `docs/AGENT_EXCHANGE.md` for agent feedback and replies. Mert requested this Git-based loop on 2026-09-07 and authorized committing and pushing the current copy and coordination work to `preview`.
 
 ## Product
 
@@ -33,11 +33,11 @@ Approved evidence pattern: We observed X under Y conditions. This may indicate Z
 
 ## Voice
 
-Blunt professional. Rage at the connected-but-unbookable failure, not at the reader and not at a named vendor. We are not selling fruit-picker work. The hotel decides. InnMetric will say if they are not a fit.
+Clear, natural and professional. Mert's feedback on 2026-09-06 supersedes the earlier anger persona. Describe a booking problem a hotel team can recognize, explain what we will check and make the next step clear. Keep the locked hook without making every supporting sentence another punchline. No contempt, invented staff anecdotes or theatrical warnings.
 
-Self-qualifier on the site: "You'll probably enjoy working with us if" then the person who already has systems, can name an approver and wants a recorded observation rather than an invented leakage number.
+Self-qualifier on the site: "You'll probably enjoy working with us if" then the person who already has systems, can name an approver and wants the booking result checked with a record they can follow. Keep the wrong-fit column specific and respectful.
 
-Why write: they can name the property, the failing path and an approver. We-may-decline: InnMetric will say if this is not the work.
+Why write: they can name the property, the booking problem and an approver. InnMetric will say if the issue falls outside its work before agreeing a scope. Rechecks can find a problem that returns; they cannot promise it will never return.
 
 ## Design
 

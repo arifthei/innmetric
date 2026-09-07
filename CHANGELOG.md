@@ -4,6 +4,27 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Shared agent review and final copy refinements, 2026-09-07
+
+- Recovered the reattached `innmetric-copy-pass.patch`. It matched the saved patch and was already applied. GitHub `preview` was still at `e575a122e201930c7c7da64da16a34881d52df7c`; `main` was still at `1e21e26b9fc39bea5504c79e393186fd5b85b1f7`.
+- Mert explicitly authorized committing and pushing this copy pass and the repository feedback loop to `preview`. The earlier wait for commit approval is resolved for this task.
+- Added `docs/AGENT_EXCHANGE.md` with Codex's critique, a bounded Cursor review and a reply protocol. Linked it from root and web agent instructions and READMEs. Added a small always-applied Cursor project rule. No background agent service or automatic wake-up is claimed.
+- Updated the Intent, contradiction log and branch map so the older anger persona and restriction on routine handoff updates cannot override the latest brief. The earlier Drive copy was not edited. Added preview release notes and refreshed the current handoff.
+- Simplified Home/About search and sharing descriptions and replaced About's future-tools sentence with a description of direct founder involvement. No layout, style, interaction or deployment configuration changed.
+- Validation on 2026-09-07: `node scripts/lint-copy.mjs` from the root passed on 10 HTML files and 19 web source files. From `web/`, `node node_modules/eslint/bin/eslint.js` and `node node_modules/next/dist/bin/next build` passed, including TypeScript and static page generation. These run the existing package scripts directly through Node.
+- Source comparison confirmed that all 8 changed TSX files differ only in prose and description strings. JSX structure, links, classes and behavior are unchanged. Built HTML checks passed on all 6 edited pages, including the locked hero, CTA, four problems, illustrative status, non-sending form notice and revised descriptions. Local documentation links and agent entry points passed. `git diff --check` passed; the 14 checked design, form, root page and configuration files were unchanged.
+- Browser QA remains outstanding and assigned to Cursor in `COPY-2026-09-07`. No visual pass is claimed. The Next.js dev command still rejects the browser preview runner's Vite-style flags; no runtime change was added for that limitation.
+
+### Natural copy pass, 2026-09-06
+
+- Prepared on `preview` from `e575a122e201930c7c7da64da16a34881d52df7c`. Recovered and included in the authorized 2026-09-07 delivery above.
+- Rewrote the homepage, problem-card bodies, services, how-it-works, about, FAQ and contact introduction in a more natural hotel-operator voice. Kept the locked H1, lede, CTA and four wheel titles.
+- Replaced theatrical warnings and repeated defensive slogans with concrete explanations of the review, approval and booking checks. Removed the promise that scheduled rechecks prevent recurrence.
+- Clarified the illustrative record caption and added reusable copy-review guidance to `AGENTS.md`, informed by the Humanizer checklist.
+- Kept preview's layout, palette, wordmark, motion and parked form/metadata behavior. No root static page or deployment setting changed. No production release is included.
+- Validation: copy lint passed on 10 root HTML files and 19 web source files; Next.js build, TypeScript and ESLint passed. Source comparison confirmed that changes in the 8 TSX files are limited to visible prose. Built HTML checks passed on the 6 edited pages, including the locked hero lines, CTA, four problem titles and illustrative status caption.
+- Browser QA remains outstanding. The supervised Sites preview runner passes Vite CLI flags that this Next.js dev command rejects. No compatibility change was added for a copy task. Check desktop and narrow views in Cursor before treating this as a visually verified candidate.
+
 ### Hero wheel and shared intent, 2026-09-06
 
 - Added `docs/INTENT.md` as the human-in-the-loop brief. Same text goes to Drive and to the Codex branch once.

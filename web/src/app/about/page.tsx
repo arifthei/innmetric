@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About InnMetric | Hotel distribution control",
   description:
-    "InnMetric combines hotel distribution judgment with systems analysis to audit, repair and verify commercial outcomes across the booking stack.",
+    "Meet the founders who work with your hotel to investigate booking problems, carry out approved corrections and check the result across your existing systems.",
   openGraph: {
     title: "About InnMetric | Hotel distribution control",
     description:
-      "InnMetric combines hotel distribution judgment with systems analysis to audit, repair and verify commercial outcomes across the booking stack.",
+      "Meet the founders who work with your hotel to investigate booking problems, carry out approved corrections and check the result across your existing systems.",
     url: "https://innmetric.com/about/",
   },
   alternates: { canonical: "/about/" },
@@ -18,24 +18,24 @@ export const metadata: Metadata = {
 
 const BELIEFS = [
   {
-    title: "Evidence before accusation",
-    body: "A public difference is an observation. It is not proof of an internal defect or vendor failure.",
+    title: "Check before drawing conclusions",
+    body: "A different public rate may have a reasonable explanation. We compare the booking conditions and check the relevant settings before deciding that something is wrong.",
   },
   {
-    title: "Approval before change",
-    body: "The hotel retains commercial authority. InnMetric implements only the agreed correction.",
+    title: "Your hotel approves the change",
+    body: "You decide what we are allowed to change. We agree each correction with the person your hotel has named to approve it.",
   },
   {
-    title: "Live outcome before closure",
-    body: "A saved configuration is not the final result. The guest-facing offer must be checked again.",
+    title: "Check what the guest can book",
+    body: "After a correction, we repeat the booking check. A saved setting on its own doesn't tell us whether the result is right.",
   },
   {
-    title: "Service before software",
-    body: "The operating method is being validated through founder-delivered work. Software will automate repeated and proven controls rather than invent a workflow before the work is understood.",
+    title: "Work directly with the founders",
+    body: "We carry out the review and agreed corrections ourselves. You can speak with the people who checked the issue about what they found and what happens next.",
   },
   {
-    title: "Existing systems before forced replacement",
-    body: "The first question is whether the current stack can be made commercially correct. A replacement recommendation requires evidence.",
+    title: "Start with the systems you have",
+    body: "We first check whether your current setup can support the result you need. Any recommendation to replace a system needs a clear reason.",
   },
 ];
 
@@ -43,15 +43,15 @@ const FOUNDERS = [
   {
     name: "Tunahan Aras, Co-founder and Hotel Distribution Lead",
     body: [
-      "Tunahan brings hands-on experience with rates, restrictions, room and rate mapping, reservation flows, OTA operations and hotel partner cases inside channel-manager environments.",
-      "He owns the hotel distribution judgment that separates a visible difference from a real control problem.",
+      "Tunahan has worked with rates, restrictions, room and rate mappings, reservation flows and OTA operations. His experience includes hotel partner cases in channel manager environments.",
+      "He looks at how the hotel's setup behaves and which settings need a closer check.",
     ],
   },
   {
     name: "Mert Carikci, Co-founder and Product Operations Lead",
     body: [
-      "Mert brings product ownership and systems-analysis experience across high-volume regulated platforms, live operations and integration-heavy products.",
-      "He owns evidence structure, approval states, delivery workflow, QA and the path from expert work to a repeatable product.",
+      "Mert's background is in product ownership and systems analysis across high-volume regulated platforms, live operations and products with complex integrations.",
+      "He keeps the findings, approvals, change records and tests organized so the team can follow the work.",
     ],
   },
 ];
@@ -61,25 +61,23 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="InnMetric exists because connectivity is not accountability."
+        title="Someone needs to follow the problem across the systems."
       >
         <p className="lede">
-          Hotels buy capable systems for property management, distribution, direct
-          booking, pricing and channel sales. Yet the commercial result depends on
-          how those systems, rules and teams behave together.
+          Your team may have checked the PMS, spoken to the channel manager and
+          looked at the OTA. The guest is still seeing something different.
         </p>
         <p className="lede">
-          When something goes wrong each party can be technically correct inside
-          its own boundary. The hotel still has to find the defect, coordinate the
-          repair and prove the live outcome. InnMetric is designed to own that
-          control loop.
+          We help follow that issue across the systems involved, work through the
+          corrections your hotel approves and check the booking again. You get a
+          record of what changed and what still needs an answer.
         </p>
       </PageHero>
 
       <section className="section wash">
         <div className="frame stack">
           <Reveal className="intro">
-            <h2>What we believe</h2>
+            <h2>What you can expect from us</h2>
           </Reveal>
           <Reveal index={1}>
             <ul className="rows">
@@ -117,14 +115,12 @@ export default function AboutPage() {
       <section className="section dark">
         <div className="frame">
           <Reveal className="intro intro-center">
-            <span className="label">Current stage</span>
-            <h2>Speak directly with the founders about one property.</h2>
+            <span className="label">Working with us</span>
+            <h2>Talk through one property with the people doing the work.</h2>
             <p className="section-lead">
-              InnMetric is an early-stage founder-led service. The first commercial
-              engagements are scoped around independent hotels where access,
-              approval and live verification can be handled directly.
-              This site does not publish customer logos, revenue-uplift percentages
-              or partner claims.
+              You&apos;ll speak directly with us about the property and the booking
+              problem. We&apos;ll agree access, approvals and a practical scope
+              before the work begins.
             </p>
             <div className="hero-actions">
               <Link className="button lg" href="/contact/">

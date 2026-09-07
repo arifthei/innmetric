@@ -21,8 +21,9 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact" title="Request a distribution review">
         <p className="lede">
-          Tell us enough to determine whether InnMetric is the right fit. Do not
-          send passwords or confidential guest data through this form.
+          Tell us which property is affected, what happens when a guest tries to
+          book and who can approve changes. We&apos;ll tell you whether it&apos;s
+          work we can take on. Please keep passwords and guest data out of your message.
         </p>
       </PageHero>
       <section className="section wash">

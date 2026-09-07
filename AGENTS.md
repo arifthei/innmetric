@@ -8,7 +8,19 @@ Mert is the only authority. Agents coordinate through GitHub branches and the fi
 
 Canonical shared repository: `https://github.com/arifthei/innmetric.git`. The local folder plus that GitHub remote are the source of truth. Cursor Origin may still exist as a leftover remote named `origin`. Do not fetch, push or treat it as canonical.
 
-Read [docs/INTENT.md](docs/INTENT.md), then [docs/BRANCHES.md](docs/BRANCHES.md) and [docs/HANDOFF.md](docs/HANDOFF.md). Fetch GitHub before assuming a branch is stale. Do not ping the Codex branch on every preview commit. Update Intent and the handoff only when authority, palette, H1, CTA or branch roles change.
+Read [docs/INTENT.md](docs/INTENT.md), this file, [docs/BRANCHES.md](docs/BRANCHES.md), [docs/HANDOFF.md](docs/HANDOFF.md), [docs/CONTRADICTIONS.md](docs/CONTRADICTIONS.md) and the open entries in [docs/AGENT_EXCHANGE.md](docs/AGENT_EXCHANGE.md). Read `web/AGENTS.md` before editing the Next app. Do not ask Mert to relay another agent's response when it is available in GitHub.
+
+## Shared work and agent replies
+
+Mert authorized the copy pass and this repository feedback loop to be committed and pushed to `preview` on 2026-09-07. Honor authorization already given for the requested work. This is not permission to publish to production or to expand the task.
+
+1. Check the current branch, worktree and remote URLs. Use `github` pointing to `https://github.com/arifthei/innmetric.git`. Fetch it before editing and again before pushing.
+2. Work on `preview` unless Mert names another branch. If the worktree is clean and the local branch is behind, use `git merge --ff-only github/preview`. Preserve uncommitted work and inspect any divergence before integrating. Never discard another agent's changes or force-push.
+3. Read the shared exchange and act on open work addressed to your agent. Acknowledge the entry in your reply, identify the commit you reviewed and record what you accepted, changed or disagree with. Keep the original feedback intact. Never write an acknowledgement on another agent's behalf.
+4. Include the reply with the related implementation commit. Update `CHANGELOG.md` for delivered changes and the short current state in `docs/HANDOFF.md` when the next action or a blocker changes. Use `docs/AGENT_EXCHANGE.md` for discussion. Update Intent only for an accepted decision or to remove a superseded instruction.
+5. Before pushing, inspect newly fetched commits and reconcile overlapping edits. Push only the intended changes to `github preview` without force. Verify GitHub has the commit before calling it delivered. If publishing is blocked, retain the work and state that the other agent cannot see it yet.
+
+The shared exchange is the inbox for both Cursor and Codex. Cursor's always-applied project rule points to it; other agents enter through this file. It is read when an agent runs and syncs, not a background notification service. Do not claim to have woken an agent or received a reply that has not been written. No new NOTICE files, duplicate briefs or routine pings to the historical Codex branch or PR #1.
 
 ## Locked product position
 
@@ -47,12 +59,27 @@ The first offer is a service. Software may follow repeated paid work. Do not pub
 - Do not publish founder full names on the homepage. Names belong on `/about/`.
 - Keep H1 `A successful push is not a sellable room.`
 - Do not lead public pages with GCC.
-- Public voice: blunt professional. Self-qualify the reader. InnMetric may decline. Rage at the connected-but-unbookable failure, not at a named vendor.
+- Public voice: clear, natural and professional. Mert's later feedback on 2026-09-06 supersedes the older direction to write with rage. Explain the booking problem and what we do with the hotel's team. Keep useful fit criteria and the ability to decline without belittling the reader or performing an angry persona.
 - Run `npm run lint:copy` before deploy.
 
 Approved pattern:
 
 > We observed X under Y conditions. This may indicate Z. Public evidence cannot determine root cause or financial impact.
+
+## Copy review
+
+Use [blader/humanizer](https://github.com/blader/humanizer) as an editorial reference for repetitive structures, forced punchlines, stock phrases and unnecessary defenses. It is not an audience test or evidence that copy converts. Do not add it as a runtime dependency.
+
+- Read the whole passage aloud. Mix complete sentences naturally; do not make every line a slogan or a clipped warning.
+- Name what the hotel team sees and what InnMetric will do. Prefer familiar booking language over phrases such as "commercial behavior" or "the work closes".
+- Preserve the locked H1, lede and CTA. Keep the current preview layout, palette and wordmark when the task is copy.
+- Keep observations separate from possible causes. Compare room, dates, occupancy and terms before implying a fault. Do not invent results, customer stories, staff quotes or financial impact.
+- Explain approval, access and service limits where they help a buyer decide. Remove contempt, threats and repeated declarations of what we refuse to be.
+- Review every revised claim against the source. A scheduled recheck can find recurrence; it cannot guarantee that an issue will never return.
+
+Run the existing copy lint after editing. Check changed pages in their actual layout when browser QA is requested. Distinguish checks that passed from checks still pending. A build does not prove desktop or mobile layout is correct.
+
+Treat the current copy pass as the review candidate. Correct factual errors, unclear wording or a demonstrated layout problem. Do not restart the homepage strategy or rewrite every page to suit a new agent's taste. Once the requested checks pass, close the review thread and wait for Mert's next brief.
 
 ## Operating motion (not this repo’s job to automate)
 

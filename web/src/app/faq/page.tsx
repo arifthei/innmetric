@@ -19,47 +19,47 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "Is InnMetric a channel manager or PMS?",
-    a: "No. InnMetric works across the hotel systems you already use. It audits their combined commercial behavior then supports approved corrections and verification.",
+    a: "No. We work with the PMS, channel manager, booking engine and OTA accounts your hotel already uses. We check how they work together, make the corrections you approve and verify the booking result.",
   },
   {
     q: "Is this only a public OTA audit?",
-    a: "No. A public review can identify a symptom. The paid baseline may include authorized work inside the PMS, channel manager, booking engine and OTA extranets so the cause can be verified.",
+    a: "A public check can show what a guest sees. To understand why, we may also need approved access to your PMS, channel manager, booking engine or OTA extranet. That access is agreed as part of the paid baseline.",
   },
   {
     q: "Do you guarantee more revenue?",
-    a: "No. Distribution corrections can remove commercial friction but InnMetric does not invent revenue impact. A financial claim requires reliable hotel data, a defined baseline and an agreed measurement method.",
+    a: "No. Making a room bookable does not tell us what revenue the hotel would have earned. Measuring a financial result needs reliable hotel data, a defined baseline and an agreed method.",
   },
   {
     q: "Will you change rates without approval?",
-    a: "No. The hotel names the approver and the permitted scope. Material changes are logged before implementation.",
+    a: "No. Your hotel names the person who can approve changes and agrees the scope. We record proposed changes before carrying them out.",
   },
   {
     q: "Do you need our passwords?",
-    a: "Use named accounts with the lowest practical access level whenever the system permits it. Credentials should not be sent through ordinary email. Access is removed when the agreed work ends.",
+    a: "Where the system allows it, we use a named account with only the access needed for the work. Please don't send passwords by ordinary email. Access is removed when the agreed work ends.",
   },
   {
     q: "Can you work with our current vendors?",
-    a: "Yes. InnMetric is designed to work across the existing stack. Some issues require a vendor ticket or vendor-led change. That dependency is documented rather than hidden.",
+    a: "Yes. Some issues need a vendor ticket or a change only the vendor can make. We record that dependency so your team can see what needs to happen next.",
   },
   {
     q: "Which properties are a fit?",
-    a: "The strongest fit is an independent hotel, resort, aparthotel or small hotel group with a direct booking path plus two or more active OTAs. A hotel owner, GM or commercial lead must be able to approve access and changes.",
+    a: "We're set up to work with independent hotels, resorts, aparthotels and small groups that have direct bookings plus at least two active OTAs. An owner, GM or commercial lead must be able to approve access and changes.",
   },
   {
     q: "Do you work with non-hotel lodging?",
-    a: "The current focus is hotel-operated accommodation. Individually listed homes and non-hotel lodging portfolios are outside the primary scope.",
+    a: "We focus on accommodation operated as a hotel. Individually listed homes and portfolios of other lodging types are outside the service.",
   },
   {
     q: "What does a baseline audit produce?",
-    a: "The output includes a system map, evidence register, confirmed findings, unresolved hypotheses, a prioritized correction backlog and the QA test for each recommended action.",
+    a: "You get a map of the systems involved, a record of what we checked and a prioritized list of findings. Each proposed correction includes a way to test it. We separate confirmed problems from questions that still need an answer.",
   },
   {
     q: "Is ongoing support available?",
-    a: "Yes after the baseline. The cadence may include pricing, availability, restriction, mapping, promotion and live-channel checks. The contract defines which controls are daily, weekly or monthly.",
+    a: "Yes, after the baseline. We agree which rates, availability, restrictions, mappings, promotions and channels to recheck. The contract sets the daily, weekly or monthly schedule and any monitoring tools included.",
   },
   {
     q: "How is pricing determined?",
-    a: "Pricing depends on property size, stack complexity, channel count, access requirements and whether implementation is included. The first call is used to define a fixed initial scope.",
+    a: "It depends on the property's size, systems, channels and access requirements, plus whether you want us to carry out the corrections. We use the first call to agree a fixed initial scope.",
   },
 ];
 

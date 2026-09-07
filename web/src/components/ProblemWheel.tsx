@@ -6,22 +6,22 @@ const CARDS = [
   {
     id: "01",
     title: "The room cannot be bought",
-    body: "Inventory looks open in one system. A stop-sell, length-of-stay rule or incomplete mapping keeps it off a channel.",
+    body: "Your team sees rooms available for the dates a guest wants. The booking engine or OTA still shows nothing to book.",
   },
   {
     id: "02",
     title: "The public rate drifted",
-    body: "Refundable and non-refundable rates lose their intended relationship. Occupancy pricing breaks. Promotions stack.",
+    body: "The offer is different from what you intended. Occupancy, cancellation terms or stacked promotions may explain why.",
   },
   {
     id: "03",
     title: "The stop-sell never lifted",
-    body: "A restriction was applied for a date or channel. The stay window passed. The public offer still refuses the sale.",
+    body: "The hotel is ready to sell those rooms again, but the channel still shows them as closed. The restriction needs another check.",
   },
   {
     id: "04",
     title: "The last fix came undone",
-    body: "A change was applied without a complete record. Another update reversed it. The same problem returns without an owner.",
+    body: "The room was bookable after the correction. Following a later update, the problem is back and the team needs to trace what changed.",
   },
 ] as const;
 

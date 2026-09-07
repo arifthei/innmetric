@@ -19,7 +19,7 @@ export function RecordSlip() {
           <dd>Recorded stay dates and occupancy</dd>
         </div>
       </dl>
-      <p className="work-file-note">Illustrative example. The record the engagement produces.</p>
+      <p className="work-file-note">Illustrative example. Not a client record.</p>
     </aside>
   );
 }

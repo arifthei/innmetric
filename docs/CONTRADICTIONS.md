@@ -1,6 +1,6 @@
 # Live overrides
 
-This file lives so later agents do not treat the Codex audit as current law. Historical findings to keep are listed first. Overrides from Mert on 2026-09-06 follow. Read [INTENT.md](INTENT.md) with this file.
+This file keeps later agents from treating an older audit or prompt as current instructions. Historical findings to keep are listed first, followed by Mert's overrides through 2026-09-07. Read [INTENT.md](INTENT.md) with this file.
 
 Draft [PR #1](https://github.com/arifthei/innmetric/pull/1) stays documentation. Do not merge it.
 
@@ -20,7 +20,14 @@ Draft [PR #1](https://github.com/arifthei/innmetric/pull/1) stays documentation.
 - Locked H1 stays `A successful push is not a sellable room.` Codex’s replacement H1 is rejected.
 - CTA string stays `Request a distribution review`. Add filter copy around it. Do not change the button.
 - There is no Chief Brain Officer. Mert is the only authority.
-- Do not write a NOTICE on every later preview commit. Preview `AGENTS.md` plus `docs/INTENT.md` and `docs/HANDOFF.md` is the live handbook.
+- Do not write a NOTICE on every later preview commit. Preview `AGENTS.md` plus `docs/INTENT.md`, `docs/HANDOFF.md` and `docs/AGENT_EXCHANGE.md` is the live handbook.
+
+## Later voice and coordination decisions
+
+- Mert rejected the inhuman tone of the earlier prompt. The anger persona and fruit-picker or brochure-job put-downs are superseded. Keep the product constraints and locked lines while writing natural support copy.
+- On 2026-09-07 Mert explicitly authorized committing and pushing the recovered copy pass and agent coordination work to `preview`. The earlier instruction to wait for commit approval has been satisfied for this task.
+- Mert wants feedback and replies in the repository so he does not carry messages between agents. Use one shared [agent exchange](AGENT_EXCHANGE.md). Update the current handoff when progress or the next action changes. This supersedes the old restriction that HANDOFF could change only when a design or authority lock changed.
+- The earlier Drive Intent and attached prompt may still contain the superseded voice or handoff rule. Do not restore them over the current Git brief. No new Drive brief was created in this pass.
 
 ## Authority
 

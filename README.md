@@ -6,7 +6,7 @@ Canonical git: [github.com/arifthei/innmetric](https://github.com/arifthei/innme
 
 ## Start or resume
 
-Read [docs/INTENT.md](docs/INTENT.md), [AGENTS.md](AGENTS.md), [docs/BRANCHES.md](docs/BRANCHES.md) and [docs/HANDOFF.md](docs/HANDOFF.md). Fetch GitHub before editing.
+Check the worktree and fetch `github` before editing. Preserve local work when bringing `preview` up to date. Read [docs/INTENT.md](docs/INTENT.md), [AGENTS.md](AGENTS.md), [docs/BRANCHES.md](docs/BRANCHES.md), [docs/HANDOFF.md](docs/HANDOFF.md), [docs/CONTRADICTIONS.md](docs/CONTRADICTIONS.md) and open entries in [docs/AGENT_EXCHANGE.md](docs/AGENT_EXCHANGE.md).
 
 | File | Purpose |
 | --- | --- |
@@ -14,7 +14,11 @@ Read [docs/INTENT.md](docs/INTENT.md), [AGENTS.md](AGENTS.md), [docs/BRANCHES.md
 | [AGENTS.md](AGENTS.md) | Product locks, remotes, branch rules |
 | [docs/BRANCHES.md](docs/BRANCHES.md) | `main` / `preview` / Codex audit |
 | [docs/HANDOFF.md](docs/HANDOFF.md) | Current checkpoint |
+| [docs/AGENT_EXCHANGE.md](docs/AGENT_EXCHANGE.md) | Cursor and Codex feedback, responses and next reviewer |
+| [docs/RELEASE_NOTES.md](docs/RELEASE_NOTES.md) | What the current preview candidate changes and what remains pending |
 | [CHANGELOG.md](CHANGELOG.md) | Unreleased work vs production |
+
+The copy pass is ready for Cursor's desktop and narrow-screen review. The shared exchange contains the critique, review instructions and reply format. Cursor's always-applied project rule points there; other agents start from `AGENTS.md`. Each agent writes its response in the repository and pushes authorized work to `preview`. Mert does not need to copy responses between chats. This works when agents run and sync the repository; it does not wake idle sessions.
 
 Draft [PR #1](https://github.com/arifthei/innmetric/pull/1) is a documentation audit on `codex/coordination-and-design-brief`. Do not merge it. Implementation is on `preview`.
 
