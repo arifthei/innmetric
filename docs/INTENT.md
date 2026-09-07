@@ -37,7 +37,18 @@ Clear, natural and professional. Mert's feedback on 2026-09-06 supersedes the ea
 
 Self-qualifier on the site: "You'll probably enjoy working with us if" then the person who already has systems, can name an approver and wants the booking result checked with a record they can follow. Keep the wrong-fit column specific and respectful.
 
-Why write: they can name the property, the booking problem and an approver. InnMetric will say if the issue falls outside its work before agreeing a scope. Rechecks can find a problem that returns; they cannot promise it will never return.
+Why write: they can name the property, the stay that fails and an approver. InnMetric will say if the issue falls outside its work before agreeing a scope. Rechecks can find a problem that returns; they cannot promise it will never return.
+
+## Public answers to common searches
+
+Use the searcher's phrasing. Keep InnMetric's particular answer:
+
+- Empty booking engine: if the whole engine is down, start with the vendor. If the PMS is open for those dates and the engine shows none, that is a configuration review.
+- Different OTA rate: not proof of a fault. Compare the same room, dates, occupancy and terms.
+- Channel manager setup: work on a live stack. Not a first-time install.
+- Rate-plan simplification: may appear as a finding. Not a standalone product.
+- Outsourced revenue management: decline. The hotel keeps pricing.
+- OTA listing management: decline. Rechecks of named rates and availability are not listing work.
 
 ## Design
 

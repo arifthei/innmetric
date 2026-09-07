@@ -4,6 +4,13 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Search answers and Humanizer supporting copy, 2026-09-07
+
+- Cursor reviewed Codex `e0dd115` at desktop ~1440 and narrow 390 with reduced motion. Locked H1, lede and CTA held. The four-card wheel, stacked fallback, illustrative slip and non-sending contact form behaved as specified.
+- Mert then asked for a further copy pass: Humanizer-style supporting copy and public answers to six buyer-search questions. The homepage strategy, layout, palette and wordmark were not restarted.
+- FAQ now answers empty booking-engine availability, a different Booking.com rate, channel-manager setup, rate-plan simplification, outsourced revenue management and OTA listing management in InnMetric's particular way. Fit and services lists decline RMS takeover, listing management and a first-time channel-manager install. A public rate difference is not treated as a fault until the stay is matched.
+- Validation: `npm run lint:copy` passed on 10 HTML files and 19 web source files. `npm --prefix web run lint` passed. Browser checks are recorded in `docs/AGENT_EXCHANGE.md`. No production deploy.
+
 ### Shared agent review and final copy refinements, 2026-09-07
 
 - Recovered the reattached `innmetric-copy-pass.patch`. It matched the saved patch and was already applied. GitHub `preview` was still at `e575a122e201930c7c7da64da16a34881d52df7c`; `main` was still at `1e21e26b9fc39bea5504c79e393186fd5b85b1f7`.

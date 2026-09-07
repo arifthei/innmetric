@@ -28,6 +28,7 @@ Draft [PR #1](https://github.com/arifthei/innmetric/pull/1) stays documentation.
 - On 2026-09-07 Mert explicitly authorized committing and pushing the recovered copy pass and agent coordination work to `preview`. The earlier instruction to wait for commit approval has been satisfied for this task.
 - Mert wants feedback and replies in the repository so he does not carry messages between agents. Use one shared [agent exchange](AGENT_EXCHANGE.md). Update the current handoff when progress or the next action changes. This supersedes the old restriction that HANDOFF could change only when a design or authority lock changed.
 - The earlier Drive Intent and attached prompt may still contain the superseded voice or handoff rule. Do not restore them over the current Git brief. No new Drive brief was created in this pass.
+- On 2026-09-07 Mert asked for a further copy pass: Humanizer-style supporting copy plus public answers to six search questions. Those answers must not turn InnMetric into an RMS, an OTA listing agency or a first-time channel-manager installer. A different public rate is not treated as a fault until the stay is matched.
 
 ## Authority
 

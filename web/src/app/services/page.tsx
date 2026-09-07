@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Hotel distribution audit and control services | InnMetric",
   description:
-    "Baseline audits, approved system corrections and ongoing distribution control for independent hotels using PMS, channel-manager, booking-engine and OTA systems.",
+    "A baseline of what guests can book, approved corrections in your current systems and scheduled rechecks. Not revenue management. Not listing management.",
   openGraph: {
     title: "Hotel distribution audit and control services | InnMetric",
     description:
-      "Baseline audits, approved system corrections and ongoing distribution control for independent hotels using PMS, channel-manager, booking-engine and OTA systems.",
+      "A baseline of what guests can book, approved corrections in your current systems and scheduled rechecks. Not revenue management. Not listing management.",
     url: "https://innmetric.com/services/",
   },
   alternates: { canonical: "/services/" },
@@ -21,19 +21,19 @@ const OFFERS = [
     id: "baseline",
     index: "01",
     title: "Distribution Baseline Audit",
-    body: "Before changing settings, we check how the property is being sold and separate confirmed problems from things that still need investigation. You get a clear order for the work that follows.",
+    body: "You learn which stays cannot be bought and which public differences are expected. Corrections wait until that is written down.",
     points: [
       "A map of your systems and active channels",
       "Booking checks with the room, dates and guest count recorded",
       "Room mappings and restrictions checked against the intended setup",
-      "A prioritized list of findings and proposed corrections",
+      "Findings in order, with a test for each proposed correction",
     ],
   },
   {
     id: "repair",
     index: "02",
     title: "Approved Repair Sprint",
-    body: "Once your hotel approves the change list, we make the agreed corrections and check the booking result again. Each change has a record and a way back if it needs to be reversed.",
+    body: "Approved stays become bookable again. Each change has a way back.",
     points: [
       "A named hotel approver before any live change",
       "An agreed change list with instructions for reversing each correction",
@@ -45,7 +45,7 @@ const OFFERS = [
     id: "control",
     index: "03",
     title: "Ongoing Distribution Control",
-    body: "After the initial work, we return to the agreed checks on a schedule set with your team. If something changes or a problem returns, it goes back on the list.",
+    body: "Agreed rates and availability get a scheduled recheck. If a problem returns, it is on the list.",
     points: [
       "Repeat checks of agreed rates, availability, mappings and channels",
       "A record of problems found and corrections verified",
@@ -63,9 +63,9 @@ export default function ServicesPage() {
         title="Start with the booking problem your team is trying to solve."
       >
         <p className="lede">
-          We work inside the PMS, channel manager, booking engine and OTA accounts
-          you already use. First we check what&apos;s happening, then agree which
-          corrections to make and how to verify them.
+          We work in the PMS, channel manager, booking engine and OTA accounts
+          you already use. You approve each change. The same stay is checked
+          again.
         </p>
         <div className="hero-actions">
           <Link className="button lg" href="/contact/">
@@ -108,6 +108,9 @@ export default function ServicesPage() {
             <ul className="not-list">
               <li>Your existing PMS, channel manager, booking engine and OTA accounts stay in place.</li>
               <li>Your hotel keeps control of pricing and approvals.</li>
+              <li>We do not take over revenue management.</li>
+              <li>We do not manage OTA listings, photos or ranking.</li>
+              <li>We do not install a new channel manager from scratch.</li>
               <li>Advertising, social media and review responses are outside this service.</li>
               <li>A booking problem alone does not establish its revenue impact.</li>
               <li>If a correction needs a vendor, we record that dependency.</li>
@@ -118,7 +121,7 @@ export default function ServicesPage() {
 
       <CtaBand
         title="Tell us where the booking goes wrong."
-        lead="Share the room or rate involved, what your team sees and who can approve changes. We'll agree the first piece of work before anything is changed."
+        lead="Name the room or rate, what the guest sees and who can approve a change. We agree the first piece of work before anything is changed."
       />
     </>
   );

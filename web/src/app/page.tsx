@@ -7,11 +7,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "InnMetric | A successful push is not a sellable room",
   description:
-    "InnMetric helps hotel teams find booking problems, make the corrections they approve and check what guests can see and book in their existing systems.",
+    "The guest still cannot buy. InnMetric checks that stay with your hotel, applies only approved corrections and tests the same booking again.",
   openGraph: {
     title: "InnMetric | A successful push is not a sellable room",
     description:
-      "InnMetric helps hotel teams find booking problems, make the corrections they approve and check what guests can see and book in their existing systems.",
+      "The guest still cannot buy. InnMetric checks that stay with your hotel, applies only approved corrections and tests the same booking again.",
     url: "https://innmetric.com/",
   },
   alternates: { canonical: "/" },
@@ -21,19 +21,19 @@ const TICKETS = [
   {
     id: "Ticket 01",
     title: "The room cannot be bought",
-    body: "A room can be available in the PMS and closed elsewhere. We check stop-sells, minimum stays and room mappings against the booking the guest is trying to make.",
+    body: "The PMS can show the room open while the booking engine shows none. We match that stay against stop-sells, minimum stays and room mapping.",
     primary: true,
   },
   {
     id: "Ticket 02",
     title: "The public offer drifts",
-    body: "A rate difference may be expected once occupancy, cancellation terms or promotions are taken into account. We compare like for like before recommending a change.",
+    body: "An OTA rate that does not match your website is not proof of a fault. We compare the same room, dates, occupancy and terms before we recommend a change.",
     primary: false,
   },
   {
     id: "Ticket 03",
     title: "The fix does not stay fixed",
-    body: "When a problem returns, the team needs to know what changed since the last check. A record of the repair gives us somewhere to start.",
+    body: "If the same stay fails after a later update, the record shows what changed last. That is where the next check starts.",
     primary: false,
   },
 ];
@@ -59,21 +59,21 @@ const OFFERS = [
   {
     index: "01",
     title: "Distribution Baseline Audit",
-    body: "Find out what is happening, what still needs checking and which corrections should come first.",
+    body: "Know which stays cannot be bought, which differences are expected and which corrections to do first.",
     href: "/services/#baseline",
     link: "Baseline audit",
   },
   {
     index: "02",
     title: "Approved Repair Sprint",
-    body: "Make the corrections your hotel approves, check the result and keep a record of how to reverse each change.",
+    body: "The approved stays become bookable again. Each change has a way back.",
     href: "/services/#repair",
     link: "Repair sprint",
   },
   {
     index: "03",
     title: "Ongoing Distribution Control",
-    body: "Return to the agreed rates, availability and channel checks on a schedule set with your team.",
+    body: "Agreed rates and availability get a scheduled recheck. If a problem returns, it is on the list.",
     href: "/services/#control",
     link: "Ongoing control",
   },
@@ -86,13 +86,13 @@ export default function HomePage() {
         <div className="frame">
           <div className="grid wide-gap">
             <Reveal className="col-6 hero-copy">
-              <span className="label">Hotel distribution support</span>
+              <span className="label">When the guest cannot buy the stay</span>
               <h1>A successful push is not a sellable room.</h1>
               <p className="lede">The PMS can show open. The guest still cannot buy.</p>
               <p className="hero-hook">
-                We work with your team to find where the booking goes wrong,
-                make the changes you approve and check the result on the same
-                room and dates.
+                The guest should be able to buy the stay you meant to sell. We
+                check that stay, you approve the change and we test the same
+                booking again.
               </p>
               <div className="hero-actions">
                 <Link className="button lg" href="/contact/">
@@ -103,12 +103,11 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="hero-why">
-                Send us the property, the booking problem and the person who can
-                approve changes.
+                Name the property, the stay that fails and who can approve a
+                change.
               </p>
               <p className="hero-decline">
-                If the issue falls outside our work, we&apos;ll tell you before
-                agreeing a scope.
+                If this is not our work we will say so before we agree a scope.
               </p>
             </Reveal>
             <div className="col-6">
@@ -122,7 +121,7 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">What we check</span>
-            <h2>Where a booking can go wrong.</h2>
+            <h2>Guests cannot complete the stay you meant to sell.</h2>
           </Reveal>
           <Reveal index={1}>
             <div className="cols-3">
@@ -145,11 +144,11 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">How we handle a problem</span>
-            <h2>Your team can see what changed and what needs checking next.</h2>
+            <h2>Your team can see what changed.</h2>
             <p className="section-lead">
-              We keep a record you can follow: what we saw, who approved the
-              correction and what happened when we checked again. Findings that
-              still need an answer stay open.
+              The record shows the stay we checked, who approved the correction
+              and what the guest could book afterwards. Open questions stay
+              open.
             </p>
           </Reveal>
           <Reveal index={1}>
@@ -169,7 +168,7 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Ways to work with us</span>
-            <h2>Start with a review of the problem your team is seeing.</h2>
+            <h2>Start with one stay that cannot be bought.</h2>
           </Reveal>
           <Reveal index={1}>
             <div className="rows">
@@ -201,20 +200,19 @@ export default function HomePage() {
           <Reveal index={1}>
             <div className="cols-2">
               <article className="card">
-                <p className="list-head">A useful starting point</p>
+                <p className="list-head">This is the work</p>
                 <ul className="checklist">
                   <li>
-                    You already use a PMS, a booking engine and at least two
-                    OTAs, but what guests see does not match what your team expects.
+                    You already run a PMS, a booking engine and at least two
+                    OTAs. Guests still cannot complete a stay you meant to sell.
                   </li>
                   <li>You can name the person who will approve access and changes.</li>
                   <li>
-                    You want us to check the booking result as well as the
-                    settings behind it.
+                    You want the live booking checked, not a leakage number.
                   </li>
                   <li>
                     You want a record of what we found, including what we cannot
-                    yet explain or measure.
+                    yet explain.
                   </li>
                 </ul>
               </article>
@@ -225,6 +223,8 @@ export default function HomePage() {
                   <li>Individually listed homes that are not hotel-operated</li>
                   <li>Properties seeking only social media, advertising or review responses</li>
                   <li>Teams that cannot authorize access or name an approver</li>
+                  <li>Hotels looking to outsource revenue management or pricing</li>
+                  <li>Teams that need someone to run OTA listings, photos or ranking</li>
                 </ul>
               </article>
             </div>
@@ -235,7 +235,7 @@ export default function HomePage() {
       <CtaBand
         eyebrow="Talk through one property"
         title="Where does the booking go wrong?"
-        lead="Tell us what your team sees, what the guest sees and who can approve changes. We'll tell you whether we can help and agree the work before changing anything."
+        lead="Name the property, the stay that fails and who can approve a change. We will say if it is our work before anything is changed."
         email
       />
     </>

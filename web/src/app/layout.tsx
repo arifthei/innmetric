@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "The PMS can show open. The guest still cannot buy. InnMetric finds the defect, gets named approval, changes the agreed system and retests where the guest buys.",
+    "The PMS can show open. The guest still cannot buy. InnMetric checks that stay with your hotel, applies only approved corrections and tests the same booking again.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
     type: "website",

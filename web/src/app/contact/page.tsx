@@ -6,11 +6,11 @@ import { ReviewForm } from "@/components/ReviewForm";
 export const metadata: Metadata = {
   title: "Request a distribution review | InnMetric",
   description:
-    "Share the property, active channels and the problem you are seeing. InnMetric will confirm whether a baseline audit is the right next step.",
+    "Name the property, the stay that fails and who can approve a change. InnMetric will say if a baseline is the right next step.",
   openGraph: {
     title: "Request a distribution review | InnMetric",
     description:
-      "Share the property, active channels and the problem you are seeing. InnMetric will confirm whether a baseline audit is the right next step.",
+      "Name the property, the stay that fails and who can approve a change. InnMetric will say if a baseline is the right next step.",
     url: "https://innmetric.com/contact/",
   },
   alternates: { canonical: "/contact/" },
@@ -21,9 +21,9 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact" title="Request a distribution review">
         <p className="lede">
-          Tell us which property is affected, what happens when a guest tries to
-          book and who can approve changes. We&apos;ll tell you whether it&apos;s
-          work we can take on. Please keep passwords and guest data out of your message.
+          Name the property, the stay that fails and who can approve a change. We
+          will say if it is our work. Keep passwords and guest data out of the
+          message.
         </p>
       </PageHero>
       <section className="section wash">

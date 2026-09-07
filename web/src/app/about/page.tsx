@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About InnMetric | Hotel distribution control",
   description:
-    "Meet the founders who work with your hotel to investigate booking problems, carry out approved corrections and check the result across your existing systems.",
+    "The founders check booking problems in the systems you already use. Your hotel approves each change.",
   openGraph: {
     title: "About InnMetric | Hotel distribution control",
     description:
-      "Meet the founders who work with your hotel to investigate booking problems, carry out approved corrections and check the result across your existing systems.",
+      "The founders check booking problems in the systems you already use. Your hotel approves each change.",
     url: "https://innmetric.com/about/",
   },
   alternates: { canonical: "/about/" },
@@ -18,24 +18,24 @@ export const metadata: Metadata = {
 
 const BELIEFS = [
   {
-    title: "Check before drawing conclusions",
-    body: "A different public rate may have a reasonable explanation. We compare the booking conditions and check the relevant settings before deciding that something is wrong.",
+    title: "Match the stay before calling a rate wrong",
+    body: "Occupancy, cancellation terms or a promotion can explain the gap. We compare those before we treat it as a defect.",
   },
   {
     title: "Your hotel approves the change",
-    body: "You decide what we are allowed to change. We agree each correction with the person your hotel has named to approve it.",
+    body: "You decide what we are allowed to change. The named approver signs each correction.",
   },
   {
-    title: "Check what the guest can book",
-    body: "After a correction, we repeat the booking check. A saved setting on its own doesn't tell us whether the result is right.",
+    title: "The guest has to be able to complete the stay",
+    body: "A saved setting is not the result. We try the same booking again after the correction.",
   },
   {
-    title: "Work directly with the founders",
-    body: "We carry out the review and agreed corrections ourselves. You can speak with the people who checked the issue about what they found and what happens next.",
+    title: "You speak with the people who checked the stay",
+    body: "The founders do the review and the approved corrections. You can ask them what they found.",
   },
   {
     title: "Start with the systems you have",
-    body: "We first check whether your current setup can support the result you need. Any recommendation to replace a system needs a clear reason.",
+    body: "We first check whether the current stack can sell the stay you meant to sell. A replacement needs a written reason.",
   },
 ];
 
@@ -68,9 +68,9 @@ export default function AboutPage() {
           looked at the OTA. The guest is still seeing something different.
         </p>
         <p className="lede">
-          We help follow that issue across the systems involved, work through the
-          corrections your hotel approves and check the booking again. You get a
-          record of what changed and what still needs an answer.
+          InnMetric follows that issue across those systems. Your hotel approves
+          each correction. The same stay is checked again. Open questions stay
+          in the record.
         </p>
       </PageHero>
 
@@ -118,9 +118,8 @@ export default function AboutPage() {
             <span className="label">Working with us</span>
             <h2>Talk through one property with the people doing the work.</h2>
             <p className="section-lead">
-              You&apos;ll speak directly with us about the property and the booking
-              problem. We&apos;ll agree access, approvals and a practical scope
-              before the work begins.
+              You speak with us about the property and the stay that fails. Access,
+              approvals and scope are agreed before the work begins.
             </p>
             <div className="hero-actions">
               <Link className="button lg" href="/contact/">

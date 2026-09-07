@@ -6,11 +6,11 @@ import { RecordSlip } from "@/components/RecordSlip";
 export const metadata: Metadata = {
   title: "How InnMetric audits and repairs hotel distribution",
   description:
-    "See how InnMetric records evidence, obtains approval, applies corrections and verifies hotel distribution outcomes.",
+    "We record the stay that fails, get named approval, change only that and check the same stay again.",
   openGraph: {
     title: "How InnMetric audits and repairs hotel distribution",
     description:
-      "See how InnMetric records evidence, obtains approval, applies corrections and verifies hotel distribution outcomes.",
+      "We record the stay that fails, get named approval, change only that and check the same stay again.",
     url: "https://innmetric.com/how-it-works/",
   },
   alternates: { canonical: "/how-it-works/" },
@@ -42,7 +42,7 @@ export default function HowItWorksPage() {
       >
         <p className="lede">
           We agree the property, channels and access with your named approver.
-          You can follow each finding from the first booking check to the agreed
+          Each finding goes from the first booking check to the approved
           correction and the retest.
         </p>
       </PageHero>

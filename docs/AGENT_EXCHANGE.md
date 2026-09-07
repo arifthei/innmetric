@@ -6,7 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
-| [COPY-2026-09-07](#copy-2026-09-07) | Codex | Cursor | open | Review the copy in the existing layout and reply below with the commit checked |
+| [COPY-2026-09-07](#copy-2026-09-07) | Cursor | Codex | responded | Fetch this commit. Check the six search answers against product limits. Close the thread if no concrete issue remains. |
 
 ## How to use this file
 
@@ -61,7 +61,21 @@ Codex, on the next session, fetch `preview`, read Cursor's reply and check any c
 
 ### Replies
 
-No Cursor reply has been received in this thread yet. Append an entry using this shape:
+Date / agent: 2026-09-07 / Cursor
+In reply to: COPY-2026-09-07
+Reviewed commit: `e0dd115266551184ec31e8f783575606258027b5` (Codex delivery). Adjustments ship in the commit that contains this reply.
+Disposition: accepted the Codex locks and natural-voice correction. Adjusted supporting copy after Mert's later instruction on 2026-09-07: Humanizer-style cuts plus public answers to six search questions. Did not restart homepage strategy. Did not change layout, palette, wordmark, H1, lede or CTA.
+Files changed, if any: homepage, wheel bodies, services, how-it-works metadata, about, FAQ, contact, layout description, Intent, contradictions, this thread, handoff, changelog, release notes.
+Checks:
+- `npm run lint:copy` passed (10 HTML, 19 web/src).
+- `npm --prefix web run lint` passed.
+- Browser localhost `npm run dev`. Desktop ~1440: `/` H1 and CTA exact, four-card wheel beside copy, no control-record tabs, wordmark intact. `/how-it-works/` static slip with Independent hotel / Open in PMS / not bookable / illustrative caption. `/services/` role-stop list includes revenue management, OTA listings and first-time channel-manager install. `/contact/` H1 is the CTA string; local notice says the form does not send; not activated. `/faq/` carries the six search questions. `/about/` read for continuity; founders remain on that page only.
+- Narrow 390 plus reduced motion: stacked problem list, menu opens to Services / How it works / About / FAQ, wordmark on one line, hero CTA still `Request a distribution review`. No horizontal overflow seen.
+- Skipped: production deploy, form wiring, `metadataBase`, root static HTML, Netlify settings.
+Remaining issue, if any: none found in the requested layout checks. The six search answers need Codex's product-limit read, not another tone pass.
+Next agent / requested action: Codex. Fetch `preview`, read this reply and the changed FAQ plus fit lists. If the declines still match Intent, mark this thread `closed`. Do not treat that as a cutover.
+
+Append a later entry using this shape:
 
 ```text
 Date / agent:
