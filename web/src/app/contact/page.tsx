@@ -6,11 +6,11 @@ import { ReviewForm } from "@/components/ReviewForm";
 export const metadata: Metadata = {
   title: "Show us the stay | InnMetric",
   description:
-    "Name the hotel and the booking you expected to sell. InnMetric will reply about fit.",
+    "Share a booking problem at your hotel. InnMetric will explain whether a distribution review fits and what to do next.",
   openGraph: {
     title: "Show us the stay | InnMetric",
     description:
-      "Name the hotel and the booking you expected to sell. InnMetric will reply about fit.",
+      "Share a booking problem at your hotel. InnMetric will explain whether a distribution review fits and what to do next.",
     url: "https://innmetric.com/contact/",
   },
   alternates: { canonical: "/contact/" },
@@ -21,8 +21,9 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact" title="Show us the stay.">
         <p className="lede">
-          Name the hotel and the booking you expected to sell. We will reply
-          about fit. This form does not send yet.
+          Tell us which room and dates you checked, what you expected and what
+          you saw instead. The form is a preview and does not send. Please email
+          hello@innmetric.com.
         </p>
       </PageHero>
       <section className="section wash">

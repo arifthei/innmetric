@@ -4,13 +4,13 @@ import { Reveal } from "@/components/Reveal";
 import { RecordSlip } from "@/components/RecordSlip";
 
 export const metadata: Metadata = {
-  title: "How InnMetric follows a stay that cannot be bought",
+  title: "How InnMetric investigates hotel booking problems",
   description:
-    "You show the stay. InnMetric follows it. You approve the change. The guest result is checked and handed over.",
+    "From your booking example to approved corrections and a repeat check. See what your hotel receives at the handover and how unresolved issues are recorded.",
   openGraph: {
-    title: "How InnMetric follows a stay that cannot be bought",
+    title: "How InnMetric investigates hotel booking problems",
     description:
-      "You show the stay. InnMetric follows it. You approve the change. The guest result is checked and handed over.",
+      "From your booking example to approved corrections and a repeat check. See what your hotel receives at the handover and how unresolved issues are recorded.",
     url: "https://innmetric.com/how-it-works/",
   },
   alternates: { canonical: "/how-it-works/" },
@@ -18,26 +18,26 @@ export const metadata: Metadata = {
 
 const PHASES = [
   {
-    verb: "You show the stay.",
-    body: "The hotel and the booking you expected to sell. That has to come from you.",
+    verb: "Show us what the guest sees.",
+    body: "Share the hotel, room, dates and booking page, with what you expected to happen. We clarify the issue and agree the scope.",
   },
   {
-    verb: "We trace it. You approve the change.",
-    body: "We look at the systems you already use. A named person at the hotel approves any live change.",
+    verb: "Trace the problem and agree the change.",
+    body: "With agreed access, we check the relevant settings across your existing systems. We explain the findings and make only the changes your named approver agrees to.",
   },
   {
-    verb: "We check the guest result and hand you the record.",
-    body: "After the approved change, we try the same booking again. You get what changed and what is still open.",
+    verb: "Check the booking and hand over the record.",
+    body: "We repeat the check for the same room, dates and booking conditions. Your team gets the result, a record of changes and any unresolved items, plus the rechecks we've agreed.",
   },
 ];
 
 export default function HowItWorksPage() {
   return (
     <>
-      <PageHero eyebrow="How it works" title="You show the stay. That is the first step.">
+      <PageHero eyebrow="How it works" title="From the first booking check to the handover.">
         <p className="lede">
-          The hotel names the booking. Three steps get from that stay to a
-          checked result.
+          We agree what to investigate and what access is needed. Your hotel
+          stays in control of live changes throughout the work.
         </p>
       </PageHero>
 
@@ -58,7 +58,8 @@ export default function HowItWorksPage() {
           </Reveal>
           <Reveal index={2}>
             <p className="section-lead">
-              The point is a sellable room and a record the next person can read.
+              If a result is still wrong or a vendor needs to act, it stays open
+              in the record.
             </p>
           </Reveal>
         </div>
@@ -66,7 +67,7 @@ export default function HowItWorksPage() {
 
       <CtaBand
         title="Show us the stay."
-        lead="That is the first piece of work. It has to come from you."
+        lead="Start with what you saw. Access and changes are agreed separately."
       />
     </>
   );

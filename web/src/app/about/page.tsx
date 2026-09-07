@@ -18,24 +18,24 @@ export const metadata: Metadata = {
 
 const BELIEFS = [
   {
-    title: "Match the stay before calling a rate wrong",
-    body: "Occupancy, cancellation terms or a promotion can explain the gap. We compare those before we treat it as a defect.",
+    title: "Compare the same booking conditions",
+    body: "Occupancy, cancellation terms or a promotion can explain a rate difference. We check those details before recommending a correction.",
   },
   {
     title: "Your hotel approves the change",
-    body: "You decide what we are allowed to change. The named approver signs each correction.",
+    body: "You decide what we are allowed to change. We explain each proposed correction and record approval before carrying it out.",
   },
   {
-    title: "The guest has to be able to complete the stay",
-    body: "A saved setting is not the result. We try the same booking again after the correction.",
+    title: "Check what the guest can book",
+    body: "We repeat the booking check after a correction. If the result is still wrong, the finding stays open.",
   },
   {
-    title: "You speak with the people who checked the stay",
-    body: "The founders do the review and the approved corrections. You can ask them what they found.",
+    title: "Speak with the people doing the work",
+    body: "The founders carry out the review and approved corrections. You can ask us about the findings and what needs attention next.",
   },
   {
     title: "Start with the systems you have",
-    body: "We first check whether the current stack can sell the stay you meant to sell. A replacement needs a written reason.",
+    body: "We start with the systems your team already uses. A recommendation to replace one needs a clear reason from the review.",
   },
 ];
 
@@ -68,9 +68,9 @@ export default function AboutPage() {
           looked at the OTA. The guest is still seeing something different.
         </p>
         <p className="lede">
-          InnMetric follows that issue across those systems. Your hotel approves
-          each correction. The same stay is checked again. Open questions stay
-          in the record.
+          We take on that investigation with your team and work through the
+          corrections you approve. At the handover, you can see what was checked,
+          what changed and what still needs an answer.
         </p>
       </PageHero>
 
@@ -116,10 +116,11 @@ export default function AboutPage() {
         <div className="frame">
           <Reveal className="intro intro-center">
             <span className="label">Working with us</span>
-            <h2>Talk through one stay with the people doing the work.</h2>
+            <h2>Talk through the booking problem with us.</h2>
             <p className="section-lead">
-              Show us the hotel and the booking you expected to sell. An
-              approver is needed when a live change is on the table.
+              Start with what your team sees and what the guest sees. We&apos;ll
+              discuss whether we can take it on and agree the scope before
+              requesting access.
             </p>
             <div className="hero-actions">
               <Link className="button lg" href="/contact/">

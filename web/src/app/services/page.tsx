@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Hotel distribution audit and control services | InnMetric",
   description:
-    "A baseline of what guests can book, approved corrections in your current systems and scheduled rechecks. Not revenue management. Not listing management.",
+    "Hotel distribution reviews, approved corrections and scheduled rechecks in the PMS, channel manager, booking engine and OTA accounts you already use.",
   openGraph: {
     title: "Hotel distribution audit and control services | InnMetric",
     description:
-      "A baseline of what guests can book, approved corrections in your current systems and scheduled rechecks. Not revenue management. Not listing management.",
+      "Hotel distribution reviews, approved corrections and scheduled rechecks in the PMS, channel manager, booking engine and OTA accounts you already use.",
     url: "https://innmetric.com/services/",
   },
   alternates: { canonical: "/services/" },
@@ -21,7 +21,7 @@ const OFFERS = [
     id: "baseline",
     index: "01",
     title: "Distribution Baseline Audit",
-    body: "You learn which stays cannot be bought and which public differences are expected. Corrections wait until that is written down.",
+    body: "We check where the booking result differs from what your team expects. You get confirmed findings, open questions and proposed corrections in priority order.",
     points: [
       "A map of your systems and active channels",
       "Booking checks with the room, dates and guest count recorded",
@@ -33,7 +33,7 @@ const OFFERS = [
     id: "repair",
     index: "02",
     title: "Approved Repair Sprint",
-    body: "Approved stays become bookable again. Each change has a way back.",
+    body: "Your hotel approves the correction list before we change anything. We carry out the agreed work, repeat the booking check and record anything that still needs attention.",
     points: [
       "A named hotel approver before any live change",
       "An agreed change list with instructions for reversing each correction",
@@ -45,7 +45,7 @@ const OFFERS = [
     id: "control",
     index: "03",
     title: "Ongoing Distribution Control",
-    body: "Agreed rates and availability get a scheduled recheck. If a problem returns, it is on the list.",
+    body: "We recheck the rates, availability and channels agreed with your team. If a problem returns, the earlier findings and change record give the next review a starting point.",
     points: [
       "Repeat checks of agreed rates, availability, mappings and channels",
       "A record of problems found and corrections verified",
@@ -64,8 +64,8 @@ export default function ServicesPage() {
       >
         <p className="lede">
           We work in the PMS, channel manager, booking engine and OTA accounts
-          you already use. You approve each change. The same stay is checked
-          again.
+          you already use. The first review establishes what needs attention
+          before you decide which corrections to approve.
         </p>
         <div className="hero-actions">
           <Link className="button lg" href="/contact/">
@@ -121,7 +121,7 @@ export default function ServicesPage() {
 
       <CtaBand
         title="Show us the stay."
-        lead="Name the hotel and the booking you expected to sell. An approver is needed when a live change is on the table."
+        lead="Share the room or rate you want checked and what the guest sees. We'll agree the first piece of work with you before asking for access."
       />
     </>
   );

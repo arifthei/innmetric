@@ -77,10 +77,12 @@ Use [blader/humanizer](https://github.com/blader/humanizer) as an editorial refe
 - Keep observations separate from possible causes. Compare room, dates, occupancy and terms before implying a fault. Do not invent results, customer stories, staff quotes or financial impact.
 - Explain approval, access and service limits where they help a buyer decide. Remove contempt, threats and repeated declarations of what we refuse to be.
 - Review every revised claim against the source. A scheduled recheck can find recurrence; it cannot guarantee that an issue will never return.
+- Use the Drive writing references to make editorial choices. Do not turn a storytelling framework or a conversion anecdote into a product promise or a new rule for the visitor. Ask for a booking example because it is useful for the review.
+- Keep a short explanation of InnMetric's role beside the homepage hook. Keeping diagnosis off the homepage does not mean withholding what the service does. Describe the next step without telling the reader to do work for its own sake.
 
 Run the existing copy lint after editing. Check changed pages in their actual layout when browser QA is requested. Distinguish checks that passed from checks still pending. A build does not prove desktop or mobile layout is correct.
 
-Treat the current cause-and-egg copy pass as the review candidate. Correct factual errors, unclear wording or a demonstrated layout problem. Do not restart the homepage strategy or rewrite every page to suit a new agent's taste. Once the requested checks pass, close the review thread and wait for Mert's next brief.
+Use [docs/HANDOFF.md](docs/HANDOFF.md) to identify the current review candidate. Mert explicitly requested the Drive-informed alternative after the cause-and-egg pass. The [copy comparison](docs/COPY_COMPARISON.md) records that proposal against its exact Git baseline. Its supporting prose is a review candidate, not a new set of locked strings. Preserve the accepted public lines in Intent. Once the requested checks pass, close the review thread and wait for Mert's next brief instead of starting another unsolicited rewrite.
 
 ## Operating motion (not this repo’s job to automate)
 

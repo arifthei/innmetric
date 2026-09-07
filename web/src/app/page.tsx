@@ -7,10 +7,10 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "InnMetric | The desk can quote the room. The guest still cannot buy it.",
   description:
-    "A successful push is not a sellable room. Show us the stay.",
+    "InnMetric traces hotel booking problems, makes approved changes in your existing systems and checks the result, with a record your team can follow.",
   openGraph: {
     title: "InnMetric | The desk can quote the room. The guest still cannot buy it.",
-    description: "A successful push is not a sellable room. Show us the stay.",
+    description: "InnMetric traces hotel booking problems, makes approved changes in your existing systems and checks the result, with a record your team can follow.",
     url: "https://innmetric.com/",
   },
   alternates: { canonical: "/" },
@@ -20,21 +20,21 @@ const OFFERS = [
   {
     index: "01",
     title: "Distribution Baseline Audit",
-    body: "Which stays cannot be bought.",
+    body: "Find what needs attention and which corrections come first.",
     href: "/services/#baseline",
     link: "Baseline audit",
   },
   {
     index: "02",
     title: "Approved Repair Sprint",
-    body: "Approved stays become bookable again.",
+    body: "Agreed corrections, checked against the same booking.",
     href: "/services/#repair",
     link: "Repair sprint",
   },
   {
     index: "03",
     title: "Ongoing Distribution Control",
-    body: "Agreed checks, on a schedule.",
+    body: "Keep track of the rates and availability we recheck.",
     href: "/services/#control",
     link: "Ongoing control",
   },
@@ -50,8 +50,9 @@ export default function HomePage() {
               <h1>The desk can quote the room. The guest still cannot buy it.</h1>
               <p className="lede">A successful push is not a sellable room.</p>
               <p className="hero-hook">
-                You already know which stay should sell. This page will not
-                diagnose it. Show us that stay.
+                InnMetric traces the problem through the systems you already
+                use. We make the changes your hotel approves, check the booking
+                again and leave a record your team can follow.
               </p>
               <div className="hero-actions">
                 <Link className="button lg" href="/contact/">
@@ -62,7 +63,8 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="hero-why">
-                Hotel. The stay you expected to sell. What the guest saw instead.
+                Start with the hotel, room and dates. Tell us what you expected
+                to see.
               </p>
             </Reveal>
             <div className="col-6">
@@ -76,7 +78,7 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Ways to work with us</span>
-            <h2>Start with one stay that cannot be bought.</h2>
+            <h2>Start with the booking you want checked.</h2>
           </Reveal>
           <Reveal index={1}>
             <div className="rows">
@@ -108,18 +110,19 @@ export default function HomePage() {
           <Reveal index={1}>
             <div className="cols-2">
               <article className="card">
-                <p className="list-head">This is the work</p>
+                <p className="list-head">A useful starting point</p>
                 <ul className="checklist">
                   <li>
                     You already run a PMS, a booking engine and at least two
                     OTAs.
                   </li>
                   <li>
-                    You can name the stay that should sell and what the guest saw
-                    instead.
+                    You want to understand why a room or rate looks different
+                    to a guest.
                   </li>
                   <li>
-                    You can bring an approver when a live change is needed.
+                    You can bring in the person who approves access and live
+                    changes.
                   </li>
                 </ul>
               </article>
@@ -140,7 +143,7 @@ export default function HomePage() {
 
       <CtaBand
         title="Show us the stay."
-        lead="That is the first piece of work. It has to come from you."
+        lead="Tell us what you expected to see and what appeared instead. We'll explain whether it fits our work and what the next step would be."
         email
       />
     </>

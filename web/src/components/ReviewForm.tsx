@@ -75,7 +75,7 @@ export function ReviewForm() {
             name="summary"
             required
             maxLength={5000}
-            placeholder="Which stay. What you expected. What the guest saw."
+            placeholder="Room and stay dates, booking page or channel, expected result and what appeared instead. No passwords or guest details."
           />
         </div>
         <div className="form-group full">

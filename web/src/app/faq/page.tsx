@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "InnMetric FAQ | Hotel distribution questions",
   description:
-    "Why the booking engine shows no rooms. Why an OTA rate looks different. What InnMetric will not take on.",
+    "Answers about unavailable rooms, rate differences, existing channel-manager setups and the work InnMetric takes on.",
   openGraph: {
     title: "InnMetric FAQ | Hotel distribution questions",
     description:
-      "Why the booking engine shows no rooms. Why an OTA rate looks different. What InnMetric will not take on.",
+      "Answers about unavailable rooms, rate differences, existing channel-manager setups and the work InnMetric takes on.",
     url: "https://innmetric.com/faq/",
   },
   alternates: { canonical: "/faq/" },
@@ -19,27 +19,27 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "Why is my hotel booking engine showing no availability?",
-    a: "If every hotel on that engine is empty, start with the vendor. If your PMS still shows the room open for those dates and the engine shows none, the mapping, restriction or allotment needs a review. That second case is our work.",
+    a: "If the booking engine itself is unavailable, contact its provider. If a room is open in your PMS but unavailable for the same dates online, we review the relevant mappings, restrictions and allotments. That difference alone does not establish the cause.",
   },
   {
     q: "Why are my hotel rates different on Booking.com?",
-    a: "A different public rate is not proof of a fault. Occupancy, cancellation terms or a promotion can make two honest offers look wrong. We compare the same room, dates and guest count before we call it a problem.",
+    a: "Different occupancy, cancellation terms, currency or promotions can produce different prices. We compare the same room and dates under matching conditions before recommending a correction.",
   },
   {
     q: "Do you set up a hotel channel manager?",
-    a: "We work on a channel manager that is already live. If guests still cannot buy the stay you meant to sell, we find the setting and you approve the correction. Installing a new channel manager from scratch is outside this service.",
+    a: "We review channel managers that are already in use. If availability or rates do not appear as your hotel expects, we investigate the setup and propose corrections for approval. A first-time installation is outside our service.",
   },
   {
     q: "How do we simplify our hotel rate plans?",
-    a: "Too many plans can make mappings and restrictions hard to keep. If the booking check shows that, we will say so. We do not sell a rate-plan redesign as a separate product.",
+    a: "We can flag overlapping rate plans when they complicate the mappings or restrictions we're reviewing. Any proposed simplification needs your hotel's approval. We do not offer a standalone rate-plan redesign.",
   },
   {
     q: "Can we outsource hotel revenue management?",
-    a: "No. Your hotel keeps pricing. We check whether the public offer matches what you intended. We do not take over yield, pickup or rate decisions.",
+    a: "InnMetric does not take over revenue management. Your hotel keeps control of pricing, yield and rate decisions. We check whether guests can book the offer your team intended.",
   },
   {
     q: "Who can manage our hotel OTA listings?",
-    a: "Not us. We do not run listing content, photos or ranking. After a baseline we can recheck the rates, availability and mappings you name. That is not listing management.",
+    a: "We do not manage OTA listing content, photos or ranking. Our ongoing service rechecks the rates, availability and mappings agreed after a baseline review.",
   },
 ];
 

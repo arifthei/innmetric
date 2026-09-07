@@ -1,6 +1,6 @@
 # Current handoff
 
-Checkpoint: 2026-09-07. Last writer: Cursor. Next reviewer: Codex. Mert is the only authority.
+Checkpoint: 2026-09-07. Last writer: Codex. Next reviewer: Cursor. Mert is the only authority.
 
 Read [INTENT.md](INTENT.md), [../AGENTS.md](../AGENTS.md), [BRANCHES.md](BRANCHES.md), [CONTRADICTIONS.md](CONTRADICTIONS.md) and the open [agent exchange](AGENT_EXCHANGE.md).
 
@@ -8,9 +8,11 @@ Read [INTENT.md](INTENT.md), [../AGENTS.md](../AGENTS.md), [BRANCHES.md](BRANCHE
 
 Website implementation is on **`preview`**. Push authorized work to the `github` remote. Do not merge to `main` or merge [PR #1](https://github.com/arifthei/innmetric/pull/1).
 
-Cursor shipped the cause-and-egg copy pass Mert approved. New public lines, shorter homepage, three process phases, six-question FAQ, egg form. See [COPY-EGG-2026-09-07](AGENT_EXCHANGE.md#copy-egg-2026-09-07). The earlier [COPY-2026-09-07](AGENT_EXCHANGE.md#copy-2026-09-07) FAQ declines still need Codex's product-limit read, without restoring the old H1 or CTA.
+Mert requested another copy alternative after the usage interruption. Codex refreshed to `3e79c47df763a38053efe2b8a3db09454b9771fb`, read all five Copy Ideas documents including Psychology and reviewed Cursor's pending replies. The [comparison](COPY_COMPARISON.md) records what was accepted, adapted and rejected from Drive and the latest Git copy.
 
-**Codex next:** fetch `preview`, read both threads, check that the six search answers and the fit declines still match Intent. If they match, mark COPY-2026-09-07 `closed` and reply on COPY-EGG-2026-09-07. That is not a production cutover.
+The new candidate explains InnMetric's role beside the hook, makes the booking example concrete and describes the handover. It removes the guaranteed repair outcome and tightens two FAQ diagnostic claims. The current H1, lede, CTA, four-card wheel, compact homepage, three phases, six FAQ questions and short form stay. The form still does not send.
+
+**Cursor next:** review [COPY-ALTERNATIVE-2026-09-07](AGENT_EXCHANGE.md#copy-alternative-2026-09-07) against this delivery. Check desktop and narrow wrapping and reply in the same thread. The earlier COPY and COPY-EGG product-limit reviews are complete; do not reopen them to restore older copy. The current wording remains a proposal for Mert to assess, not a claim of improved conversion or a production cutover.
 
 ## Source
 

@@ -4,6 +4,17 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Drive-informed copy alternative, 2026-09-07
+
+- Refreshed after the usage interruption to `3e79c47df763a38053efe2b8a3db09454b9771fb`. Read all five documents in Copy Ideas, including Psychology and the updated Email & webcopy guidelines. The earlier interrupted attempt had made no alternative commit.
+- Added `docs/COPY_COMPARISON.md` with a head-to-head comparison, source decisions and the completed product-limit review requested by Cursor. The current Git H1, lede, CTA and compact layout take precedence over the older Drive suggestions.
+- Replaced the hero's refusal to diagnose with a short explanation of InnMetric's role and handover. Made the first enquiry concrete, clarified the form placeholder and kept the non-sending form explicit.
+- Removed the implied guarantee that approved stays become bookable and tightened unsupported diagnostic and recurrence claims. Kept the three process phases, six FAQ questions, service exclusions, short form and all current public-line locks.
+- Updated the agent guidance, Intent, contradictions, handoff and release notes. Closed the older product-limit review threads and opened COPY-ALTERNATIVE-2026-09-07 for Cursor and the email/branding agent to respond in Git.
+- Validation: `node scripts/lint-copy.mjs` passed on 10 HTML files and 19 web source files. From `web/`, `node node_modules/eslint/bin/eslint.js` and `node node_modules/next/dist/bin/next build` passed, including TypeScript and static page generation.
+- An AST comparison of all 9 changed TSX files confirmed changes only to prose, metadata descriptions/titles and the form placeholder. Markup, routes, classes, form logic and field requirements were unchanged. Built HTML checks passed for the 6 edited pages, current public lines, 4 wheel titles, 3 process phases, 6 FAQ questions and non-sending form notice. Local documentation links and `git diff --check` passed. Root static HTML, styling, shared chrome, illustrative slip, dependencies and deployment files were unchanged.
+- Fresh browser QA remains queued for Cursor. The available supervised preview forwards Vite-style flags that the existing Next dev command rejects. Its supported recovery does not provide a compatible Next path; no app migration or temporary runtime rewrite was made. Earlier Cursor browser checks apply to `3e79c47`, not this wording. No production deploy or change to Netlify configuration.
+
 ### Cause-and-egg copy pass, 2026-09-07
 
 - Mert approved a concise preview copy pass: hotel as hero, one cause, homepage stops before the diagnosis, contact form as the egg.

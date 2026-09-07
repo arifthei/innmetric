@@ -15,6 +15,7 @@ Check the worktree and fetch `github` before editing. Preserve local work when b
 | [docs/BRANCHES.md](docs/BRANCHES.md) | `main` / `preview` / Codex audit |
 | [docs/HANDOFF.md](docs/HANDOFF.md) | Current checkpoint |
 | [docs/AGENT_EXCHANGE.md](docs/AGENT_EXCHANGE.md) | Cursor and Codex feedback, responses and next reviewer |
+| [docs/COPY_COMPARISON.md](docs/COPY_COMPARISON.md) | Latest preview versus Drive suggestions and the proposed copy |
 | [docs/RELEASE_NOTES.md](docs/RELEASE_NOTES.md) | What the current preview candidate changes and what remains pending |
 | [CHANGELOG.md](CHANGELOG.md) | Unreleased work vs production |
 

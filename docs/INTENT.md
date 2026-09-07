@@ -38,15 +38,17 @@ Approved evidence pattern: We observed X under Y conditions. This may indicate Z
 
 ## Voice and neural register
 
-Hero is the hotel desk, never InnMetric. Mission: a stay the guest can buy. Obstacle: a successful push that is still not a sellable room, not a named OTA as villain. Guide: InnMetric. Journey: three phases on `/how-it-works/`, not as a homepage essay. Resolution: the same stay is bookable, and the next person can read what changed.
+Hero is the hotel desk, never InnMetric. Mission: a stay the guest can buy. Obstacle: a successful push that is still not a sellable room, not a named OTA as villain. Guide: InnMetric. Journey: three phases on `/how-it-works/`, not as a homepage essay. The goal is the intended booking result and a record the next person can use. A result that still needs correction remains open; do not promise that every approved repair succeeds.
 
-Egg: they name the stay. The homepage does not finish the diagnosis. The contact message field is the effort that gives the hotel ownership of the start. Fewer fields is not zero effort.
+Egg: they name the stay. The homepage does not finish the diagnosis. The contact message supplies a useful booking example: the hotel, room, dates and what the guest saw. Explain this request plainly. The psychology references are drafting aids, not proof that more friction improves enquiries. Keep a short explanation of the service beside the hook.
 
 Public voice: concise, not boring. Clear, natural and professional. Complete sentences mixed with short ones. Do not dump process, offers and FAQ onto the homepage. No contempt, invented staff anecdotes or theatrical warnings. No health-coach identity pull. No `helps`, `unlock` or `leverage` on public pages.
 
 Self-qualifier: "You'll probably enjoy working with us if" then the person who already has systems, can name the stay that should sell and can bring an approver when a live change is needed. Keep the wrong-fit column specific and respectful.
 
 Why write: hotel, the stay they expected to sell and what the guest saw instead. A named approver is not required to send the first note. InnMetric will say if the issue falls outside its work before agreeing a scope. Rechecks can find a problem that returns; they cannot promise it will never return.
+
+Current proposal: Mert requested another alternative after the latest Git changes and the added Psychology reference. See [COPY_COMPARISON.md](COPY_COMPARISON.md) for the source decisions and comparison with `3e79c47`. The proposal preserves the public-line overrides and compact layout. It does not replace Mert's authority with a writing framework.
 
 ## Email register
 

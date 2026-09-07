@@ -6,22 +6,22 @@ const CARDS = [
   {
     id: "01",
     title: "The room cannot be bought",
-    body: "The desk can quote those dates. The booking page still shows none.",
+    body: "Your team can see a room available for those dates. The booking page shows nothing to book.",
   },
   {
     id: "02",
     title: "The public rate drifted",
-    body: "The OTA price is not the one the desk is quoting tonight.",
+    body: "A guest finds a different rate online. Your team needs to know whether the offers match.",
   },
   {
     id: "03",
     title: "The stop-sell never lifted",
-    body: "You opened those dates again. The channel still shows them closed.",
+    body: "The hotel is ready to sell those dates again, but the channel still shows them closed.",
   },
   {
     id: "04",
     title: "The last fix came undone",
-    body: "The stay was bookable. A later update brought the problem back.",
+    body: "The room was bookable after the fix. On the next check, the same booking fails again.",
   },
 ] as const;
 
@@ -84,7 +84,7 @@ export function ProblemWheel() {
             </li>
           ))}
         </ol>
-        <p className="work-file-note">Examples. Not a live hotel.</p>
+        <p className="work-file-note">Illustrative booking problems, not live hotel data.</p>
       </div>
     );
   }
@@ -140,7 +140,7 @@ export function ProblemWheel() {
           );
         })}
       </div>
-      <p className="work-file-note">Examples. Not a live hotel.</p>
+      <p className="work-file-note">Illustrative booking problems, not live hotel data.</p>
     </div>
   );
 }

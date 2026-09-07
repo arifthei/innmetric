@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "A successful push is not a sellable room. Show us the stay.",
+    "InnMetric traces hotel booking problems, makes approved changes in your existing systems and checks the result, with a record your team can follow.",
   icons: { icon: "/favicon.svg" },
   openGraph: {
     type: "website",

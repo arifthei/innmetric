@@ -43,6 +43,15 @@ These six replace the older preview locks. Do not restore them from CONTRADICTIO
 
 Psychology register (Drive): hotel is the hero, InnMetric is the guide, the egg is naming the stay. That file is a method, not copy to paste.
 
+## Later requested alternative, 2026-09-07
+
+Mert returned after the usage interruption and requested a fresh read of preview, the expanded Copy Ideas folder and the agent handoff, followed by a stronger copy alternative. This authorizes the requested pass; it does not restore an older H1, CTA, layout or longer form.
+
+- The homepage still stops before diagnosis. Its supporting paragraph can explain what InnMetric does and what the hotel receives. The earlier lines about the page not diagnosing the issue and work having to come from the reader are implementation choices, not locked copy.
+- Naming the booking remains the first useful contribution. Do not treat the egg anecdote as proof that withholding explanation or increasing form effort improves conversion.
+- Keep all six search questions and the RMS, OTA-listing, first-install and standalone rate-plan-redesign limits. Phrase investigation as investigation. Do not promise a known cause or a successful correction before checking.
+- The [comparison](COPY_COMPARISON.md) is the rationale for a review candidate. It does not make every proposed sentence a permanent rule.
+
 ## Authority
 
 Latest explicit instruction from Mert wins over this file, over a Codex brief, over a Drive suggestion and over an older handoff.
