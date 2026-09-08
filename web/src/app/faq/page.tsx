@@ -19,37 +19,38 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "Why is my hotel booking engine showing no availability?",
-    a: "If the booking engine itself is down, its provider is the first call. If the engine is up, the PMS shows rooms for those dates and the engine still shows none, the gap is usually somewhere in mappings, restrictions or allotments. That is a configuration review. Tell us the room and dates and we will reproduce it from the guest's side before proposing anything.",
+    a: "If the engine is down, start with its provider. If it loads but shows no rooms your team expects to sell, we compare the booking result with your settings. Mappings, restrictions and allotments are places to check, not a diagnosis from the public page.",
   },
   {
     q: "Why are my hotel rates different on Booking.com?",
-    a: "A different price is not proof of a fault. Occupancy, cancellation terms, currency, taxes and promotions all change what a guest sees. We compare the same room and dates under matching conditions first. If the offers still differ, that becomes a finding with a proposed correction for your approval.",
+    a: "First compare the same room, dates, occupancy, cancellation terms, currency, taxes and promotions. A difference can be intentional. If it remains, we check what your hotel intended before proposing a correction.",
   },
   {
     q: "Do you set up a hotel channel manager?",
-    a: "No. We work on the channel manager you already run. If rates or availability are not reaching a channel the way your team set them, we trace the setup and propose corrections for approval. If you have no channel manager yet, the vendor's onboarding is the right route.",
+    a: "We review the channel manager you already run and carry out approved corrections. For a first-time installation, start with the vendor's onboarding team.",
   },
   {
     q: "How do we simplify our hotel rate plans?",
-    a: "When overlapping rate plans are what makes the mappings or restrictions hard to trace, we flag it in the findings register and propose a simpler structure for your approval. We do not sell a standalone rate-plan redesign. If that is the whole job, tell us and we will say so.",
+    a: "Overlapping plans may make room mappings or restrictions harder to follow. We can flag that during a review and propose changes for your approval. We do not offer rate-plan redesign as a standalone service.",
   },
   {
     q: "Can we outsource hotel revenue management?",
-    a: "Not to us. Pricing, yield and rate decisions stay with your hotel. Our job is narrower: making sure the rate and availability your team decided on is what a guest can actually book, on every channel you sell through.",
+    a: "InnMetric does not take over revenue management. Your hotel decides pricing and yield. We check whether guests can book the rates and availability you intended on the agreed channels.",
   },
   {
     q: "Who can manage our hotel OTA listings?",
-    a: "Listing content, photos and ranking are marketing work and we do not do it. What we do on an ongoing basis is recheck the rates, availability and mappings agreed after a baseline review and tell you when one of them moved.",
+    a: "You need a provider that covers listing content, photos and visibility. InnMetric's ongoing work is different: scheduled checks of agreed rates, availability and mappings. We do not manage listing content or ranking.",
   },
 ];
 
 export default function FaqPage() {
   return (
     <>
-      <PageHero eyebrow="FAQ" title="The questions hotel teams search before they write to us.">
+      <PageHero eyebrow="FAQ" title="Before you bring us in.">
         <p className="lede">
-          Short answers on what we take on and where the line sits. If your
-          question is not here, ask it in the form and we will answer it there.
+          Answers to common booking questions and what InnMetric can take on.
+          For anything else, email{" "}
+          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
         </p>
       </PageHero>
       <section className="section wash">

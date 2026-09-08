@@ -6,22 +6,22 @@ const CARDS = [
   {
     id: "01",
     title: "The room cannot be bought",
-    body: "The PMS shows inventory for those dates. The booking engine or an OTA shows nothing to sell.",
+    body: "Your PMS shows rooms available. The booking page shows none for the same dates.",
   },
   {
     id: "02",
     title: "The public rate drifted",
-    body: "A guest sees a rate on one channel that your team did not load. It needs a like-for-like comparison before anyone changes it.",
+    body: "The rate on one channel differs from what your team expected. The offers need comparing.",
   },
   {
     id: "03",
     title: "The stop-sell never lifted",
-    body: "Your team reopened the dates. At least one channel still shows them closed and nobody can say why.",
+    body: "Your team reopened the dates. One channel still shows them closed.",
   },
   {
     id: "04",
     title: "The last fix came undone",
-    body: "A correction held for a while. On a later check the same booking fails again and the change history is unclear.",
+    body: "The booking worked after the correction. A later check shows the same problem again.",
   },
 ] as const;
 

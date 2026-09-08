@@ -1,39 +1,29 @@
 # Current handoff
 
-Checkpoint: 2026-09-08. Last writer: Cursor. Next reviewer: Codex on COPY-DECISION-MAKER-2026-09-08, then Mert. Mert is the only authority.
-
-Read [INTENT.md](INTENT.md), [../AGENTS.md](../AGENTS.md), [BRANCHES.md](BRANCHES.md), [CONTRADICTIONS.md](CONTRADICTIONS.md) and the open [agent exchange](AGENT_EXCHANGE.md).
+Checkpoint: 2026-09-08. Last writer: Codex. Next reviewer: Cursor, then Mert. Mert is the only authority.
 
 ## Resume here
 
-Website implementation is on **`preview`**. Push authorized work to the `github` remote. Do not merge to `main` or merge [PR #1](https://github.com/arifthei/innmetric/pull/1).
+The current task is Mert's shorter decision-maker copy and instruction repair, based on `preview` `ef2df4259fe6a4281d642ff8705cb852be028feb`. Read [AGENTS](../AGENTS.md), [Intent](INTENT.md), [Writing](WRITING.md) and the active [COPY-REPAIR-2026-09-08](AGENT_EXCHANGE.md#copy-repair-2026-09-08) thread. Older review threads are closed.
 
-Mert requested another copy alternative after the usage interruption. Codex refreshed to `3e79c47df763a38053efe2b8a3db09454b9771fb`, read all five Copy Ideas documents including Psychology and reviewed Cursor's pending replies. The [comparison](COPY_COMPARISON.md) records what was accepted, adapted and rejected from Drive and the latest Git copy.
+Done: refreshed Git and Cursor's attached guideline; reviewed GTM and Copy Ideas, including Writing Tips and Psychology; reviewed both humanizer repositories. Published the four numbered files to Drive's [Fixes folder](https://drive.google.com/drive/folders/1zIfbo6AVX4On40r05itCrOYhtfeQVeE1) before website edits. Their Git mirror is [docs/fixes](fixes/00_START_HERE.md).
 
-The new candidate explains InnMetric's role beside the hook, makes the booking example concrete and describes the handover. It removes the guaranteed repair outcome and tightens two FAQ diagnostic claims. The current H1, lede, CTA, four-card wheel, compact homepage, three phases, six FAQ questions and short form stay. The form still does not send.
+Implemented: shorter copy across six sales pages, clearer deliverables and role split, corrected unsupported cause/success/scope claims, clearer decision-maker form labels and truthful email route. Preview privacy describes the current fields and non-sending behavior. H1, primary CTA, all CSS, palette, founder biographies, motion, form fields and requiredness remain. The handbook now separates user decisions, editorial guidance, current status and historical discussion.
 
-Cursor reviewed Codex `835afa4` in the browser and shipped a CSS-only alignment pass as `000d2b1`. See [COPY-ALTERNATIVE-2026-09-07](AGENT_EXCHANGE.md#copy-alternative-2026-09-07).
+A separate native email alternative was created and verified in Drive GTM. It retains the four source observations as earlier observations, not new audits. No email was sent and no prospect data was committed to Git.
 
-On 2026-09-08 Mert judged the copy too vague for a hotel decision maker and the form written for a guest. He authorized a decision-maker rewrite with layout and CSS changes, palette unchanged. Mert's answers to Cursor's questions: keep H1 and `Let's Solve It!`; replace the lede, `Send the stay` and `Show us the stay`; rebuild the form with role, property count, systems, problem type and wanted outcome; name deliverables and next steps without durations or vendor names. The result is on `preview` and recorded in [COPY-DECISION-MAKER-2026-09-08](AGENT_EXCHANGE.md#copy-decision-maker-2026-09-08). Intent carries the new public lines and the page arc.
+## Verification
 
-**Next:** Codex reviews the decision-maker rewrite against Intent. Layout follow-up on founder wrap and card fill is on the same `preview` tip. Do not restore guest-flavored lines. Do not wire the form. Do not merge to `main`.
+Passed: copy lint (10 root HTML files, 19 web source files), ESLint, Next build and TypeScript; all 12 static pages generated. Rendered HTML checks passed on seven routes for text, metadata, internal links, current H1/CTA, deliverables, process, FAQ, form fields and privacy. Source comparison confirmed unchanged form control attributes and submit handler, CSS, shared chrome, root static files, dependencies and deployment settings. Local Markdown links and `git diff --check` passed.
 
-## Source
+Visible text extracted from the six sales-page source files fell from 2,195 to 1,655 words (about 25%). This excludes metadata and shared components. It is a size measurement, not a conversion or writing-quality score.
 
-| Item | State |
-| --- | --- |
-| Canonical repo | `https://github.com/arifthei/innmetric.git` |
-| Production baseline | GitHub `main` `1e21e26`. No production deploy in this pass. |
-| This branch | `preview` |
-| Historical audit | `codex/coordination-and-design-brief` and PR #1. Current instructions are on `preview`. |
+Fresh visual QA remains for Cursor. The known Codex preview runner forwards Vite-style flags to the unchanged Next dev command; the previous incompatible runner was not retried and the app was not migrated for this copy pass. This turn's source/build checks are not browser measurements. See the active exchange for exact routes and viewports.
 
-## Parked (not this pass)
+## Next action and stopping point
 
-- Email domain split: website on innmetric.com, transactional mail on one subdomain, marketing mail on another, plus SPF/DKIM/DMARC.
-- React form still does not post to Netlify.
-- `metadataBase` is still localhost.
-- Next.js cutover. Root static HTML restyle.
+Cursor syncs the delivered commit, records its SHA and performs the bounded browser/form/copy review. Fix concrete defects and reply in the same thread. Close it when those checks pass. Mert reviews the copy and the separate email draft. Do not initiate another general rewrite or imply buyer validation.
 
-## Palette and copy lock
+## Held
 
-Sanzo Wada kinari/asagi/sumi. Preview H1 is `The desk can quote the room. The guest still cannot buy it.` Lede is `Your systems say the room is on sale. Somewhere between the PMS and the booking page, it stopped being one.` Button is `Let's Solve It!`. Form submit is `Send the problem`. Band title is `Tell us which booking problem you want owned.` **Not bookable** is kaki. No public GCC hook. The site speaks to the owner, GM or commercial lead, not to a guest.
+`main` baseline: `1e21e26b9fc39bea5504c79e393186fd5b85b1f7`. No main push, production deployment, Netlify setting change, root static edit, form activation or metadataBase change. The old Codex audit and PR #1 stay historical. Email infrastructure and the Next cutover are separate tasks.

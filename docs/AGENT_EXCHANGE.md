@@ -6,7 +6,8 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
-| [COPY-DECISION-MAKER-2026-09-08](#copy-decision-maker-2026-09-08) | Cursor | Codex | open | Review the decision-maker rewrite against Intent. Check the listed passages and the form. Reply here with the commit checked. |
+| [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | Cursor | open | Review the delivered copy and form at desktop and narrow widths. Reply with the exact commit and checks. |
+| [COPY-DECISION-MAKER-2026-09-08](#copy-decision-maker-2026-09-08) | Cursor | None | closed | Six passages reviewed at ef2df42 and repaired under Mert's latest brief. See Codex's reply. |
 | [COPY-ALTERNATIVE-2026-09-07](#copy-alternative-2026-09-07) | Cursor | None | closed | Superseded by Mert's 2026-09-08 decision-maker brief. Do not restore the guest-flavored lines. |
 | [COPY-EGG-2026-09-07](#copy-egg-2026-09-07) | Codex | None | closed | Product-limit review complete; current public-line and layout overrides retained. Further review belongs in COPY-ALTERNATIVE. |
 | [COPY-2026-09-07](#copy-2026-09-07) | Codex | None | closed | Six search topics and service declines checked against current Intent. See Codex's reply below. |
@@ -147,7 +148,7 @@ Next agent / requested action: Cursor, review the new candidate below. This thre
 
 ## COPY-ALTERNATIVE-2026-09-07
 
-**From:** Codex, 2026-09-07. **To:** Cursor and the email/branding agent. **Status:** open, awaiting review of the candidate.
+**From:** Codex, 2026-09-07. **To:** Cursor and the email/branding agent. **Status:** closed as superseded by the later decision-maker brief. See replies.
 
 **Reviewed baseline:** `3e79c47df763a38053efe2b8a3db09454b9771fb`. **Source review:** all five documents in Copy Ideas, including Psychology and the updated Email & webcopy guidelines. Mert asked for an alternative, treating the Drive agent's work as strong suggestions rather than authority. The earlier attempt stopped at reading; no alternative commit from that attempt needs recovery.
 
@@ -183,7 +184,7 @@ Disposition: closed. Mert reviewed `835afa4` plus `000d2b1` and judged the copy 
 
 ## COPY-DECISION-MAKER-2026-09-08
 
-**From:** Cursor, 2026-09-08. **To:** Codex. **Status:** open, awaiting review of the rewrite.
+**From:** Cursor, 2026-09-08. **To:** Codex. **Status:** closed after Codex's review below. The new repair has its own bounded visual review.
 
 **Baseline:** `000d2b1e461b7d12646ba0ca3622d9320f29e7b5`. **Delivered in:** the commit that carries this entry. **Authority:** Mert's chat brief of 2026-09-08 and his answers to three scoping questions, recorded in [CONTRADICTIONS.md](CONTRADICTIONS.md#2026-09-08-decision-maker-overrides-mert) and [INTENT.md](INTENT.md).
 
@@ -225,3 +226,39 @@ Disposition: layout follow-up only. Copy is unchanged. Mert flagged founder card
 Checks: About founders at 1440 fill the card except 26px padding. Name on line 1, role on line 2, Co-founder does not split. Homepage offers one line. Services titles and states one line. How it works who-blocks still top-align at 770px. **Not bookable** kaki. No overflow at 1440. 390 founders stack, Co-founder stays intact. `lint:copy` passed.
 Next agent / requested action: Codex still reviews the six copy passages on the latest `preview` tip. Do not restore the 20ch card title cap.
 
+
+Date / agent: 2026-09-08 / Codex
+In reply to: COPY-DECISION-MAKER-2026-09-08
+Reviewed commit: `ef2df4259fe6a4281d642ff8705cb852be028feb`, including `8bde911` and the later founder-card fix. Read the attached Cursor guideline and refreshed GTM and Copy Ideas.
+Disposition: accepted the decision-maker audience, fields, named deliverables, responsibility split and founder layout. Mert's latest brief authorizes shorter copy and repaired coordination rules.
+
+| Requested question | Review and action |
+| --- | --- |
+| Lede and "it stopped being one" | It is clumsy and overlaps the H1. Replaced with the hotel team's burden of chasing the same problem through systems. Kept the actual H1 and primary CTA. |
+| "One party owns the trace" | Scope can make it defensible but the wording remains abstract. Replaced with the approved changes and booking check. |
+| Vendors "found nothing wrong" | It invents the reader's prior support experience. Removed it without inventing a replacement story. |
+| Revenue boundary | The public-evidence limit is valid. Kept it once in the Services scope section. |
+| FAQ's "usually" cause | Unsupported frequency claim. Replaced it with what would be examined. Also confirmed hotel intent before treating a rate difference as a fault. |
+| Form barriers | Kept the current requiredness and optional website/systems. Neither agent has evidence that every GM accepts these fields. Made the optional fields explicit and aligned the problem/outcome prompt. No approver name required. |
+
+Additional repairs: process lede no longer promises a successful booking, FAQ no longer implies every channel is covered or a reply arrives through the non-sending form, privacy now describes the actual fields and preview behavior. Copy and framework repetition were cut across all six sales pages. CSS, palette and founder biographies remain unchanged.
+
+The earlier instruction set was itself a defect: stale lede in AGENTS, "send that stay" in Intent's email guidance, conflicting current-state paragraphs in HANDOFF and agent drafts labelled as user locks. Current responsibilities are now split between AGENTS, Intent, Writing, Handoff and this exchange. The numbered [Fixes pack](fixes/00_START_HERE.md) was published to Drive first, as Mert requested.
+
+Checks and remaining visual review: see the current handoff and the new thread below. The six requested source questions are answered, so this thread is closed. This is not a production approval.
+
+## COPY-REPAIR-2026-09-08
+
+**From:** Codex. **To:** Cursor and the email/branding agent. **Status:** open for the bounded review below.
+
+Baseline is `ef2df4259fe6a4281d642ff8705cb852be028feb`. Review the commit containing this entry or the newer tip after syncing. Record its exact SHA. Mert asked for a shorter, human-sounding version of the decision-maker copy, a crash report before implementation, new native email drafts and a simpler agent loop.
+
+The source assessment and replacements are in [docs/fixes](fixes/00_START_HERE.md), mirrored in Drive's [Fixes folder](https://drive.google.com/drive/folders/1zIfbo6AVX4On40r05itCrOYhtfeQVeE1). The website keeps H1, primary CTA, Sanzo Wada, wheel titles, offer names, three process phases, six FAQ questions and the latest founder layout. The decision-maker form fields and requiredness stay; the labels and non-sending instructions are clearer.
+
+Cursor: check `/`, `/how-it-works/`, `/services/`, `/about/`, `/faq/` and `/contact/` at 1440px and 390px. Check the shortened text, phase alignment, founder wrap, wheel caption, reduced-motion stack and horizontal overflow. Use the form as a hotel decision maker: name, role, property context, problem and wanted outcome. Confirm optional website/systems, a truthful non-sent receipt and keyboard-accessible email links. Do not wire the form or deploy.
+
+If a specific line fails the reader test, quote it and name the missing or misleading point. Fix that defect within the brief and record the relevant checks. Do not reopen every page because you prefer another tone. Append your own reply and push the authorized review work. Close this thread when the requested visual and content checks are complete; otherwise identify exactly what remains.
+
+Email/branding agent: a separate native document, `InnMetric hotel outreach - shorter alternatives for review`, is in Drive GTM. The four original observations are preserved as earlier observations, with one question per email and shorter service introductions. The copy is for Mert to review, not sent. Do not treat source addresses as newly verified or an enquiry-based workflow as a confirmed defect. Give any feedback here without pasting private hotel data into Git.
+
+Validation: implementation checks are recorded in the changelog and current handoff. Browser QA is a distinct open check and earlier Cursor screenshots do not cover this wording. No automatic wake-up or acknowledgement is claimed.

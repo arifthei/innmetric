@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About InnMetric | Hotel distribution control",
   description:
-    "Two founders who take a hotel's booking problem as one piece of work across PMS, channel manager, booking engine and OTA accounts. Your hotel approves each change.",
+    "Meet the founders who investigate your hotel's booking problems, carry out approved changes and keep your team informed.",
   openGraph: {
     title: "About InnMetric | Hotel distribution control",
     description:
-      "Two founders who take a hotel's booking problem as one piece of work across PMS, channel manager, booking engine and OTA accounts. Your hotel approves each change.",
+      "Meet the founders who investigate your hotel's booking problems, carry out approved changes and keep your team informed.",
     url: "https://innmetric.com/about/",
   },
   alternates: { canonical: "/about/" },
@@ -18,24 +18,24 @@ export const metadata: Metadata = {
 
 const BELIEFS = [
   {
-    title: "We believe a booking problem needs one owner",
-    body: "So we take the trace from your systems to the booking page as one piece of work and report it to one person at your hotel.",
+    title: "Someone needs to follow the whole problem",
+    body: "We investigate across the agreed systems and keep one person at your hotel informed, including when a vendor needs to act.",
   },
   {
-    title: "We believe a rate difference is not a fault until the stay is matched",
-    body: "So we compare the same room, dates, occupancy, terms and promotions before we propose any correction.",
+    title: "Different offers can have different rates",
+    body: "We compare the booking conditions and confirm what your hotel intended before proposing a change.",
   },
   {
-    title: "We believe the hotel decides what changes",
-    body: "So a named person at your hotel approves each correction before we make it and we record that approval.",
+    title: "Your hotel makes the decisions",
+    body: "You choose which corrections go ahead. We record the named approval before changing anything live.",
   },
   {
-    title: "We believe a fix counts only where the guest sees it",
-    body: "So we repeat the booking check after the change. If the result is still wrong, the finding stays open in your record.",
+    title: "A changed setting needs a booking check",
+    body: "We repeat the check after the correction. If the result is still wrong, the issue stays open.",
   },
   {
-    title: "We believe you should hear from the people doing the work",
-    body: "So the founders carry out the review and the approved corrections and answer your questions about them directly.",
+    title: "You should be able to ask the person doing the work",
+    body: "The founders carry out the review and approved corrections. We answer your questions directly.",
   },
 ];
 
@@ -63,17 +63,12 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="Someone has to own the problem across the systems."
+        title="You work directly with the founders."
       >
         <p className="lede">
-          You have asked the PMS vendor, the channel manager and the OTA. Each
-          one checked its own side and found nothing wrong. The guest still
-          cannot book what your team put on sale.
-        </p>
-        <p className="lede">
-          InnMetric takes that problem as one piece of work. We trace it across
-          the systems, correct it with your approval and hand you a record of
-          what was checked, what changed and what still needs an answer.
+          A booking problem can cross several systems. We follow it through the
+          agreed setup and keep your team informed of what we find, what changes
+          and what still needs an answer.
         </p>
       </PageHero>
 
@@ -81,7 +76,7 @@ export default function AboutPage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">How we work</span>
-            <h2>What we believe, so what we do</h2>
+            <h2>What you can expect from us.</h2>
           </Reveal>
           <Reveal index={1}>
             <ul className="rows">
@@ -125,10 +120,10 @@ export default function AboutPage() {
         <div className="frame">
           <Reveal className="intro intro-center">
             <span className="label">Working with us</span>
-            <h2>Tell us which booking problem you want owned.</h2>
+            <h2>Talk to the people who will do the work.</h2>
             <p className="section-lead">
-              Name the property, the problem and the outcome you want. We reply
-              on fit and agree the scope before asking for any access.
+              Tell us what your hotel needs. We&apos;ll explain what we can take
+              on and what we would check first.
             </p>
             <div className="hero-actions">
               <Link className="button lg" href="/contact/">

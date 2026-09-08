@@ -25,11 +25,12 @@ export default function PrivacyPage() {
           no registered legal entity listed on this site. Contact:{" "}
           <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
         </p>
-        <h2>What form data is collected</h2>
+        <h2>What the preview form asks for</h2>
         <p>
-          The contact form may collect your name, work email, hotel name or
-          website, optional role, a note about the stay to look at and consent to
-          be contacted.
+          The preview form asks for your name, work email, role, number of
+          properties, hotel or group name, problem type, wanted outcome and
+          consent to be contacted. Website and systems in use are optional.
+          This form does not send the information to InnMetric.
         </p>
         <h2>Why the data is used</h2>
         <p>
@@ -38,8 +39,10 @@ export default function PrivacyPage() {
         </p>
         <h2>Hosting and form processing</h2>
         <p>
-          The website is hosted by Netlify. Netlify also processes form
-          submissions. Email notifications may be sent to hello@innmetric.com.
+          The production website is hosted by Netlify. This preview form does
+          not submit to Netlify or send email notifications. To contact
+          InnMetric, email hello@innmetric.com. If you choose that route, the
+          information you send is used to assess and respond to your request.
         </p>
         <h2>Retention</h2>
         <p>

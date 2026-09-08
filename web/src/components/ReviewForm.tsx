@@ -22,10 +22,10 @@ const SYSTEMS = [
 ];
 
 const PROBLEMS = [
-  "A room the PMS shows cannot be booked online",
-  "A rate a guest sees does not match the rate we loaded",
-  "A stop-sell or closed date has not reopened on a channel",
-  "A fix we made earlier has come undone",
+  "Available rooms cannot be booked online",
+  "A public rate differs from what we expected",
+  "Reopened dates still show closed on a channel",
+  "A previous booking problem has returned",
   "Something else",
 ];
 
@@ -43,10 +43,10 @@ export function ReviewForm() {
         <span className="label">Local preview</span>
         <h2>The request was not sent.</h2>
         <p className="section-lead">
-          This Next.js app does not post to Netlify. Production innmetric.com is
-          unchanged. Email hello@innmetric.com with your property, the booking
-          problem and the outcome you want. Do not include passwords or guest
-          data.
+          This preview form does not send. Please email{" "}
+          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a> with your
+          hotel, the problem and what you want to change. Do not include
+          passwords or guest data.
         </p>
         <button className="button" type="button" onClick={() => setSent(false)}>
           Return to the form
@@ -59,7 +59,8 @@ export function ReviewForm() {
     <form onSubmit={onSubmit}>
       <div className="local-notice">
         <strong>Local preview</strong>
-        This form does not send. Production innmetric.com is unchanged.
+        This form does not send. Please email{" "}
+        <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
       </div>
       <p className="honeypot">
         <label>
@@ -102,7 +103,7 @@ export function ReviewForm() {
           <input id="hotel" name="hotel" type="text" required maxLength={200} />
         </div>
         <div className="form-group">
-          <label htmlFor="website">Website</label>
+          <label htmlFor="website">Website (optional)</label>
           <input
             id="website"
             name="website"
@@ -113,7 +114,7 @@ export function ReviewForm() {
           />
         </div>
         <fieldset className="form-group full check-group">
-          <legend>Systems in use</legend>
+          <legend>Systems in use (optional)</legend>
           <div className="check-grid">
             {SYSTEMS.map((system) => (
               <label className="check" key={system.id} htmlFor={`system-${system.id}`}>
@@ -129,7 +130,7 @@ export function ReviewForm() {
           </div>
         </fieldset>
         <div className="form-group full">
-          <label htmlFor="problem">The problem</label>
+          <label htmlFor="problem">What needs attention?</label>
           <select id="problem" name="problem" defaultValue="" required>
             <option value="" disabled>
               Choose the closest match
@@ -140,13 +141,13 @@ export function ReviewForm() {
           </select>
         </div>
         <div className="form-group full">
-          <label htmlFor="outcome">What should be true when it is fixed</label>
+          <label htmlFor="outcome">What is happening and what would you like to change?</label>
           <textarea
             id="outcome"
             name="outcome"
             required
             maxLength={5000}
-            placeholder="Where you see the problem today, which channels it affects and what your team expects a guest to be able to book. No passwords or guest details."
+            placeholder="Tell us where the problem shows and the result your team needs. For example: reopened dates should be available on our agreed channels. No passwords or guest details."
           />
         </div>
         <div className="form-group full">
@@ -158,10 +159,11 @@ export function ReviewForm() {
       </div>
       <div className="form-actions">
         <button className="button lg" type="submit">
-          Send the problem
+          Send enquiry
         </button>
         <span className="form-note">
-          Prefer email? Write to hello@innmetric.com.
+          Prefer email? Write to{" "}
+          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
         </span>
       </div>
     </form>

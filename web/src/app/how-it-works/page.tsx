@@ -4,7 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { RecordSlip } from "@/components/RecordSlip";
 
 const DESCRIPTION =
-  "Three phases from an agreed scope to a verified booking result. See what your team does, what InnMetric does and what you hold at the handover.";
+  "See what your hotel team does, what InnMetric takes on and how findings, approved changes and booking checks are handed over.";
 
 export const metadata: Metadata = {
   title: "How InnMetric works with your hotel",
@@ -20,32 +20,31 @@ export const metadata: Metadata = {
 const PHASES = [
   {
     verb: "Agree the scope",
-    body: "We start from the problem you named and the result you want. Nothing is accessed or changed in this phase.",
-    yours: "Tell us the property, the systems involved and where the booking result goes wrong. Name the outcome that would count as fixed.",
-    ours: "Reproduce the problem from the guest's side, say whether it fits our work and propose a scope, the access we need and who approves changes.",
+    body: "First, decide what needs checking.",
+    yours: "Describe the problem and the result you want. You do not need to know the cause.",
+    ours: "Clarify the problem and propose the work. Agree access and who approves changes before entering your accounts.",
   },
   {
-    verb: "Trace and correct with approval",
-    body: "With agreed access, we follow the problem through your existing systems and change only what your approver signs off.",
-    yours: "Grant the agreed access. Review each proposed correction and approve, defer or reject it.",
-    ours: "Check the relevant settings across PMS, channel manager, booking engine and OTA accounts. Explain each finding, record the approval and make the correction.",
+    verb: "Investigate and correct",
+    body: "Your hotel decides what changes.",
+    yours: "Provide agreed access and approve, defer or reject each proposed correction.",
+    ours: "Follow the problem through the relevant systems. Explain the findings, record your approval and make the agreed changes.",
   },
   {
     verb: "Verify and hand over",
-    body: "A correction counts when the guest-facing result matches what your team intended.",
-    yours: "Confirm the result against your own expectation. Decide which rates, availability and channels we recheck and how often.",
-    ours: "Repeat the same booking check under the same conditions. Hand over the findings register, change list, open items and the recheck plan.",
+    body: "Check what the change achieved.",
+    yours: "Review the result with us and decide whether you need ongoing checks.",
+    ours: "Repeat the booking check under the same conditions. Hand over the findings, changes and open items, with any agreed recheck schedule.",
   },
 ];
 
 export default function HowItWorksPage() {
   return (
     <>
-      <PageHero eyebrow="How it works" title="Three phases. Your hotel approves every live change.">
+      <PageHero eyebrow="How it works" title="You know what we need from your team at each step.">
         <p className="lede">
-          You bring the problem and the person who can approve changes when the
-          work reaches that point. We bring the trace, the corrections and the
-          proof that the guest can now book what your team intended.
+          We agree the work before asking for access. Your hotel approves every
+          live change. Here is how the investigation and handover fit together.
         </p>
       </PageHero>
 
@@ -79,19 +78,19 @@ export default function HowItWorksPage() {
           </Reveal>
           <Reveal index={2}>
             <p className="section-lead">
-              A result that is still wrong stays open in the record. If a
-              correction depends on a vendor, we record that dependency and what
-              was asked of them. A scheduled recheck can catch a problem that
-              returns. It cannot promise that it never will.
+              If the booking still fails, the issue stays open. We record what
+              needs attention, including any action required from your vendor.
+              Scheduled rechecks can find a returning problem; they cannot
+              guarantee it stays fixed.
             </p>
           </Reveal>
         </div>
       </section>
 
       <CtaBand
-        title="Tell us which booking problem you want owned."
-        lead="If you already know which phase you need, choose the engagement. If not, write and we will say."
-        next={{ href: "/services/", label: "Choose the engagement" }}
+        title="Which part do you need us for?"
+        lead="You can start with an audit or bring the findings your team already has."
+        next={{ href: "/services/", label: "Compare the services" }}
       />
     </>
   );

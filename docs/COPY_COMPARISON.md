@@ -1,5 +1,7 @@
 # Website copy alternative
 
+Historical comparison of the 2026-09-07 candidate. For the current repair, start with [the Fixes pack](fixes/00_START_HERE.md) and [HANDOFF.md](HANDOFF.md). This file does not override current Intent.
+
 Prepared by Codex on 2026-09-07 after Mert requested a fresh review. This is the reasoning for a copy candidate, not a verdict from the branding agent or a new set of locked strings.
 
 **Git baseline:** [`3e79c47df763a38053efe2b8a3db09454b9771fb`](https://github.com/arifthei/innmetric/commit/3e79c47df763a38053efe2b8a3db09454b9771fb), the latest `preview` commit when this review began. It supersedes the earlier comparison started against `61b4e34`. No alternative was committed during that interrupted attempt.

@@ -4,7 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { ReviewForm } from "@/components/ReviewForm";
 
 const DESCRIPTION =
-  "For hotel owners, general managers and commercial leads. Name the booking problem and the outcome you want. InnMetric replies on fit, scope and what it needs from you.";
+  "Tell InnMetric about your hotel's availability or rate problem and what you want to change. We will explain what we can take on and the next step.";
 
 export const metadata: Metadata = {
   title: "Tell us the booking problem | InnMetric",
@@ -18,20 +18,19 @@ export const metadata: Metadata = {
 };
 
 const NEXT_STEPS = [
-  "We read your note and reply on whether the problem fits our work.",
-  "If it does, we propose a scope, the access we would need and who at your hotel approves changes.",
-  "Access is requested only after you agree the scope. Nothing changes in your systems before a named approver signs it off.",
+  "We reply about whether the problem fits our work and clarify anything we need to know.",
+  "Together, we agree what to check and what a useful result would be.",
+  "We agree access before starting. Your hotel approves each live change.",
 ];
 
 export default function ContactPage() {
   return (
     <>
-      <PageHero eyebrow="Contact" title="Tell us the booking problem you want owned.">
+      <PageHero eyebrow="Contact" title="What needs to work better at your hotel?">
         <p className="lede">
-          This form is for the person who can decide to bring us in: an owner,
-          a general manager or a commercial lead. Tell us the property, the
-          problem and what should be true when it is fixed. This preview does
-          not send. Until it does, please email hello@innmetric.com.
+          For owners, GMs and hotel commercial or operations teams. Tell us where
+          availability or rates are going wrong and what you want to change.
+          You don&apos;t need to diagnose the cause first.
         </p>
       </PageHero>
       <section className="section wash">
@@ -42,7 +41,7 @@ export default function ContactPage() {
                 <ReviewForm />
               </div>
               <aside className="col-5 side-card">
-                <h3>What happens next</h3>
+                <h3>After you email us</h3>
                 <ol className="steps">
                   {NEXT_STEPS.map((step) => (
                     <li key={step}>{step}</li>

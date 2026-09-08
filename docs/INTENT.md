@@ -1,113 +1,63 @@
-# InnMetric HITL Intent
+# Current InnMetric intent
 
-Updated: 2026-09-08. Owner: Mert. Canonical git: `https://github.com/arifthei/innmetric.git`. Earlier Drive copy: https://docs.google.com/document/d/14hJbHK8UQvX735QXRlo265BKGwVLyp5QPsU1go59nPk/edit. That copy is stale. Do not restore its anger persona over this file. The current website handbook is this file plus `AGENTS.md`, `docs/HANDOFF.md` and `docs/AGENT_EXCHANGE.md` on **`preview`**. Latest explicit instructions from Mert take precedence.
+Updated 2026-09-08. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`, implementation branch `preview`. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
 
-This brief is for website copy **and** later email copy. Hotel prospecting stays a separate track. Do not import Drive traction packs into git.
+## The service and the reader
 
-Branding Drive [implementation suggestions](https://docs.google.com/document/d/1WcQQv5zdqA4I4ZMpwHhEf7DzMSF49seO5F4N2LqK1VQ/edit) is a suggestion, not a paste and not authority to revert newer Git decisions.
+InnMetric is a founder-delivered, vendor-neutral service for hotel distribution problems. It investigates the hotel's existing PMS, channel manager, booking engine and OTA accounts, makes agreed corrections with named approval, checks the guest-facing booking result and rechecks the outcomes included in the agreement.
 
-## Branches
+Write to the hotel owner, GM, commercial, revenue, distribution or operations decision maker. A chain operator should understand the offer too; that does not silently change the launch ICP. Internal ICP remains independent and small-group hotels in the GCC. Public fit is independent hotels, resorts, aparthotels and small groups selling direct and on at least two OTAs. Large international chains with their own central distribution team and individually listed homes outside hotel operations remain outside the launch fit.
 
-| Branch | Role |
+The first purchase is a service. Do not claim an AI product, SaaS, autonomous pricing, validated prices, customer outcomes, revenue recovery or a launch timetable. No public GCC hook, real prospect names or founder full names on the homepage. Founder biographies belong on About.
+
+## Decisions retained by Mert
+
+The attached Cursor note records Mert's answers before `8bde911`. His latest request authorizes reducing the wordy parts and repairing the instructions. Distinguish the answers from Cursor's implementation wording.
+
+| Decision | Current constraint |
 | --- | --- |
-| `main` | Production static HTML on innmetric.com. Do not push experiments. |
-| `preview` | Implementation home for the Next.js rebuild in `web/`. |
-| `codex/coordination-and-design-brief` | Historical audit. Draft PR #1. Do not merge. Current overrides live in `docs/CONTRADICTIONS.md` on `preview`. |
+| Homepage H1 | `The desk can quote the room. The guest still cannot buy it.` |
+| Primary button | `Let's Solve It!` to `/contact/`, never used as a heading or metadata title |
+| Visual identity | Sanzo Wada palette and current lowercase wordmark |
+| Form audience | Hotel decision makers; ask for the problem and wanted result |
+| Form context | Include role, property count, systems and problem type; role is required |
+| Concreteness | Name the deliverables and next step. No invented durations or PMS/channel-manager vendor names |
+| Writing | Natural professional English. No em/en dashes or Oxford comma. No contempt or invented anecdotes |
 
-Cursor Origin is not the source of truth. Fetch GitHub before assuming a branch is stale. Do not write a Codex NOTICE on every preview commit. Update this Intent when an accepted decision changes or an older instruction needs correction. Keep `docs/HANDOFF.md` current with the next action and use `docs/AGENT_EXCHANGE.md` for agent feedback and replies. Mert requested this Git-based loop on 2026-09-07 and authorized committing and pushing website work to `preview`.
+The lede, closing bands, submit label and other supporting sentences are editable under a copy brief. `Send the stay`, `Show us the stay` and the old push lede are superseded. Current wording is in the app; do not duplicate it here as new locks. The header CTA applies to Next preview; root static HTML retains its existing production CTA until cutover.
 
-## Product
+## Service boundaries
 
-InnMetric is a founder-delivered, vendor-neutral distribution-control service. It audits, repairs with named hotel approval, verifies the live guest-facing result and rechecks agreed outcomes across the hotel's existing PMS, channel manager, booking engine and OTA accounts.
+- The hotel's existing systems remain in place. InnMetric is not a PMS, channel manager, booking engine, OTA or RMS replacement. No first-time system installation.
+- Hotel pricing, yield and rate decisions stay with the hotel. No revenue-management takeover, standalone rate-plan redesign or autonomous inventory/pricing bot.
+- No OTA content, photos, ranking, advertising, social media, SEO or review-response service.
+- Agree access before entering accounts and obtain named hotel approval before each live change. A first enquiry does not require an approver's name.
+- Observed symptoms are separate from causes. Match the room, dates, occupancy, terms, taxes, currency and promotions before interpreting a public rate difference. Confirm the hotel's intent before calling it a fault.
+- Do not promise a known cause, successful repair or permanent fix. Unresolved findings stay open. Rechecks cover agreed conditions and channels, not every future booking.
+- A public symptom alone cannot establish revenue loss or vendor negligence. A factual limit belongs where it changes the reader's decision, not at the end of every paragraph.
 
-Internal ICP (keep in `AGENTS.md`, not as a homepage hook): independent and small-group hotels in the GCC.
+## Deliverables and page structure
 
-Public pages must not lead with GCC. The site is read by anyone. Geography is not the hook.
+Keep the three offer names: Distribution Baseline Audit, Approved Repair Sprint and Ongoing Distribution Control. Name findings, approved changes with reversal, repeat booking checks and a handover with open items and agreed rechecks. Those are delivered as applicable to the selected scope; an audit does not imply completed repair work.
 
-## Locked public lines (preview Next app)
+The current structure stays: homepage hook, four-card problem wheel, useful deliverables, offers, fit and invitation. No ticket row or homepage FAQ. How it works has three phases with Your team / InnMetric responsibilities and a static illustrative slip. FAQ keeps its six buyer-search questions. About keeps the latest founder-card layout and sourced biographies. [WRITING.md](WRITING.md) defines each page's job without forcing a visitor through every page.
 
-- H1: `The desk can quote the room. The guest still cannot buy it.`
-- Lede: `Your systems say the room is on sale. Somewhere between the PMS and the booking page, it stopped being one.` (2026-09-08, replaces `A successful push is not a sellable room.`)
-- Button (header, hero, CtaBand): `Let's Solve It!` to `/contact/`. Never as H1, eyebrow or metadata title.
-- Form submit: `Send the problem` (2026-09-08, replaces `Send the stay`)
-- Closing band and contact title: `Tell us which booking problem you want owned.` / `Tell us the booking problem you want owned.` (2026-09-08, replaces `Show us the stay.`)
-- Audience: the person who can decide to bring InnMetric in. Owner, general manager, revenue or distribution lead, commercial lead, operations or cluster lead. Do not write to the guest or ask for the guest's stay as if the reader were the guest.
-- English only. No em dash. No Oxford comma. No prices. No SaaS or AI claims. No leakage amounts. No vendor negligence. No real hotel names. No founder full names on the homepage.
+## Form and privacy contract
 
-Root static HTML on `main` (and the leftover root HTML on this branch) still uses the older production CTA. Leave it until an authorized cutover. Preview lint requires `Let's Solve It!` in the Next header only.
+Current required fields: name, work email, role, number of properties, hotel/group name, problem type, problem-and-outcome note and consent. Website and systems are optional. Preserve this requiredness during the current tightening pass. Optional labels must be clear. No credentials, guest data or approver name are requested.
 
-Approved evidence pattern: We observed X under Y conditions. This may indicate Z. Public evidence cannot determine root cause or financial impact.
+The React form is non-sending. Keep a visible notice before the fields, a truthful non-sent receipt and a working `mailto:hello@innmetric.com` route. Do not imply receipt, an email reply from the form or Netlify submission. The preview privacy description must match the current fields and actual behavior. Do not activate the form under this brief.
 
-## Voice and neural register
+## Design and production
 
-Hero is the hotel decision maker, never InnMetric. Mission: rooms and rates a guest can actually book, on every channel the hotel sells through. Obstacle: connected systems that still produce a wrong guest-facing result and no one at the hotel who owns tracing it end to end. Not a named vendor as villain. Guide: InnMetric. Journey: three phases on `/how-it-works/`. Resolution: a verified booking result, a record the next person can use and one accountable party. A result that still needs correction remains open; do not promise that every approved repair succeeds.
+Sanzo Wada: paper `#F3EDE0`, wash `#D5E4D4`, ink `#1C1917`, asagi `#2F8A84`, press `#2A6B68`, kaki `#8A4B2E`. Preserve the remaining current palette variables too. **Not bookable** uses kaki, never brand turquoise. No HotelRunner orange or former Codex spa palette.
 
-Egg (2026-09-08): they name the problem and the outcome they want. The contact form asks for role, property count, systems in use, the closest problem type and what should be true when it is fixed. It does not ask the reader to describe a guest's stay as if they were the guest. The psychology references are drafting aids, not proof that more friction improves enquiries. Keep a short explanation of the service and its deliverables beside the hook.
+Wordmark: lowercase `innmetric` with a small asagi square glow. Keep Figtree, the four wheel titles and motion/reduced-motion behavior. Mert permits targeted layout/CSS edits when the brief calls for them; no palette change. Preserve Cursor's founder wrap and column fixes.
 
-Page arc (2026-09-08). Each page has one job and hands the reader to the next. Primary button is always `Let's Solve It!` to `/contact/`. The secondary button on a page points to the next page in the arc.
+`main`, root static files and Netlify settings are held. The preview bar stays. `metadataBase` stays localhost until cutover. See [BRANCHES.md](BRANCHES.md).
 
-| Page | Job | Hands to |
-| --- | --- | --- |
-| `/` | Recognise the problem, learn what InnMetric delivers, self-qualify | `/how-it-works/`, offers to `/services/` |
-| `/how-it-works/` | Three phases with the Your team / InnMetric split | `/services/` |
-| `/services/` | Choose by state: do not know yet / know and want it corrected / want it to stay fixed | `/contact/` |
-| `/about/` | We believe X, so we do Y. Founders | `/contact/` |
-| `/faq/` | Objections in the searcher's words, each with a next step | `/contact/` |
-| `/contact/` | The ask. Decision-maker form. What happens next | none |
+## Email consistency
 
-Deliverables named on the public site: findings register, approved change list with a way to reverse each correction, repeat booking check under the same conditions, handover record with open items and agreed rechecks. No durations. No PMS or channel-manager vendor names.
+Use the same service boundary and ordinary language. Open with the actual observation or relevant question and ask for one useful reply from the hotel team. Do not require a guest's stay, paste the offers or presume a fault. Keep the observation's original tense and uncertainty. Drafting an email does not mean a new inspection, recipient verification or permission to send it.
 
-Public voice: concise, not boring. Clear, natural and professional. Complete sentences mixed with short ones. Do not dump process, offers and FAQ onto the homepage. No contempt, invented staff anecdotes or theatrical warnings. No health-coach identity pull. No `helps`, `unlock` or `leverage` on public pages.
-
-Self-qualifier: "You'll probably enjoy working with us if" then the person who already has systems, can name the stay that should sell and can bring an approver when a live change is needed. Keep the wrong-fit column specific and respectful.
-
-Why write: the property, the booking problem and what should be true when it is fixed. A named approver is not required to send the first note. InnMetric replies on fit and scope before asking for access. Rechecks can find a problem that returns; they cannot promise it will never return.
-
-History: the Codex alternative at `835afa4` and its [comparison](COPY_COMPARISON.md) were the review candidate on 2026-09-07. On 2026-09-08 Mert judged that candidate too vague for a decision maker and its form written for a guest. He authorized the decision-maker rewrite recorded above. The comparison stays as history of the earlier decisions.
-
-## Email register
-
-Same story as the site. Do not build a mailer in this repo.
-
-- Open on their desk, not on InnMetric.
-- One cause: a stay they can quote still cannot be bought.
-- One ask: send that stay.
-- Do not paste the homepage. Do not attach the three offers unless they asked.
-
-## Public answers to common searches
-
-Use the searcher's phrasing. Keep InnMetric's particular answer. These live on `/faq/`, not as a homepage dump.
-
-- Empty booking engine: if the whole engine is down, start with the vendor. If the PMS is open for those dates and the engine shows none, that is a configuration review.
-- Different OTA rate: not proof of a fault. Compare the same room, dates, occupancy and terms.
-- Channel manager setup: work on a live stack. Not a first-time install.
-- Rate-plan simplification: may appear as a finding. Not a standalone product.
-- Outsourced revenue management: decline. The hotel keeps pricing.
-- OTA listing management: decline. Rechecks of named rates and availability are not listing work.
-
-## Design
-
-Sanzo Wada cartella on the Next app: kinari paper `#F3EDE0`, byakuroku wash `#D5E4D4`, sumi ink `#1C1917`, asagi `#2F8A84`, kaki warning `#8A4B2E`. Do not restore HotelRunner orange. Do not apply Codex spa hexes. **Not bookable** is never brand turquoise.
-
-Wordmark: lowercase `innmetric`, tight tracking, asagi square with glow at the end. No IM box. No Eosyn amber.
-
-Homepage: copy left, four-card 3D problem wheel right, then What you get, three offers by buyer state, fit and the closing band. No ticket row. No five-verb band. Offer names stay short. Cards:
-
-1. The room cannot be bought
-2. The public rate drifted
-3. The stop-sell never lifted
-4. The last fix came undone
-
-Illustrative only. Not a live operations product. Prefer-reduced-motion: stacked list. Do not copy Eosyn chat chrome, amber bars or iGaming voice. Motion idea only.
-
-Control-record tab toy is off the homepage. `/how-it-works/` keeps a quiet static slip and three phases only. Each phase shows a Your team block and an InnMetric block so the split of work is visible.
-
-Offer names: Distribution Baseline Audit, Approved Repair Sprint, Ongoing Distribution Control.
-
-## Production hold
-
-`netlify.toml` publishes `.`. Do not point Netlify at `web/`. Do not merge `preview` into `main` until Mert authorizes a cutover. Root HTML/CSS on `preview` can hitchhike into production if merged wholesale.
-
-The React form still does not send. Its fields are name, work email, role, number of properties, hotel or group name, website, systems in use, the problem and what should be true when it is fixed, plus consent. `metadataBase` is localhost until cutover. Keep the local-preview bar. Do not show a fake thanks state.
-
-Inquiry: hello@innmetric.com
+Writing references in Drive are source material, not a second handbook. The older Drive Intent and earlier [copy comparison](COPY_COMPARISON.md) remain history. The current source assessment is in [the repair report](fixes/01_CRASH_REPORT.md).

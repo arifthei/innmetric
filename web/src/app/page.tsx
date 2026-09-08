@@ -5,7 +5,7 @@ import { ProblemWheel } from "@/components/ProblemWheel";
 import { Reveal } from "@/components/Reveal";
 
 const DESCRIPTION =
-  "InnMetric traces hotel booking problems through the PMS, channel manager, booking engine and OTA accounts you already use, corrects them with your approval and verifies what a guest can book.";
+  "InnMetric investigates hotel availability and rate problems, makes approved changes in your existing systems and checks what guests can book.";
 
 export const metadata: Metadata = {
   title: "InnMetric | The desk can quote the room. The guest still cannot buy it.",
@@ -21,19 +21,19 @@ export const metadata: Metadata = {
 const DELIVERABLES = [
   {
     title: "Findings register",
-    body: "Every issue we confirmed, in the order it should be corrected, with the booking check that showed it.",
+    body: "Confirmed problems in priority order, with the booking checks that showed them.",
   },
   {
     title: "Approved change list",
-    body: "Each correction your hotel approved, who approved it and how to reverse it.",
+    body: "The agreed corrections, who approved them and how to reverse each change.",
   },
   {
     title: "Repeat booking check",
-    body: "The same room, dates and conditions checked again after the change, from the guest's side.",
+    body: "What guests can book after a change, checked for the same room, dates and conditions.",
   },
   {
     title: "Handover record",
-    body: "What changed, what is still open, which items need a vendor and which rechecks we agreed.",
+    body: "The results, unresolved items, vendor dependencies and any agreed rechecks.",
   },
 ];
 
@@ -41,21 +41,21 @@ const OFFERS = [
   {
     index: "01",
     title: "Distribution Baseline Audit",
-    body: "You do not know yet what is wrong. We find it and put the corrections in order.",
+    body: "You need to understand the problem before deciding what to change.",
     href: "/services/#baseline",
     link: "Baseline audit",
   },
   {
     index: "02",
     title: "Approved Repair Sprint",
-    body: "You know what is wrong. We correct it with your approval and check the booking again.",
+    body: "You have identified the problem and need someone to carry out the agreed corrections.",
     href: "/services/#repair",
     link: "Repair sprint",
   },
   {
     index: "03",
     title: "Ongoing Distribution Control",
-    body: "You want it to stay fixed. We recheck the agreed rates, availability and channels.",
+    body: "You need to know when a problem returns. We recheck the rates and channels you agree.",
     href: "/services/#control",
     link: "Ongoing control",
   },
@@ -70,16 +70,13 @@ export default function HomePage() {
             <Reveal className="col-6 hero-copy">
               <h1>The desk can quote the room. The guest still cannot buy it.</h1>
               <p className="lede">
-                Your systems say the room is on sale. Somewhere between the PMS
-                and the booking page, it stopped being one.
+                Your team shouldn&apos;t have to chase the same booking problem
+                through every system.
               </p>
               <p className="hero-hook">
-                InnMetric works with owners, general managers and commercial
-                leads of independent hotels and small groups. We trace the
-                problem through your PMS, channel manager, booking engine and
-                OTA accounts, correct it with your approval and verify what a
-                guest can book. One party owns the trace. Your team keeps the
-                record.
+                InnMetric investigates room availability and rate problems in
+                the systems your hotel already uses. We make the changes you
+                approve and check what guests can book.
               </p>
               <div className="hero-actions">
                 <Link className="button lg" href="/contact/">
@@ -90,9 +87,8 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="hero-why">
-                Write with the problem and the outcome you want. We reply on fit
-                and scope. Access and live changes are agreed later with the
-                person who approves them.
+                Tell us what your team is dealing with and what needs to change.
+                We&apos;ll reply about whether it fits our work.
               </p>
             </Reveal>
             <div className="col-6">
@@ -106,10 +102,10 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">What you get</span>
-            <h2>Four things your team holds when the work is done.</h2>
+            <h2>Know what changed and what still needs attention.</h2>
             <p className="section-lead">
-              Not a slide deck. Working documents the next person on your team
-              can pick up without repeating the investigation.
+              For the work we agree, your team gets a record it can pick up
+              without repeating the investigation.
             </p>
           </Reveal>
           <Reveal index={1}>
@@ -131,8 +127,8 @@ export default function HomePage() {
             <span className="label">Ways to work with us</span>
             <h2>Three ways to bring us in.</h2>
             <p className="section-lead">
-              Pick by where you are. If you are not sure, tell us the problem
-              and we will say which one fits.
+              Start with the part you need. We can work through that choice
+              with you.
             </p>
           </Reveal>
           <Reveal index={1}>
@@ -168,17 +164,16 @@ export default function HomePage() {
                 <p className="list-head">A useful starting point</p>
                 <ul className="checklist">
                   <li>
-                    You run a PMS, a booking engine and at least two OTAs.
-                    Something a guest sees on one of them does not match what
-                    your team set.
+                    You manage an independent hotel or small group with a PMS,
+                    direct booking and at least two OTAs.
                   </li>
                   <li>
-                    You want one party to own the trace from your systems to
-                    the booking page and to tell you plainly what it found.
+                    You want someone to investigate the problem, explain the
+                    findings and check the result.
                   </li>
                   <li>
-                    You can bring in the person who approves access and live
-                    changes when the work reaches that point.
+                    You can involve the person who approves access and changes
+                    when needed.
                   </li>
                 </ul>
               </article>
@@ -198,8 +193,8 @@ export default function HomePage() {
       </section>
 
       <CtaBand
-        title="Tell us which booking problem you want owned."
-        lead="Name the property, the problem and what should be true when it is fixed. We reply with whether it fits our work, what we would check first and what we need from you."
+        title="What needs to work better at your hotel?"
+        lead="Tell us where availability or rates are going wrong and what your team wants to change. We'll explain what we can take on."
         email
       />
     </>

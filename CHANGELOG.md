@@ -4,6 +4,16 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Shorter decision-maker copy and instruction repair, 2026-09-08
+
+- Reviewed `ef2df42`, including Cursor's rewrite and latest founder-card fix, against the attached guideline, current Drive sources and both humanizer repositories.
+- Published the four-file Fixes pack in Drive before implementing its Git mirror. The report names actual writing failures, unsupported claims, stale instructions and the limits of the references.
+- Shortened the six sales pages and wheel bodies. Kept the concrete deliverables, team responsibilities, approved H1/CTA, offer names and six FAQ questions. Removed invented vendor history, known-cause/success promises, all-channel scope and formula repetition.
+- Preserved the decision-maker fields and requiredness. Clarified optional website/systems, the problem/outcome prompt, working email links and non-sending state. Updated the preview privacy field and processing descriptions to match the code.
+- Consolidated current rules into AGENTS, Intent and Writing, shortened the current handoff and replaced stacked contradictions with a resolved-conflict table. Answered Cursor's six questions and opened one bounded review thread. README and historical comparison point to the current repair.
+- Created and read back a separate native email alternative in Drive GTM. No emails sent and no hotel-specific data added to Git.
+- Validation: copy lint passed (10 HTML, 19 web source files), ESLint passed and Next build/TypeScript passed with 12 static pages. Rendered HTML checks passed on seven routes for metadata, links, the current H1/CTA, process, FAQ, form contract and privacy. Form control attributes and submit handler match the baseline. Protected source comparison, local Markdown links and `git diff --check` passed. Six sales-page source texts fell from 2,195 to 1,655 words, excluding metadata and shared components. Fresh browser QA remains open for Cursor. CSS, palette, founder biographies, root static files, form wiring and deployment settings remain unchanged.
+
 ### Card and title wrap CSS, 2026-09-08
 
 - Founder cards were capped at 20ch for titles and 42ch for body, so Co-founder broke across lines and a dead strip sat on the right of each card. Titles now fill the card. Name and role sit on two lines. Headings do not hyphenate.

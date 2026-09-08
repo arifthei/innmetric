@@ -1,5 +1,17 @@
 # Preview release notes
 
+Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
+
+## 2026-09-08: shorter decision-maker copy and instruction repair
+
+Based on `ef2df42`. Mert liked much of Cursor's tone but asked for less wordy copy, a diagnosis of the confused rules and a separate email alternative. The four-file [Fixes pack](fixes/00_START_HERE.md) was placed in Drive before implementation.
+
+The revision keeps the concrete hotel-team form, deliverables and current design. It cuts repeated process language, removes invented support history and corrects unsupported cause, repair and all-channel claims. The form labels ask about the hotel's problem and wanted result. Email links work while the preview form remains non-sending. Its privacy description now matches the code.
+
+Current user decisions, writing guidance and progress have separate homes in the handbook. Cursor's six requested points are answered in the exchange. The new review is bounded to the delivered copy and layout. A native email draft is available in Drive GTM for Mert's review; nothing was sent.
+
+Validation is recorded in [CHANGELOG.md](../CHANGELOG.md). Fresh browser QA is still queued for Cursor. This is a preview candidate, not buyer validation or a production release. Main and Netlify remain held.
+
 ## 2026-09-08: decision-maker copy rewrite
 
 **Status:** preview review candidate, based on `000d2b1`. Mert judged the previous candidate too vague for a decision maker and its form written for a guest. This is not a production release and no buyer validation is claimed.

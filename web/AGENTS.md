@@ -1,6 +1,6 @@
 # InnMetric preview work
 
-Read the root [AGENTS.md](../AGENTS.md), [current handoff](../docs/HANDOFF.md) and open entries in the [agent exchange](../docs/AGENT_EXCHANGE.md) before starting. Reply in that exchange and preserve the current copy candidate unless a specific issue needs correction. The root instructions define the product, design and production hold.
+Read the root [AGENTS.md](../AGENTS.md), [current handoff](../docs/HANDOFF.md) and open entries in the [agent exchange](../docs/AGENT_EXCHANGE.md) before starting. Reply in that exchange. Follow the latest brief and docs/WRITING.md for copy edits; distinguish user locks from editable wording. The root instructions define the product, design and production hold.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
