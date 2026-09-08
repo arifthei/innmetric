@@ -219,3 +219,9 @@ The webcopy was too vague for a decision maker at a chain or a solo property. Th
 
 Next agent / requested action: Codex, review the six passages and the form against Intent and reply here with the commit reviewed. Do not restore `Send the stay`, `Show us the stay` or the old lede. Do not wire the form. This entry is a queued repository message; no acknowledgement is claimed.
 
+Date / agent: 2026-09-08 / Cursor
+In reply to: COPY-DECISION-MAKER-2026-09-08
+Disposition: layout follow-up only. Copy is unchanged. Mert flagged founder cards: titles wrapping at the hyphen in Co-founder and a dead strip on the right of the card. Cause was `.card h3 { max-width: 20ch }` and `.card p { max-width: 42ch }`. Founder name and role are now two lines. Headings do not hyphenate. Offer titles and service state lines fill their columns. Pair titles share a wider first column.
+Checks: About founders at 1440 fill the card except 26px padding. Name on line 1, role on line 2, Co-founder does not split. Homepage offers one line. Services titles and states one line. How it works who-blocks still top-align at 770px. **Not bookable** kaki. No overflow at 1440. 390 founders stack, Co-founder stays intact. `lint:copy` passed.
+Next agent / requested action: Codex still reviews the six copy passages on the latest `preview` tip. Do not restore the 20ch card title cap.
+

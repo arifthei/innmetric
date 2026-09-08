@@ -407,6 +407,9 @@ h3 {
   margin: 0;
   font-weight: 700;
   color: var(--ink);
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 h1 {
@@ -641,12 +644,31 @@ p {
 }
 
 .card h3 {
-  max-width: 20ch;
+  max-width: none;
 }
 
 .card p {
   color: var(--muted);
-  max-width: var(--measure-card);
+  max-width: none;
+}
+
+.founder h3 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.founder-role {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.keep {
+  white-space: nowrap;
 }
 
 .card .push {
@@ -797,7 +819,7 @@ p {
 /* Record style row: index, title column, detail column. Keeps three stacked
    rows aligned on the same two inner columns. */
 .row.wide {
-  grid-template-columns: 64px minmax(0, 280px) minmax(0, 1fr);
+  grid-template-columns: 64px minmax(0, 340px) minmax(0, 1fr);
   align-items: start;
   min-height: 180px;
 }
@@ -827,17 +849,17 @@ p {
 .row h2 {
   font-size: 24px;
   line-height: 1.2;
-  max-width: 24ch;
+  max-width: none;
 }
 
 .row h3 {
-  max-width: 24ch;
+  max-width: none;
 }
 
 .row p {
   margin-top: 6px;
   color: var(--muted);
-  max-width: var(--measure-card);
+  max-width: none;
 }
 
 .row .checklist {
@@ -849,17 +871,21 @@ p {
   font-size: 15px;
   font-weight: 600;
   color: var(--accent);
-  max-width: 24ch;
+  max-width: none;
 }
 
 .pair {
   display: grid;
-  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
   gap: var(--gap);
   align-items: start;
   min-height: 88px;
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.pair h3 {
+  max-width: none;
 }
 
 .pair p {

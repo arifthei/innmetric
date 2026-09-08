@@ -4,6 +4,12 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Card and title wrap CSS, 2026-09-08
+
+- Founder cards were capped at 20ch for titles and 42ch for body, so Co-founder broke across lines and a dead strip sat on the right of each card. Titles now fill the card. Name and role sit on two lines. Headings do not hyphenate.
+- Homepage offer titles and services state lines fill their columns. Services title column is 340px so the three offer names stay on one line at 1440. Belief pairs use a wider first column.
+- Copy unchanged. Palette unchanged. Browser: About, Home, Services, How it works and FAQ at 1440, founders also at 390. No overflow. **Not bookable** stays kaki. `lint:copy` passed.
+
 ### Decision-maker copy rewrite, 2026-09-08
 
 - Mert judged the Codex candidate too vague for a hotel decision maker and its form written for a guest. He authorized a rewrite of copy, layout and CSS with the palette unchanged and answered three scoping questions: keep H1 and `Let's Solve It!`, replace the lede and the guest-flavored form and band lines, rebuild the form for decision makers, name deliverables without durations or vendor names.

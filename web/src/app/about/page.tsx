@@ -41,14 +41,16 @@ const BELIEFS = [
 
 const FOUNDERS = [
   {
-    name: "Tunahan Aras, Co-founder and Hotel Distribution Lead",
+    name: "Tunahan Aras",
+    role: "Hotel Distribution Lead",
     body: [
       "Tunahan has worked with rates, restrictions, room and rate mappings, reservation flows and OTA operations. His experience includes hotel partner cases in channel manager environments.",
       "He looks at how the hotel's setup behaves and which settings need a closer check.",
     ],
   },
   {
-    name: "Mert Carikci, Co-founder and Product Operations Lead",
+    name: "Mert Carikci",
+    role: "Product Operations Lead",
     body: [
       "Mert's background is in product ownership and systems analysis across high-volume regulated platforms, live operations and products with complex integrations.",
       "He keeps the findings, approvals, change records and tests organized so the team can follow the work.",
@@ -102,8 +104,13 @@ export default function AboutPage() {
           <Reveal index={1}>
             <div className="cols-2">
               {FOUNDERS.map((founder) => (
-                <article className="card" key={founder.name}>
-                  <h3>{founder.name}</h3>
+                <article className="card founder" key={founder.name}>
+                  <h3>
+                    <span className="founder-name">{founder.name}</span>
+                    <span className="founder-role">
+                      <span className="keep">Co-founder</span> and {founder.role}
+                    </span>
+                  </h3>
                   {founder.body.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}

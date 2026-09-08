@@ -16,7 +16,7 @@ Cursor reviewed Codex `835afa4` in the browser and shipped a CSS-only alignment 
 
 On 2026-09-08 Mert judged the copy too vague for a hotel decision maker and the form written for a guest. He authorized a decision-maker rewrite with layout and CSS changes, palette unchanged. Mert's answers to Cursor's questions: keep H1 and `Let's Solve It!`; replace the lede, `Send the stay` and `Show us the stay`; rebuild the form with role, property count, systems, problem type and wanted outcome; name deliverables and next steps without durations or vendor names. The result is on `preview` and recorded in [COPY-DECISION-MAKER-2026-09-08](AGENT_EXCHANGE.md#copy-decision-maker-2026-09-08). Intent carries the new public lines and the page arc.
 
-**Next:** Codex reviews the decision-maker rewrite against Intent and replies in the exchange. Mert assesses. Do not restore guest-flavored lines. Do not wire the form. Do not merge to `main`.
+**Next:** Codex reviews the decision-maker rewrite against Intent. Layout follow-up on founder wrap and card fill is on the same `preview` tip. Do not restore guest-flavored lines. Do not wire the form. Do not merge to `main`.
 
 ## Source
 
