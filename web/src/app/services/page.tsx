@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand, PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
+import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
   "Hotel distribution audits, approved repairs and ongoing booking checks. Compare what is included and choose the work your team needs.";
@@ -28,7 +29,7 @@ const OFFERS = [
       "Your systems, active channels and account owners mapped",
       "Booking checks with room, dates, occupancy and terms recorded",
       "Room mappings, rate mappings and restrictions reviewed",
-      "Prioritised findings and the checks needed to verify a correction",
+      "Prioritized findings and the checks needed to verify a correction",
     ],
   },
   {
@@ -72,8 +73,9 @@ export default function ServicesPage() {
     <>
       <PageHero eyebrow="Services" title="Start with the work your hotel needs.">
         <p className="lede">
-          Bring us in to investigate a problem, carry out agreed repairs or
-          recheck an existing setup. Each engagement has its own scope.
+          {t(
+            "Bring us in to investigate a problem, carry out agreed repairs or recheck an existing setup. Each engagement has its own scope."
+          )}
         </p>
         <div className="hero-actions">
           <Link className="button lg" href="/contact/">
@@ -95,14 +97,14 @@ export default function ServicesPage() {
                     {offer.index}
                   </span>
                   <div>
-                    <h2>{offer.title}</h2>
-                    <p className="row-state">{offer.state}</p>
+                    <h2>{t(offer.title)}</h2>
+                    <p className="row-state">{t(offer.state)}</p>
                   </div>
                   <div>
-                    <p>{offer.body}</p>
+                    <p>{t(offer.body)}</p>
                     <ul className="checklist">
                       {offer.points.map((point) => (
-                        <li key={point}>{point}</li>
+                        <li key={point}>{t(point)}</li>
                       ))}
                     </ul>
                   </div>
@@ -117,12 +119,12 @@ export default function ServicesPage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Scope</span>
-            <h2>What stays with your team.</h2>
+            <h2>{t("What stays with your team.")}</h2>
           </Reveal>
           <Reveal index={1}>
             <ul className="not-list">
               {BOUNDARIES.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>{t(item)}</li>
               ))}
             </ul>
           </Reveal>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import { SiteLogo } from "@/components/SiteLogo";
 
 const NAV = [
@@ -21,6 +21,19 @@ export function SiteHeader() {
   const current = withSlash(pathname || "/");
   const [open, setOpen] = useState(false);
 
+  // A link to the page already on screen returns the reader to its top.
+  // Next treats a same-URL navigation as a no-op, which reads as a dead link.
+  // `scroll-behavior` on <html> makes this smooth and honours reduced motion.
+  function onNavClick(href: string) {
+    return (event: MouseEvent<HTMLAnchorElement>) => {
+      setOpen(false);
+      if (current === href) {
+        event.preventDefault();
+        window.scrollTo({ top: 0 });
+      }
+    };
+  }
+
   return (
     <div className="site-top">
       <div className="preview-bar">
@@ -33,7 +46,7 @@ export function SiteHeader() {
       </div>
       <header>
         <div className="frame nav">
-          <Link className="logo" href="/" aria-label="innmetric">
+          <Link className="logo" href="/" aria-label="innmetric" onClick={onNavClick("/")}>
             <SiteLogo />
           </Link>
           <nav
@@ -46,13 +59,13 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={current === item.href ? "page" : undefined}
-                onClick={() => setOpen(false)}
+                onClick={onNavClick(item.href)}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
-          <Link className="button nav-cta" href="/contact/">
+          <Link className="button nav-cta" href="/contact/" onClick={onNavClick("/contact/")}>
             <span className="cta-full">Let&apos;s Solve It!</span>
             <span className="cta-short">Let&apos;s Solve It!</span>
           </Link>

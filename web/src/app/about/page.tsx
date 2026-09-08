@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
+import { t } from "@/lib/typeset";
 
 export const metadata: Metadata = {
   title: "About InnMetric | Hotel distribution control",
@@ -66,9 +67,9 @@ export default function AboutPage() {
         title="You work directly with the founders."
       >
         <p className="lede">
-          A booking problem can cross several systems. We follow it through the
-          agreed setup and keep your team informed of what we find, what changes
-          and what still needs an answer.
+          {t(
+            "A booking problem can cross several systems. We follow it through the agreed setup and keep your team informed of what we find, what changes and what still needs an answer."
+          )}
         </p>
       </PageHero>
 
@@ -76,14 +77,14 @@ export default function AboutPage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">How we work</span>
-            <h2>What you can expect from us.</h2>
+            <h2>{t("What you can expect from us.")}</h2>
           </Reveal>
           <Reveal index={1}>
             <ul className="rows">
               {BELIEFS.map((item) => (
                 <li className="pair" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.body}</p>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
                 </li>
               ))}
             </ul>
@@ -107,7 +108,7 @@ export default function AboutPage() {
                     </span>
                   </h3>
                   {founder.body.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                    <p key={paragraph}>{t(paragraph)}</p>
                   ))}
                 </article>
               ))}
@@ -120,10 +121,11 @@ export default function AboutPage() {
         <div className="frame">
           <Reveal className="intro intro-center">
             <span className="label">Working with us</span>
-            <h2>Talk to the people who will do the work.</h2>
+            <h2>{t("Talk to the people who will do the work.")}</h2>
             <p className="section-lead">
-              Tell us what your hotel needs. We&apos;ll explain what we can take
-              on and what we would check first.
+              {t(
+                "Tell us what your hotel needs. We'll explain what we can take on and what we would check first."
+              )}
             </p>
             <div className="hero-actions">
               <Link className="button lg" href="/contact/">

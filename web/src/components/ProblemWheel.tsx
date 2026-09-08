@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { t } from "@/lib/typeset";
 
 const CARDS = [
   {
@@ -79,8 +80,8 @@ export function ProblemWheel() {
           {CARDS.map((card) => (
             <li className="problem-card" key={card.id}>
               <span className="ticket-id">Problem {card.id}</span>
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
+              <h3>{t(card.title)}</h3>
+              <p>{t(card.body)}</p>
             </li>
           ))}
         </ol>
@@ -134,8 +135,8 @@ export function ProblemWheel() {
               }}
             >
               <span className="ticket-id">Problem {card.id}</span>
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
+              <h3>{t(card.title)}</h3>
+              <p>{t(card.body)}</p>
             </article>
           );
         })}

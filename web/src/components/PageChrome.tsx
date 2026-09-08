@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/Reveal";
+import { t, TAIL } from "@/lib/typeset";
 
 export function PageHero({
   eyebrow,
@@ -16,7 +17,7 @@ export function PageHero({
       <div className="frame">
         <Reveal className="intro">
           <span className="label">{eyebrow}</span>
-          <h1>{title}</h1>
+          <h1>{t(title, TAIL.heading)}</h1>
           {children}
         </Reveal>
       </div>
@@ -42,8 +43,8 @@ export function CtaBand({
       <div className="frame">
         <Reveal className="intro intro-center">
           {eyebrow ? <span className="label">{eyebrow}</span> : null}
-          <h2>{title}</h2>
-          {lead ? <p className="section-lead">{lead}</p> : null}
+          <h2>{t(title)}</h2>
+          {lead ? <p className="section-lead">{t(lead)}</p> : null}
           <div className="hero-actions">
             <Link className="button lg" href="/contact/">
               Let&apos;s Solve It!

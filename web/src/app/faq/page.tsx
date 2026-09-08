@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
+import { t } from "@/lib/typeset";
 
 export const metadata: Metadata = {
   title: "InnMetric FAQ | Hotel distribution questions",
@@ -48,8 +49,9 @@ export default function FaqPage() {
     <>
       <PageHero eyebrow="FAQ" title="Before you bring us in.">
         <p className="lede">
-          Answers to common booking questions and what InnMetric can take on.
-          For anything else, email{" "}
+          {t(
+            "Answers to common booking questions and what InnMetric can take on. For anything else, email"
+          )}{" "}
           <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
         </p>
       </PageHero>
@@ -59,8 +61,8 @@ export default function FaqPage() {
             <div className="faq-list">
               {FAQ.map((item) => (
                 <article className="faq-item" key={item.q}>
-                  <h2>{item.q}</h2>
-                  <p>{item.a}</p>
+                  <h2>{t(item.q)}</h2>
+                  <p>{t(item.a)}</p>
                 </article>
               ))}
             </div>

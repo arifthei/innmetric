@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
 import { ReviewForm } from "@/components/ReviewForm";
+import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
   "Tell InnMetric about your hotel's availability or rate problem and what you want to change. We will explain what we can take on and the next step.";
@@ -28,9 +29,9 @@ export default function ContactPage() {
     <>
       <PageHero eyebrow="Contact" title="What needs to work better at your hotel?">
         <p className="lede">
-          For owners, GMs and hotel commercial or operations teams. Tell us where
-          availability or rates are going wrong and what you want to change.
-          You don&apos;t need to diagnose the cause first.
+          {t(
+            "For owners, GMs and hotel commercial or operations teams. Tell us where availability or rates are going wrong and what you want to change. You don't need to diagnose the cause first."
+          )}
         </p>
       </PageHero>
       <section className="section wash">
@@ -44,16 +45,17 @@ export default function ContactPage() {
                 <h3>After you email us</h3>
                 <ol className="steps">
                   {NEXT_STEPS.map((step) => (
-                    <li key={step}>{step}</li>
+                    <li key={step}>{t(step)}</li>
                   ))}
                 </ol>
                 <h3>Privacy notice</h3>
                 <p>
-                  InnMetric uses the information in this form only to assess and
-                  respond to your request. Do not submit passwords, payment data
-                  or guest information. See the{" "}
-                  <a href="/privacy/">Privacy Notice</a> for retention, deletion
-                  and contact details.
+                  {t(
+                    "InnMetric uses the information in this form only to assess and respond to your request. Do not submit passwords, payment data or guest information. See the"
+                  )}
+                  {"\u00A0"}
+                  <a href="/privacy/">Privacy Notice</a>{" "}
+                  {t("for retention, deletion and contact details.")}
                 </p>
                 <p>
                   Prefer email? Write to{" "}

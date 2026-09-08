@@ -2,6 +2,14 @@
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
+## 2026-09-08: typesetting, equal cards and active-nav scroll
+
+Based on `fbea002`. Mert's 1920 screenshots showed leads and card bodies ending lines on `the`, `you`, `or`, `it`, `what` and finishing on a one-word line. The founder cards also had different heights, and clicking the nav item for the current page did nothing.
+
+Copy is unchanged. A render-time typesetting helper keeps short function words off line ends and glues the last two words of each block. One- and two-line blocks are balanced. Side-by-side cards share a height. The active nav item, logo and header CTA now return the reader to the top of the page they are on.
+
+An automated audit of every rendered text block at seven widths from 1920 to 390 reports no function-word line endings, no one-word last lines and no overflow on the six sales pages. Validation is in [CHANGELOG.md](../CHANGELOG.md). This is a preview candidate. Main and Netlify remain held.
+
 ## 2026-09-08: shorter decision-maker copy and instruction repair
 
 Based on `ef2df42`. Mert liked much of Cursor's tone but asked for less wordy copy, a diagnosis of the confused rules and a separate email alternative. The four-file [Fixes pack](fixes/00_START_HERE.md) was placed in Drive before implementation.

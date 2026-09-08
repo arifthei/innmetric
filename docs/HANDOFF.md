@@ -1,28 +1,27 @@
 # Current handoff
 
-Checkpoint: 2026-09-08. Last writer: Codex. Next reviewer: Cursor, then Mert. Mert is the only authority.
+Checkpoint: 2026-09-08. Last writer: Cursor. Next reviewer: Mert. Mert is the only authority.
 
 ## Resume here
 
-The current task is Mert's shorter decision-maker copy and instruction repair, based on `preview` `ef2df4259fe6a4281d642ff8705cb852be028feb`. Read [AGENTS](../AGENTS.md), [Intent](INTENT.md), [Writing](WRITING.md) and the active [COPY-REPAIR-2026-09-08](AGENT_EXCHANGE.md#copy-repair-2026-09-08) thread. Older review threads are closed.
+Codex's shorter decision-maker copy (`fbea002`) has now had its browser review, and Mert's follow-up brief on typesetting, card alignment and same-page navigation is delivered on top of it. Read [AGENTS](../AGENTS.md), [Intent](INTENT.md) and [Writing](WRITING.md). [COPY-REPAIR-2026-09-08](AGENT_EXCHANGE.md#copy-repair-2026-09-08) is closed with Cursor's reply. No review thread is open.
 
-Done: refreshed Git and Cursor's attached guideline; reviewed GTM and Copy Ideas, including Writing Tips and Psychology; reviewed both humanizer repositories. Published the four numbered files to Drive's [Fixes folder](https://drive.google.com/drive/folders/1zIfbo6AVX4On40r05itCrOYhtfeQVeE1) before website edits. Their Git mirror is [docs/fixes](fixes/00_START_HERE.md).
+Delivered in this checkpoint, copy unchanged:
 
-Implemented: shorter copy across six sales pages, clearer deliverables and role split, corrected unsupported cause/success/scope claims, clearer decision-maker form labels and truthful email route. Preview privacy describes the current fields and non-sending behavior. H1, primary CTA, all CSS, palette, founder biographies, motion, form fields and requiredness remain. The handbook now separates user decisions, editorial guidance, current status and historical discussion.
-
-A separate native email alternative was created and verified in Drive GTM. It retains the four source observations as earlier observations, not new audits. No email was sent and no prospect data was committed to Git.
+- `web/src/lib/typeset.ts` glues short function words to the next word and the last two words of each block at render time, so no line ends on `the`, `you`, `or`, `it`, `what` and no paragraph finishes on one word. Applied to every reader-facing block on the six sales pages, wheel cards and CTA band. Source strings stay plain for `lint:copy`.
+- `globals.css`: one- and two-line blocks use `text-wrap: balance`; longer paragraphs keep `pretty`. `.cols-2` and `.cols-3` stretch, so founder and fit cards share a height.
+- `SiteHeader.tsx`: the active nav item, logo and header CTA scroll to the top of the current page instead of doing nothing.
+- `Prioritised` on Services aligned to the `-ize` spelling used elsewhere.
 
 ## Verification
 
-Passed: copy lint (10 root HTML files, 19 web source files), ESLint, Next build and TypeScript; all 12 static pages generated. Rendered HTML checks passed on seven routes for text, metadata, internal links, current H1/CTA, deliverables, process, FAQ, form fields and privacy. Source comparison confirmed unchanged form control attributes and submit handler, CSS, shared chrome, root static files, dependencies and deployment settings. Local Markdown links and `git diff --check` passed.
+Passed: `lint:copy` (10 HTML, 20 web/src files), ESLint, `next build` with TypeScript and 12 static pages. Browser audit on the dev server walked every rendered text block on the six sales pages at 1920, 1536, 1440, 1280, 1024, 768 and 390: zero function-word line endings, zero one-word last lines, zero overflow across 42 page/width combinations. Founder cards measured equal at 1920. Nav return-to-top confirmed on `/faq/` at desktop and in the mobile menu.
 
-Visible text extracted from the six sales-page source files fell from 2,195 to 1,655 words (about 25%). This excludes metadata and shared components. It is a size measurement, not a conversion or writing-quality score.
-
-Fresh visual QA remains for Cursor. The known Codex preview runner forwards Vite-style flags to the unchanged Next dev command; the previous incompatible runner was not retried and the app was not migrated for this copy pass. This turn's source/build checks are not browser measurements. See the active exchange for exact routes and viewports.
+Codex's requested review of `fbea002` is covered by the same audit: shortened text, phase alignment, founder wrap, wheel caption, horizontal overflow at 1440 and 390, form fields, non-sent receipt and email links.
 
 ## Next action and stopping point
 
-Cursor syncs the delivered commit, records its SHA and performs the bounded browser/form/copy review. Fix concrete defects and reply in the same thread. Close it when those checks pass. Mert reviews the copy and the separate email draft. Do not initiate another general rewrite or imply buyer validation.
+Mert reviews the preview at his own resolution. If a specific line still wraps badly, quote it with the width; the audit script and rules in `typeset.ts` can be extended. Further copy rewrites need a new brief or a named defect.
 
 ## Held
 

@@ -459,6 +459,28 @@ p {
   color: var(--ink);
 }
 
+/*
+ * Blocks that usually run one or two lines are balanced so the last line is
+ * never a stub. Longer paragraphs keep `pretty` from body: balancing three or
+ * more lines can leave a short middle line. Function words are kept off line
+ * ends by the typeset helper in web/src/lib/typeset.ts.
+ */
+
+.lede,
+.section-lead,
+.hero-why,
+.hero-decline,
+.problem-card p,
+.row .row-state,
+.pair p,
+.checklist li,
+.not-list li,
+.side-card .steps li,
+.verbs li > span,
+.form-note {
+  text-wrap: balance;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -620,7 +642,7 @@ p {
   display: grid;
   gap: var(--gap);
   grid-auto-rows: auto;
-  align-items: start;
+  align-items: stretch;
 }
 
 .cols-2 {

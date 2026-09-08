@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CtaBand, PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
 import { RecordSlip } from "@/components/RecordSlip";
+import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
   "See what your hotel team does, what InnMetric takes on and how findings, approved changes and booking checks are handed over.";
@@ -43,8 +44,9 @@ export default function HowItWorksPage() {
     <>
       <PageHero eyebrow="How it works" title="You know what we need from your team at each step.">
         <p className="lede">
-          We agree the work before asking for access. Your hotel approves every
-          live change. Here is how the investigation and handover fit together.
+          {t(
+            "We agree the work before asking for access. Your hotel approves every live change. Here is how the investigation and handover fit together."
+          )}
         </p>
       </PageHero>
 
@@ -57,16 +59,16 @@ export default function HowItWorksPage() {
                   <span className="verb-index" aria-hidden="true">
                     0{index + 1}
                   </span>
-                  <strong>{item.verb}</strong>
-                  <span>{item.body}</span>
+                  <strong>{t(item.verb)}</strong>
+                  <span>{t(item.body)}</span>
                   <dl className="who">
                     <div>
                       <dt>Your team</dt>
-                      <dd>{item.yours}</dd>
+                      <dd>{t(item.yours)}</dd>
                     </div>
                     <div>
                       <dt>InnMetric</dt>
-                      <dd>{item.ours}</dd>
+                      <dd>{t(item.ours)}</dd>
                     </div>
                   </dl>
                 </li>
@@ -78,10 +80,9 @@ export default function HowItWorksPage() {
           </Reveal>
           <Reveal index={2}>
             <p className="section-lead">
-              If the booking still fails, the issue stays open. We record what
-              needs attention, including any action required from your vendor.
-              Scheduled rechecks can find a returning problem; they cannot
-              guarantee it stays fixed.
+              {t(
+                "If the booking still fails, the issue stays open. We record what needs attention, including any action required from your vendor. Scheduled rechecks can find a returning problem; they cannot guarantee it stays fixed."
+              )}
             </p>
           </Reveal>
         </div>

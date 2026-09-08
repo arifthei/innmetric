@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CtaBand } from "@/components/PageChrome";
 import { ProblemWheel } from "@/components/ProblemWheel";
 import { Reveal } from "@/components/Reveal";
+import { t, TAIL } from "@/lib/typeset";
 
 const DESCRIPTION =
   "InnMetric investigates hotel availability and rate problems, makes approved changes in your existing systems and checks what guests can book.";
@@ -61,6 +62,20 @@ const OFFERS = [
   },
 ];
 
+const FIT = [
+  "You manage an independent hotel or small group with a PMS, direct booking and at least two OTAs.",
+  "You want someone to investigate the problem, explain the findings and check the result.",
+  "You can involve the person who approves access and changes when needed.",
+];
+
+const NOT_FIT = [
+  "Large international chains with a central distribution team already owning this",
+  "Individually listed homes that are not hotel-operated",
+  "Properties looking for social media, advertising or review responses",
+  "Hotels that want pricing or revenue management taken over",
+  "Teams that need someone to run OTA listings, photos or ranking",
+];
+
 export default function HomePage() {
   return (
     <>
@@ -68,15 +83,21 @@ export default function HomePage() {
         <div className="frame">
           <div className="grid wide-gap">
             <Reveal className="col-6 hero-copy">
-              <h1>The desk can quote the room. The guest still cannot buy it.</h1>
+              <h1>
+                {t(
+                  "The desk can quote the room. The guest still cannot buy it.",
+                  TAIL.heading
+                )}
+              </h1>
               <p className="lede">
-                Your team shouldn&apos;t have to chase the same booking problem
-                through every system.
+                {t(
+                  "Your team shouldn't have to chase the same booking problem through every system."
+                )}
               </p>
               <p className="hero-hook">
-                InnMetric investigates room availability and rate problems in
-                the systems your hotel already uses. We make the changes you
-                approve and check what guests can book.
+                {t(
+                  "InnMetric investigates room availability and rate problems in the systems your hotel already uses. We make the changes you approve and check what guests can book."
+                )}
               </p>
               <div className="hero-actions">
                 <Link className="button lg" href="/contact/">
@@ -87,8 +108,9 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="hero-why">
-                Tell us what your team is dealing with and what needs to change.
-                We&apos;ll reply about whether it fits our work.
+                {t(
+                  "Tell us what your team is dealing with and what needs to change. We'll reply about whether it fits our work."
+                )}
               </p>
             </Reveal>
             <div className="col-6">
@@ -102,18 +124,19 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">What you get</span>
-            <h2>Know what changed and what still needs attention.</h2>
+            <h2>{t("Know what changed and what still needs attention.")}</h2>
             <p className="section-lead">
-              For the work we agree, your team gets a record it can pick up
-              without repeating the investigation.
+              {t(
+                "For the work we agree, your team gets a record it can pick up without repeating the investigation."
+              )}
             </p>
           </Reveal>
           <Reveal index={1}>
             <ul className="rows">
               {DELIVERABLES.map((item) => (
                 <li className="pair" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.body}</p>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
                 </li>
               ))}
             </ul>
@@ -125,10 +148,11 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Ways to work with us</span>
-            <h2>Three ways to bring us in.</h2>
+            <h2>{t("Three ways to bring us in.")}</h2>
             <p className="section-lead">
-              Start with the part you need. We can work through that choice
-              with you.
+              {t(
+                "Start with the part you need. We can work through that choice with you."
+              )}
             </p>
           </Reveal>
           <Reveal index={1}>
@@ -139,8 +163,8 @@ export default function HomePage() {
                     {offer.index}
                   </span>
                   <div>
-                    <h3>{offer.title}</h3>
-                    <p>{offer.body}</p>
+                    <h3>{t(offer.title)}</h3>
+                    <p>{t(offer.body)}</p>
                   </div>
                   <Link className="inline" href={offer.href}>
                     {offer.link}
@@ -156,35 +180,24 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Fit</span>
-            <h2>You&apos;ll probably enjoy working with us if</h2>
+            <h2>{t("You'll probably enjoy working with us if")}</h2>
           </Reveal>
           <Reveal index={1}>
             <div className="cols-2">
               <article className="card">
                 <p className="list-head">A useful starting point</p>
                 <ul className="checklist">
-                  <li>
-                    You manage an independent hotel or small group with a PMS,
-                    direct booking and at least two OTAs.
-                  </li>
-                  <li>
-                    You want someone to investigate the problem, explain the
-                    findings and check the result.
-                  </li>
-                  <li>
-                    You can involve the person who approves access and changes
-                    when needed.
-                  </li>
+                  {FIT.map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
                 </ul>
               </article>
               <article className="card">
                 <p className="list-head">Usually not a fit</p>
                 <ul className="not-list">
-                  <li>Large international chains with a central distribution team already owning this</li>
-                  <li>Individually listed homes that are not hotel-operated</li>
-                  <li>Properties looking for social media, advertising or review responses</li>
-                  <li>Hotels that want pricing or revenue management taken over</li>
-                  <li>Teams that need someone to run OTA listings, photos or ranking</li>
+                  {NOT_FIT.map((item) => (
+                    <li key={item}>{t(item)}</li>
+                  ))}
                 </ul>
               </article>
             </div>

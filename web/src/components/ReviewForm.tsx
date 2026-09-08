@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { t } from "@/lib/typeset";
 
 const ROLES = [
   "Owner or managing director",
@@ -43,10 +44,11 @@ export function ReviewForm() {
         <span className="label">Local preview</span>
         <h2>The request was not sent.</h2>
         <p className="section-lead">
-          This preview form does not send. Please email{" "}
-          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a> with your
-          hotel, the problem and what you want to change. Do not include
-          passwords or guest data.
+          {t("This preview form does not send. Please email")}{" "}
+          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>{" "}
+          {t(
+            "with your hotel, the problem and what you want to change. Do not include passwords or guest data."
+          )}
         </p>
         <button className="button" type="button" onClick={() => setSent(false)}>
           Return to the form

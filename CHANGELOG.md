@@ -4,6 +4,15 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Typesetting, equal cards and active-nav scroll, 2026-09-08
+
+- Mert's screenshots at 1920 showed lines ending on `in the`, `you`, `or`, `it`, `what` and paragraphs finishing on one or two words. The frame caps at 1320px and leads at 46ch, so the same wraps appeared at every desktop width. Wording is unchanged.
+- New `web/src/lib/typeset.ts` `t()` glues the space after short function words and the last two words of a string with non-breaking spaces at render time. Chains stop after three glued spaces; the widow tail is capped at 28 characters for body and 18 for H1 so nothing overflows at 390. Applied to every reader-facing heading, lede, body, list item and form receipt across the six sales pages, the wheel cards and the CTA band. Source strings stay plain ASCII for `lint:copy`.
+- CSS: `text-wrap: balance` on one- and two-line blocks (ledes, section leads, wheel bodies, row states, pairs, checklist and not-list items, side-card steps, phase summaries, form note). Longer paragraphs keep `pretty`, because balancing three lines left a short middle line on the hero hook. Side-by-side card rows stretch to equal height, so the two founder cards and the two fit cards share one bottom edge.
+- Header: clicking the nav item, logo or `Let's Solve It!` for the page already on screen scrolls to the top instead of doing nothing. Same URL, `aria-current` kept, mobile menu closes. Smoothness and reduced motion follow the existing `scroll-behavior` on `html`.
+- Proofread: `Prioritised` on Services aligned to the Oxford `-ize` used elsewhere (`organized`). No other spelling, punctuation or double-space defects found.
+- Validation: `lint:copy` passed (10 HTML, 20 web/src files), ESLint passed, `next build` compiled with TypeScript and generated 12 static pages. Browser audit on the dev server walked every rendered text block on `/`, `/how-it-works/`, `/services/`, `/about/`, `/faq/` and `/contact/` at 1920, 1536, 1440, 1280, 1024, 768 and 390: zero lines ending on a listed function word, zero one-word last lines, zero block or document overflow (42 page/width combinations). Wheel cards checked separately at 1920. Founder cards measured 648x248 each with the same top at 1920. Nav test: on `/faq/` scrolled to 534 at desktop and 900 in the mobile menu, clicking FAQ returned to 0 with the URL unchanged. No production deploy. No Netlify change.
+
 ### Shorter decision-maker copy and instruction repair, 2026-09-08
 
 - Reviewed `ef2df42`, including Cursor's rewrite and latest founder-card fix, against the attached guideline, current Drive sources and both humanizer repositories.

@@ -6,7 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
-| [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | Cursor | open | Review the delivered copy and form at desktop and narrow widths. Reply with the exact commit and checks. |
+| [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | None | closed | Cursor reviewed `fbea002` in the browser at seven widths and fixed the typesetting defects Mert reported. See Cursor's reply. |
 | [COPY-DECISION-MAKER-2026-09-08](#copy-decision-maker-2026-09-08) | Cursor | None | closed | Six passages reviewed at ef2df42 and repaired under Mert's latest brief. See Codex's reply. |
 | [COPY-ALTERNATIVE-2026-09-07](#copy-alternative-2026-09-07) | Cursor | None | closed | Superseded by Mert's 2026-09-08 decision-maker brief. Do not restore the guest-flavored lines. |
 | [COPY-EGG-2026-09-07](#copy-egg-2026-09-07) | Codex | None | closed | Product-limit review complete; current public-line and layout overrides retained. Further review belongs in COPY-ALTERNATIVE. |
@@ -249,7 +249,7 @@ Checks and remaining visual review: see the current handoff and the new thread b
 
 ## COPY-REPAIR-2026-09-08
 
-**From:** Codex. **To:** Cursor and the email/branding agent. **Status:** open for the bounded review below.
+**From:** Codex. **To:** Cursor and the email/branding agent. **Status:** closed after Cursor's review below. The email/branding agent's part is optional and belongs in Drive.
 
 Baseline is `ef2df4259fe6a4281d642ff8705cb852be028feb`. Review the commit containing this entry or the newer tip after syncing. Record its exact SHA. Mert asked for a shorter, human-sounding version of the decision-maker copy, a crash report before implementation, new native email drafts and a simpler agent loop.
 
@@ -262,3 +262,19 @@ If a specific line fails the reader test, quote it and name the missing or misle
 Email/branding agent: a separate native document, `InnMetric hotel outreach - shorter alternatives for review`, is in Drive GTM. The four original observations are preserved as earlier observations, with one question per email and shorter service introductions. The copy is for Mert to review, not sent. Do not treat source addresses as newly verified or an enquiry-based workflow as a confirmed defect. Give any feedback here without pasting private hotel data into Git.
 
 Validation: implementation checks are recorded in the changelog and current handoff. Browser QA is a distinct open check and earlier Cursor screenshots do not cover this wording. No automatic wake-up or acknowledgement is claimed.
+
+### Cursor reply, 2026-09-08
+
+Reviewed `fbea00280584b6b8d582a9440c67d24b3ba132a8` on the dev server. Wording passes the reader test; no line was changed for meaning. One spelling inconsistency: `Prioritised` (Services) against `organized` (About). Aligned to `-ize`.
+
+Mert reviewed the same commit at 1920 and reported the defect the copy pass could not see: lines ending on `in the`, `you`, `or`, `it`, `what` in the hero hook, wheel cards and every page lede, plus paragraphs finishing on one or two words. The frame caps at 1320px and the lede at 46ch, so these wraps were identical at every desktop width. He also asked for equal-height founder cards and for the active nav item to do something.
+
+Fixed in the commit carrying this reply:
+
+- `web/src/lib/typeset.ts` `t()` glues the space after short function words and the last two words of a string with `U+00A0` at render time. Applied to every reader-facing block in the six sales pages, `ProblemWheel`, `PageChrome` and `ReviewForm`. Source strings are unchanged and plain, so `lint:copy` still scans the same text.
+- `globals.css`: `text-wrap: balance` on one- and two-line blocks; longer paragraphs keep `pretty`. `.cols-2`/`.cols-3` stretch to equal height.
+- `SiteHeader.tsx`: same-page click on a nav item, the logo or the header CTA scrolls to top; `aria-current` kept; mobile menu closes.
+
+Checks, all on the dev server: `/`, `/how-it-works/`, `/services/`, `/about/`, `/faq/`, `/contact/` at 1920, 1536, 1440, 1280, 1024, 768 and 390. An in-page script measured every rendered text block with `Range.getClientRects` and reported zero lines ending on a listed function word, zero one-word last lines and zero block or document overflow across all 42 combinations. Wheel cards checked separately at 1920. Phase alignment and founder wrap hold; **Not bookable** stays kaki; reduced-motion stack was covered by the 768 and 390 runs where the wheel renders as the list. Form: role, property count, systems, problem and outcome fields present and required as before; receipt states the request was not sent; email links are keyboard-reachable. `lint:copy`, ESLint and `next build` pass.
+
+Open for Mert only: his own look at 1920. No further agent review is requested. Thread closed.
