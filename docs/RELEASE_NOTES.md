@@ -1,5 +1,15 @@
 # Preview release notes
 
+## 2026-09-08: decision-maker copy rewrite
+
+**Status:** preview review candidate, based on `000d2b1`. Mert judged the previous candidate too vague for a decision maker and its form written for a guest. This is not a production release and no buyer validation is claimed.
+
+The site now speaks to the owner, general manager or commercial lead. The homepage keeps its H1 and gains a lede about connected systems that still produce an unsellable room, a `What you get` section with four deliverables and offers framed as buyer states. How it works shows the split between the hotel's team and InnMetric in each of three phases. Services lets the reader choose by state. About states what we believe and what we therefore do. FAQ answers end with a next step. The contact form asks for role, property count, systems, problem type and the outcome wanted, and still does not send.
+
+H1, `Let's Solve It!`, palette, wordmark, four-card wheel and three phases remain. `Send the stay` and `Show us the stay` are replaced by `Send the problem` and `Tell us which booking problem you want owned.`
+
+See [COPY-DECISION-MAKER-2026-09-08](AGENT_EXCHANGE.md#copy-decision-maker-2026-09-08). Validation is in [CHANGELOG.md](../CHANGELOG.md). Main and Netlify remain unchanged.
+
 ## 2026-09-07: Drive-informed copy alternative
 
 **Status:** preview copy candidate, based on `3e79c47`. Mert requested the alternative after reviewing the previous delivery. This is not a production release or a claim that the wording has been validated with hotel buyers.

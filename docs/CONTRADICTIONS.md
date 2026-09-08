@@ -52,6 +52,17 @@ Mert returned after the usage interruption and requested a fresh read of preview
 - Keep all six search questions and the RMS, OTA-listing, first-install and standalone rate-plan-redesign limits. Phrase investigation as investigation. Do not promise a known cause or a successful correction before checking.
 - The [comparison](COPY_COMPARISON.md) is the rationale for a review candidate. It does not make every proposed sentence a permanent rule.
 
+## 2026-09-08 decision-maker overrides (Mert)
+
+Mert reviewed the Codex candidate at `835afa4` after Cursor's CSS pass at `000d2b1`. Verdict: the copy was too vague for a decision maker at a chain or a solo property and the form read as if a guest were filling it in. He authorized a rewrite of copy, layout, divs and CSS with the palette unchanged and answered Cursor's scoping questions in chat. These replace the older lines and the earlier egg definition.
+
+1. Lede is `Your systems say the room is on sale. Somewhere between the PMS and the booking page, it stopped being one.` not `A successful push is not a sellable room.` H1 and `Let's Solve It!` are unchanged.
+2. Form submit is `Send the problem` not `Send the stay`. Band and contact titles are `Tell us which booking problem you want owned.` / `Tell us the booking problem you want owned.` not `Show us the stay.`
+3. The egg is the problem and the wanted outcome, not the guest's stay. Form fields: name, work email, role (required), number of properties, hotel or group name, website, systems in use, the problem (required select) and what should be true when it is fixed. Still non-sending. No fake thanks.
+4. Deliverables are named on public pages: findings register, approved change list with reversal, repeat booking check, handover record. No durations. No PMS or channel-manager vendor names. OTA names may appear where the FAQ already used them.
+5. Pages form an arc. Secondary buttons hand the reader to the next page; the primary button always goes to `/contact/`. About uses the we-believe-so-we-do structure.
+6. The 2026-09-07 rule that the homepage stops before diagnosis still holds in spirit: the homepage names problems and deliverables, it does not diagnose the visitor's hotel.
+
 ## Authority
 
 Latest explicit instruction from Mert wins over this file, over a Codex brief, over a Drive suggestion and over an older handoff.

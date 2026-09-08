@@ -5,9 +5,28 @@ import { FormEvent, useState } from "react";
 const ROLES = [
   "Owner or managing director",
   "General manager",
-  "Revenue, e-commerce or distribution",
-  "Operations or cluster",
+  "Revenue or distribution lead",
+  "Commercial or e-commerce lead",
+  "Operations or cluster lead",
   "Other",
+];
+
+const PROPERTY_COUNTS = ["1", "2 to 5", "6 to 20", "More than 20"];
+
+const SYSTEMS = [
+  { id: "pms", label: "PMS" },
+  { id: "channel-manager", label: "Channel manager" },
+  { id: "booking-engine", label: "Booking engine" },
+  { id: "ota", label: "OTA extranets" },
+  { id: "rms", label: "RMS" },
+];
+
+const PROBLEMS = [
+  "A room the PMS shows cannot be booked online",
+  "A rate a guest sees does not match the rate we loaded",
+  "A stop-sell or closed date has not reopened on a channel",
+  "A fix we made earlier has come undone",
+  "Something else",
 ];
 
 export function ReviewForm() {
@@ -25,8 +44,9 @@ export function ReviewForm() {
         <h2>The request was not sent.</h2>
         <p className="section-lead">
           This Next.js app does not post to Netlify. Production innmetric.com is
-          unchanged. Email hello@innmetric.com with the hotel and the stay you
-          expected to sell. Do not include passwords or guest data.
+          unchanged. Email hello@innmetric.com with your property, the booking
+          problem and the outcome you want. Do not include passwords or guest
+          data.
         </p>
         <button className="button" type="button" onClick={() => setSent(false)}>
           Return to the form
@@ -55,27 +75,78 @@ export function ReviewForm() {
           <label htmlFor="email">Work email</label>
           <input id="email" name="email" type="email" required maxLength={254} />
         </div>
-        <div className="form-group full">
-          <label htmlFor="hotel">Hotel name or website</label>
-          <input id="hotel" name="hotel" type="text" required maxLength={200} />
-        </div>
         <div className="form-group">
-          <label htmlFor="role">Role (optional)</label>
-          <select id="role" name="role" defaultValue="">
-            <option value="">Skip for now</option>
+          <label htmlFor="role">Your role</label>
+          <select id="role" name="role" defaultValue="" required>
+            <option value="" disabled>
+              Choose one
+            </option>
             {ROLES.map((role) => (
               <option key={role}>{role}</option>
             ))}
           </select>
         </div>
+        <div className="form-group">
+          <label htmlFor="properties">Number of properties</label>
+          <select id="properties" name="properties" defaultValue="" required>
+            <option value="" disabled>
+              Choose one
+            </option>
+            {PROPERTY_COUNTS.map((count) => (
+              <option key={count}>{count}</option>
+            ))}
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="hotel">Hotel or group name</label>
+          <input id="hotel" name="hotel" type="text" required maxLength={200} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            type="url"
+            inputMode="url"
+            placeholder="https://"
+            maxLength={200}
+          />
+        </div>
+        <fieldset className="form-group full check-group">
+          <legend>Systems in use</legend>
+          <div className="check-grid">
+            {SYSTEMS.map((system) => (
+              <label className="check" key={system.id} htmlFor={`system-${system.id}`}>
+                <input
+                  id={`system-${system.id}`}
+                  name="systems"
+                  type="checkbox"
+                  value={system.label}
+                />
+                <span>{system.label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
         <div className="form-group full">
-          <label htmlFor="summary">What to look at</label>
+          <label htmlFor="problem">The problem</label>
+          <select id="problem" name="problem" defaultValue="" required>
+            <option value="" disabled>
+              Choose the closest match
+            </option>
+            {PROBLEMS.map((problem) => (
+              <option key={problem}>{problem}</option>
+            ))}
+          </select>
+        </div>
+        <div className="form-group full">
+          <label htmlFor="outcome">What should be true when it is fixed</label>
           <textarea
-            id="summary"
-            name="summary"
+            id="outcome"
+            name="outcome"
             required
             maxLength={5000}
-            placeholder="Room and stay dates, booking page or channel, expected result and what appeared instead. No passwords or guest details."
+            placeholder="Where you see the problem today, which channels it affects and what your team expects a guest to be able to book. No passwords or guest details."
           />
         </div>
         <div className="form-group full">
@@ -87,7 +158,7 @@ export function ReviewForm() {
       </div>
       <div className="form-actions">
         <button className="button lg" type="submit">
-          Send the stay
+          Send the problem
         </button>
         <span className="form-note">
           Prefer email? Write to hello@innmetric.com.

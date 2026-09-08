@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "InnMetric FAQ | Hotel distribution questions",
   description:
-    "Answers about unavailable rooms, rate differences, existing channel-manager setups and the work InnMetric takes on.",
+    "Plain answers for hotel decision makers on unavailable rooms, rate differences, channel-manager setups and where InnMetric's work stops.",
   openGraph: {
     title: "InnMetric FAQ | Hotel distribution questions",
     description:
-      "Answers about unavailable rooms, rate differences, existing channel-manager setups and the work InnMetric takes on.",
+      "Plain answers for hotel decision makers on unavailable rooms, rate differences, channel-manager setups and where InnMetric's work stops.",
     url: "https://innmetric.com/faq/",
   },
   alternates: { canonical: "/faq/" },
@@ -19,34 +19,39 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "Why is my hotel booking engine showing no availability?",
-    a: "If the booking engine itself is unavailable, contact its provider. If a room is open in your PMS but unavailable for the same dates online, we review the relevant mappings, restrictions and allotments. That difference alone does not establish the cause.",
+    a: "If the booking engine itself is down, its provider is the first call. If the engine is up, the PMS shows rooms for those dates and the engine still shows none, the gap is usually somewhere in mappings, restrictions or allotments. That is a configuration review. Tell us the room and dates and we will reproduce it from the guest's side before proposing anything.",
   },
   {
     q: "Why are my hotel rates different on Booking.com?",
-    a: "Different occupancy, cancellation terms, currency or promotions can produce different prices. We compare the same room and dates under matching conditions before recommending a correction.",
+    a: "A different price is not proof of a fault. Occupancy, cancellation terms, currency, taxes and promotions all change what a guest sees. We compare the same room and dates under matching conditions first. If the offers still differ, that becomes a finding with a proposed correction for your approval.",
   },
   {
     q: "Do you set up a hotel channel manager?",
-    a: "We review channel managers that are already in use. If availability or rates do not appear as your hotel expects, we investigate the setup and propose corrections for approval. A first-time installation is outside our service.",
+    a: "No. We work on the channel manager you already run. If rates or availability are not reaching a channel the way your team set them, we trace the setup and propose corrections for approval. If you have no channel manager yet, the vendor's onboarding is the right route.",
   },
   {
     q: "How do we simplify our hotel rate plans?",
-    a: "We can flag overlapping rate plans when they complicate the mappings or restrictions we're reviewing. Any proposed simplification needs your hotel's approval. We do not offer a standalone rate-plan redesign.",
+    a: "When overlapping rate plans are what makes the mappings or restrictions hard to trace, we flag it in the findings register and propose a simpler structure for your approval. We do not sell a standalone rate-plan redesign. If that is the whole job, tell us and we will say so.",
   },
   {
     q: "Can we outsource hotel revenue management?",
-    a: "InnMetric does not take over revenue management. Your hotel keeps control of pricing, yield and rate decisions. We check whether guests can book the offer your team intended.",
+    a: "Not to us. Pricing, yield and rate decisions stay with your hotel. Our job is narrower: making sure the rate and availability your team decided on is what a guest can actually book, on every channel you sell through.",
   },
   {
     q: "Who can manage our hotel OTA listings?",
-    a: "We do not manage OTA listing content, photos or ranking. Our ongoing service rechecks the rates, availability and mappings agreed after a baseline review.",
+    a: "Listing content, photos and ranking are marketing work and we do not do it. What we do on an ongoing basis is recheck the rates, availability and mappings agreed after a baseline review and tell you when one of them moved.",
   },
 ];
 
 export default function FaqPage() {
   return (
     <>
-      <PageHero eyebrow="FAQ" title="If a guest cannot book, start here." />
+      <PageHero eyebrow="FAQ" title="The questions hotel teams search before they write to us.">
+        <p className="lede">
+          Short answers on what we take on and where the line sits. If your
+          question is not here, ask it in the form and we will answer it there.
+        </p>
+      </PageHero>
       <section className="section wash">
         <div className="frame stack">
           <Reveal>

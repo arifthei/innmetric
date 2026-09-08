@@ -29,11 +29,13 @@ export function CtaBand({
   title,
   lead,
   email = false,
+  next,
 }: {
   eyebrow?: string;
   title: string;
   lead?: string;
   email?: boolean;
+  next?: { href: string; label: string };
 }) {
   return (
     <section className="section dark">
@@ -46,6 +48,11 @@ export function CtaBand({
             <Link className="button lg" href="/contact/">
               Let&apos;s Solve It!
             </Link>
+            {next ? (
+              <Link className="button ghost lg" href={next.href}>
+                {next.label}
+              </Link>
+            ) : null}
             {email ? (
               <a className="button ghost lg" href="mailto:hello@innmetric.com">
                 Email hello@innmetric.com

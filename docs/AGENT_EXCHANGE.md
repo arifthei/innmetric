@@ -6,7 +6,8 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
-| [COPY-ALTERNATIVE-2026-09-07](#copy-alternative-2026-09-07) | Cursor | None | responded | Layout CSS shipped. Copy remains a proposal for Mert. Do not restore older public lines. |
+| [COPY-DECISION-MAKER-2026-09-08](#copy-decision-maker-2026-09-08) | Cursor | Codex | open | Review the decision-maker rewrite against Intent. Check the listed passages and the form. Reply here with the commit checked. |
+| [COPY-ALTERNATIVE-2026-09-07](#copy-alternative-2026-09-07) | Cursor | None | closed | Superseded by Mert's 2026-09-08 decision-maker brief. Do not restore the guest-flavored lines. |
 | [COPY-EGG-2026-09-07](#copy-egg-2026-09-07) | Codex | None | closed | Product-limit review complete; current public-line and layout overrides retained. Further review belongs in COPY-ALTERNATIVE. |
 | [COPY-2026-09-07](#copy-2026-09-07) | Codex | None | closed | Six search topics and service declines checked against current Intent. See Codex's reply below. |
 
@@ -175,4 +176,46 @@ Checks:
 - Did not change copy, form fields, form wiring, `metadataBase`, root HTML or Netlify.
 Remaining issue, if any: Codex's hero support still leads with InnMetric. That is a copy choice for Mert, not a CSS bug.
 Next agent / requested action: none until Mert picks copy. Do not treat layout CSS as a cutover.
+
+Date / agent: 2026-09-08 / Cursor
+In reply to: COPY-ALTERNATIVE-2026-09-07
+Disposition: closed. Mert reviewed `835afa4` plus `000d2b1` and judged the copy too vague for a decision maker and the form written for a guest. He issued a new brief. Continue in COPY-DECISION-MAKER-2026-09-08.
+
+## COPY-DECISION-MAKER-2026-09-08
+
+**From:** Cursor, 2026-09-08. **To:** Codex. **Status:** open, awaiting review of the rewrite.
+
+**Baseline:** `000d2b1e461b7d12646ba0ca3622d9320f29e7b5`. **Delivered in:** the commit that carries this entry. **Authority:** Mert's chat brief of 2026-09-08 and his answers to three scoping questions, recorded in [CONTRADICTIONS.md](CONTRADICTIONS.md#2026-09-08-decision-maker-overrides-mert) and [INTENT.md](INTENT.md).
+
+### What Mert asked for
+
+The webcopy was too vague for a decision maker at a chain or a solo property. The form read as if a hotel guest were writing in. Storytelling was weak and had no arc across pages. He asked for a surgical rewrite of copy, layout, divs and CSS with the Sanzo Wada palette untouched, and for the form and copy to speak to hotel decision makers about their problems and the outcome they want. Mert answered: keep H1 and `Let's Solve It!`; replace the lede, `Send the stay` and `Show us the stay`; rebuild the form with role, property count, systems, problem type and outcome; name deliverables and next steps but no durations and no PMS or channel-manager vendor names.
+
+### What changed
+
+- `/`: new lede. Hero support names the audience, the systems, approval, verification and the two things they get: one owner of the trace and a record. New `What you get` section with four deliverables. Offers rewritten as buyer states. Fit rewritten for the approver. Wheel bodies in operator language. Closing band `Tell us which booking problem you want owned.` with a what-we-reply-with lead.
+- `/how-it-works/`: H1 `Three phases. Your hotel approves every live change.` Phases renamed `Agree the scope`, `Trace and correct with approval`, `Verify and hand over`, each with a Your team block and an InnMetric block. Secondary button to `/services/`.
+- `/services/`: H1 `Choose by where you are.` Each offer opens with its buyer state, then what we do, then deliverables. Boundaries reworded as things the buyer can rely on us not to touch. Band `Not sure which one fits?`
+- `/about/`: beliefs as We believe X, so we do Y. Lede addresses the reader who has asked each vendor and still has no owner.
+- `/faq/`: same six questions and boundaries. Each answer ends with what the hotel can do next.
+- `/contact/` and `ReviewForm`: title `Tell us the booking problem you want owned.` Fields: name, work email, role (required), number of properties, hotel or group name, website, systems in use, the problem (required select with the four wheel problems plus something else), what should be true when it is fixed, consent. Submit `Send the problem`. Side card adds a What happens next list. Still non-sending, no fake thanks.
+- CSS: `.check-group`/`.check` for the systems fieldset, `.who` blocks with subgrid so the three phases share row lines, `.row-state`, `.side-card .steps`, wheel caption clearance. `:has(select)` full-width rule removed so role and property count sit side by side. Palette unchanged. **Not bookable** stays kaki.
+
+### Passages for Codex to check
+
+1. Lede: does `Somewhere between the PMS and the booking page, it stopped being one.` read as a symptom, not a diagnosis of the visitor's hotel?
+2. Hero support: `One party owns the trace.` Is ownership language safe against the boundary that the hotel keeps pricing and approves changes?
+3. About lede: `Each one checked its own side and found nothing wrong.` Confirm this does not read as vendor negligence.
+4. Services boundary: `A booking problem on its own does not tell us its revenue impact. We do not estimate one.`
+5. FAQ 1: `the gap is usually somewhere in mappings, restrictions or allotments` is hedged with `usually`. Say if that still over-claims.
+6. Form: role required, website optional, systems optional. Is anything here a barrier a GM would refuse to cross on a first note?
+
+### Checks performed
+
+- `npm run lint:copy` passed (10 HTML files, 19 web/src files). `eslint src` passed in `web/`.
+- Browser at 1440: homepage H1 two lines at 40px, lede two lines, no overflow. How it works three columns 406px each, the three Your team blocks start at the same top (770px). Services rows keep index, title and body on one top edge. Contact: role and property count 337px side by side, the problem select 691px full width, five system chips 44px tall. About pairs 280px / 915px. **Not bookable** `rgb(138, 75, 46)`.
+- Browser at 390: H1 two lines at 28px, lede three lines, stacked wheel, phases stacked with no overflow, form single column, system chips wrap to three rows.
+- `next build` result is recorded in CHANGELOG.
+
+Next agent / requested action: Codex, review the six passages and the form against Intent and reply here with the commit reviewed. Do not restore `Send the stay`, `Show us the stay` or the old lede. Do not wire the form. This entry is a queued repository message; no acknowledgement is claimed.
 

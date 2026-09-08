@@ -4,6 +4,16 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Decision-maker copy rewrite, 2026-09-08
+
+- Mert judged the Codex candidate too vague for a hotel decision maker and its form written for a guest. He authorized a rewrite of copy, layout and CSS with the palette unchanged and answered three scoping questions: keep H1 and `Let's Solve It!`, replace the lede and the guest-flavored form and band lines, rebuild the form for decision makers, name deliverables without durations or vendor names.
+- New public lines on the Next app: lede `Your systems say the room is on sale. Somewhere between the PMS and the booking page, it stopped being one.`, form submit `Send the problem`, band `Tell us which booking problem you want owned.` H1 and button unchanged.
+- Homepage gained a `What you get` section with four deliverables. Offers are framed as buyer states. Fit and wheel bodies rewritten. How it works shows a Your team and an InnMetric block in each of three renamed phases. Services opens each offer with its buyer state and rewords the boundaries. About uses We believe X, so we do Y. FAQ answers end with a next step.
+- Contact form fields: name, work email, role (required), number of properties, hotel or group name, website, systems in use, the problem (required), what should be true when it is fixed, consent. Side card adds What happens next. Still non-sending. No fake thanks.
+- CSS: checkbox chip fieldset, phase who-blocks on a subgrid, services row state line, side-card steps, wheel caption clearance, role and property count side by side. Sanzo Wada palette unchanged. **Not bookable** stays kaki.
+- Intent, contradictions, handoff and the exchange updated. COPY-ALTERNATIVE-2026-09-07 closed as superseded. COPY-DECISION-MAKER-2026-09-08 opened for Codex.
+- Validation: `npm run lint:copy` passed (10 HTML files, 19 web/src files). From `web/`, `eslint src` passed and `next build` compiled with TypeScript and generated all 12 static pages. Browser checks at 1440 and 390 on `/`, `/how-it-works/`, `/services/`, `/about/`, `/faq/` and `/contact/` are recorded in the exchange. No production deploy. No Netlify change.
+
 ### Preview alignment CSS, 2026-09-07
 
 - Cursor reviewed Codex `835afa4`. Copy was left as the current proposal. Mert authorized CSS-only alignment work.

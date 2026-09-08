@@ -1,6 +1,6 @@
 # InnMetric HITL Intent
 
-Updated: 2026-09-07. Owner: Mert. Canonical git: `https://github.com/arifthei/innmetric.git`. Earlier Drive copy: https://docs.google.com/document/d/14hJbHK8UQvX735QXRlo265BKGwVLyp5QPsU1go59nPk/edit. That copy is stale. Do not restore its anger persona over this file. The current website handbook is this file plus `AGENTS.md`, `docs/HANDOFF.md` and `docs/AGENT_EXCHANGE.md` on **`preview`**. Latest explicit instructions from Mert take precedence.
+Updated: 2026-09-08. Owner: Mert. Canonical git: `https://github.com/arifthei/innmetric.git`. Earlier Drive copy: https://docs.google.com/document/d/14hJbHK8UQvX735QXRlo265BKGwVLyp5QPsU1go59nPk/edit. That copy is stale. Do not restore its anger persona over this file. The current website handbook is this file plus `AGENTS.md`, `docs/HANDOFF.md` and `docs/AGENT_EXCHANGE.md` on **`preview`**. Latest explicit instructions from Mert take precedence.
 
 This brief is for website copy **and** later email copy. Hotel prospecting stays a separate track. Do not import Drive traction packs into git.
 
@@ -27,9 +27,11 @@ Public pages must not lead with GCC. The site is read by anyone. Geography is no
 ## Locked public lines (preview Next app)
 
 - H1: `The desk can quote the room. The guest still cannot buy it.`
-- Lede: `A successful push is not a sellable room.`
+- Lede: `Your systems say the room is on sale. Somewhere between the PMS and the booking page, it stopped being one.` (2026-09-08, replaces `A successful push is not a sellable room.`)
 - Button (header, hero, CtaBand): `Let's Solve It!` to `/contact/`. Never as H1, eyebrow or metadata title.
-- Form submit: `Send the stay`
+- Form submit: `Send the problem` (2026-09-08, replaces `Send the stay`)
+- Closing band and contact title: `Tell us which booking problem you want owned.` / `Tell us the booking problem you want owned.` (2026-09-08, replaces `Show us the stay.`)
+- Audience: the person who can decide to bring InnMetric in. Owner, general manager, revenue or distribution lead, commercial lead, operations or cluster lead. Do not write to the guest or ask for the guest's stay as if the reader were the guest.
 - English only. No em dash. No Oxford comma. No prices. No SaaS or AI claims. No leakage amounts. No vendor negligence. No real hotel names. No founder full names on the homepage.
 
 Root static HTML on `main` (and the leftover root HTML on this branch) still uses the older production CTA. Leave it until an authorized cutover. Preview lint requires `Let's Solve It!` in the Next header only.
@@ -38,17 +40,30 @@ Approved evidence pattern: We observed X under Y conditions. This may indicate Z
 
 ## Voice and neural register
 
-Hero is the hotel desk, never InnMetric. Mission: a stay the guest can buy. Obstacle: a successful push that is still not a sellable room, not a named OTA as villain. Guide: InnMetric. Journey: three phases on `/how-it-works/`, not as a homepage essay. The goal is the intended booking result and a record the next person can use. A result that still needs correction remains open; do not promise that every approved repair succeeds.
+Hero is the hotel decision maker, never InnMetric. Mission: rooms and rates a guest can actually book, on every channel the hotel sells through. Obstacle: connected systems that still produce a wrong guest-facing result and no one at the hotel who owns tracing it end to end. Not a named vendor as villain. Guide: InnMetric. Journey: three phases on `/how-it-works/`. Resolution: a verified booking result, a record the next person can use and one accountable party. A result that still needs correction remains open; do not promise that every approved repair succeeds.
 
-Egg: they name the stay. The homepage does not finish the diagnosis. The contact message supplies a useful booking example: the hotel, room, dates and what the guest saw. Explain this request plainly. The psychology references are drafting aids, not proof that more friction improves enquiries. Keep a short explanation of the service beside the hook.
+Egg (2026-09-08): they name the problem and the outcome they want. The contact form asks for role, property count, systems in use, the closest problem type and what should be true when it is fixed. It does not ask the reader to describe a guest's stay as if they were the guest. The psychology references are drafting aids, not proof that more friction improves enquiries. Keep a short explanation of the service and its deliverables beside the hook.
+
+Page arc (2026-09-08). Each page has one job and hands the reader to the next. Primary button is always `Let's Solve It!` to `/contact/`. The secondary button on a page points to the next page in the arc.
+
+| Page | Job | Hands to |
+| --- | --- | --- |
+| `/` | Recognise the problem, learn what InnMetric delivers, self-qualify | `/how-it-works/`, offers to `/services/` |
+| `/how-it-works/` | Three phases with the Your team / InnMetric split | `/services/` |
+| `/services/` | Choose by state: do not know yet / know and want it corrected / want it to stay fixed | `/contact/` |
+| `/about/` | We believe X, so we do Y. Founders | `/contact/` |
+| `/faq/` | Objections in the searcher's words, each with a next step | `/contact/` |
+| `/contact/` | The ask. Decision-maker form. What happens next | none |
+
+Deliverables named on the public site: findings register, approved change list with a way to reverse each correction, repeat booking check under the same conditions, handover record with open items and agreed rechecks. No durations. No PMS or channel-manager vendor names.
 
 Public voice: concise, not boring. Clear, natural and professional. Complete sentences mixed with short ones. Do not dump process, offers and FAQ onto the homepage. No contempt, invented staff anecdotes or theatrical warnings. No health-coach identity pull. No `helps`, `unlock` or `leverage` on public pages.
 
 Self-qualifier: "You'll probably enjoy working with us if" then the person who already has systems, can name the stay that should sell and can bring an approver when a live change is needed. Keep the wrong-fit column specific and respectful.
 
-Why write: hotel, the stay they expected to sell and what the guest saw instead. A named approver is not required to send the first note. InnMetric will say if the issue falls outside its work before agreeing a scope. Rechecks can find a problem that returns; they cannot promise it will never return.
+Why write: the property, the booking problem and what should be true when it is fixed. A named approver is not required to send the first note. InnMetric replies on fit and scope before asking for access. Rechecks can find a problem that returns; they cannot promise it will never return.
 
-Current proposal: Mert requested another alternative after the latest Git changes and the added Psychology reference. See [COPY_COMPARISON.md](COPY_COMPARISON.md) for the source decisions and comparison with `3e79c47`. The proposal preserves the public-line overrides and compact layout. It does not replace Mert's authority with a writing framework.
+History: the Codex alternative at `835afa4` and its [comparison](COPY_COMPARISON.md) were the review candidate on 2026-09-07. On 2026-09-08 Mert judged that candidate too vague for a decision maker and its form written for a guest. He authorized the decision-maker rewrite recorded above. The comparison stays as history of the earlier decisions.
 
 ## Email register
 
@@ -76,7 +91,7 @@ Sanzo Wada cartella on the Next app: kinari paper `#F3EDE0`, byakuroku wash `#D5
 
 Wordmark: lowercase `innmetric`, tight tracking, asagi square with glow at the end. No IM box. No Eosyn amber.
 
-Homepage: copy left, four-card 3D problem wheel right. No ticket row. No five-verb band. Offer names stay short. Cards:
+Homepage: copy left, four-card 3D problem wheel right, then What you get, three offers by buyer state, fit and the closing band. No ticket row. No five-verb band. Offer names stay short. Cards:
 
 1. The room cannot be bought
 2. The public rate drifted
@@ -85,7 +100,7 @@ Homepage: copy left, four-card 3D problem wheel right. No ticket row. No five-ve
 
 Illustrative only. Not a live operations product. Prefer-reduced-motion: stacked list. Do not copy Eosyn chat chrome, amber bars or iGaming voice. Motion idea only.
 
-Control-record tab toy is off the homepage. `/how-it-works/` may keep a quiet static slip and three phases only.
+Control-record tab toy is off the homepage. `/how-it-works/` keeps a quiet static slip and three phases only. Each phase shows a Your team block and an InnMetric block so the split of work is visible.
 
 Offer names: Distribution Baseline Audit, Approved Repair Sprint, Ongoing Distribution Control.
 
@@ -93,6 +108,6 @@ Offer names: Distribution Baseline Audit, Approved Repair Sprint, Ongoing Distri
 
 `netlify.toml` publishes `.`. Do not point Netlify at `web/`. Do not merge `preview` into `main` until Mert authorizes a cutover. Root HTML/CSS on `preview` can hitchhike into production if merged wholesale.
 
-The React form still does not send. `metadataBase` is localhost until cutover. Keep the local-preview bar. Do not show a fake thanks state.
+The React form still does not send. Its fields are name, work email, role, number of properties, hotel or group name, website, systems in use, the problem and what should be true when it is fixed, plus consent. `metadataBase` is localhost until cutover. Keep the local-preview bar. Do not show a fake thanks state.
 
 Inquiry: hello@innmetric.com

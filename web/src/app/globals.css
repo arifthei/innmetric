@@ -606,6 +606,7 @@ p {
 .problem-wheel .work-file-note {
   justify-content: center;
   border: 0;
+  margin-top: 56px;
   color: var(--muted);
 }
 
@@ -690,6 +691,21 @@ p {
   border-right: 1px solid var(--line);
 }
 
+/* Index, title, body and the who-block share rows across the three phases
+   so the labelled blocks start on the same line. */
+@supports (grid-template-rows: subgrid) {
+  .verbs {
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .verbs li {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    align-content: start;
+  }
+}
+
 .verbs li:last-child {
   border-right: 0;
   padding-right: 0;
@@ -707,6 +723,49 @@ p {
 
 .verbs span {
   font-size: 15px;
+  color: var(--muted);
+}
+
+.verbs .verb-index {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Who does what inside a phase. Two labelled blocks, no table. */
+
+.who {
+  display: grid;
+  gap: 12px;
+  margin: 6px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.who > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.who dt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.who > div:last-child dt {
+  color: var(--accent);
+}
+
+.who dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--muted);
 }
 
@@ -783,6 +842,14 @@ p {
 
 .row .checklist {
   margin-top: 14px;
+}
+
+.row .row-state {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  max-width: 24ch;
 }
 
 .pair {
@@ -1035,9 +1102,58 @@ p {
   gap: 7px;
 }
 
-.form-group.full,
-.form-group:has(select) {
+.form-group.full {
   grid-column: 1 / -1;
+}
+
+/* Fieldset of checkboxes. Reset the browser box so it sits like a form-group. */
+
+.check-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.check-group legend {
+  padding: 0;
+  margin-bottom: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.check-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.check:has(input:checked) {
+  border-color: var(--accent);
+}
+
+.check input {
+  margin: 0;
 }
 
 label {
@@ -1136,6 +1252,23 @@ input[type="checkbox"] {
 
 .side-card p + p {
   margin-top: 16px;
+}
+
+.side-card .steps {
+  margin: 0 0 26px;
+  padding: 0 0 0 22px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.side-card .steps li {
+  padding: 4px 0;
+}
+
+.side-card .steps li::marker {
+  color: var(--accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
 .side-card a {
