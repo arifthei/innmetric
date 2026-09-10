@@ -12,4 +12,4 @@ Fetch `https://github.com/arifthei/innmetric.git` before assuming any branch is 
 
 Both Cursor and Codex use the same [agent exchange](AGENT_EXCHANGE.md) on `preview`. An agent's name does not imply a separate implementation branch. Follow the fetch and integration steps in [AGENTS.md](../AGENTS.md) before editing or pushing.
 
-Netlify production branch must stay `main`. `netlify.toml` still publishes `.`. Do not point the existing site at `web/`.
+Netlify production branch must stay `main`. Live innmetric.com still publishes `.` from `main`. The `preview` `netlify.toml` is the Next cutover pack (base `web`, publish `.next` with the adapter) and applies only after an authorized merge.

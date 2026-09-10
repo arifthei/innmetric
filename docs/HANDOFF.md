@@ -1,28 +1,32 @@
 # Current handoff
 
-Checkpoint: 2026-09-08. Last writer: Cursor. Next reviewer: Mert. Mert is the only authority.
+Checkpoint: 2026-09-10. Last writer: Cursor. Next reviewer: Mert. Mert is the only authority.
 
 ## Resume here
 
-Codex's shorter decision-maker copy (`fbea002`) has now had its browser review, and Mert's follow-up brief on typesetting, card alignment and same-page navigation is delivered on top of it. Read [AGENTS](../AGENTS.md), [Intent](INTENT.md) and [Writing](WRITING.md). [COPY-REPAIR-2026-09-08](AGENT_EXCHANGE.md#copy-repair-2026-09-08) is closed with Cursor's reply. No review thread is open.
+Preview now has founder portraits on About, a gated Netlify form that stays off for ordinary preview, and the Next cutover files. GitHub `preview` was `991b441` before this delivery. Read [AGENTS](../AGENTS.md), [Intent](INTENT.md) and [Writing](WRITING.md). No agent review thread is open.
 
-Delivered in this checkpoint, copy unchanged:
+This is a non-sending preview. Approving the commit is not a merge to `main`. Cutover steps live in local gitignored `buildplan.md`. The form contract is local `formtutorial-live.md`.
 
-- `web/src/lib/typeset.ts` glues short function words to the next word and the last two words of each block at render time, so no line ends on `the`, `you`, `or`, `it`, `what` and no paragraph finishes on one word. Applied to every reader-facing block on the six sales pages, wheel cards and CTA band. Source strings stay plain for `lint:copy`.
-- `globals.css`: one- and two-line blocks use `text-wrap: balance`; longer paragraphs keep `pretty`. `.cols-2` and `.cols-3` stretch, so founder and fit cards share a height.
-- `SiteHeader.tsx`: the active nav item, logo and header CTA scroll to the top of the current page instead of doing nothing.
-- `Prioritised` on Services aligned to the `-ize` spelling used elsewhere.
+## Delivered
+
+- About founder cards: 640×800 WebP plus JPEG in `web/public/founders/`, photo first, `alt` is name and role, faces cropped high. No faces on the homepage. Original 2 MB PNGs stay gitignored.
+- Form gate: `CONTEXT === "production"` and `INNMETRIC_FORMS_ENABLED === "true"`. `NODE_ENV` is not the switch. Default preview keeps the local bar, localhost `metadataBase`, the non-sent notice and receipt.
+- Detector: `web/src/forms/detector.html.template` copied to gitignored `web/public/__forms.html` only when the gate is on; disabled builds delete leftovers. `ReviewForm` posts through `postEnquiry` to `/__forms.html` when enabled. `/thanks/` is not a receipt.
+- Cutover files on this branch: `netlify.toml` base `web`, `npm run build` (with root `lint:copy`), publish `.next`, `@netlify/plugin-nextjs`. `.netlifyignore` no longer excludes `web`. Production chrome and privacy copy sit behind the same flag.
 
 ## Verification
 
-Passed: `lint:copy` (10 HTML, 20 web/src files), ESLint, `next build` with TypeScript and 12 static pages. Browser audit on the dev server walked every rendered text block on the six sales pages at 1920, 1536, 1440, 1280, 1024, 768 and 390: zero function-word line endings, zero one-word last lines, zero overflow across 42 page/width combinations. Founder cards measured equal at 1920. Nav return-to-top confirmed on `/faq/` at desktop and in the mobile menu.
+Passed: `lint:copy` (10 HTML, 22 web/src), ESLint, form unit tests (prepare-forms copy/delete, `postEnquiry` 2xx / non-2xx / network / abort / double-submit), default `next build` with no `__forms.html` and no `data-netlify` in `.next`, enabled `CONTEXT=production INNMETRIC_FORMS_ENABLED=true` build with a matching detector, then a second default build that removed the leftover file.
 
-Codex's requested review of `fbea002` is covered by the same audit: shortened text, phase alignment, founder wrap, wheel caption, horizontal overflow at 1440 and 390, form fields, non-sent receipt and email links.
+Browser on `npm run dev`: `/about/` at 1920, equal 648×1049 cards, WebP 640×800, no overflow; at 390 the cards stack, photo first, no overflow. Homepage has no founder images. `/contact/` shows the local notice; a filled submit stayed on `/contact/`, showed “The request was not sent.” and issued no `fetch`. `/thanks/` title is not a receipt.
+
+Skipped: merge to `main`, production deploy, a live innmetric.com submit, outreach.
 
 ## Next action and stopping point
 
-Mert reviews the preview at his own resolution. If a specific line still wraps badly, quote it with the width; the audit script and rules in `typeset.ts` can be extended. Further copy rewrites need a new brief or a named defect.
+Mert reviews `buildplan.md` and this preview. Merge, Netlify dashboard checks and one innmetric.com submit come after that. Do not start the first email batch until that live row is in Verified and `hello@innmetric.com`.
 
 ## Held
 
-`main` baseline: `1e21e26b9fc39bea5504c79e393186fd5b85b1f7`. No main push, production deployment, Netlify setting change, root static edit, form activation or metadataBase change. The old Codex audit and PR #1 stay historical. Email infrastructure and the Next cutover are separate tasks.
+`main` baseline: `1e21e26b9fc39bea5504c79e393186fd5b85b1f7`. innmetric.com still publishes `.` from `main`. No main push, `netlify deploy --prod`, `npm run deploy` or `deploy.ps1`. The old Codex audit and PR #1 stay historical.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
 import { ReviewForm } from "@/components/ReviewForm";
+import { FORMS_ENABLED } from "@/lib/release";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
@@ -42,7 +43,7 @@ export default function ContactPage() {
                 <ReviewForm />
               </div>
               <aside className="col-5 side-card">
-                <h3>After you email us</h3>
+                <h3>{FORMS_ENABLED ? "After you contact us" : "After you email us"}</h3>
                 <ol className="steps">
                   {NEXT_STEPS.map((step) => (
                     <li key={step}>{t(step)}</li>

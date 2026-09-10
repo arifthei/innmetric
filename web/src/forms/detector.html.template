@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>InnMetric form declaration</title>
+  </head>
+  <body>
+    <form name="distribution-review" method="POST"
+      data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="distribution-review" />
+      <input name="bot-field" type="text" />
+      <input name="contact-name" type="text" />
+      <input name="email" type="email" />
+      <input name="role" type="text" />
+      <input name="properties" type="text" />
+      <input name="hotel" type="text" />
+      <input name="website" type="url" />
+      <input name="systems" type="text" />
+      <input name="problem" type="text" />
+      <textarea name="outcome"></textarea>
+      <input name="consent" type="text" />
+    </form>
+  </body>
+</html>

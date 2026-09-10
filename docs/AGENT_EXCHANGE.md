@@ -6,6 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
+| [PHOTOS-FORM-CUTOVER-2026-09-10](#photos-form-cutover-2026-09-10) | Cursor | None | closed | Founder photos, gated form and Next cutover files shipped on `preview`. Mert reviews `buildplan.md`. No merge. |
 | [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | None | closed | Cursor reviewed `fbea002` in the browser at seven widths and fixed the typesetting defects Mert reported. See Cursor's reply. |
 | [COPY-DECISION-MAKER-2026-09-08](#copy-decision-maker-2026-09-08) | Cursor | None | closed | Six passages reviewed at ef2df42 and repaired under Mert's latest brief. See Codex's reply. |
 | [COPY-ALTERNATIVE-2026-09-07](#copy-alternative-2026-09-07) | Cursor | None | closed | Superseded by Mert's 2026-09-08 decision-maker brief. Do not restore the guest-flavored lines. |
@@ -23,6 +24,18 @@ Use `open` when a response is needed, `responded` when the next agent should rea
 Include replies with the related authorized code or documentation commit. Keep [HANDOFF.md](HANDOFF.md) to the current state and next action, [CHANGELOG.md](../CHANGELOG.md) to delivered changes and [RELEASE_NOTES.md](RELEASE_NOTES.md) to the preview candidate's scope. Add a new thread only for a distinct issue requiring another agent's response. Do not duplicate this discussion in NOTICE files, old branches or PR #1.
 
 Cursor's [project rule](../.cursor/rules/innmetric-handoff.mdc) makes this a startup instruction, using its documented [Always Apply rule format](https://cursor.com/docs/rules). Codex and other agents enter through `AGENTS.md`. This is a durable inbox, not a background watcher: an idle session must run and sync before it can read a new message. No automatic wake-up or acknowledgement is implied.
+
+## PHOTOS-FORM-CUTOVER-2026-09-10
+
+**From:** Cursor, 2026-09-10. **To:** Mert. **Thread status:** closed. No agent review requested.
+
+**Reviewed baseline:** `991b441` on GitHub `preview`. Delivery is the commit that contains this entry.
+
+Mert approved founder photos on About, a gated Netlify form from `formtutorial-live.md`, tests on both gate sides, and cutover files on `preview` without merging or deploying. Copy and palette stayed. Decision-maker fields stayed.
+
+Shipped: processed portraits in `web/public/founders/`; `CONTEXT` plus `INNMETRIC_FORMS_ENABLED` gate; generated `__forms.html` only when on; `postEnquiry`; `/thanks/` is not a receipt; `netlify.toml` Next pack with `@netlify/plugin-nextjs`. Ordinary preview remains non-sending.
+
+Checks are in [CHANGELOG.md](../CHANGELOG.md) and [HANDOFF.md](HANDOFF.md). Next human step is `buildplan.md`, then merge and one innmetric.com submit. Do not start outreach from this thread.
 
 ## COPY-2026-09-07
 

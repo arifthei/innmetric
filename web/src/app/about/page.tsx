@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
@@ -44,6 +45,10 @@ const FOUNDERS = [
   {
     name: "Tunahan Aras",
     role: "Hotel Distribution Lead",
+    photo: {
+      webp: "/founders/tunahan.webp",
+      jpg: "/founders/tunahan.jpg",
+    },
     body: [
       "Tunahan has worked with rates, restrictions, room and rate mappings, reservation flows and OTA operations. His experience includes hotel partner cases in channel manager environments.",
       "He looks at how the hotel's setup behaves and which settings need a closer check.",
@@ -52,6 +57,10 @@ const FOUNDERS = [
   {
     name: "Mert Carikci",
     role: "Product Operations Lead",
+    photo: {
+      webp: "/founders/mert.webp",
+      jpg: "/founders/mert.jpg",
+    },
     body: [
       "Mert's background is in product ownership and systems analysis across high-volume regulated platforms, live operations and products with complex integrations.",
       "He keeps the findings, approvals, change records and tests organized so the team can follow the work.",
@@ -101,6 +110,15 @@ export default function AboutPage() {
             <div className="cols-2">
               {FOUNDERS.map((founder) => (
                 <article className="card founder" key={founder.name}>
+                  <picture className="founder-photo">
+                    <source srcSet={founder.photo.webp} type="image/webp" />
+                    <Image
+                      src={founder.photo.jpg}
+                      alt={`${founder.name}, Co-founder and ${founder.role}`}
+                      width={640}
+                      height={800}
+                    />
+                  </picture>
                   <h3>
                     <span className="founder-name">{founder.name}</span>
                     <span className="founder-role">

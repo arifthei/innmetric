@@ -1,9 +1,16 @@
 [build]
-  publish = "."
-  command = "npm run lint:copy"
+  base = "web"
+  command = "npm --prefix .. run lint:copy && npm run build"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "22"
+
+[context.production.environment]
+  INNMETRIC_FORMS_ENABLED = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/*"

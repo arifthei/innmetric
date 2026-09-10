@@ -4,6 +4,13 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Founder photos, gated form and cutover prep, 2026-09-10
+
+- About founder cards now show processed 640×800 portraits (`tunahan`/`mert` WebP 28–39 KB, JPEG 55–65 KB) above the name. `alt` is name, Co-founder and role. `object-position: center 18%`. Cards stay equal at 1920 and stack at 390. No faces on the homepage. The 2 MB source PNGs stay gitignored.
+- Form gate is `CONTEXT === "production"` and `INNMETRIC_FORMS_ENABLED === "true"`. Ordinary preview still does not send. `prebuild` copies `detector.html.template` to gitignored `web/public/__forms.html` only when the gate is on and deletes it otherwise. `ReviewForm` uses named form `distribution-review`, `postEnquiry` with `getAll("systems")` joined, a 20s abort, Sending…, no double submit, inline thanks when enabled, and the existing non-sent receipt when disabled. `/thanks/` does not confirm receipt.
+- Production contact/privacy wording, preview bar and `metadataBase https://innmetric.com` sit behind the same flag. `netlify.toml` on this branch is the Next pack: base `web`, `npm --prefix .. run lint:copy && npm run build`, publish `.next`, `@netlify/plugin-nextjs`. `.netlifyignore` no longer excludes `web`.
+- Validation: `lint:copy` passed (10 HTML, 22 web/src). ESLint passed. Form unit tests covered prepare-forms leftover deletion and mocked `postEnquiry` (2xx, 500, network, abort, in-flight guard). Default build: detector absent, no `data-netlify` in `.next`. Enabled build: detector matches the template field names. Second default build removed the leftover file. Browser: About 1920/390, homepage has no founder images, disabled contact submit stays on `/contact/` with no `fetch`. No production deploy. No merge to `main`.
+
 ### Typesetting, equal cards and active-nav scroll, 2026-09-08
 
 - Mert's screenshots at 1920 showed lines ending on `in the`, `you`, `or`, `it`, `what` and paragraphs finishing on one or two words. The frame caps at 1320px and leads at 46ch, so the same wraps appeared at every desktop width. Wording is unchanged.

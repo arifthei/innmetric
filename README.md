@@ -47,6 +47,8 @@ Routes: `/`, `/services/`, `/how-it-works/`, `/about/`, `/faq/`, `/privacy/`, `/
 
 ## Deploy
 
-`main` only. `netlify.toml` publishes `.`. Do not point Netlify at `web/`. Do not create a second Netlify site.
+`main` only until Mert authorizes the cutover. Live innmetric.com still publishes root static HTML. Do not create a second Netlify site.
 
-`.\deploy.ps1` is a manual production path for the static root. Do not run it for Next preview work.
+`preview` contains the Next `netlify.toml` (base `web`, publish `.next` with `@netlify/plugin-nextjs`). That file does not change innmetric.com until merge. Ordinary preview builds stay non-sending.
+
+`.\deploy.ps1` is a manual production path for the static root. Do not run it, `npm run deploy` or `npx netlify deploy --prod` for Next preview work.

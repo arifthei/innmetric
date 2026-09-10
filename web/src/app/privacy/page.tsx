@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageChrome";
+import { FORMS_ENABLED } from "@/lib/release";
 
 export const metadata: Metadata = {
   title: "Privacy Notice | InnMetric",
@@ -25,12 +26,14 @@ export default function PrivacyPage() {
           no registered legal entity listed on this site. Contact:{" "}
           <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
         </p>
-        <h2>What the preview form asks for</h2>
+        <h2>{FORMS_ENABLED ? "What the form asks for" : "What the preview form asks for"}</h2>
         <p>
-          The preview form asks for your name, work email, role, number of
+          The form asks for your name, work email, role, number of
           properties, hotel or group name, problem type, wanted outcome and
           consent to be contacted. Website and systems in use are optional.
-          This form does not send the information to InnMetric.
+          {FORMS_ENABLED
+            ? " Submissions are stored by Netlify and a notification is sent to hello@innmetric.com."
+            : " This form does not send the information to InnMetric."}
         </p>
         <h2>Why the data is used</h2>
         <p>
@@ -39,10 +42,20 @@ export default function PrivacyPage() {
         </p>
         <h2>Hosting and form processing</h2>
         <p>
-          The production website is hosted by Netlify. This preview form does
-          not submit to Netlify or send email notifications. To contact
-          InnMetric, email hello@innmetric.com. If you choose that route, the
-          information you send is used to assess and respond to your request.
+          {FORMS_ENABLED ? (
+            <>
+              The website is hosted by Netlify. Netlify processes form
+              submissions. Email notifications go to hello@innmetric.com. You
+              may also write to that address directly.
+            </>
+          ) : (
+            <>
+              The production website is hosted by Netlify. This preview form does
+              not submit to Netlify or send email notifications. To contact
+              InnMetric, email hello@innmetric.com. If you choose that route, the
+              information you send is used to assess and respond to your request.
+            </>
+          )}
         </p>
         <h2>Retention</h2>
         <p>

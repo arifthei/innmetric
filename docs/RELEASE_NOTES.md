@@ -2,6 +2,14 @@
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
+## 2026-09-10: founder photos, gated form and cutover prep
+
+Based on `991b441`. About now has founder portraits. The contact form can post to Netlify when the production flag is on, and stays a truthful non-sending preview otherwise. `/thanks/` is not a receipt.
+
+`preview` also contains the Next Netlify pack: base `web`, `npm run build`, publish `.next` with `@netlify/plugin-nextjs`. That does not change innmetric.com until Mert merges. Ordinary preview still shows the local bar and does not send. Cutover steps are in local `buildplan.md`. Copy and palette are unchanged.
+
+Validation is in [CHANGELOG.md](../CHANGELOG.md). This is a preview candidate, not a live form test or permission to email hotels.
+
 ## 2026-09-08: typesetting, equal cards and active-nav scroll
 
 Based on `fbea002`. Mert's 1920 screenshots showed leads and card bodies ending lines on `the`, `you`, `or`, `it`, `what` and finishing on a one-word line. The founder cards also had different heights, and clicking the nav item for the current page did nothing.

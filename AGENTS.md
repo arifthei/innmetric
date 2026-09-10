@@ -37,9 +37,9 @@ The exchange is a durable inbox, read when an agent runs and syncs. It does not 
 
 ## Production hold
 
-`main` is the production branch for the existing Netlify site. It publishes root static HTML through `netlify.toml` with `publish = "."`. Do not merge `preview` into `main`, change the publish directory, create another Netlify site or merge [PR #1](https://github.com/arifthei/innmetric/pull/1) without an explicit cutover brief.
+`main` is the production branch for the existing Netlify site. Live innmetric.com still publishes root static HTML with `publish = "."` until Mert merges. Do not merge `preview` into `main`, create another Netlify site or merge [PR #1](https://github.com/arifthei/innmetric/pull/1) without an explicit cutover brief.
 
-The Next preview lives in `web/`. Run `npm run dev` from the repo root. Do not run `deploy.ps1`, `npm run deploy` or `npx netlify deploy --prod` during preview work. Keep `.netlifyignore` excluding `web` and `docs`. Form activation and `metadataBase` changes remain part of later cutover work.
+The Next preview lives in `web/`. Run `npm run dev` from the repo root. Do not run `deploy.ps1`, `npm run deploy` or `npx netlify deploy --prod` during preview work. `preview` already contains the cutover `netlify.toml` (base `web`, `npm run build`, publish `.next` with `@netlify/plugin-nextjs`). `.netlifyignore` keeps `_context` and `docs` out and no longer excludes `web`. Ordinary preview and localhost builds stay non-sending; the form and production chrome turn on only when `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`.
 
 ## Keep private source work separate
 

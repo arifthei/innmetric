@@ -1,6 +1,6 @@
 # Current InnMetric intent
 
-Updated 2026-09-08. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`, implementation branch `preview`. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
+Updated 2026-09-10. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`, implementation branch `preview`. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
 
 ## The service and the reader
 
@@ -44,9 +44,11 @@ The current structure stays: homepage hook, four-card problem wheel, useful deli
 
 ## Form and privacy contract
 
-Current required fields: name, work email, role, number of properties, hotel/group name, problem type, problem-and-outcome note and consent. Website and systems are optional. Preserve this requiredness during the current tightening pass. Optional labels must be clear. No credentials, guest data or approver name are requested.
+Current required fields: name, work email, role, number of properties, hotel/group name, problem type, problem-and-outcome note and consent. Website and systems are optional. Optional labels must be clear. No credentials, guest data or approver name are requested. Reuse form name `distribution-review` and keep the field name `email` for Reply-to.
 
-The React form is non-sending. Keep a visible notice before the fields, a truthful non-sent receipt and a working `mailto:hello@innmetric.com` route. Do not imply receipt, an email reply from the form or Netlify submission. The preview privacy description must match the current fields and actual behavior. Do not activate the form under this brief.
+Ordinary preview and localhost builds stay non-sending. Keep the visible notice, the truthful non-sent receipt and a working `mailto:hello@innmetric.com` route. Visiting `/thanks/` is not a receipt.
+
+The collector turns on only when `CONTEXT === "production"` and `INNMETRIC_FORMS_ENABLED === "true"`. `NODE_ENV` is not the gate. That production build generates `web/public/__forms.html` from the template, posts through `postEnquiry`, and uses production contact/privacy wording. Do not commit the generated detector. Merge to `main` and a live innmetric.com submit remain a later human step.
 
 ## Design and production
 
@@ -54,7 +56,7 @@ Sanzo Wada: paper `#F3EDE0`, wash `#D5E4D4`, ink `#1C1917`, asagi `#2F8A84`, pre
 
 Wordmark: lowercase `innmetric` with a small asagi square glow. Keep Figtree, the four wheel titles and motion/reduced-motion behavior. Mert permits targeted layout/CSS edits when the brief calls for them; no palette change. Preserve Cursor's founder wrap and column fixes.
 
-`main`, root static files and Netlify settings are held. The preview bar stays. `metadataBase` stays localhost until cutover. See [BRANCHES.md](BRANCHES.md).
+`main` and innmetric.com stay on today's static HTML until Mert merges. The preview bar and localhost `metadataBase` stay on ordinary preview builds. The production chrome, `metadataBase https://innmetric.com` and live form copy sit behind the same form flag. Founder portraits belong on About only. See [BRANCHES.md](BRANCHES.md).
 
 ## Email consistency
 

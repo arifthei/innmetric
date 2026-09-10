@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predev": "node scripts/prepare-forms.mjs",
+    "prebuild": "node scripts/prepare-forms.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:forms": "node scripts/test-forms.mjs"
   },
   "dependencies": {
     "next": "16.3.2",
@@ -14,6 +17,7 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

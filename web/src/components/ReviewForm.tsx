@@ -1,6 +1,8 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { postEnquiry, SUBMIT_TIMEOUT_MS } from "@/lib/enquiry";
+import { FORMS_ENABLED } from "@/lib/release";
 import { t } from "@/lib/typeset";
 
 const ROLES = [
@@ -30,19 +32,61 @@ const PROBLEMS = [
   "Something else",
 ];
 
-export function ReviewForm() {
-  const [sent, setSent] = useState(false);
+function useClientReady() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
+}
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+export function ReviewForm() {
+  const ready = useClientReady();
+  const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+  const inFlight = useRef(false);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (sent) headingRef.current?.focus();
+  }, [sent]);
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    if (!FORMS_ENABLED) {
+      setSent(true);
+      return;
+    }
+    if (inFlight.current || sending) return;
+
+    const data = new FormData(event.currentTarget);
+    inFlight.current = true;
+    setSending(true);
+    setError(false);
+
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), SUBMIT_TIMEOUT_MS);
+
+    try {
+      await postEnquiry(data, controller.signal);
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      clearTimeout(timer);
+      inFlight.current = false;
+      setSending(false);
+    }
   }
 
-  if (sent) {
+  if (!FORMS_ENABLED && sent) {
     return (
       <div className="form-receipt">
         <span className="label">Local preview</span>
-        <h2>The request was not sent.</h2>
+        <h2 ref={headingRef} tabIndex={-1}>
+          The request was not sent.
+        </h2>
         <p className="section-lead">
           {t("This preview form does not send. Please email")}{" "}
           <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>{" "}
@@ -57,16 +101,46 @@ export function ReviewForm() {
     );
   }
 
-  return (
-    <form onSubmit={onSubmit}>
-      <div className="local-notice">
-        <strong>Local preview</strong>
-        This form does not send. Please email{" "}
-        <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
+  if (FORMS_ENABLED && sent) {
+    return (
+      <div className="form-receipt" aria-live="polite">
+        <h2 ref={headingRef} tabIndex={-1}>
+          Thanks. Your enquiry has been submitted.
+        </h2>
+        <p className="section-lead">
+          {t(
+            "A founder will review the details and reply from an @innmetric.com address."
+          )}
+        </p>
       </div>
+    );
+  }
+
+  return (
+    <form
+      name="distribution-review"
+      method="post"
+      action={FORMS_ENABLED ? "/__forms.html" : "/contact/"}
+      onSubmit={onSubmit}
+    >
+      <noscript>
+        <p className="local-notice">
+          JavaScript is off. Email{" "}
+          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
+        </p>
+      </noscript>
+      {FORMS_ENABLED ? null : (
+        <div className="local-notice">
+          <strong>Local preview</strong>
+          This form does not send. Please email{" "}
+          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
+        </div>
+      )}
+      <input type="hidden" name="form-name" value="distribution-review" />
       <p className="honeypot">
         <label>
-          Do not fill this field <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          Do not fill this field{" "}
+          <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
       <div className="form-grid">
@@ -159,9 +233,16 @@ export function ReviewForm() {
           </label>
         </div>
       </div>
+      {error ? (
+        <p className="form-error" role="alert">
+          We couldn&apos;t confirm your enquiry was sent. Your details are still
+          here. Try again or email{" "}
+          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
+        </p>
+      ) : null}
       <div className="form-actions">
-        <button className="button lg" type="submit">
-          Send enquiry
+        <button className="button lg" type="submit" disabled={!ready || sending}>
+          {sending ? "Sending..." : "Send enquiry"}
         </button>
         <span className="form-note">
           Prefer email? Write to{" "}
