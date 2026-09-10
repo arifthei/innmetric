@@ -19,7 +19,7 @@ This is a non-sending preview. Approving the commit is not a merge to `main`. Cu
 
 Passed: `lint:copy` (10 HTML, 22 web/src), ESLint, form unit tests (prepare-forms copy/delete, `postEnquiry` 2xx / non-2xx / network / abort / double-submit), default `next build` with no `__forms.html` and no `data-netlify` in `.next`, enabled `CONTEXT=production INNMETRIC_FORMS_ENABLED=true` build with a matching detector, then a second default build that removed the leftover file.
 
-Browser on `npm run dev`: `/about/` at 1920, equal 648×516 cards, portraits 200×250, no overflow; at 390 the cards stack, photo first at 200×250, no overflow. Homepage has no founder images. `/contact/` shows the local notice; a filled submit stayed on `/contact/`, showed “The request was not sent.” and issued no `fetch`. `/thanks/` title is not a receipt.
+Browser on `npm run dev`: `/about/` at 1920, equal 648×273 cards, portrait 160×200 with copy in the remaining column, no overflow; at 390 the cards stack, photo 120px beside copy, no overflow. Homepage has no founder images. `/contact/` shows the local notice; a filled submit stayed on `/contact/`, showed “The request was not sent.” and issued no `fetch`. `/thanks/` title is not a receipt.
 
 Skipped: merge to `main`, production deploy, a live innmetric.com submit, outreach.
 

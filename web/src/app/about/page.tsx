@@ -119,15 +119,17 @@ export default function AboutPage() {
                       height={800}
                     />
                   </picture>
-                  <h3>
-                    <span className="founder-name">{founder.name}</span>
-                    <span className="founder-role">
-                      <span className="keep">Co-founder</span> and {founder.role}
-                    </span>
-                  </h3>
-                  {founder.body.map((paragraph) => (
-                    <p key={paragraph}>{t(paragraph)}</p>
-                  ))}
+                  <div className="founder-copy">
+                    <h3>
+                      <span className="founder-name">{founder.name}</span>
+                      <span className="founder-role">
+                        <span className="keep">Co-founder</span> and {founder.role}
+                      </span>
+                    </h3>
+                    {founder.body.map((paragraph) => (
+                      <p key={paragraph}>{t(paragraph)}</p>
+                    ))}
+                  </div>
                 </article>
               ))}
             </div>
