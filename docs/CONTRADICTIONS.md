@@ -1,13 +1,16 @@
 # Resolved instruction conflicts
 
-Updated 2026-09-08 after Mert requested a diagnosis and repair of the writing loop. Current decisions live in [INTENT.md](INTENT.md); Git procedure lives in [AGENTS.md](../AGENTS.md). This table replaces the stacked chronological overrides. The previous text remains in [Git history at the reviewed baseline](https://github.com/arifthei/innmetric/blob/ef2df4259fe6a4281d642ff8705cb852be028feb/docs/CONTRADICTIONS.md).
+Updated 2026-09-12 for Mert's build revision request. Current decisions live in [INTENT.md](INTENT.md); Git procedure lives in [AGENTS.md](../AGENTS.md). This table replaces stacked chronological overrides. Historical wording remains in Git history.
 
 | Conflict | Current resolution |
 | --- | --- |
 | Old prohibition on editing preview | Mert authorized implementation and pushes to `preview`. No production cutover. |
 | Old Codex branch or PR #1 treated as current | Historical audit only. Use the current preview handoff. |
-| AGENTS locked the old lede while Intent carried Cursor's replacement | Only the retained H1 and primary CTA are exact copy locks. Later supporting copy remains editable under Mert's brief. |
-| Agent-authored wording recorded as Mert's exact answer | Record the user's actual decision separately from the implementation. Cursor's attachment says keep H1/CTA and replace the lede/form wording; it does not prove approval of every replacement string. |
+| Old H1/CTA locks versus the latest revision request | Mert explicitly permits judgment on both in the 2026-09-12 prompt. Public wording is in the app; do not restore the old strings from historical files. |
+| The attachment asks for approval after every page | Mert authorized implementation and asked to end the rewrite loop. Work in page chunks, verify the finished result and deliver to preview without adding intermediate approval requests. |
+| The plan treats identical closing lines as coherence | Keep the same service scope and primary action; each page may answer a different remaining question. The missing-room hook does not exclude rate, reopening or recurrence problems. |
+| Full privacy/process sidebar beside the form | Use one focused Contact column. Keep a short privacy link with consent, data guidance by the textarea and one reply expectation near submit. |
+| Agent-authored wording recorded as Mert's exact answer | Record the user's actual decision separately from an agent's implementation. An older attachment is not proof that Mert approved every replacement string. |
 | Short guest-style form versus new decision-maker fields | Keep the current hotel-team form and its requiredness. No "send that stay" instruction. |
 | The form does not send but FAQ/privacy imply it does | Ordinary preview stays non-sending. Production contact, privacy and chrome use the same `CONTEXT` plus `INNMETRIC_FORMS_ENABLED` gate. `/thanks/` is never a receipt. |
 | Every page must hand to the next page | Give each page a job and relevant links. A visitor can enter anywhere or contact us immediately. |

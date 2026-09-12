@@ -4,6 +4,16 @@ A commit on `preview` is not a production release. innmetric.com follows `main` 
 
 ## Unreleased
 
+### Page purpose and Contact revision, 2026-09-12
+
+- Refreshed `preview` from GitHub at `98e35041b391c9a8c9a59c890375d773c76a8c75`, including Cursor's founder portraits, production form gate and Netlify cutover preparation. Applied a corrected version of Mert's attached build revision plan in six page chunks.
+- Home now opens with a recognizable availability mismatch and one explanation of the service. The deliverables lead with what the hotel team can learn or follow up. Services offers direct section links and separates an audit's findings from repair work. How it works removes repeated phase summaries. About puts the sourced founder bios first, removing the five-row process manifesto. FAQ retains six questions with scoped answers. Metadata follows each page's purpose.
+- The primary action is `Talk to us`, shared from `web/src/lib/copy.ts`. Mert explicitly permitted H1/CTA judgment. The copy lint retains the header's contact destination check without freezing an editable phrase. Page-specific closing invitations use the shared CTA component.
+- Contact uses one centered column with existing field pairs at desktop widths. Privacy sits with consent, data guidance sits beside the outcome field and the reply expectation sits by submit. Field labels use sentence case. Added name/email/organization autocomplete. Required fields, optional website/systems, detector schema, submission handler and both receipt states are preserved.
+- Updated agent rules, Intent, Writing, contradictions, both READMEs and historical-pack entry points. The source adaptations and plan corrections are recorded in the handbook and exchange. No new general copy-review loop.
+- Validation: copy lint, ESLint, form tests and default/enabled Next builds passed, including TypeScript and 12 generated static pages. Enabled built-HTML checks passed across nine routes for headings, the shared action and production canonical URLs; form field names matched the detector. Protected-source checks confirmed the form handler, release gate, Netlify configuration, typesetting helper, wheel and illustrative record were unchanged. Every palette variable matched the baseline. Final disabled-build checks and the remaining visual-review status are in HANDOFF.
+- Browser limitation: the available cloud browser could not open the local app (`ERR_BLOCKED_BY_CLIENT`). GitHub returned no commit statuses or check runs exposing a branch-preview URL for the baseline. No fresh visual or interactive browser pass is claimed. Cursor has one bounded rendering/form check, not a new editorial rewrite. No main merge, production deployment or outreach.
+
 ### Founder photos, gated form and cutover prep, 2026-09-10
 
 - About founder cards now show processed 640×800 portraits (`tunahan`/`mert` WebP 28–39 KB, JPEG 55–65 KB) above the name. `alt` is name, Co-founder and role. `object-position: center 18%`. Portraits sit at 160×200 beside the name and bio so the card has no empty strip. Cards stay equal at 1920 and stack at 390. No faces on the homepage. The 2 MB source PNGs stay gitignored.

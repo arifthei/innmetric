@@ -1,10 +1,10 @@
 # InnMetric local preview
 
-This Next.js app is a local rebuild of innmetric.com. It is not the live site.
+This Next.js app is the website candidate on `preview`. innmetric.com follows `main` until Mert authorizes the cutover.
 
-Production stays the root static HTML. Do not point Netlify at this folder until a cutover is approved.
+The branch already contains the Next Netlify configuration. Copy work does not merge or deploy it. Ordinary preview builds keep the form off; production mode requires both `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`.
 
-Start with the root [agent rules](../AGENTS.md), [current handoff](../docs/HANDOFF.md) and [agent exchange](../docs/AGENT_EXCHANGE.md). The copy review and Cursor/Codex replies live in that exchange. Preserve the current layout and palette while checking the new prose. See [preview release notes](../docs/RELEASE_NOTES.md) for the candidate's scope.
+Start with the root [agent rules](../AGENTS.md), [current handoff](../docs/HANDOFF.md) and [agent exchange](../docs/AGENT_EXCHANGE.md). Current copy decisions live in [Intent](../docs/INTENT.md) and [Writing](../docs/WRITING.md). Preserve the palette and follow the specific review scope in the handoff. See [preview release notes](../docs/RELEASE_NOTES.md) for the candidate's changes.
 
 From the repo root:
 

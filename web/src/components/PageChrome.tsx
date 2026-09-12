@@ -1,21 +1,24 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/Reveal";
+import { CONTACT_CTA } from "@/lib/copy";
 import { t, TAIL } from "@/lib/typeset";
 
 export function PageHero({
   eyebrow,
   title,
   children,
+  contentClassName = "",
 }: {
   eyebrow: string;
   title: string;
   children?: ReactNode;
+  contentClassName?: string;
 }) {
   return (
     <section className="section hero">
       <div className="frame">
-        <Reveal className="intro">
+        <Reveal className={`intro ${contentClassName}`.trim()}>
           <span className="label">{eyebrow}</span>
           <h1>{t(title, TAIL.heading)}</h1>
           {children}
@@ -47,7 +50,7 @@ export function CtaBand({
           {lead ? <p className="section-lead">{t(lead)}</p> : null}
           <div className="hero-actions">
             <Link className="button lg" href="/contact/">
-              Let&apos;s Solve It!
+              {CONTACT_CTA}
             </Link>
             {next ? (
               <Link className="button ghost lg" href={next.href}>

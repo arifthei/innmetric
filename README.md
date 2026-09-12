@@ -16,9 +16,11 @@ Check the worktree and fetch `github` before editing. Preserve local work. Start
 | [docs/HANDOFF.md](docs/HANDOFF.md) | Current checkpoint and remaining checks |
 | [docs/AGENT_EXCHANGE.md](docs/AGENT_EXCHANGE.md) | Agent feedback and replies |
 | [docs/CONTRADICTIONS.md](docs/CONTRADICTIONS.md) | Resolved conflicts; current decisions are in Intent |
-| [docs/fixes/00_START_HERE.md](docs/fixes/00_START_HERE.md) | Current copy repair diagnosis and implementation pack, also in Drive's Fixes folder |
+| [docs/fixes/00_START_HERE.md](docs/fixes/00_START_HERE.md) | Historical 2026-09-08 diagnosis, also in Drive's Fixes folder; newer decisions are in Intent |
 | [docs/BRANCHES.md](docs/BRANCHES.md) | Production, implementation and historical audit branches |
 | [docs/RELEASE_NOTES.md](docs/RELEASE_NOTES.md) / [CHANGELOG.md](CHANGELOG.md) | Delivered scope and verification history |
+
+The 2026-09-12 revision gives each sales page a distinct job, simplifies Contact to one column and uses one shared primary action. The old exact H1/CTA locks are superseded by Mert's latest brief. Read the current handoff for verification and the single remaining review.
 
 The older [copy comparison](docs/COPY_COMPARISON.md) explains the previous candidate. It is historical, not the current brief. Hotel-specific emails and recipient data stay in Drive's GTM folder.
 

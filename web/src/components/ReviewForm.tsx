@@ -146,11 +146,11 @@ export function ReviewForm() {
       <div className="form-grid">
         <div className="form-group">
           <label htmlFor="contact-name">Your name</label>
-          <input id="contact-name" name="contact-name" type="text" required maxLength={100} />
+          <input id="contact-name" name="contact-name" type="text" autoComplete="name" required maxLength={100} />
         </div>
         <div className="form-group">
           <label htmlFor="email">Work email</label>
-          <input id="email" name="email" type="email" required maxLength={254} />
+          <input id="email" name="email" type="email" autoComplete="email" required maxLength={254} />
         </div>
         <div className="form-group">
           <label htmlFor="role">Your role</label>
@@ -176,7 +176,7 @@ export function ReviewForm() {
         </div>
         <div className="form-group">
           <label htmlFor="hotel">Hotel or group name</label>
-          <input id="hotel" name="hotel" type="text" required maxLength={200} />
+          <input id="hotel" name="hotel" type="text" autoComplete="organization" required maxLength={200} />
         </div>
         <div className="form-group">
           <label htmlFor="website">Website (optional)</label>
@@ -217,20 +217,28 @@ export function ReviewForm() {
           </select>
         </div>
         <div className="form-group full">
-          <label htmlFor="outcome">What is happening and what would you like to change?</label>
+          <label htmlFor="outcome">What is happening and what needs to change?</label>
           <textarea
             id="outcome"
             name="outcome"
             required
             maxLength={5000}
-            placeholder="Tell us where the problem shows and the result your team needs. For example: reopened dates should be available on our agreed channels. No passwords or guest details."
+            aria-describedby="outcome-hint"
+            placeholder="For example: reopened dates still show as closed on one channel. They should be available to book."
           />
+          <p className="form-hint" id="outcome-hint">
+            Include the affected channel and dates if useful. No passwords,
+            payment details or guest data.
+          </p>
         </div>
         <div className="form-group full">
           <label className="consent" htmlFor="consent">
             <input id="consent" name="consent" type="checkbox" value="yes" required />
             <span>I agree that InnMetric may contact me about this request.</span>
           </label>
+          <p className="form-hint">
+            How we handle your enquiry: <a href="/privacy/">Privacy Notice</a>.
+          </p>
         </div>
       </div>
       {error ? (
@@ -245,10 +253,15 @@ export function ReviewForm() {
           {sending ? "Sending..." : "Send enquiry"}
         </button>
         <span className="form-note">
-          Prefer email? Write to{" "}
-          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
+          {FORMS_ENABLED
+            ? "A founder will review your enquiry and reply about the next step."
+            : "This preview does not send. Email us for a reply from a founder."}
         </span>
       </div>
+      <p className="form-alternative">
+        Prefer email? Write to{" "}
+        <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
+      </p>
     </form>
   );
 }

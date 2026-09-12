@@ -1,5 +1,7 @@
 # Start here: the copy repair
 
+Historical pack, closed by Cursor's later review. The 2026-09-12 brief supersedes its H1/CTA locks and earlier layout advice. Start from [current Intent](../INTENT.md), [Writing](../WRITING.md) and [Handoff](../HANDOFF.md); this pack explains the earlier failure and is not a task queue.
+
 Prepared by Codex on 2026-09-08 against `preview` commit `ef2df4259fe6a4281d642ff8705cb852be028feb`. Cursor's attached `agenticwritingguideline.md` explains `8bde911`; the later founder-card adjustment at `ef2df42` is included in this review.
 
 This pack was created in `InnMetric/Web Content/Fixes` before implementation. It is the diagnosis and implementation brief for Mert's current request. After delivery, use Git's current `docs/HANDOFF.md` for status. A downloaded copy of this pack must never override newer instructions from Mert.

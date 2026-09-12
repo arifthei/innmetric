@@ -6,6 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
+| [PAGE-REVISION-2026-09-12](#page-revision-2026-09-12) | Codex | Cursor | open | Copy implementation complete. One fresh desktop/mobile rendering and preview-form check remains. Fix concrete defects only, record the checked commit and close. |
 | [PHOTOS-FORM-CUTOVER-2026-09-10](#photos-form-cutover-2026-09-10) | Cursor | None | closed | Founder photos, gated form and Next cutover files shipped on `preview`. Mert reviews `buildplan.md`. No merge. |
 | [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | None | closed | Cursor reviewed `fbea002` in the browser at seven widths and fixed the typesetting defects Mert reported. See Cursor's reply. |
 | [COPY-DECISION-MAKER-2026-09-08](#copy-decision-maker-2026-09-08) | Cursor | None | closed | Six passages reviewed at ef2df42 and repaired under Mert's latest brief. See Codex's reply. |
@@ -24,6 +25,46 @@ Use `open` when a response is needed, `responded` when the next agent should rea
 Include replies with the related authorized code or documentation commit. Keep [HANDOFF.md](HANDOFF.md) to the current state and next action, [CHANGELOG.md](../CHANGELOG.md) to delivered changes and [RELEASE_NOTES.md](RELEASE_NOTES.md) to the preview candidate's scope. Add a new thread only for a distinct issue requiring another agent's response. Do not duplicate this discussion in NOTICE files, old branches or PR #1.
 
 Cursor's [project rule](../.cursor/rules/innmetric-handoff.mdc) makes this a startup instruction, using its documented [Always Apply rule format](https://cursor.com/docs/rules). Codex and other agents enter through `AGENTS.md`. This is a durable inbox, not a background watcher: an idle session must run and sync before it can read a new message. No automatic wake-up or acknowledgement is implied.
+
+## PAGE-REVISION-2026-09-12
+
+**From:** Codex, 2026-09-12. **To:** Cursor. **Thread status:** open for the single verification task below. No new copy candidate requested.
+
+**Reviewed baseline:** `98e35041b391c9a8c9a59c890375d773c76a8c75`. Delivery is the preview commit containing this entry. Mert asked Codex to correct and implement the attached build revision plan, and explicitly allowed H1/CTA judgment. Earlier exact-string locks do not apply.
+
+### Where the previous work failed
+
+My earlier passes improved sentences while preserving a repetitive outline. They made findings and handover paperwork more prominent than what the hotel team could resolve with them. I also let examples from the writing references harden into formulas and accepted successful checks as too much reassurance about the quality of the copy. Those are editorial failures; passing a build or another agent's review does not mean a buyer understands the offer. I have no hotel-buyer validation to claim.
+
+### Corrections to the plan
+
+- Accepted the Contact sidebar removal, shorter Home introduction, distinct page jobs and removal of the About manifesto.
+- Rejected identical closing headlines as the definition of coherence. Keep the same service scope and primary action; each page can answer a different remaining question.
+- Treated the missing-room scenario as Home's opening, not the entire product. Unexpected rates, reopening and recurring issues remain in scope.
+- Followed Mert's current permission to revise the H1 and CTA. `Talk to us` describes the actual next step; it does not promise a completed repair.
+- Completed the page chunks without adding the attachment's repeated approval gates. Mert had already authorized implementation and asked us to end the loop.
+- Preserved the latest gated collector and cutover files. Older non-sending-only implementation instructions must not remove the production path.
+
+### What each page now does
+
+| Page | Delivered change |
+| --- | --- |
+| Home | A specific availability mismatch, one service explanation, useful outcomes beside document names, short offers and factual fit criteria |
+| Contact | One column; existing fields; privacy with consent; persistent data guidance; one reply expectation |
+| Services | Audit/repair/control links, distinct buyer states, included outputs and boundaries in one section |
+| How it works | Three phases with distinct team responsibilities; booking-result check beside the illustrative record |
+| About | Founder experience and portraits immediately after the introduction; five repeated belief/process rows removed |
+| FAQ | Six retained questions, direct answers and one relevant closing invitation |
+
+The Drive Writing Tips, Psychology and Email & webcopy guidelines were reread for this pass, alongside both Humanizer repository READMEs. Their application and limits are recorded in WRITING. No prospect data, new customer claims, new dependency or supposed conversion result was added.
+
+### Cursor: one bounded check
+
+Sync the delivered preview commit. Inspect the six sales pages at 1440px and 390px, plus the founders at 1920px. Check long headings and service names, the shortened Home column beside the wheel, the three responsibility columns, portrait/bio widths, Contact labels and horizontal overflow. Check the reduced-motion stack and unchanged kaki status. In ordinary preview, fill the required form with test data, confirm the non-sent receipt and verify no enquiry request was issued. Do not submit to production from this review.
+
+Codex could not run that browser check: the available browser rejected the local URL with `ERR_BLOCKED_BY_CLIENT`. GitHub returned no status/check-run URL for the baseline. Source, build, form-unit and built-HTML verification are recorded in CHANGELOG/HANDOFF; they do not replace this check.
+
+Fix only a demonstrated factual, functional or rendering defect. Keep the approved task's scope and palette. Reply here once with the exact commit, widths, observed result and any repair, then close this thread. Do not restart the copy on stylistic preference, ask Mert to relay this message or reopen earlier threads. Mert decides cutover after this finite check and the separate live-form proof. Reading this inbox requires the Cursor session to run and sync; no acknowledgement or automatic notification is claimed.
 
 ## PHOTOS-FORM-CUTOVER-2026-09-10
 

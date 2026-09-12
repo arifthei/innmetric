@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Hotel distribution audits, approved repairs and ongoing booking checks. Compare what is included and choose the work your team needs.";
+  "Compare InnMetric's hotel distribution audit, approved repair sprint and scheduled checks. See the deliverables, responsibilities and service limits.";
 
 export const metadata: Metadata = {
   title: "Hotel distribution audit, repair and control | InnMetric",
@@ -23,68 +23,69 @@ const OFFERS = [
     id: "baseline",
     index: "01",
     title: "Distribution Baseline Audit",
-    state: "You need to understand what is wrong.",
-    body: "Start here when the booking result does not match your setup. We investigate the gap and give your team findings to act on, including questions that still need an answer.",
+    state: "The booking result is wrong. The cause is unclear.",
+    body: "We follow the affected room or rate through your setup and compare it with what guests see. You get findings to act on; live corrections are a separate scope.",
     points: [
-      "Your systems, active channels and account owners mapped",
-      "Booking checks with room, dates, occupancy and terms recorded",
-      "Room mappings, rate mappings and restrictions reviewed",
-      "Prioritized findings and the checks needed to verify a correction",
+      "Relevant systems, channel connections, mappings and restrictions reviewed",
+      "Booking evidence with the room, dates, occupancy and terms recorded",
+      "Prioritized actions, unanswered questions and checks for any proposed correction",
     ],
   },
   {
     id: "repair",
     index: "02",
     title: "Approved Repair Sprint",
-    state: "You have findings that need action.",
-    body: "Bring the findings from our audit or your own review. We agree the corrections with your approver, make the changes and check the result. Anything unresolved stays in the handover.",
+    state: "You have findings. The corrections need doing.",
+    body: "We review the findings with you, make the corrections you approve and repeat the booking checks. You can bring findings from our audit or your own investigation.",
     points: [
-      "Named approval before each live change",
-      "A change list with a way to reverse each correction",
-      "Agreed corrections in your existing systems",
-      "Repeat booking checks and a record of the results",
+      "Named approval and reversal instructions for each live change",
+      "Before-and-after results for the same room, dates and conditions",
+      "A handover of completed changes, open issues and vendor actions",
     ],
   },
   {
     id: "control",
     index: "03",
     title: "Ongoing Distribution Control",
-    state: "You need to know when a problem returns.",
-    body: "Your setup keeps changing as you sell. We recheck the agreed rates and availability on a set schedule, so your team has a current result to compare with the earlier work.",
+    state: "You need to catch problems that return.",
+    body: "We check agreed channels on a set schedule and compare each result with what your hotel intends to sell. New and returning issues go into the record for follow-up.",
     points: [
-      "Checks of agreed rates, availability, mappings and channels",
-      "A running record of findings and verified corrections",
-      "A dated check history for investigating recurring problems",
-      "Check frequency and any tools specified in the agreement",
+      "Agreed rates, availability and mappings checked",
+      "A dated history of findings and verified corrections",
+      "Check frequency, channels and any tools specified in your agreement",
     ],
   },
 ];
 
 const BOUNDARIES = [
-  "We work in your existing PMS, channel manager, booking engine and OTA accounts. Initial system installation is outside this service.",
-  "Your hotel keeps pricing, yield and rate decisions. We do not take over revenue management or sell standalone rate-plan redesign.",
-  "Every live change needs named approval. If a vendor must act, we record what is needed from them.",
-  "OTA content, photos, ranking, advertising, social media and review responses are outside this service.",
-  "A public booking problem alone cannot establish a revenue loss.",
+  {
+    title: "Your setup stays in place",
+    body: "We work in your existing PMS, channel manager, booking engine and OTA accounts. First-time installation and system replacement are outside this service.",
+  },
+  {
+    title: "Your hotel sets the rates",
+    body: "Pricing, yield and revenue management stay with your team. We don't offer standalone rate-plan redesign.",
+  },
+  {
+    title: "We focus on bookability",
+    body: "OTA listing content, photos, ranking, advertising, social media and review responses need a different service.",
+  },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHero eyebrow="Services" title="Start with the work your hotel needs.">
+      <PageHero eyebrow="Services" title="Choose an audit, a repair or ongoing checks.">
         <p className="lede">
           {t(
-            "Bring us in to investigate a problem, carry out agreed repairs or recheck an existing setup. Each engagement has its own scope."
+            "Each service works with the systems you already use. Here's what you get and where our work stops."
           )}
         </p>
-        <div className="hero-actions">
-          <Link className="button lg" href="/contact/">
-            Let&apos;s Solve It!
-          </Link>
-          <Link className="button ghost lg" href="/how-it-works/">
-            See the three phases
-          </Link>
-        </div>
+        <nav className="section-links" aria-label="Compare services">
+          <Link className="inline" href="#baseline">Audit</Link>
+          <Link className="inline" href="#repair">Repair</Link>
+          <Link className="inline" href="#control">Ongoing checks</Link>
+        </nav>
       </PageHero>
 
       <section className="section wash">
@@ -115,16 +116,19 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="scope">
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Scope</span>
-            <h2>{t("What stays with your team.")}</h2>
+            <h2>{t("Where our work starts and stops.")}</h2>
           </Reveal>
           <Reveal index={1}>
-            <ul className="not-list">
+            <ul className="rows">
               {BOUNDARIES.map((item) => (
-                <li key={item}>{t(item)}</li>
+                <li className="pair" key={item.title}>
+                  <h3>{t(item.title)}</h3>
+                  <p>{t(item.body)}</p>
+                </li>
               ))}
             </ul>
           </Reveal>
@@ -132,8 +136,8 @@ export default function ServicesPage() {
       </section>
 
       <CtaBand
-        title="Not sure where to start?"
-        lead="Tell us what your team is dealing with. We'll suggest the work that fits. If you need a different service, we'll say so."
+        title="Not sure which service you need?"
+        lead="Describe the problem and any work already done. We'll suggest a starting point, including if you need a different kind of provider."
       />
     </>
   );

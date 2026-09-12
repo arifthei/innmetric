@@ -94,11 +94,10 @@ if (webFiles.length) {
   if (!header) {
     errors.push("web/src/components/SiteHeader.tsx: missing header with site-wide CTA");
   } else {
-    lintText(
-      "web/src/components/SiteHeader.tsx",
-      readFileSync(header, "utf8"),
-      { requireCta: true, ctaString: "Let's Solve It!" }
-    );
+    // The destination is part of the site contract; editable copy is not a lock.
+    if (!readFileSync(header, "utf8").includes('href="/contact/"')) {
+      errors.push("web/src/components/SiteHeader.tsx: missing contact action");
+    }
   }
 }
 

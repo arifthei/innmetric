@@ -1,6 +1,6 @@
 # Current InnMetric intent
 
-Updated 2026-09-10. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`, implementation branch `preview`. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
+Updated 2026-09-12. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`, implementation branch `preview`. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
 
 ## The service and the reader
 
@@ -12,12 +12,12 @@ The first purchase is a service. Do not claim an AI product, SaaS, autonomous pr
 
 ## Decisions retained by Mert
 
-The attached Cursor note records Mert's answers before `8bde911`. His latest request authorizes reducing the wordy parts and repairing the instructions. Distinguish the answers from Cursor's implementation wording.
+Mert's 2026-09-12 request authorizes implementing a corrected version of the attached build revision plan on `preview`, including surgical copy and layout changes. It explicitly allows judgment on the H1 and primary CTA, superseding the older exact-string locks. Complete the page chunks and checks under that authorization; the attachment's repeated page-by-page approval gates do not apply. Distinguish user decisions from agent-authored wording.
 
 | Decision | Current constraint |
 | --- | --- |
-| Homepage H1 | `The desk can quote the room. The guest still cannot buy it.` |
-| Primary button | `Let's Solve It!` to `/contact/`, never used as a heading or metadata title |
+| Homepage H1 | Editable under the current brief; lead with a recognizable hotel booking problem |
+| Primary button | Editable wording, consistent across sales pages, leading to `/contact/`; do not imply a booked call or completed repair |
 | Visual identity | Sanzo Wada palette and current lowercase wordmark |
 | Form audience | Hotel decision makers; ask for the problem and wanted result |
 | Form context | Include role, property count, systems and problem type; role is required |
@@ -40,7 +40,7 @@ The lede, closing bands, submit label and other supporting sentences are editabl
 
 Keep the three offer names: Distribution Baseline Audit, Approved Repair Sprint and Ongoing Distribution Control. Name findings, approved changes with reversal, repeat booking checks and a handover with open items and agreed rechecks. Those are delivered as applicable to the selected scope; an audit does not imply completed repair work.
 
-The current structure stays: homepage hook, four-card problem wheel, useful deliverables, offers, fit and invitation. No ticket row or homepage FAQ. How it works has three phases with Your team / InnMetric responsibilities and a static illustrative slip. FAQ keeps its six buyer-search questions. About keeps the latest founder-card layout and sourced biographies. [WRITING.md](WRITING.md) defines each page's job without forcing a visitor through every page.
+The current structure stays: homepage hook, four-card problem wheel, useful deliverables, offers, fit and invitation. No ticket row or homepage FAQ. How it works has three phases with Your team / InnMetric responsibilities and a static illustrative slip. FAQ keeps its six buyer-search questions. About puts the founders before repeated process explanations, retaining the portraits, sourced biography facts and responsive cards. Contact uses one focused column, with concise privacy information near consent and submission. [WRITING.md](WRITING.md) defines each page's job without forcing a visitor through every page or repeating the same closing headline everywhere.
 
 ## Form and privacy contract
 

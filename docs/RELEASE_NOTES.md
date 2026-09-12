@@ -2,6 +2,16 @@
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
+## 2026-09-12: clearer page roles and a focused Contact page
+
+Based on `98e3504`. The previous pages repeated the process while leaving the buying questions poorly separated. Home now introduces a concrete availability problem and the work InnMetric takes on. Services compares the three engagements, How it works divides responsibilities, About introduces the founders and FAQ answers the six retained questions.
+
+Contact is one column. Its privacy link is next to consent, with a brief next-step message near submit. The new shared `Talk to us` action opens Contact. The revised homepage headline and all supporting copy remain editorial choices under Mert's brief, not new permanent locks.
+
+Sanzo Wada colors, founder portraits, wheel behavior, form fields and the gated production submission logic remain. Build, lint and form/schema checks passed. A fresh browser pass is still open because the cloud browser could not reach the local server. The exact remaining check is in the handoff.
+
+This delivers a preview candidate. It does not merge to main, activate production forms or authorize outreach. The ordinary preview remains non-sending.
+
 ## 2026-09-10: founder photos, gated form and cutover prep
 
 Based on `991b441`. About now has founder portraits. The contact form can post to Netlify when the production flag is on, and stays a truthful non-sending preview otherwise. `/thanks/` is not a receipt.

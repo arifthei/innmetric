@@ -1,5 +1,7 @@
 # Implementation and the review loop
 
+Historical 2026-09-08 implementation record. Cursor subsequently completed the review recorded below. Use [the current handoff](../HANDOFF.md) for present checks; do not reopen COPY-REPAIR or restore its copy locks from this document.
+
 Baseline: `ef2df4259fe6a4281d642ff8705cb852be028feb`. The diagnosis and copy instructions were published in Drive before website edits. Implementation and source/build validation are complete; fresh visual review remains open. Use Git's current handoff for the publication checkpoint.
 
 ## Codex implementation

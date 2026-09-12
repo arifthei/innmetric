@@ -5,7 +5,7 @@ import { RecordSlip } from "@/components/RecordSlip";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "See what your hotel team does, what InnMetric takes on and how findings, approved changes and booking checks are handed over.";
+  "Your hotel approves the changes. InnMetric investigates across your existing systems, carries out agreed corrections and hands over checked results and open issues.";
 
 export const metadata: Metadata = {
   title: "How InnMetric works with your hotel",
@@ -21,31 +21,28 @@ export const metadata: Metadata = {
 const PHASES = [
   {
     verb: "Agree the scope",
-    body: "First, decide what needs checking.",
-    yours: "Describe the problem and the result you want. You do not need to know the cause.",
-    ours: "Clarify the problem and propose the work. Agree access and who approves changes before entering your accounts.",
+    yours: "Show us what guests see, what you expected and the systems involved.",
+    ours: "Propose the work and agree access, the result to check and who can approve changes.",
   },
   {
     verb: "Investigate and correct",
-    body: "Your hotel decides what changes.",
-    yours: "Provide agreed access and approve, defer or reject each proposed correction.",
-    ours: "Follow the problem through the relevant systems. Explain the findings, record your approval and make the agreed changes.",
+    yours: "Provide the agreed access, answer questions about the setup and approve, defer or reject each proposed change.",
+    ours: "Trace the issue, explain the findings and make approved corrections with a way to reverse them.",
   },
   {
     verb: "Verify and hand over",
-    body: "Check what the change achieved.",
-    yours: "Review the result with us and decide whether you need ongoing checks.",
-    ours: "Repeat the booking check under the same conditions. Hand over the findings, changes and open items, with any agreed recheck schedule.",
+    yours: "Review the results and decide who will handle any remaining actions.",
+    ours: "Repeat the booking checks under the same conditions. Hand over what changed, what remains open and any agreed rechecks.",
   },
 ];
 
 export default function HowItWorksPage() {
   return (
     <>
-      <PageHero eyebrow="How it works" title="You know what we need from your team at each step.">
+      <PageHero eyebrow="How it works" title="We do the investigation. You decide what changes.">
         <p className="lede">
           {t(
-            "We agree the work before asking for access. Your hotel approves every live change. Here is how the investigation and handover fit together."
+            "You provide the context and agreed access. We follow the problem across the relevant systems and keep a record your team can use."
           )}
         </p>
       </PageHero>
@@ -60,7 +57,6 @@ export default function HowItWorksPage() {
                     0{index + 1}
                   </span>
                   <strong>{t(item.verb)}</strong>
-                  <span>{t(item.body)}</span>
                   <dl className="who">
                     <div>
                       <dt>Your team</dt>
@@ -76,21 +72,26 @@ export default function HowItWorksPage() {
             </ol>
           </Reveal>
           <Reveal index={1}>
-            <RecordSlip />
-          </Reveal>
-          <Reveal index={2}>
-            <p className="section-lead">
-              {t(
-                "If the booking still fails, the issue stays open. We record what needs attention, including any action required from your vendor. Scheduled rechecks can find a returning problem; they cannot guarantee it stays fixed."
-              )}
-            </p>
+            <div className="grid wide-gap verification">
+              <div className="col-6 intro">
+                <h2>{t("The booking result decides whether the issue stays open.")}</h2>
+                <p className="section-lead">
+                  {t(
+                    "If the result is still wrong after a correction, we record the next action, including anything needed from your vendor. A later problem belongs in the record too. Scheduled rechecks cover the channels and conditions we agree."
+                  )}
+                </p>
+              </div>
+              <div className="col-6">
+                <RecordSlip />
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
 
       <CtaBand
-        title="Which part do you need us for?"
-        lead="You can start with an audit or bring the findings your team already has."
+        title="Already have findings? Bring them."
+        lead="We can start with your team's investigation. Compare the services or tell us what remains unresolved."
         next={{ href: "/services/", label: "Compare the services" }}
       />
     </>

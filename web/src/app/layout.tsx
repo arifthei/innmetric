@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     FORMS_ENABLED ? "https://innmetric.com" : "http://localhost:3000"
   ),
   title: {
-    default: "InnMetric | The desk can quote the room. The guest still cannot buy it.",
+    default: "Hotel availability and rate problems, investigated | InnMetric",
     template: "%s",
   },
   description:

@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { PageHero } from "@/components/PageChrome";
+import { CtaBand, PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
 import { t } from "@/lib/typeset";
 
 export const metadata: Metadata = {
   title: "InnMetric FAQ | Hotel distribution questions",
   description:
-    "Plain answers for hotel decision makers on unavailable rooms, rate differences, channel-manager setups and where InnMetric's work stops.",
+    "Answers on missing hotel availability, rate differences, channel manager setups and the services InnMetric covers.",
   openGraph: {
     title: "InnMetric FAQ | Hotel distribution questions",
     description:
-      "Plain answers for hotel decision makers on unavailable rooms, rate differences, channel-manager setups and where InnMetric's work stops.",
+      "Answers on missing hotel availability, rate differences, channel manager setups and the services InnMetric covers.",
     url: "https://innmetric.com/faq/",
   },
   alternates: { canonical: "/faq/" },
@@ -20,41 +19,34 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "Why is my hotel booking engine showing no availability?",
-    a: "If the engine is down, start with its provider. If it loads but shows no rooms your team expects to sell, we compare the booking result with your settings. Mappings, restrictions and allotments are places to check, not a diagnosis from the public page.",
+    a: "If the booking engine won't load, contact its provider. If it loads but omits rooms you expect to sell, compare the setup with the booking result. Room mappings, restrictions and allotments may need checking. We investigate that gap with your team.",
   },
   {
     q: "Why are my hotel rates different on Booking.com?",
-    a: "First compare the same room, dates, occupancy, cancellation terms, currency, taxes and promotions. A difference can be intentional. If it remains, we check what your hotel intended before proposing a correction.",
+    a: "Compare the same room, dates, occupancy, cancellation terms, currency, taxes and promotions first. Different offers can legitimately have different rates. If those conditions match and the difference wasn't intended, we can investigate it with your team.",
   },
   {
     q: "Do you set up a hotel channel manager?",
-    a: "We review the channel manager you already run and carry out approved corrections. For a first-time installation, start with the vendor's onboarding team.",
+    a: "We review and correct an existing setup with your approval. For a first-time channel manager installation, start with the vendor's onboarding team.",
   },
   {
     q: "How do we simplify our hotel rate plans?",
-    a: "Overlapping plans may make room mappings or restrictions harder to follow. We can flag that during a review and propose changes for your approval. We do not offer rate-plan redesign as a standalone service.",
+    a: "We can flag overlapping plans when they affect mappings or restrictions and propose corrections as part of that review. Your hotel keeps the pricing decisions. Standalone rate-plan redesign is outside our service.",
   },
   {
     q: "Can we outsource hotel revenue management?",
-    a: "InnMetric does not take over revenue management. Your hotel decides pricing and yield. We check whether guests can book the rates and availability you intended on the agreed channels.",
+    a: "InnMetric doesn't take over revenue management. Your team sets prices and yield strategy; we investigate whether your systems make those rates and rooms bookable on the agreed channels.",
   },
   {
     q: "Who can manage our hotel OTA listings?",
-    a: "You need a provider that covers listing content, photos and visibility. InnMetric's ongoing work is different: scheduled checks of agreed rates, availability and mappings. We do not manage listing content or ranking.",
+    a: "For content, photos and visibility, look for an OTA listing management service. InnMetric checks rates, availability and mappings on agreed channels. Our ongoing service doesn't manage listings or ranking.",
   },
 ];
 
 export default function FaqPage() {
   return (
     <>
-      <PageHero eyebrow="FAQ" title="Before you bring us in.">
-        <p className="lede">
-          {t(
-            "Answers to common booking questions and what InnMetric can take on. For anything else, email"
-          )}{" "}
-          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
-        </p>
-      </PageHero>
+      <PageHero eyebrow="FAQ" title="Availability, rates and where we can step in." />
       <section className="section wash">
         <div className="frame stack">
           <Reveal>
@@ -67,15 +59,12 @@ export default function FaqPage() {
               ))}
             </div>
           </Reveal>
-          <Reveal index={1}>
-            <div className="hero-actions">
-              <Link className="button lg" href="/contact/">
-                Let&apos;s Solve It!
-              </Link>
-            </div>
-          </Reveal>
         </div>
       </section>
+      <CtaBand
+        title="Ask us about your situation."
+        lead="Tell us which channel is affected and what you expected to see. We'll explain whether our work covers it."
+      />
     </>
   );
 }

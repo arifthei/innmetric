@@ -22,7 +22,7 @@ Mert has authorized the requested website work and repo feedback loop to be comm
 | [CONTRADICTIONS](docs/CONTRADICTIONS.md) | Resolved conflicts and where the current decision lives |
 | Changelog / release notes | Delivered changes and verification, not new instructions |
 
-Keep current public strings in Intent only. Do not promote a drafted sentence to a user lock. Preserve Mert's explicit constraints; use judgment for the wording he asked us to improve.
+Keep public wording in the app. Intent records product boundaries and explicit user constraints; an agent's drafted sentence is not a new lock. Preserve Mert's constraints and use judgment for the wording he asked us to improve. Apply an approved brief in bounded page chunks without inserting new approval gates between them.
 
 ## Finish and hand over
 
@@ -45,7 +45,7 @@ The Next preview lives in `web/`. Run `npm run dev` from the repo root. Do not r
 
 Do not import hotel prospect records, email recipient data or Drive traction packs into this public repository. Website and email writing can be reviewed together when Mert asks; email drafts stay in Drive. Do not send outreach as part of a copy pass.
 
-The current repair diagnosis is in [docs/fixes](docs/fixes/00_START_HERE.md) and Drive's [Fixes folder](https://drive.google.com/drive/folders/1zIfbo6AVX4On40r05itCrOYhtfeQVeE1). The current implementation status is always in the handoff.
+The historical 2026-09-08 repair diagnosis is in [docs/fixes](docs/fixes/00_START_HERE.md) and Drive's [Fixes folder](https://drive.google.com/drive/folders/1zIfbo6AVX4On40r05itCrOYhtfeQVeE1). Use the current handoff and Intent for newer work; do not restore old copy locks or reopen completed reviews from that pack.
 
 ## New hotel prospecting chats
 

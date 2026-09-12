@@ -1,32 +1,38 @@
 # Current handoff
 
-Checkpoint: 2026-09-10. Last writer: Cursor. Next reviewer: Mert. Mert is the only authority.
+Checkpoint: 2026-09-12. Last writer: Codex. Next reviewer: Cursor for one bounded browser check. Mert is the only authority.
 
 ## Resume here
 
-Preview now has founder portraits on About, a gated Netlify form that stays off for ordinary preview, and the Next cutover files. GitHub `preview` was `991b441` before this delivery. Read [AGENTS](../AGENTS.md), [Intent](INTENT.md) and [Writing](WRITING.md). No agent review thread is open.
+The attached build revision plan is implemented on `preview` from `98e35041b391c9a8c9a59c890375d773c76a8c75`. The delivery is the commit containing this checkpoint. Read [AGENTS](../AGENTS.md), [Intent](INTENT.md), [Writing](WRITING.md) and [PAGE-REVISION-2026-09-12](AGENT_EXCHANGE.md#page-revision-2026-09-12).
 
-This is a non-sending preview. Approving the commit is not a merge to `main`. Cutover steps live in local gitignored `buildplan.md`. The form contract is local `formtutorial-live.md`.
+Copy implementation is complete. Mert explicitly allowed H1/CTA judgment; old exact-string locks are superseded. The historical Fixes pack and earlier threads are not a new task queue.
 
 ## Delivered
 
-- About founder cards: 640×800 WebP plus JPEG in `web/public/founders/`, photo first, `alt` is name and role, faces cropped high. No faces on the homepage. Original 2 MB PNGs stay gitignored.
-- Form gate: `CONTEXT === "production"` and `INNMETRIC_FORMS_ENABLED === "true"`. `NODE_ENV` is not the switch. Default preview keeps the local bar, localhost `metadataBase`, the non-sent notice and receipt.
-- Detector: `web/src/forms/detector.html.template` copied to gitignored `web/public/__forms.html` only when the gate is on; disabled builds delete leftovers. `ReviewForm` posts through `postEnquiry` to `/__forms.html` when enabled. `/thanks/` is not a receipt.
-- Cutover files on this branch: `netlify.toml` base `web`, `npm run build` (with root `lint:copy`), publish `.next`, `@netlify/plugin-nextjs`. `.netlifyignore` no longer excludes `web`. Production chrome and privacy copy sit behind the same flag.
+- Home: a recognizable availability mismatch, one service explanation and deliverables framed around what the hotel team can use.
+- Services: direct audit/repair/control links, separate engagement scopes and one service-boundary section.
+- How it works: three responsibility splits without duplicate summaries, plus the booking-result explanation beside the illustrative record.
+- About: sourced founder bios and existing portraits immediately after the introduction. The five-row manifesto is removed.
+- FAQ: the six questions retained with direct, scoped answers. Shared action wording is `Talk to us` in `web/src/lib/copy.ts`; closing invitations remain relevant to each page.
+- Contact: one centered column, the same decision-maker fields, sentence-case labels, privacy by consent, data guidance by the textarea and the next step by submit.
+
+Palette variables, founder images, typesetting helper, wheel behavior, illustrative record, form handler, release gate and Netlify cutover settings match the baseline.
 
 ## Verification
 
-Passed: `lint:copy` (10 HTML, 22 web/src), ESLint, form unit tests (prepare-forms copy/delete, `postEnquiry` 2xx / non-2xx / network / abort / double-submit), default `next build` with no `__forms.html` and no `data-netlify` in `.next`, enabled `CONTEXT=production INNMETRIC_FORMS_ENABLED=true` build with a matching detector, then a second default build that removed the leftover file.
+Passed on this application source: `npm run lint:copy` (10 HTML and 23 web/src files), ESLint, existing form tests and Next builds with the gate off and on, including TypeScript and 12 static pages. A final default build removed the enabled detector and restored preview output.
 
-Browser on `npm run dev`: `/about/` at 1920, equal 648×273 cards, portrait 160×200 with copy in the remaining column, no overflow; at 390 the cards stack, photo 120px beside copy, no overflow. Homepage has no founder images. `/contact/` shows the local notice; a filled submit stayed on `/contact/`, showed “The request was not sent.” and issued no `fetch`. `/thanks/` title is not a receipt.
+Built-HTML checks passed across nine routes for the primary action, one H1, canonical mode, internal links and section anchors. Contact has the unchanged required fields and five optional system choices, an associated data hint and privacy inside the form. The enabled detector matches the form schema. `/thanks/` remains neutral and noindex. Protected-source, palette, Markdown-link and whitespace checks passed. These are source/build checks, not browser interaction or buyer validation.
 
-Skipped: merge to `main`, production deploy, a live innmetric.com submit, outreach.
+## One remaining review
 
-## Next action and stopping point
+Cursor: sync this delivery and perform the specific 1440px/390px page checks, 1920px founder check, reduced-motion check and non-sending preview-form test in the exchange. Fix a demonstrated defect, reply once with the exact commit and evidence, then close the thread. Do not reopen general copy review or ask Mert to relay the handoff.
 
-Mert reviews `buildplan.md` and this preview. Merge, Netlify dashboard checks and one innmetric.com submit come after that. Do not start the first email batch until that live row is in Verified and `hello@innmetric.com`.
+Fresh browser QA is open because the cloud browser rejected the local application URL with `ERR_BLOCKED_BY_CLIENT`. GitHub exposed no commit-status/check-run preview URL for the baseline. Earlier screenshots do not verify this revision.
 
-## Held
+## Production remains separate
 
-`main` baseline: `1e21e26b9fc39bea5504c79e393186fd5b85b1f7`. innmetric.com still publishes `.` from `main`. No main push, `netlify deploy --prod`, `npm run deploy` or `deploy.ps1`. The old Codex audit and PR #1 stay historical.
+`main` baseline: `1e21e26b9fc39bea5504c79e393186fd5b85b1f7`. No main merge, production deploy or outreach was performed.
+
+Preview retains the Next cutover configuration: base `web`, publish `.next` and `@netlify/plugin-nextjs`. Ordinary preview stays non-sending. The collector and production chrome require both `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`. Before outreach, the separately authorized cutover still needs a real innmetric.com submission visible in Netlify Verified, delivery to `hello@innmetric.com` and a checked Reply-to. This copy delivery is not that proof.

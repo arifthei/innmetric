@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, type MouseEvent } from "react";
 import { SiteLogo } from "@/components/SiteLogo";
+import { CONTACT_CTA } from "@/lib/copy";
 import { FORMS_ENABLED } from "@/lib/release";
 
 const NAV = [
@@ -69,8 +70,7 @@ export function SiteHeader() {
             ))}
           </nav>
           <Link className="button nav-cta" href="/contact/" onClick={onNavClick("/contact/")}>
-            <span className="cta-full">Let&apos;s Solve It!</span>
-            <span className="cta-short">Let&apos;s Solve It!</span>
+            {CONTACT_CTA}
           </Link>
           <button
             type="button"
