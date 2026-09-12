@@ -1,6 +1,6 @@
 # Current InnMetric intent
 
-Updated 2026-09-12. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`, implementation branch `preview`. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
+Updated 2026-09-12. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`. Website work lands on `preview` and merges to `main` when Mert authorizes. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
 
 ## The service and the reader
 
@@ -24,7 +24,7 @@ Mert's 2026-09-12 request authorizes implementing a corrected version of the att
 | Concreteness | Name the deliverables and next step. No invented durations or PMS/channel-manager vendor names |
 | Writing | Natural professional English. No em/en dashes or Oxford comma. No contempt or invented anecdotes |
 
-The lede, closing bands, submit label and other supporting sentences are editable under a copy brief. `Send the stay`, `Show us the stay` and the old push lede are superseded. Current wording is in the app; do not duplicate it here as new locks. The header CTA applies to Next preview; root static HTML retains its existing production CTA until cutover.
+The lede, closing bands, submit label and other supporting sentences are editable under a copy brief. `Send the stay`, `Show us the stay` and the old push lede are superseded. Current wording is in the app; do not duplicate it here as new locks. The header CTA applies to the live Next site.
 
 ## Service boundaries
 
@@ -46,9 +46,9 @@ The current structure stays: homepage hook, four-card problem wheel, useful deli
 
 Current required fields: name, work email, role, number of properties, hotel/group name, problem type, problem-and-outcome note and consent. Website and systems are optional. Optional labels must be clear. No credentials, guest data or approver name are requested. Reuse form name `distribution-review` and keep the field name `email` for Reply-to.
 
-Ordinary preview and localhost builds stay non-sending. Keep the visible notice, the truthful non-sent receipt and a working `mailto:hello@innmetric.com` route. Visiting `/thanks/` is not a receipt.
+Ordinary localhost and deploy-preview builds stay non-sending. Public copy is always the live wording. Gated submits do not show a fake receipt; they stay on the form and offer email to hello@innmetric.com. Visiting `/thanks/` is not a receipt.
 
-The collector turns on only when `CONTEXT === "production"` and `INNMETRIC_FORMS_ENABLED === "true"`. `NODE_ENV` is not the gate. That production build generates `web/public/__forms.html` from the template, posts through `postEnquiry`, and uses production contact/privacy wording. Do not commit the generated detector. Merge to `main` and a live innmetric.com submit remain a later human step.
+The collector turns on only when `CONTEXT === "production"` and `INNMETRIC_FORMS_ENABLED === "true"`. `NODE_ENV` is not the gate. That production build generates `web/public/__forms.html` from the template and posts through `postEnquiry`. Do not commit the generated detector. Mert authorized the 2026-09-12 cutover of `preview` into `main`.
 
 ## Design and production
 
@@ -56,7 +56,7 @@ Sanzo Wada: paper `#F3EDE0`, wash `#D5E4D4`, ink `#1C1917`, asagi `#2F8A84`, pre
 
 Wordmark: lowercase `innmetric` with a small asagi square glow. Keep Figtree, the four wheel titles and motion/reduced-motion behavior. Mert permits targeted layout/CSS edits when the brief calls for them; no palette change. Preserve Cursor's founder wrap and column fixes.
 
-`main` and innmetric.com stay on today's static HTML until Mert merges. The preview bar and localhost `metadataBase` stay on ordinary preview builds. The production chrome, `metadataBase https://innmetric.com` and live form copy sit behind the same form flag. Founder portraits belong on About only. See [BRANCHES.md](BRANCHES.md).
+`main` is live innmetric.com (Next in `web/`). Public copy is always production-shaped. `metadataBase` is `https://innmetric.com`. Founder portraits belong on About only. See [BRANCHES.md](BRANCHES.md).
 
 ## Email consistency
 

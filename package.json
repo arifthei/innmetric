@@ -9,6 +9,6 @@
     "lint": "npm --prefix web run lint",
     "lint:copy": "node scripts/lint-copy.mjs",
     "test:forms": "node web/scripts/test-forms.mjs",
-    "deploy": "npm run lint:copy && npx --yes netlify-cli deploy --prod --dir ."
+    "deploy": "npm run lint:copy && npx --yes netlify-cli deploy --prod --build"
   }
 }

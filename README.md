@@ -1,6 +1,6 @@
 # InnMetric
 
-Public website for [innmetric.com](https://innmetric.com). Production is static HTML on the existing Netlify site from GitHub `main`.
+Public website for [innmetric.com](https://innmetric.com). Production is the Next app in `web/` on GitHub `main`.
 
 Canonical git: [github.com/arifthei/innmetric](https://github.com/arifthei/innmetric). Local folder plus that remote. Cursor Origin is not the source of truth.
 
@@ -24,33 +24,25 @@ The 2026-09-12 revision gives each sales page a distinct job, simplifies Contact
 
 The older [copy comparison](docs/COPY_COMPARISON.md) explains the previous candidate. It is historical, not the current brief. Hotel-specific emails and recipient data stay in Drive's GTM folder.
 
-The copy pass is on `preview`. Read open entries in the shared exchange before editing. Cursor's always-applied project rule points there; other agents start from `AGENTS.md`. Each agent writes its response in the repository and pushes authorized work to `preview`. Mert does not need to copy responses between chats. This works when agents run and sync the repository; it does not wake idle sessions.
+The copy pass is on `preview`, then merges to `main` when Mert authorizes. Read open entries in the shared exchange before editing. Cursor's always-applied project rule points there; other agents start from `AGENTS.md`. Each agent writes its response in the repository and pushes authorized work to `preview`. Mert does not need to copy responses between chats. This works when agents run and sync the repository; it does not wake idle sessions.
 
 Draft [PR #1](https://github.com/arifthei/innmetric/pull/1) is a documentation audit on `codex/coordination-and-design-brief`. Do not merge it. Implementation is on `preview`.
 
 ## Local
 
-Root static site (what Netlify publishes from `main`):
-
 ```bash
 npm run lint:copy
-npx --yes serve .
-```
-
-Next.js preview (this branch, not live):
-
-```bash
 npm run dev
 ```
 
-Open http://localhost:3000. innmetric.com stays unchanged.
+Open http://localhost:3000. Localhost builds do not send the form.
 
 Routes: `/`, `/services/`, `/how-it-works/`, `/about/`, `/faq/`, `/privacy/`, `/terms/`, `/contact/`, `/thanks/`.
 
 ## Deploy
 
-`main` only until Mert authorizes the cutover. Live innmetric.com still publishes root static HTML. Do not create a second Netlify site.
+`main` is live innmetric.com. Do not create a second Netlify site. Do not merge PR #1.
 
-`preview` contains the Next `netlify.toml` (base `web`, publish `.next` with `@netlify/plugin-nextjs`). That file does not change innmetric.com until merge. Ordinary preview builds stay non-sending.
+`netlify.toml` builds the Next app (base `web`, publish `.next` with `@netlify/plugin-nextjs`). Ordinary localhost and deploy-preview builds stay non-sending.
 
-`.\deploy.ps1` is a manual production path for the static root. Do not run it, `npm run deploy` or `npx netlify deploy --prod` for Next preview work.
+`.\deploy.ps1` and `npm run deploy` run `netlify deploy --prod --build`. Do not pass `--dir .`.

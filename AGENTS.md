@@ -9,7 +9,7 @@ Mert is the only authority. Latest explicit instructions from Mert override olde
 3. Read [current handoff](docs/HANDOFF.md), [current intent](docs/INTENT.md) and the active inbox entry in [agent exchange](docs/AGENT_EXCHANGE.md). Read [writing guidance](docs/WRITING.md) for copy work and `web/AGENTS.md` before changing the Next app. Read older threads only when their history is relevant.
 4. Read the actual files and source material named by the current brief. A previous agent's summary is useful context, not a substitute for a fresh baseline.
 
-Mert has authorized the requested website work and repo feedback loop to be committed and pushed to `preview`. Do not ask again for permission already given. This does not authorize a production release or unrelated work.
+Mert has authorized the requested website work and repo feedback loop to be committed and pushed to `preview`. Do not ask again for permission already given. Merge `preview` into `main` only when Mert authorizes a cutover. Do not merge [PR #1](https://github.com/arifthei/innmetric/pull/1) or create another Netlify site.
 
 ## Where decisions belong
 
@@ -35,11 +35,13 @@ Keep public wording in the app. Intent records product boundaries and explicit u
 
 The exchange is a durable inbox, read when an agent runs and syncs. It does not wake idle agents. Never invent an acknowledgement or ask Mert to relay feedback already available in Git. Do not create duplicate NOTICE files or routine pings on historical PR #1.
 
-## Production hold
+## Production
 
-`main` is the production branch for the existing Netlify site. Live innmetric.com still publishes root static HTML with `publish = "."` until Mert merges. Do not merge `preview` into `main`, create another Netlify site or merge [PR #1](https://github.com/arifthei/innmetric/pull/1) without an explicit cutover brief.
+`main` is the production branch for innmetric.com. It publishes the Next app in `web/` through `netlify.toml` (base `web`, `npm run build`, publish `.next`, `@netlify/plugin-nextjs`). Do not merge [PR #1](https://github.com/arifthei/innmetric/pull/1) or create another Netlify site.
 
-The Next preview lives in `web/`. Run `npm run dev` from the repo root. Do not run `deploy.ps1`, `npm run deploy` or `npx netlify deploy --prod` during preview work. `preview` already contains the cutover `netlify.toml` (base `web`, `npm run build`, publish `.next` with `@netlify/plugin-nextjs`). `.netlifyignore` keeps `_context` and `docs` out and no longer excludes `web`. Ordinary preview and localhost builds stay non-sending; the form and production chrome turn on only when `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`.
+Public copy is always production-shaped. Ordinary localhost and deploy-preview builds stay non-sending. The collector turns on only when `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`. `NODE_ENV` is not the gate.
+
+Run `npm run dev` from the repo root. Do not pass `--dir .` to Netlify; that publishes the old static root. Root `npm run deploy` and `deploy.ps1` run `netlify deploy --prod --build` using `netlify.toml`. Website work still lands on `preview` first. `.netlifyignore` keeps `_context` and `docs` out and no longer excludes `web`.
 
 ## Keep private source work separate
 

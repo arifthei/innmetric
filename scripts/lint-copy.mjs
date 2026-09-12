@@ -29,7 +29,8 @@ function walk(dir, { skipWeb = false } = {}, out = []) {
       name === ".netlify" ||
       name === "_context" ||
       name === ".next" ||
-      name === "test.html"
+      name === "test.html" ||
+      name === "signatures"
     ) {
       continue;
     }

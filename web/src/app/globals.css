@@ -25,7 +25,6 @@
   --pad-hero: 64px;
 
   --nav-h: 64px;
-  --bar-h: 30px;
 
   --radius: 4px;
 
@@ -205,29 +204,6 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 40;
-}
-
-.preview-bar {
-  height: var(--bar-h);
-  display: flex;
-  align-items: center;
-  background: var(--ink);
-  color: rgba(243, 237, 224, 0.7);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.preview-bar .frame {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-
-.preview-bar strong {
-  color: var(--accent);
-  font-weight: 600;
 }
 
 header {
@@ -1344,25 +1320,6 @@ input[type="checkbox"] {
   margin-top: 22px;
 }
 
-.local-notice {
-  padding: 14px 16px;
-  margin-bottom: 20px;
-  background: rgba(138, 75, 46, 0.1);
-  border: 1px solid rgba(138, 75, 46, 0.35);
-  border-radius: var(--radius);
-  font-size: 15px;
-}
-
-.local-notice strong {
-  display: block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 6px;
-}
-
 .form-receipt {
   display: flex;
   flex-direction: column;
@@ -1549,11 +1506,6 @@ footer a:hover {
 
   .form-grid {
     grid-template-columns: 1fr;
-  }
-
-  .preview-bar {
-    font-size: 10px;
-    letter-spacing: 0.06em;
   }
 
   .work-file-verbs {

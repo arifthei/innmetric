@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { FORMS_ENABLED } from "@/lib/release";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -13,9 +12,7 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    FORMS_ENABLED ? "https://innmetric.com" : "http://localhost:3000"
-  ),
+  metadataBase: new URL("https://innmetric.com"),
   title: {
     default: "Hotel availability and rate problems, investigated | InnMetric",
     template: "%s",

@@ -1,6 +1,10 @@
-# Preview release notes
+# Release notes
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
+
+## 2026-09-12: production cutover
+
+Public copy is production-shaped. Tunahan's About paragraph is updated. The form still sends only on Netlify production. `main` publishes the Next app. Form notification and one live test submit are Mert's Netlify clicks after the first green production deploy.
 
 ## 2026-09-12: clearer page roles and a focused Contact page
 

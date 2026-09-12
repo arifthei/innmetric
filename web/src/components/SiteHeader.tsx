@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useState, type MouseEvent } from "react";
 import { SiteLogo } from "@/components/SiteLogo";
 import { CONTACT_CTA } from "@/lib/copy";
-import { FORMS_ENABLED } from "@/lib/release";
 
 const NAV = [
   { href: "/services/", label: "Services" },
@@ -38,16 +37,6 @@ export function SiteHeader() {
 
   return (
     <div className="site-top">
-      {FORMS_ENABLED ? null : (
-        <div className="preview-bar">
-          <div className="frame">
-            <span>
-              <strong>Local preview</strong> innmetric.com is unchanged.
-            </span>
-            <span>npm run dev</span>
-          </div>
-        </div>
-      )}
       <header>
         <div className="frame nav">
           <Link className="logo" href="/" aria-label="innmetric" onClick={onNavClick("/")}>

@@ -55,7 +55,7 @@ export function ReviewForm() {
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!FORMS_ENABLED) {
-      setSent(true);
+      setError(true);
       return;
     }
     if (inFlight.current || sending) return;
@@ -80,28 +80,7 @@ export function ReviewForm() {
     }
   }
 
-  if (!FORMS_ENABLED && sent) {
-    return (
-      <div className="form-receipt">
-        <span className="label">Local preview</span>
-        <h2 ref={headingRef} tabIndex={-1}>
-          The request was not sent.
-        </h2>
-        <p className="section-lead">
-          {t("This preview form does not send. Please email")}{" "}
-          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>{" "}
-          {t(
-            "with your hotel, the problem and what you want to change. Do not include passwords or guest data."
-          )}
-        </p>
-        <button className="button" type="button" onClick={() => setSent(false)}>
-          Return to the form
-        </button>
-      </div>
-    );
-  }
-
-  if (FORMS_ENABLED && sent) {
+  if (sent) {
     return (
       <div className="form-receipt" aria-live="polite">
         <h2 ref={headingRef} tabIndex={-1}>
@@ -124,18 +103,11 @@ export function ReviewForm() {
       onSubmit={onSubmit}
     >
       <noscript>
-        <p className="local-notice">
+        <p className="form-hint">
           JavaScript is off. Email{" "}
           <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
         </p>
       </noscript>
-      {FORMS_ENABLED ? null : (
-        <div className="local-notice">
-          <strong>Local preview</strong>
-          This form does not send. Please email{" "}
-          <a href="mailto:hello@innmetric.com">hello@innmetric.com</a>.
-        </div>
-      )}
       <input type="hidden" name="form-name" value="distribution-review" />
       <p className="honeypot">
         <label>
@@ -253,9 +225,7 @@ export function ReviewForm() {
           {sending ? "Sending..." : "Send enquiry"}
         </button>
         <span className="form-note">
-          {FORMS_ENABLED
-            ? "A founder will review your enquiry and reply about the next step."
-            : "This preview does not send. Email us for a reply from a founder."}
+          A founder will review your enquiry and reply about the next step.
         </span>
       </div>
       <p className="form-alternative">

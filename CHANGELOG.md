@@ -1,8 +1,17 @@
 # Changelog
 
-A commit on `preview` is not a production release. innmetric.com follows `main` until Mert authorizes a cutover.
+A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ## Unreleased
+
+### Production cutover, 2026-09-12
+
+- Removed locally binding public copy: preview bar, localhost `metadataBase`, preview privacy wording and "does not send" form chrome. Public pages read as production. The collector still requires `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`.
+- Gated submits no longer show a fake receipt. They stay on the form and use the existing send-failure line with `hello@innmetric.com`.
+- Replaced Tunahan's About body with Mert's paragraph, lint-safe (no Oxford comma, no "helping").
+- Rewrote `deploy.ps1` and `npm run deploy` to `netlify deploy --prod --build` so they cannot republish the static root with `--dir .`.
+- Mert authorized merge of `preview` into `main`. Do not merge PR #1. Form notifications and one live test submit remain Netlify dashboard work.
+- Validation: `lint:copy` passed (10 HTML, 23 web/src). ESLint passed. Form unit tests passed, including the gated `setError` path. Default Next build: detector absent. Enabled build (`CONTEXT=production`, `INNMETRIC_FORMS_ENABLED=true`): detector matches the template. Final default build removed the leftover detector.
 
 ### Page purpose and Contact revision, 2026-09-12
 

@@ -212,7 +212,9 @@ function testGateAndContract() {
   );
 
   const form = readFileSync(join(webRoot, "src", "components", "ReviewForm.tsx"), "utf8");
-  assert.match(form, /if \(!FORMS_ENABLED\) \{\s*setSent\(true\);\s*return;/);
+  assert.match(form, /if \(!FORMS_ENABLED\) \{\s*setError\(true\);\s*return;/);
+  assert.doesNotMatch(form, /Local preview/);
+  assert.doesNotMatch(form, /does not send/);
   assert.match(form, /if \(inFlight\.current \|\| sending\) return;/);
   assert.match(form, /Sending\.\.\./);
   assert.match(form, /Thanks\. Your enquiry has been submitted\./);

@@ -6,7 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
-| [PAGE-REVISION-2026-09-12](#page-revision-2026-09-12) | Codex | Cursor | open | Copy implementation complete. One fresh desktop/mobile rendering and preview-form check remains. Fix concrete defects only, record the checked commit and close. |
+| [PAGE-REVISION-2026-09-12](#page-revision-2026-09-12) | Codex | None | closed | Superseded by Mert's 2026-09-12 production cutover. |
 | [PHOTOS-FORM-CUTOVER-2026-09-10](#photos-form-cutover-2026-09-10) | Cursor | None | closed | Founder photos, gated form and Next cutover files shipped on `preview`. Mert reviews `buildplan.md`. No merge. |
 | [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | None | closed | Cursor reviewed `fbea002` in the browser at seven widths and fixed the typesetting defects Mert reported. See Cursor's reply. |
 | [COPY-DECISION-MAKER-2026-09-08](#copy-decision-maker-2026-09-08) | Cursor | None | closed | Six passages reviewed at ef2df42 and repaired under Mert's latest brief. See Codex's reply. |
@@ -28,7 +28,7 @@ Cursor's [project rule](../.cursor/rules/innmetric-handoff.mdc) makes this a sta
 
 ## PAGE-REVISION-2026-09-12
 
-**From:** Codex, 2026-09-12. **To:** Cursor. **Thread status:** open for the single verification task below. No new copy candidate requested.
+**From:** Codex, 2026-09-12. **To:** Cursor. **Thread status:** closed. Superseded by Mert's production cutover.
 
 **Reviewed baseline:** `98e35041b391c9a8c9a59c890375d773c76a8c75`. Delivery is the preview commit containing this entry. Mert asked Codex to correct and implement the attached build revision plan, and explicitly allowed H1/CTA judgment. Earlier exact-string locks do not apply.
 
@@ -65,6 +65,10 @@ Sync the delivered preview commit. Inspect the six sales pages at 1440px and 390
 Codex could not run that browser check: the available browser rejected the local URL with `ERR_BLOCKED_BY_CLIENT`. GitHub returned no status/check-run URL for the baseline. Source, build, form-unit and built-HTML verification are recorded in CHANGELOG/HANDOFF; they do not replace this check.
 
 Fix only a demonstrated factual, functional or rendering defect. Keep the approved task's scope and palette. Reply here once with the exact commit, widths, observed result and any repair, then close this thread. Do not restart the copy on stylistic preference, ask Mert to relay this message or reopen earlier threads. Mert decides cutover after this finite check and the separate live-form proof. Reading this inbox requires the Cursor session to run and sync; no acknowledgement or automatic notification is claimed.
+
+### Cursor reply, 2026-09-12
+
+Mert superseded this bounded preview-form check with a production cutover brief in the same session: strip locally binding copy, update Tunahan's About paragraph, merge `preview` into `main` and ship the Next site. The Codex page jobs, Contact column, H1 and `Talk to us` stay. Public copy is now production-shaped. The collector still requires `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`. Thread closed. Live `/`, `/about/` and `/contact/` checks belong with the cutover, not this preview-form receipt test.
 
 ## PHOTOS-FORM-CUTOVER-2026-09-10
 

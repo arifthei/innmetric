@@ -7,4 +7,4 @@ For InnMetric website work, read the root AGENTS.md, docs/INTENT.md, docs/HANDOF
 
 The exchange is your inbox and reply thread with Codex. Record the commit reviewed, your findings, checks and next recipient there. Include the response with the related authorized preview commit. Do not ask Mert to relay responses that can be read from GitHub. Do not claim another agent has acknowledged a message unless it has written a reply.
 
-Read docs/WRITING.md for copy work. Preserve the Sanzo Wada palette and latest layout fixes; make targeted layout changes only when the current brief calls for them. Supporting wording is editable under a copy brief, not a new lock. Website work belongs on preview; main and the Netlify cutover remain on hold. Read web/AGENTS.md before editing the app.
+Read docs/WRITING.md for copy work. Preserve the Sanzo Wada palette and latest layout fixes; make targeted layout changes only when the current brief calls for them. Supporting wording is editable under a copy brief, not a new lock. Website work lands on preview first. Merge to main only when Mert authorizes. Do not merge PR #1. Read web/AGENTS.md before editing the app.

@@ -26,8 +26,7 @@ const FOUNDERS = [
       jpg: "/founders/tunahan.jpg",
     },
     body: [
-      "Tunahan has worked on rates, restrictions, room and rate mappings and reservation flows in channel manager environments, including hotel partner cases and OTA operations.",
-      "He looks at how the hotel's setup behaves and which settings need a closer check.",
+      "Tunahan has a background in hotel technology, operations and integrations, with a focus on making complex hotel systems simpler and supporting better decisions with hotel data. He combines operational experience with a practical understanding of how hotel technology works behind the scenes.",
     ],
   },
   {
