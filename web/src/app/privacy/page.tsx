@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { PageHero } from "@/components/PageChrome";
 
-export const metadata: Metadata = {
-  title: "Privacy Notice | InnMetric",
+export const metadata: Metadata = pageMetadata({
+  title: "Privacy Notice for website enquiries | InnMetric",
   description:
     "How InnMetric collects and uses website inquiry data. Founder-led service hosted on Netlify.",
-  openGraph: {
-    title: "Privacy Notice | InnMetric",
-    description:
-      "How InnMetric collects and uses website inquiry data. Founder-led service hosted on Netlify.",
-    url: "https://innmetric.com/privacy/",
-  },
-  alternates: { canonical: "/privacy/" },
-};
+  path: "/privacy/",
+});
 
 export default function PrivacyPage() {
   return (
@@ -44,6 +39,15 @@ export default function PrivacyPage() {
           Email notifications go to hello@innmetric.com. You may also write to
           that address directly.
         </p>
+        {process.env.NEXT_PUBLIC_CF_BEACON_TOKEN ? (
+          <>
+            <h2>Visit statistics</h2>
+            <p>
+              We count page visits with Cloudflare Web Analytics. It sets no
+              cookies and does not identify individual visitors.
+            </p>
+          </>
+        ) : null}
         <h2>Retention</h2>
         <p>
           Inquiry records are kept so we can respond. If a paid engagement starts,

@@ -1,26 +1,32 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumb, ORG_ID, pageMetadata, SITE_URL } from "@/lib/site";
 import { PageHero } from "@/components/PageChrome";
-import { Reveal } from "@/components/Reveal";
 import { ReviewForm } from "@/components/ReviewForm";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
   "Tell InnMetric where your hotel's availability or rates differ from what you intended. A founder will review your enquiry and discuss the next step.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Talk through a hotel booking problem | InnMetric",
   description: DESCRIPTION,
-  openGraph: {
-    title: "Talk through a hotel booking problem | InnMetric",
-    description: DESCRIPTION,
-    url: "https://innmetric.com/contact/",
-  },
-  alternates: { canonical: "/contact/" },
-};
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          {
+            "@type": "ContactPage",
+            url: `${SITE_URL}/contact/`,
+            about: { "@id": ORG_ID },
+          },
+          breadcrumb("/contact/", "Contact"),
+        ]}
+      />
       <PageHero
         eyebrow="Contact"
         title="Tell us about the booking problem."
@@ -34,9 +40,9 @@ export default function ContactPage() {
       </PageHero>
       <section className="section wash">
         <div className="frame">
-          <Reveal className="contact-width">
+          <div className="contact-width">
             <ReviewForm />
-          </Reveal>
+          </div>
         </div>
       </section>
     </>

@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { PageHero } from "@/components/PageChrome";
 
-export const metadata: Metadata = {
-  title: "Terms of Use | InnMetric",
+export const metadata: Metadata = pageMetadata({
+  title: "Terms of Use for the InnMetric website | InnMetric",
   description:
     "Website terms for InnMetric. Public pages are not a proposal. Live changes require hotel approval.",
-  openGraph: {
-    title: "Terms of Use | InnMetric",
-    description:
-      "Website terms for InnMetric. Public pages are not a proposal. Live changes require hotel approval.",
-    url: "https://innmetric.com/terms/",
-  },
-  alternates: { canonical: "/terms/" },
-};
+  path: "/terms/",
+});
 
 export default function TermsPage() {
   return (

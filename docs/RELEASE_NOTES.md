@@ -2,6 +2,10 @@
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
+## 2026-09-25: search, share and AI-answer readiness
+
+Mert asked for a full audit and authorized direct deployment. The site had no robots file, sitemap, share image or analytics, and its hero text was invisible until JavaScript ran. This release fixes those defects and adds structured data, `llms.txt`, explicit AI crawler access and IndexNow. Copy changes are limited to page titles, two meta descriptions and the opening sentence of three FAQ answers. Palette and layout are unchanged. Analytics turns on when Mert sets the Cloudflare token.
+
 ## 2026-09-12: production cutover
 
 Public copy is production-shaped. Tunahan's About paragraph is updated. The form still sends only on Netlify production. `main` publishes the Next app. Form notification and one live test submit are Mert's Netlify clicks after the first green production deploy.

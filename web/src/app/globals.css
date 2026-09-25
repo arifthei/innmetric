@@ -1362,8 +1362,8 @@ footer a:hover {
   color: var(--paper);
 }
 
-/* Scroll reveal. Bidirectional: the observer stays live, so leaving the
-   viewport upward runs the same transition in reverse. */
+/* Scroll reveal. One-shot: content stays visible once it has entered the
+   viewport. Hero copy is never wrapped so it paints with the HTML. */
 
 .reveal {
   opacity: 0;

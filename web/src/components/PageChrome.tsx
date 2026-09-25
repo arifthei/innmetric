@@ -18,11 +18,11 @@ export function PageHero({
   return (
     <section className="section hero">
       <div className="frame">
-        <Reveal className={`intro ${contentClassName}`.trim()}>
+        <div className={`intro ${contentClassName}`.trim()}>
           <span className="label">{eyebrow}</span>
           <h1>{t(title, TAIL.heading)}</h1>
           {children}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

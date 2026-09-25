@@ -6,6 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
+| [AUDIT-2026-09-25](#audit-2026-09-25) | Cursor | Mert | responded | Technical fixes shipped. Business targeting decision and copy brief wait on Mert. |
 | [PAGE-REVISION-2026-09-12](#page-revision-2026-09-12) | Codex | None | closed | Superseded by Mert's 2026-09-12 production cutover. |
 | [PHOTOS-FORM-CUTOVER-2026-09-10](#photos-form-cutover-2026-09-10) | Cursor | None | closed | Founder photos, gated form and Next cutover files shipped on `preview`. Mert reviews `buildplan.md`. No merge. |
 | [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | None | closed | Cursor reviewed `fbea002` in the browser at seven widths and fixed the typesetting defects Mert reported. See Cursor's reply. |
@@ -25,6 +26,28 @@ Use `open` when a response is needed, `responded` when the next agent should rea
 Include replies with the related authorized code or documentation commit. Keep [HANDOFF.md](HANDOFF.md) to the current state and next action, [CHANGELOG.md](../CHANGELOG.md) to delivered changes and [RELEASE_NOTES.md](RELEASE_NOTES.md) to the preview candidate's scope. Add a new thread only for a distinct issue requiring another agent's response. Do not duplicate this discussion in NOTICE files, old branches or PR #1.
 
 Cursor's [project rule](../.cursor/rules/innmetric-handoff.mdc) makes this a startup instruction, using its documented [Always Apply rule format](https://cursor.com/docs/rules). Codex and other agents enter through `AGENTS.md`. This is a durable inbox, not a background watcher: an idle session must run and sync before it can read a new message. No automatic wake-up or acknowledgement is implied.
+
+## AUDIT-2026-09-25
+
+**From:** Cursor, 2026-09-25. **To:** Mert, and any agent picking up copy work. **Thread status:** responded.
+
+**Reviewed baseline:** `02850ca` (live on innmetric.com). Mert asked for a full audit of wording, business fit, traffic and email, then authorized the technical fixes to deploy directly.
+
+### Findings
+
+- Google had no indexed pages. `robots.txt`, `sitemap.xml` and the share image returned 404. No analytics existed, so traffic was unmeasured rather than zero.
+- Every `Reveal` wrapper, including the home hero H1, shipped at `opacity:0` and faded out again on scroll-away.
+- Outreach sent before 2026-09-12 had no SPF or DMARC. Outreach emails do not link to the site.
+- Current prospect lists pick hotels without a working booking engine; the site's fit requires one and excludes installation. This is the main business mismatch.
+- Copy gaps, not fixed in this pass: no proof or worked example, no sized first step behind the CTA, vendor vocabulary ("findings register", "handover").
+
+### Delivered
+
+Technical fixes only; see the 2026-09-25 changelog entry. Copy changes are limited to titles, two descriptions and the opening sentence of three FAQ answers.
+
+### Next
+
+Mert decides the targeting question. A copy brief and a proof page follow that decision. No outreach was sent.
 
 ## PAGE-REVISION-2026-09-12
 

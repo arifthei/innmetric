@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumb, ORG_ID, pageMetadata, SITE_URL } from "@/lib/site";
 import Image from "next/image";
 import { CtaBand, PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
 import { t } from "@/lib/typeset";
 
-export const metadata: Metadata = {
-  title: "Meet the founders | InnMetric",
+export const metadata: Metadata = pageMetadata({
+  title: "Meet the founders of InnMetric | Hotel distribution",
   description:
     "Meet Tunahan Aras and Mert Carikci, the founders who bring hotel distribution and product operations experience to InnMetric's investigation and repair work.",
-  openGraph: {
-    title: "Meet the founders | InnMetric",
-    description:
-      "Meet Tunahan Aras and Mert Carikci, the founders who bring hotel distribution and product operations experience to InnMetric's investigation and repair work.",
-    url: "https://innmetric.com/about/",
-  },
-  alternates: { canonical: "/about/" },
-};
+  path: "/about/",
+});
 
 const FOUNDERS = [
   {
@@ -43,9 +39,29 @@ const FOUNDERS = [
   },
 ];
 
+const ABOUT_SCHEMA = [
+  ...FOUNDERS.map((founder) => ({
+    "@type": "Person",
+    "@id": `${SITE_URL}/about/#${founder.name.split(" ")[0].toLowerCase()}`,
+    name: founder.name,
+    jobTitle: `Co-founder and ${founder.role}`,
+    description: founder.body.join(" "),
+    image: `${SITE_URL}${founder.photo.jpg}`,
+    worksFor: { "@id": ORG_ID },
+    url: `${SITE_URL}/about/`,
+  })),
+  {
+    "@type": "AboutPage",
+    url: `${SITE_URL}/about/`,
+    about: { "@id": ORG_ID },
+  },
+  breadcrumb("/about/", "About"),
+];
+
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={ABOUT_SCHEMA} />
       <PageHero
         eyebrow="About"
         title="You work directly with the founders."

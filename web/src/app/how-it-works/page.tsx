@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumb, pageMetadata } from "@/lib/site";
 import { CtaBand, PageHero } from "@/components/PageChrome";
 import { Reveal } from "@/components/Reveal";
 import { RecordSlip } from "@/components/RecordSlip";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Your hotel approves the changes. InnMetric investigates across your existing systems, carries out agreed corrections and hands over checked results and open issues.";
+  "Your hotel approves every change. InnMetric investigates across your existing systems, makes agreed corrections and hands over checked results and open issues.";
 
-export const metadata: Metadata = {
-  title: "How InnMetric works with your hotel",
+export const metadata: Metadata = pageMetadata({
+  title: "How InnMetric works with your hotel team | InnMetric",
   description: DESCRIPTION,
-  openGraph: {
-    title: "How InnMetric works with your hotel",
-    description: DESCRIPTION,
-    url: "https://innmetric.com/how-it-works/",
-  },
-  alternates: { canonical: "/how-it-works/" },
-};
+  path: "/how-it-works/",
+});
 
 const PHASES = [
   {
@@ -39,6 +36,7 @@ const PHASES = [
 export default function HowItWorksPage() {
   return (
     <>
+      <JsonLd data={breadcrumb("/how-it-works/", "How it works")} />
       <PageHero eyebrow="How it works" title="We do the investigation. You decide what changes.">
         <p className="lede">
           {t(

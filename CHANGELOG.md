@@ -4,6 +4,19 @@ A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ## Unreleased
 
+### Audit fixes: crawlability, visible hero, schema, AEO and GEO, 2026-09-25
+
+- The hero, page heroes and the contact form no longer ship at `opacity:0`. `Reveal` is one-shot (it disconnects after the first intersection instead of fading out on scroll-away), and a `<noscript>` style shows every `.reveal` without JavaScript.
+- Added `app/robots.ts` (all crawlers plus named AI search and training crawlers allowed; `/__forms.html` disallowed) and `app/sitemap.ts` (eight indexable routes, `/thanks/` excluded and still `noindex`).
+- Added a generated 1200x630 share image (`app/opengraph-image.tsx`), a 512 PNG icon and a 180 Apple icon. New `pageMetadata` helper in `web/src/lib/site.ts` sets canonical, Open Graph and Twitter tags with the image on every page. Previously each page's `openGraph` replaced the layout's images.
+- JSON-LD: site-wide `Organization`/`ProfessionalService` and `WebSite`; `Service` per offer on Services; `FAQPage` on FAQ; `Person` and `AboutPage` on About; `ContactPage` on Contact; `BreadcrumbList` on inner pages. No ratings, reviews, prices or `areaServed` (Intent: no public GCC hook). Founder names stay on About only.
+- `/llms.txt` and `/llms-full.txt` route handlers built from shared `lib/faq.ts` and `lib/services.ts`, which the FAQ, Services and Home pages now import. FAQ answers open with a direct sentence (three answers changed).
+- Titles now 48 to 56 characters; home and How it works descriptions trimmed under 160.
+- `netlify.toml`: HSTS, Permissions-Policy and COOP headers; single-hop `www` to apex 301s; `llms*.txt` served as text with `X-Robots-Tag: noindex`.
+- Cloudflare Web Analytics beacon and its privacy paragraph render only when `NEXT_PUBLIC_CF_BEACON_TOKEN` is set.
+- IndexNow key file and `npm run indexnow` (submits the live sitemap URLs).
+- Validation: Next build (19 static routes), ESLint, form unit tests and `lint:copy` (10 HTML, 35 web/src) passed. Local `next start` checks: `/robots.txt`, `/sitemap.xml`, `/llms.txt`, `/llms-full.txt`, `/opengraph-image/`, `/icon/`, `/apple-icon/` and the key file return 200. Every indexable page emits canonical, `og:image` and the expected schema types; no hero is inside `.reveal`. Browser: home at 1440, contact at 390 (hero and form visible at first paint), FAQ scroll down and up leaves `.reveal` at opacity 1.
+
 ### Production cutover, 2026-09-12
 
 - Removed locally binding public copy: preview bar, localhost `metadataBase`, preview privacy wording and "does not send" form chrome. Public pages read as production. The collector still requires `CONTEXT=production` and `INNMETRIC_FORMS_ENABLED=true`.

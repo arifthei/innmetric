@@ -4,21 +4,18 @@ import { CtaBand } from "@/components/PageChrome";
 import { ProblemWheel } from "@/components/ProblemWheel";
 import { Reveal } from "@/components/Reveal";
 import { CONTACT_CTA } from "@/lib/copy";
+import { FIT, NOT_FIT } from "@/lib/services";
+import { pageMetadata } from "@/lib/site";
 import { t, TAIL } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Rooms available but missing online? InnMetric investigates availability and rate problems in your existing hotel systems, makes approved corrections and checks the result.";
+  "Rooms available but missing online? InnMetric traces hotel availability and rate problems in your existing systems, makes approved fixes and checks the result.";
 
-export const metadata: Metadata = {
-  title: "Hotel availability and rate problems, investigated | InnMetric",
+export const metadata: Metadata = pageMetadata({
+  title: "Hotel availability and rate problems, traced | InnMetric",
   description: DESCRIPTION,
-  openGraph: {
-    title: "Hotel availability and rate problems, investigated | InnMetric",
-    description: DESCRIPTION,
-    url: "https://innmetric.com/",
-  },
-  alternates: { canonical: "/" },
-};
+  path: "/",
+});
 
 const DELIVERABLES = [
   {
@@ -63,25 +60,13 @@ const OFFERS = [
   },
 ];
 
-const FIT = [
-  "Independent hotels, resorts, aparthotels and small groups selling direct and on at least two OTAs",
-  "An existing PMS, channel manager and booking engine to investigate",
-  "A hotel contact who can arrange access and involve the person approving changes",
-];
-
-const NOT_FIT = [
-  "Large international chains whose central team already owns distribution",
-  "Individually listed homes that are not hotel-operated",
-  "Teams seeking system installation, revenue management or OTA content and marketing",
-];
-
 export default function HomePage() {
   return (
     <>
       <section className="section hero">
         <div className="frame">
           <div className="grid wide-gap home-hero-grid">
-            <Reveal className="col-6 hero-copy">
+            <div className="col-6 hero-copy">
               <span className="label">Hotel distribution support</span>
               <h1>
                 {t(
@@ -102,7 +87,7 @@ export default function HomePage() {
                   See how we work
                 </Link>
               </div>
-            </Reveal>
+            </div>
             <div className="col-6">
               <ProblemWheel />
             </div>

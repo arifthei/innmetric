@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:forms": "node scripts/test-forms.mjs"
+    "test:forms": "node scripts/test-forms.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "next": "16.3.2",
