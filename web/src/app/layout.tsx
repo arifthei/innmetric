@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import Script from "next/script";
 import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -20,6 +21,8 @@ const figtree = Figtree({
 });
 
 const CF_BEACON_TOKEN = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN;
+const GA_ID = "G-D71XSP5J7T";
+const GA_ENABLED = process.env.CONTEXT === "production";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -121,6 +124,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="content">{children}</main>
         <SiteFooter />
         <JsonLd data={siteGraph} />
+        {GA_ENABLED ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+            </Script>
+          </>
+        ) : null}
         {CF_BEACON_TOKEN ? (
           <script
             defer

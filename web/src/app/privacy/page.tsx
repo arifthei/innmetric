@@ -13,7 +13,7 @@ export default function PrivacyPage() {
   return (
     <PageHero eyebrow="Legal" title="Privacy Notice">
       <div className="prose">
-        <p>Effective date: 20 August 2026</p>
+        <p>Effective date: 27 September 2026</p>
         <h2>Who operates the website</h2>
         <p>
           InnMetric is a founder-led hotel distribution-control service. There is
@@ -39,13 +39,22 @@ export default function PrivacyPage() {
           Email notifications go to hello@innmetric.com. You may also write to
           that address directly.
         </p>
-        {process.env.NEXT_PUBLIC_CF_BEACON_TOKEN ? (
+        {process.env.CONTEXT === "production" ||
+        process.env.NEXT_PUBLIC_CF_BEACON_TOKEN ? (
           <>
             <h2>Visit statistics</h2>
-            <p>
-              We count page visits with Cloudflare Web Analytics. It sets no
-              cookies and does not identify individual visitors.
-            </p>
+            {process.env.CONTEXT === "production" ? (
+              <p>
+                We measure visits with Google Analytics. Google may store a
+                cookie in your browser and receive which pages you view.
+              </p>
+            ) : null}
+            {process.env.NEXT_PUBLIC_CF_BEACON_TOKEN ? (
+              <p>
+                We count page visits with Cloudflare Web Analytics. It sets no
+                cookies and does not identify individual visitors.
+              </p>
+            ) : null}
           </>
         ) : null}
         <h2>Retention</h2>

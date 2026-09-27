@@ -4,6 +4,11 @@ A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ## Unreleased
 
+### Google Analytics on production, 2026-09-27
+
+- The Google tag `G-D71XSP5J7T` loads from the site layout on every page, only when Netlify builds with `CONTEXT=production`. Local and deploy-preview builds do not send visits.
+- The privacy notice says Google Analytics may store a cookie and receive the pages viewed. Effective date is 27 September 2026.
+
 ### Audit fixes: crawlability, visible hero, schema, AEO and GEO, 2026-09-25
 
 - The hero, page heroes and the contact form no longer ship at `opacity:0`. `Reveal` is one-shot (it disconnects after the first intersection instead of fading out on scroll-away), and a `<noscript>` style shows every `.reveal` without JavaScript.
