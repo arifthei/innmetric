@@ -4,6 +4,11 @@ A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ## Unreleased
 
+### Wordmark SVG, 2026-10-03
+
+- Added `web/public/logo.svg`: the innmetric wordmark and asagi square on a transparent background, drawn from Figtree Bold with the same tight spacing and slanted t as the header.
+- Header and footer now use that SVG. The word takes the surrounding text color, so it stays ink on the page and paper in the footer. The square stays `#2F8A84`.
+
 ### Google Analytics on production, 2026-09-27
 
 - The Google tag `G-D71XSP5J7T` loads from the site layout on every page, only when Netlify builds with `CONTEXT=production`. Local and deploy-preview builds do not send visits.

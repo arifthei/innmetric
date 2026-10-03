@@ -230,59 +230,21 @@ header {
 }
 
 .wordmark {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 10px;
+  display: block;
+  height: 22px;
+  width: auto;
+  overflow: visible;
   flex-shrink: 0;
-  white-space: nowrap;
   user-select: none;
 }
 
-.wordmark-text {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.07em;
-  text-transform: lowercase;
-  color: var(--ink);
-  white-space: nowrap;
-}
-
-.wordmark-compact .wordmark-text {
-  font-size: 18px;
-}
-
-.wordmark-skew {
-  display: inline-block;
-  transform: skewX(-6deg);
+.wordmark-compact {
+  height: 18px;
 }
 
 .wordmark-dot {
-  position: relative;
-  width: 11px;
-  height: 11px;
-  margin-bottom: 2px;
-  background: var(--accent);
-  border-radius: 1px;
-  box-shadow: 0 0 14px rgba(47, 138, 132, 0.45);
-  flex-shrink: 0;
-}
-
-.wordmark-dot::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--accent);
-  filter: blur(7px);
-  opacity: 0.65;
-}
-
-footer .wordmark-text {
-  color: var(--paper);
-}
-
-footer .wordmark-dot {
-  box-shadow: 0 0 14px rgba(47, 138, 132, 0.7);
+  fill: var(--accent);
+  filter: drop-shadow(0 0 4px rgba(47, 138, 132, 0.45));
 }
 
 .nav-links {
@@ -1431,8 +1393,8 @@ footer a:hover {
     --gap: 16px;
   }
 
-  .wordmark-text {
-    font-size: 18px;
+  .wordmark {
+    height: 18px;
   }
 
   .menu-toggle {

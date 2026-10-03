@@ -1,6 +1,6 @@
 # Current handoff
 
-Checkpoint: 2026-09-27. Last writer: Cursor. Next action: Mert's search-console and email checks below. Mert is the only authority.
+Checkpoint: 2026-10-03. Last writer: Cursor. Next action: Mert's search-console and email checks below. Mert is the only authority.
 
 ## Resume here
 
@@ -14,6 +14,7 @@ Mert asked for a full audit of the site, copy, business fit and email, then auth
 - Security headers and single-hop `www` redirects in `netlify.toml`.
 - Env-gated Cloudflare Web Analytics.
 - Google tag `G-D71XSP5J7T` on production builds only. Privacy notice updated 27 September 2026.
+- Wordmark SVG at `/logo.svg`, used in the header and footer.
 
 ## Mert's actions
 

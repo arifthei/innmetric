@@ -2,6 +2,10 @@
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
+## 2026-10-03: wordmark SVG
+
+The header and footer use an SVG of the innmetric wordmark and square. The file is also at `/logo.svg`, transparent background, for signatures and other uses.
+
 ## 2026-09-27: Google Analytics
 
 The live site loads Google tag `G-D71XSP5J7T` on every page. Preview and local builds do not. The privacy notice now says Google Analytics may store a cookie.

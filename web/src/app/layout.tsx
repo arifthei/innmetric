@@ -74,9 +74,9 @@ const siteGraph = [
     email: "hello@innmetric.com",
     logo: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/icon/`,
-      width: 512,
-      height: 512,
+      url: `${SITE_URL}/logo.svg`,
+      width: 108,
+      height: 19,
     },
     image: `${SITE_URL}/opengraph-image/`,
     description: SITE_DESCRIPTION,
