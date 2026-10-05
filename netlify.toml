@@ -51,18 +51,6 @@
   force = true
 
 [[redirects]]
-  from = "/tr"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/tr/*"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/archive/*"
   to = "/"
   status = 301

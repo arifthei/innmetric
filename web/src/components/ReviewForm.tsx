@@ -196,7 +196,7 @@ export function ReviewForm() {
             required
             maxLength={5000}
             aria-describedby="outcome-hint"
-            placeholder="For example: reopened dates still show as closed on one channel. They should be available to book."
+            placeholder="For example: the booking page shows the dates closed. We reopened them and they should be bookable."
           />
           <p className="form-hint" id="outcome-hint">
             Include the affected channel and dates if useful. No passwords,

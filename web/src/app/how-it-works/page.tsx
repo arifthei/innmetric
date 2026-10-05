@@ -7,10 +7,10 @@ import { RecordSlip } from "@/components/RecordSlip";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Your hotel approves every change. InnMetric investigates across your existing systems, makes agreed corrections and hands over checked results and open issues.";
+  "Your hotel shows us the page and opens the systems. InnMetric follows the disagreement, makes the corrections you approve and hands over the booking result plus anything still open.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "How InnMetric works with your hotel team | InnMetric",
+  title: "You approve the change. The booking check finishes it. | InnMetric",
   description: DESCRIPTION,
   path: "/how-it-works/",
 });
@@ -18,13 +18,13 @@ export const metadata: Metadata = pageMetadata({
 const PHASES = [
   {
     verb: "Agree the scope",
-    yours: "Show us what guests see, what you expected and the systems involved.",
+    yours: "Show us what the page shows, what you meant to sell and the systems involved.",
     ours: "Propose the work and agree access, the result to check and who can approve changes.",
   },
   {
-    verb: "Investigate and correct",
+    verb: "Diagnose. Correct only in an agreed repair.",
     yours: "Provide the agreed access, answer questions about the setup and approve, defer or reject each proposed change.",
-    ours: "Trace the issue, explain the findings and make approved corrections with a way to reverse them.",
+    ours: "Trace the issue and explain the findings. Make a correction only inside an agreed repair and keep a way to reverse it.",
   },
   {
     verb: "Verify and hand over",
@@ -40,7 +40,7 @@ export default function HowItWorksPage() {
       <PageHero eyebrow="How it works" title="We do the investigation. You decide what changes.">
         <p className="lede">
           {t(
-            "You provide the context and agreed access. We follow the problem across the relevant systems and keep a record your team can use."
+            "Your team shows us the page and opens the systems. We follow the disagreement. You approve every change. The booking result says whether the issue is finished."
           )}
         </p>
       </PageHero>

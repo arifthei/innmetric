@@ -8,8 +8,8 @@ import {
 import { SITE_DESCRIPTION, SITE_URL } from "@/lib/site";
 
 const PHASES = [
-  "Agree the scope: the hotel shows what guests see, what it expected and the systems involved. InnMetric proposes the work and agrees access, the result to check and who approves changes.",
-  "Investigate and correct: InnMetric traces the issue, explains the findings and makes approved corrections with a way to reverse them. The hotel approves, defers or rejects each proposed change.",
+  "Agree the scope: the hotel shows what the page shows, what it meant to sell and the systems involved. InnMetric proposes the work and agrees access, the result to check and who approves changes.",
+  "Diagnose. Correct only in an agreed repair: InnMetric traces the issue and explains the findings, makes a correction only inside an agreed repair and keeps a way to reverse it. The hotel approves, defers or rejects each proposed change.",
   "Verify and hand over: InnMetric repeats the booking checks under the same conditions and hands over what changed, what remains open and any agreed rechecks.",
 ];
 

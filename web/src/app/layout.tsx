@@ -75,8 +75,8 @@ const siteGraph = [
     logo: {
       "@type": "ImageObject",
       url: `${SITE_URL}/logo.svg`,
-      width: 108,
-      height: 19,
+      width: 116,
+      height: 27,
     },
     image: `${SITE_URL}/opengraph-image/`,
     description: SITE_DESCRIPTION,

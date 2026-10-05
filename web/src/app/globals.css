@@ -402,7 +402,6 @@ p {
 
 .lede,
 .section-lead,
-.problem-card p,
 .row .row-state,
 .pair p,
 .checklist li,
@@ -474,10 +473,7 @@ p {
   flex-direction: column;
   gap: 18px;
   align-items: flex-start;
-}
-
-.grid.home-hero-grid {
-  align-items: center;
+  max-width: 38rem;
 }
 
 .section-links {
@@ -497,70 +493,6 @@ p {
   font-size: clamp(28px, 3.2vw, 40px);
   line-height: 1.18;
   letter-spacing: -0.04em;
-}
-
-.problem-wheel {
-  position: relative;
-  min-height: 520px;
-  cursor: grab;
-  user-select: none;
-  touch-action: none;
-}
-
-.problem-wheel:active {
-  cursor: grabbing;
-}
-
-.problem-wheel-stage {
-  position: relative;
-  height: 520px;
-  perspective: 1100px;
-  perspective-origin: center center;
-  transform-style: preserve-3d;
-}
-
-.problem-card-wheel {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(280px, 86%);
-  margin: 0;
-}
-
-.problem-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.problem-card {
-  background: var(--paper);
-  border: 1px solid var(--line-strong);
-  border-radius: 2px;
-  padding: 18px 18px 16px;
-}
-
-.problem-card h3 {
-  margin: 8px 0 10px;
-  font-size: 18px;
-  max-width: none;
-  text-wrap: balance;
-}
-
-.problem-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.problem-wheel .work-file-note {
-  justify-content: center;
-  border: 0;
-  margin-top: 56px;
-  color: var(--muted);
 }
 
 /* Uniform card rows. Equal height is enforced here, not per page. */
@@ -659,20 +591,6 @@ p {
 
 .card.primary {
   border-color: var(--ink);
-}
-
-.ticket-id {
-  display: block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-
-.card.primary .ticket-id {
-  color: var(--accent);
 }
 
 /* Three phases */

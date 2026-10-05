@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/PageChrome";
-import { ProblemWheel } from "@/components/ProblemWheel";
 import { Reveal } from "@/components/Reveal";
 import { CONTACT_CTA } from "@/lib/copy";
 import { FIT, NOT_FIT } from "@/lib/services";
@@ -9,10 +8,10 @@ import { pageMetadata } from "@/lib/site";
 import { t, TAIL } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Rooms available but missing online? InnMetric traces hotel availability and rate problems in your existing systems, makes approved fixes and checks the result.";
+  "When the booking page and the rooms you meant to sell disagree, InnMetric traces the gap in your existing systems, makes the changes you approve and checks what a guest can book.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Hotel availability and rate problems, traced | InnMetric",
+  title: "The booking page disagrees with the hotel | InnMetric",
   description: DESCRIPTION,
   path: "/",
 });
@@ -65,31 +64,31 @@ export default function HomePage() {
     <>
       <section className="section hero">
         <div className="frame">
-          <div className="grid wide-gap home-hero-grid">
-            <div className="col-6 hero-copy">
-              <span className="label">Hotel distribution support</span>
-              <h1>
-                {t(
-                  "You have rooms to sell. The booking page says otherwise.",
-                  TAIL.heading
-                )}
-              </h1>
-              <p className="lede">
-                {t(
-                  "We trace availability and rate problems through your existing hotel systems. Then we make the changes you approve and check what guests can book."
-                )}
-              </p>
-              <div className="hero-actions">
-                <Link className="button lg" href="/contact/">
-                  {CONTACT_CTA}
-                </Link>
-                <Link className="button ghost lg" href="/how-it-works/">
-                  See how we work
-                </Link>
-              </div>
-            </div>
-            <div className="col-6">
-              <ProblemWheel />
+          <div className="hero-copy">
+            <span className="label">When the page and the hotel disagree</span>
+            <h1>
+              {t(
+                "You have rooms to sell. The booking page says otherwise.",
+                TAIL.heading
+              )}
+            </h1>
+            <p className="lede">
+              {t(
+                "That split is the work. We trace it through the systems you already run. We change only what you approve. We check what a guest can book."
+              )}
+            </p>
+            <p>
+              {t(
+                "We don't install a new system. We don't set your rates. We don't sell another login."
+              )}
+            </p>
+            <div className="hero-actions">
+              <Link className="button lg" href="/contact/">
+                {CONTACT_CTA}
+              </Link>
+              <Link className="button ghost lg" href="/how-it-works/">
+                See how we work
+              </Link>
             </div>
           </div>
         </div>
@@ -98,11 +97,11 @@ export default function HomePage() {
       <section className="section" id="deliverables">
         <div className="frame stack">
           <Reveal className="intro">
-            <span className="label">What you get</span>
+            <span className="label">What you leave with</span>
             <h2>{t("See what's been checked, changed and left open.")}</h2>
             <p className="section-lead">
               {t(
-                "Your records cover the work we agree, from initial findings to the checks after a repair."
+                "The record is what you can use the next morning. It shows what the page did, what you approved and what is still wrong."
               )}
             </p>
           </Reveal>
@@ -123,7 +122,11 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Ways to work with us</span>
-            <h2>{t("Bring us in to investigate, repair or recheck.")}</h2>
+            <h2>
+              {t(
+                "Three ways to start. An audit ends in findings. A repair and a recheck end in a booking check."
+              )}
+            </h2>
             <p className="section-lead">
               {t(
                 "Each is a separate service. You can start with the findings your team already has."
@@ -155,7 +158,11 @@ export default function HomePage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Who we work with</span>
-            <h2>{t("For hotels selling across several channels.")}</h2>
+            <h2>
+              {t(
+                "A fit when you already have the systems and the page disagrees with them."
+              )}
+            </h2>
           </Reveal>
           <Reveal index={1}>
             <div className="cols-2">
@@ -182,7 +189,7 @@ export default function HomePage() {
 
       <CtaBand
         title="You don't need to know the cause to start."
-        lead="Tell us what guests see and what your hotel expected. We'll explain whether it fits our work and what we'd check first."
+        lead="Tell us what the page shows and what you meant to sell. We'll say whether that disagreement is our work and what we'd check first."
         email
       />
     </>

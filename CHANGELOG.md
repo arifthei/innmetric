@@ -4,6 +4,22 @@ A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ## Unreleased
 
+### Booking-page copy, 2026-10-05
+
+On branch `copy/booking-page`, from the comparison doc. Proposed wording is on the live pages. Blocks marked "Same words" were left as they were. Privacy and Terms were not edited. Not merged to `main`.
+
+- Footer stays logo, Privacy, Terms, Contact and hello@. No English-language sentence. The `/tr` redirects are removed. Nav and `Talk to us` stay.
+- Home: eyebrow, lede, refusals, "What you leave with", the three-ways heading, the fit heading, the close and the search title and description. The H1, deliverable items, offer sentences and fit lists stay. The share image still uses the H1. The problem carousel is removed.
+- Services: title, lede, search text, "Bookability is the job" and the close. The three offers and the boundary bodies stay.
+- How it works: lede, search text, phase 01 hotel line and phase 02 label plus InnMetric line. Phase 03, the booking-result paragraph and the close stay. `llms-full.txt` uses the same phase sentences.
+- About: lede, both bios, search text and the close. Titles, roles and portraits stay.
+- FAQ: title, lede, search text, the first two answers and the close. Questions 3 to 6 stay word for word.
+- Contact: title, lede, search text and the example placeholder. Fields, choices, consent and "Send enquiry" stay.
+- Copy lint rejects a comma before "and" or "or", so those commas were dropped and the words kept.
+- `web/public/logo.svg` keeps the header outlines, adds the asagi glow and an intrinsic size so the whole word and square stay in frame.
+
+Checks: `lint:copy` passed. ESLint passed. Browser on local Next: `/`, `/services/`, `/how-it-works/`, `/about/`, `/faq/` and `/contact/` at 390px, plus `/` and `/how-it-works/` at 1440px. No horizontal overflow. Footer line and the contact placeholder were visible. The homepage carousel was removed after that check.
+
 ### Wordmark SVG, 2026-10-03
 
 - Added `web/public/logo.svg`: the innmetric wordmark and asagi square on a transparent background, drawn from Figtree Bold with the same tight spacing and slanted t as the header.

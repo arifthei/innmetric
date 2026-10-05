@@ -1,10 +1,10 @@
 # Current handoff
 
-Checkpoint: 2026-10-03. Last writer: Cursor. Next action: Mert's search-console and email checks below. Mert is the only authority.
+Checkpoint: 2026-10-05. Last writer: Cursor. Next action: Mert reviews `copy/booking-page` before it joins `preview` or `main`. Mert is the only authority.
 
 ## Resume here
 
-Mert asked for a full audit of the site, copy, business fit and email, then authorized the technical fixes to be deployed directly. The fixes are on `preview` and `main`. The audit summary and open business decisions are in [AUDIT-2026-09-25](AGENT_EXCHANGE.md#audit-2026-09-25). Read [AGENTS](../AGENTS.md) and [Intent](INTENT.md).
+The comparison doc's proposed wording is on branch `copy/booking-page`, checked against each page. "Same words" blocks, Privacy and Terms, the fit lists and the three offer bodies were left in place. Mert then removed the homepage problem carousel. Not merged to `main`. The audit summary remains in [AUDIT-2026-09-25](AGENT_EXCHANGE.md#audit-2026-09-25). Read [AGENTS](../AGENTS.md) and [Intent](INTENT.md).
 
 ## Delivered
 

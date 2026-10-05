@@ -2,6 +2,10 @@
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
+## 2026-10-05: booking-page copy
+
+Branch `copy/booking-page`. The public pages now use the comparison doc's proposed wording. The position is the disagreement between the booking page and what the hotel meant to sell. Offers, fit lists, refusals and the approval rule stay. Privacy and Terms stay. This is not on `main`.
+
 ## 2026-10-03: wordmark SVG
 
 The header and footer use an SVG of the innmetric wordmark and square. The file is also at `/logo.svg`, transparent background, for signatures and other uses.

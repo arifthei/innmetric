@@ -40,7 +40,7 @@ The lede, closing bands, submit label and other supporting sentences are editabl
 
 Keep the three offer names: Distribution Baseline Audit, Approved Repair Sprint and Ongoing Distribution Control. Name findings, approved changes with reversal, repeat booking checks and a handover with open items and agreed rechecks. Those are delivered as applicable to the selected scope; an audit does not imply completed repair work.
 
-The current structure stays: homepage hook, four-card problem wheel, useful deliverables, offers, fit and invitation. No ticket row or homepage FAQ. How it works has three phases with Your team / InnMetric responsibilities and a static illustrative slip. FAQ keeps its six buyer-search questions. About puts the founders before repeated process explanations, retaining the portraits, sourced biography facts and responsive cards. Contact uses one focused column, with concise privacy information near consent and submission. [WRITING.md](WRITING.md) defines each page's job without forcing a visitor through every page or repeating the same closing headline everywhere.
+The current structure stays: homepage hook, useful deliverables, offers, fit and invitation. No ticket row or homepage FAQ. How it works has three phases with Your team / InnMetric responsibilities and a static illustrative slip. FAQ keeps its six buyer-search questions. About puts the founders before repeated process explanations, retaining the portraits, sourced biography facts and responsive cards. Contact uses one focused column, with concise privacy information near consent and submission. [WRITING.md](WRITING.md) defines each page's job without forcing a visitor through every page or repeating the same closing headline everywhere.
 
 ## Form and privacy contract
 
@@ -54,7 +54,7 @@ The collector turns on only when `CONTEXT === "production"` and `INNMETRIC_FORMS
 
 Sanzo Wada: paper `#F3EDE0`, wash `#D5E4D4`, ink `#1C1917`, asagi `#2F8A84`, press `#2A6B68`, kaki `#8A4B2E`. Preserve the remaining current palette variables too. **Not bookable** uses kaki, never brand turquoise. No HotelRunner orange or former Codex spa palette.
 
-Wordmark: lowercase `innmetric` with a small asagi square glow. Keep Figtree, the four wheel titles and motion/reduced-motion behavior. Mert permits targeted layout/CSS edits when the brief calls for them; no palette change. Preserve Cursor's founder wrap and column fixes.
+Wordmark: lowercase `innmetric` with a small asagi square glow. Keep Figtree and motion/reduced-motion behavior. The homepage problem carousel is gone. Mert permits targeted layout/CSS edits when the brief calls for them; no palette change. Preserve Cursor's founder wrap and column fixes.
 
 `main` is live innmetric.com (Next in `web/`). Public copy is always production-shaped. `metadataBase` is `https://innmetric.com`. Founder portraits belong on About only. See [BRANCHES.md](BRANCHES.md).
 

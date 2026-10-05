@@ -7,9 +7,9 @@ import { Reveal } from "@/components/Reveal";
 import { t } from "@/lib/typeset";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Hotel booking engine and OTA rate questions | InnMetric",
+  title: "Availability, rates and where the work stops | InnMetric",
   description:
-    "Answers on missing hotel availability, rate differences, channel manager setups and the services InnMetric covers.",
+    "Answers on missing availability, rate differences and channel setups and on the work InnMetric does not take: installation, pricing and listing content.",
   path: "/faq/",
 });
 
@@ -32,7 +32,13 @@ export default function FaqPage() {
   return (
     <>
       <JsonLd data={FAQ_SCHEMA} />
-      <PageHero eyebrow="FAQ" title="Availability, rates and where we can step in." />
+      <PageHero eyebrow="FAQ" title="If the page and the hotel disagree, start here.">
+        <p className="lede">
+          {t(
+            "The answers below are about whether a guest can book what you meant to sell. Installation, pricing and listing content sit outside the work."
+          )}
+        </p>
+      </PageHero>
       <section className="section wash">
         <div className="frame stack">
           <Reveal>
@@ -49,7 +55,7 @@ export default function FaqPage() {
       </section>
       <CtaBand
         title="Ask us about your situation."
-        lead="Tell us which channel is affected and what you expected to see. We'll explain whether our work covers it."
+        lead="Tell us which channel is affected, what the page shows and what you meant to sell. We'll say whether our work covers it."
       />
     </>
   );

@@ -8,10 +8,10 @@ import { Reveal } from "@/components/Reveal";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Compare InnMetric's hotel distribution audit, approved repair sprint and scheduled checks. See the deliverables, responsibilities and service limits.";
+  "Compare a baseline audit, an approved repair and scheduled checks. Each one stays inside the systems you already run and live corrections stay out of the audit.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Hotel distribution audit, repair and control | InnMetric",
+  title: "An audit, a repair or a check of the booking page | InnMetric",
   description: DESCRIPTION,
   path: "/services/",
 });
@@ -41,10 +41,10 @@ export default function ServicesPage() {
   return (
     <>
       <JsonLd data={SERVICES_SCHEMA} />
-      <PageHero eyebrow="Services" title="Choose an audit, a repair or ongoing checks.">
+      <PageHero eyebrow="Services" title="Start from the page that disagrees.">
         <p className="lede">
           {t(
-            "Each service works with the systems you already use. Here's what you get and where our work stops."
+            "An audit names the gap. A repair changes what you approve and checks the booking again. Ongoing checks catch the gap when it returns. Your systems stay."
           )}
         </p>
         <nav className="section-links" aria-label="Compare services">
@@ -86,7 +86,7 @@ export default function ServicesPage() {
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">Scope</span>
-            <h2>{t("Where our work starts and stops.")}</h2>
+            <h2>{t("Bookability is the job.")}</h2>
           </Reveal>
           <Reveal index={1}>
             <ul className="rows">
@@ -102,8 +102,8 @@ export default function ServicesPage() {
       </section>
 
       <CtaBand
-        title="Not sure which service you need?"
-        lead="Describe the problem and any work already done. We'll suggest a starting point, including if you need a different kind of provider."
+        title="Not sure which disagreement you are looking at?"
+        lead="Describe what the page shows and what you meant to sell. Mention any work already done. We'll suggest a starting point, including when you need a different kind of provider."
       />
     </>
   );
