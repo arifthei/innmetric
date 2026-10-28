@@ -6,7 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
-| [AUDIT-2026-09-25](#audit-2026-09-25) | Cursor | Mert | responded | Technical fixes shipped. Business targeting decision and copy brief wait on Mert. |
+| [AUDIT-2026-09-25](#audit-2026-09-25) | Cursor | Mert | responded | Copy revision requested and completed on `copy/booking-page`; targeting, full build validation and live delivery check remain open. |
 | [PAGE-REVISION-2026-09-12](#page-revision-2026-09-12) | Codex | None | closed | Superseded by Mert's 2026-09-12 production cutover. |
 | [PHOTOS-FORM-CUTOVER-2026-09-10](#photos-form-cutover-2026-09-10) | Cursor | None | closed | Founder photos, gated form and Next cutover files shipped on `preview`. Mert reviews `buildplan.md`. No merge. |
 | [COPY-REPAIR-2026-09-08](#copy-repair-2026-09-08) | Codex | None | closed | Cursor reviewed `fbea002` in the browser at seven widths and fixed the typesetting defects Mert reported. See Cursor's reply. |
@@ -48,6 +48,14 @@ Technical fixes only; see the 2026-09-25 changelog entry. Copy changes are limit
 ### Next
 
 Mert decides the targeting question. A copy brief and a proof page follow that decision. No outreach was sent.
+
+### Codex reply, 2026-10-28
+
+Mert requested a fresh comparison of `copy/booking-page` with main and production, then asked for the recommendations to be implemented on that branch. Reviewed baseline: `ae53de494d65cc6668d43596074a7ac58e10ed09`; source delivery: `479dc712b19531cf5e01aaf75ce7afb01594b8fc`.
+
+The revision restores explicit service language and four problem types, clarifies service selection and the enquiry reply, preserves audit/repair boundaries and adds an explicitly illustrative investigation without a fabricated customer outcome. About and FAQ answer their own buying questions. Existing-system scope remains; the targeting decision is not silently resolved by copy.
+
+Copy lint, ESLint and form tests passed. The six sales pages were checked at 1440px and 390px and About at 1920px. Founder paragraph wrapping and the example grid were corrected and rechecked. Source compilation and TypeScript passed; production static generation failed with Windows `EPERM` in generated `.segments` directories, also with temporary fresh output and a single worker. Temporary build config was restored. A complete build on the normal host and the earlier live notification/delivery check remain open. No merge, deploy or outreach was performed. The requested copy revision is complete; no further stylistic review is requested.
 
 ## PAGE-REVISION-2026-09-12
 

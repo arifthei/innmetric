@@ -1,6 +1,6 @@
 # Current InnMetric intent
 
-Updated 2026-09-12. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`. Website work lands on `preview` and merges to `main` when Mert authorizes. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
+Updated 2026-10-28. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`. Website work lands on `preview` unless Mert names another branch and merges to `main` when Mert authorizes. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
 
 ## The service and the reader
 
@@ -11,6 +11,8 @@ Write to the hotel owner, GM, commercial, revenue, distribution or operations de
 The first purchase is a service. Do not claim an AI product, SaaS, autonomous pricing, validated prices, customer outcomes, revenue recovery or a launch timetable. No public GCC hook, real prospect names or founder full names on the homepage. Founder biographies belong on About.
 
 ## Decisions retained by Mert
+
+On 2026-10-28 Mert requested revision of `copy/booking-page` according to Codex's comparison with main and production. This authorizes the clearer service and enquiry copy, retention of the four business cases without the carousel and an explicitly illustrative worked example. The revision retains the current service scope; it does not authorize installation, a targeting change or a production cutover.
 
 Mert's 2026-09-12 request authorizes implementing a corrected version of the attached build revision plan on `preview`, including surgical copy and layout changes. It explicitly allows judgment on the H1 and primary CTA, superseding the older exact-string locks. Complete the page chunks and checks under that authorization; the attachment's repeated page-by-page approval gates do not apply. Distinguish user decisions from agent-authored wording.
 

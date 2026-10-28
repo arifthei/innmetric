@@ -1,10 +1,17 @@
 # Current handoff
 
-Checkpoint: 2026-10-05. Last writer: Cursor. Next action: Mert reviews `copy/booking-page` before it joins `preview` or `main`. Mert is the only authority.
+Checkpoint: 2026-10-28. Last writer: Codex. Next action: Mert reviews the revised `copy/booking-page`; the production build must pass on the normal build host before cutover. Mert is the only authority.
 
 ## Resume here
 
-The comparison doc's proposed wording is on branch `copy/booking-page`, checked against each page. "Same words" blocks, Privacy and Terms, the fit lists and the three offer bodies were left in place. Mert then removed the homepage problem carousel. Not merged to `main`. The audit summary remains in [AUDIT-2026-09-25](AGENT_EXCHANGE.md#audit-2026-09-25). Read [AGENTS](../AGENTS.md) and [Intent](INTENT.md).
+Mert requested the latest copy audit be implemented on `copy/booking-page`. Source revision `479dc712b19531cf5e01aaf75ce7afb01594b8fc` follows baseline `ae53de494d65cc6668d43596074a7ac58e10ed09`. Home explains the service and four problem types, Services clarifies the engagement choices and Contact explains the email reply. How it works contains a clearly illustrative investigation with an unresolved result. About and FAQ have distinct page roles and descriptive search text. The carousel remains removed. Existing service scope, fit lists, offer bodies, required form fields, Privacy and Terms remain intact. Not merged to `main`.
+
+## Revision checks
+
+- Copy lint, ESLint and existing form tests passed. A separate editorial review found no factual or scope defects.
+- Source revision `479dc712b19531cf5e01aaf75ce7afb01594b8fc` was checked in the local browser: all six sales pages at 1440px and 390px, with About also at 1920px. DOM width checks and visual inspection of Home, Contact and the worked example found two narrow-screen issues; the delivery corrects founder paragraph wrapping and the example grid. Both were rechecked with no remaining horizontal overflow. Kaki status retained.
+- Production build compilation and TypeScript checks passed, but static generation failed with Windows `EPERM` while creating generated `.segments` directories. A fresh temporary output directory and a single-worker retry produced the same class of error. Temporary config and TypeScript changes were restored; no build configuration change ships. A complete production build remains unverified.
+- No production form submission, merge or deployment was performed. The existing live notification/delivery check remains open.
 
 ## Delivered
 
@@ -27,4 +34,4 @@ The comparison doc's proposed wording is on branch `copy/booking-page`, checked 
 
 ## Open decision
 
-Current prospect lists target hotels without a working booking engine, while the site's fit requires an existing PMS, channel manager and booking engine. Either the targeting or the offer changes. Copy rewrite and a proof page wait for that decision.
+Current prospect lists target hotels without a working booking engine, while the site's fit requires an existing PMS, channel manager and booking engine. The authorized copy revision retains the existing-system service. An absent engine or a first-time installation remains outside scope; an existing engine with incorrect booking results can fit. The targeting decision is still open. The new worked example illustrates the method and is not customer proof.

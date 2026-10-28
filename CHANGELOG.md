@@ -4,6 +4,19 @@ A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ## Unreleased
 
+### Booking-page audit revision, 2026-10-28
+
+Requested by Mert on `copy/booking-page`. Source commit `479dc712b19531cf5e01aaf75ce7afb01594b8fc`, based on `ae53de494d65cc6668d43596074a7ac58e10ed09`. Not merged to `main`.
+
+- Restored the concrete service explanation and descriptive metadata. Retained the H1 and added the four business cases as static prose.
+- Clarified service selection, audit/repair boundaries and the limited scope of scheduled checks. Retained offer names, bodies and fit criteria.
+- Explained the enquiry reply, made channel/date context explicitly optional and aligned the confirmation copy. Required fields and sending behavior are unchanged.
+- Replaced the small sample slip with an illustrative investigation covering intent, observation, matched conditions, uncertainty, next checks, conditional repair and an open result. No customer outcome is claimed.
+- Restored distinct About/FAQ page purposes and preserved the FAQ's careful cause language. Updated the LLM process summary to match.
+- Browser checks found and corrected narrow founder paragraph wrapping and the verification section's mobile grid overflow. Palette and carousel removal are preserved.
+
+Validation: copy lint, ESLint, existing form tests and diff whitespace checks passed. Browser checks on the source commit above covered the six sales routes at 1440px and 390px and About at 1920px, with the repaired layouts rechecked. Production build compilation and type checking passed; static generation remains blocked by Windows `EPERM` creating generated `.segments` directories, including in a fresh output directory with one worker. Temporary build configuration changes were restored. Full build success and live form delivery are not claimed.
+
 ### Booking-page copy, 2026-10-05
 
 On branch `copy/booking-page`, from the comparison doc. Proposed wording is on the live pages. Blocks marked "Same words" were left as they were. Privacy and Terms were not edited. Not merged to `main`.

@@ -2,6 +2,12 @@
 
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
+## 2026-10-28: booking-page audit revision
+
+On `copy/booking-page`, source commit `479dc712b19531cf5e01aaf75ce7afb01594b8fc`. The homepage retains its hook and explains availability, rates, reopened dates and recurring issues. Services makes the three engagement choices explicit. Contact explains what to send and what the founder's email reply will cover. How it works shows an illustrative investigation with an unresolved outcome. About and FAQ return to their distinct buying questions. Two mobile wrapping/grid issues found during browser checks are corrected.
+
+Copy lint, ESLint and form tests passed. Browser checks covered desktop and mobile. The production build compiled and type-checked but static generation hit Windows file-permission errors; full build validation remains open. No production cutover or live form submission was performed.
+
 ## 2026-10-05: booking-page copy
 
 Branch `copy/booking-page`. The public pages now use the comparison doc's proposed wording. The position is the disagreement between the booking page and what the hotel meant to sell. Offers, fit lists, refusals and the approval rule stay. Privacy and Terms stay. This is not on `main`.
