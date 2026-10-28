@@ -6,7 +6,7 @@ A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ### Booking-page audit revision, 2026-10-28
 
-Requested by Mert on `copy/booking-page`. Source commit `479dc712b19531cf5e01aaf75ce7afb01594b8fc`, based on `ae53de494d65cc6668d43596074a7ac58e10ed09`. Not merged to `main`.
+Requested by Mert on `copy/booking-page`. Source commit `479dc712b19531cf5e01aaf75ce7afb01594b8fc`, based on `ae53de494d65cc6668d43596074a7ac58e10ed09`. Mert authorized cutover; `main` is `467c9e2`.
 
 - Restored the concrete service explanation and descriptive metadata. Retained the H1 and added the four business cases as static prose.
 - Clarified service selection, audit/repair boundaries and the limited scope of scheduled checks. Retained offer names, bodies and fit criteria.
@@ -19,7 +19,7 @@ Validation: copy lint, ESLint, existing form tests and diff whitespace checks pa
 
 ### Booking-page copy, 2026-10-05
 
-On branch `copy/booking-page`, from the comparison doc. Proposed wording is on the live pages. Blocks marked "Same words" were left as they were. Privacy and Terms were not edited. Not merged to `main`.
+On branch `copy/booking-page`, from the comparison doc. Proposed wording is on the live pages. Blocks marked "Same words" were left as they were. Privacy and Terms were not edited. Shipped to `main` with the 2026-10-28 cutover.
 
 - Footer stays logo, Privacy, Terms, Contact and hello@. No English-language sentence. The `/tr` redirects are removed. Nav and `Talk to us` stay.
 - Home: eyebrow, lede, refusals, "What you leave with", the three-ways heading, the fit heading, the close and the search title and description. The H1, deliverable items, offer sentences and fit lists stay. The share image still uses the H1. The problem carousel is removed.

@@ -1,10 +1,10 @@
 # Current handoff
 
-Checkpoint: 2026-10-28. Last writer: Codex. Next action: Mert reviews the revised `copy/booking-page`; the production build must pass on the normal build host before cutover. Mert is the only authority.
+Checkpoint: 2026-10-28. Last writer: Cursor. Next action: confirm innmetric.com built from `main` at `467c9e2`. Mert is the only authority.
 
 ## Resume here
 
-Mert requested the latest copy audit be implemented on `copy/booking-page`. Source revision `479dc712b19531cf5e01aaf75ce7afb01594b8fc` follows baseline `ae53de494d65cc6668d43596074a7ac58e10ed09`. Home explains the service and four problem types, Services clarifies the engagement choices and Contact explains the email reply. How it works contains a clearly illustrative investigation with an unresolved result. About and FAQ have distinct page roles and descriptive search text. The carousel remains removed. Existing service scope, fit lists, offer bodies, required form fields, Privacy and Terms remain intact. Not merged to `main`.
+Mert authorized the production cutover after Codex's commits were verified on GitHub `copy/booking-page`. `main` fast-forwarded to `467c9e2` (Codex copy `479dc71`, then Codex's validation record). Home explains the service and four problem types, Services clarifies the engagement choices and Contact explains the email reply. How it works contains a clearly illustrative investigation with an unresolved result. About and FAQ have distinct page roles. The carousel, English footer sentence and `/tr` redirects stay off. Existing service scope, fit lists, offer bodies, required form fields, Privacy and Terms remain intact. PR #1 was not merged.
 
 ## Revision checks
 
