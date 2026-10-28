@@ -7,9 +7,9 @@ import { Reveal } from "@/components/Reveal";
 import { t } from "@/lib/typeset";
 
 export const metadata: Metadata = pageMetadata({
-  title: "The two people who do the work | InnMetric",
+  title: "Meet the founders of InnMetric | Hotel distribution",
   description:
-    "Tunahan Aras follows the booking path through the hotel's systems. Mert Carikci keeps the findings, the approval and the booking check in one record. You work with both of them.",
+    "Meet Tunahan Aras and Mert Carikci, the founders who bring hotel distribution and product operations experience to InnMetric's investigation and repair work.",
   path: "/about/",
 });
 
@@ -22,7 +22,7 @@ const FOUNDERS = [
       jpg: "/founders/tunahan.jpg",
     },
     body: [
-      "Tunahan follows a booking through the property system, the channel manager, the booking engine and the listings, until the page and the hotel agree or the open point is named. His background is hotel technology, operations and integrations.",
+      "Tunahan's background is in hotel technology, operations and integrations. He applies that experience to tracing availability and rate problems across the systems your hotel already uses.",
     ],
   },
   {
@@ -33,7 +33,8 @@ const FOUNDERS = [
       jpg: "/founders/mert.jpg",
     },
     body: [
-      "Mert keeps the work in an order your team can follow: what was found, what was approved, what changed and what the booking check showed afterwards. His background is product ownership and systems analysis for live operations and complex integrations.",
+      "Mert's background is in product ownership and systems analysis for regulated platforms, live operations and complex integrations.",
+      "He keeps findings, approvals, change records and booking checks organized so your team can follow the work.",
     ],
   },
 ];
@@ -67,7 +68,7 @@ export default function AboutPage() {
       >
         <p className="lede">
           {t(
-            "Tunahan follows the booking path through the systems that produce it. Mert keeps what was found, what you approved and what the next booking check showed. A founder answers."
+            "InnMetric brings hotel distribution experience and product operations together to investigate booking problems across systems. We carry out the work and answer your team's questions directly."
           )}
         </p>
       </PageHero>
@@ -98,7 +99,7 @@ export default function AboutPage() {
                       </span>
                     </h3>
                     {founder.body.map((paragraph) => (
-                      <p key={paragraph}>{t(paragraph)}</p>
+                      <p key={paragraph}>{t(paragraph, 18)}</p>
                     ))}
                   </div>
                 </article>
@@ -109,8 +110,8 @@ export default function AboutPage() {
       </section>
 
       <CtaBand
-        title="Ask us about the page that disagrees."
-        lead="A founder will reply. Describe what guests can book and what you meant to sell. We'll say whether we're the right people to take it on."
+        title="Ask us about your hotel's setup."
+        lead="Describe what's happening and we'll discuss whether we're the right people to take it on."
       />
     </>
   );

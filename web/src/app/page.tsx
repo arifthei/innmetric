@@ -8,10 +8,10 @@ import { pageMetadata } from "@/lib/site";
 import { t, TAIL } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "When the booking page and the rooms you meant to sell disagree, InnMetric traces the gap in your existing systems, makes the changes you approve and checks what a guest can book.";
+  "Rooms available but missing online? InnMetric traces hotel availability and rate problems in your existing systems, makes approved fixes and checks the result.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "The booking page disagrees with the hotel | InnMetric",
+  title: "Hotel availability and rate problems, traced | InnMetric",
   description: DESCRIPTION,
   path: "/",
 });
@@ -65,7 +65,7 @@ export default function HomePage() {
       <section className="section hero">
         <div className="frame">
           <div className="hero-copy">
-            <span className="label">When the page and the hotel disagree</span>
+            <span className="label">Hotel distribution support</span>
             <h1>
               {t(
                 "You have rooms to sell. The booking page says otherwise.",
@@ -74,12 +74,12 @@ export default function HomePage() {
             </h1>
             <p className="lede">
               {t(
-                "That split is the work. We trace it through the systems you already run. We change only what you approve. We check what a guest can book."
+                "We trace availability and rate problems through your existing hotel systems. Then we make the changes you approve and check what guests can book."
               )}
             </p>
             <p>
               {t(
-                "We don't install a new system. We don't set your rates. We don't sell another login."
+                "We investigate missing availability, unexpected rates, dates still closed after reopening and booking problems that return after a correction."
               )}
             </p>
             <div className="hero-actions">
@@ -97,13 +97,14 @@ export default function HomePage() {
       <section className="section" id="deliverables">
         <div className="frame stack">
           <Reveal className="intro">
-            <span className="label">What you leave with</span>
+            <span className="label">What you get</span>
             <h2>{t("See what's been checked, changed and left open.")}</h2>
             <p className="section-lead">
               {t(
-                "The record is what you can use the next morning. It shows what the page did, what you approved and what is still wrong."
+                "Your team can see what needs attention, which changes were approved and what the booking checks confirmed. Unresolved findings and vendor actions stay visible."
               )}
             </p>
+            <p>{t("Deliverables depend on the service agreed. An audit provides findings; live corrections are a separate scope.")}</p>
           </Reveal>
           <Reveal index={1}>
             <ul className="rows">
@@ -124,7 +125,7 @@ export default function HomePage() {
             <span className="label">Ways to work with us</span>
             <h2>
               {t(
-                "Three ways to start. An audit ends in findings. A repair and a recheck end in a booking check."
+                "Bring us in to investigate, repair or recheck."
               )}
             </h2>
             <p className="section-lead">
@@ -160,7 +161,7 @@ export default function HomePage() {
             <span className="label">Who we work with</span>
             <h2>
               {t(
-                "A fit when you already have the systems and the page disagrees with them."
+                "For hotels selling across several channels."
               )}
             </h2>
           </Reveal>
@@ -189,7 +190,7 @@ export default function HomePage() {
 
       <CtaBand
         title="You don't need to know the cause to start."
-        lead="Tell us what the page shows and what you meant to sell. We'll say whether that disagreement is our work and what we'd check first."
+        lead="Tell us what guests see and what your hotel expected. We'll explain whether it fits our work and what we'd check first."
         email
       />
     </>

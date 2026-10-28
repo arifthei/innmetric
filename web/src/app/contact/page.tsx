@@ -6,10 +6,10 @@ import { ReviewForm } from "@/components/ReviewForm";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Describe what the booking page shows and what your hotel meant to sell. A founder reviews the enquiry and replies about the next step.";
+  "Describe your hotel's availability or rate problem. A founder reviews your enquiry and replies by email about whether we can take it on and what we'd check first.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Tell us what the page shows | InnMetric",
+  title: "Talk through a hotel booking problem | InnMetric",
   description: DESCRIPTION,
   path: "/contact/",
 });
@@ -29,12 +29,12 @@ export default function ContactPage() {
       />
       <PageHero
         eyebrow="Contact"
-        title="Tell us what the page shows and what you meant to sell."
+        title="Tell us about the booking problem."
         contentClassName="contact-width"
       >
         <p className="lede">
           {t(
-            "You don't need the cause. Name the channel, the dates and the result you expected. A founder reads it."
+            "Tell us what is happening and what you want to change. Include the affected channel and dates if you have them. You don't need to know the cause."
           )}
         </p>
       </PageHero>

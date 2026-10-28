@@ -88,7 +88,7 @@ export function ReviewForm() {
         </h2>
         <p className="section-lead">
           {t(
-            "A founder will review the details and reply from an @innmetric.com address."
+            "A founder will reply from an @innmetric.com address about whether we can take it on and what we'd check first."
           )}
         </p>
       </div>
@@ -196,7 +196,7 @@ export function ReviewForm() {
             required
             maxLength={5000}
             aria-describedby="outcome-hint"
-            placeholder="For example: the booking page shows the dates closed. We reopened them and they should be bookable."
+            placeholder="For example: We reopened these dates, but they still show as unavailable on one channel."
           />
           <p className="form-hint" id="outcome-hint">
             Include the affected channel and dates if useful. No passwords,
@@ -225,7 +225,8 @@ export function ReviewForm() {
           {sending ? "Sending..." : "Send enquiry"}
         </button>
         <span className="form-note">
-          A founder will review your enquiry and reply about the next step.
+          A founder will review your enquiry and reply by email about whether we
+          can take it on and what we would check first.
         </span>
       </div>
       <p className="form-alternative">

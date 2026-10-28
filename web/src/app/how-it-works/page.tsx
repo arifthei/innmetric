@@ -7,10 +7,10 @@ import { RecordSlip } from "@/components/RecordSlip";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Your hotel shows us the page and opens the systems. InnMetric follows the disagreement, makes the corrections you approve and hands over the booking result plus anything still open.";
+  "See how InnMetric investigates hotel distribution problems, agrees access and approvals with your team and checks the booking result after an agreed repair.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "You approve the change. The booking check finishes it. | InnMetric",
+  title: "How InnMetric works with your hotel team | InnMetric",
   description: DESCRIPTION,
   path: "/how-it-works/",
 });
@@ -18,18 +18,18 @@ export const metadata: Metadata = pageMetadata({
 const PHASES = [
   {
     verb: "Agree the scope",
-    yours: "Show us what the page shows, what you meant to sell and the systems involved.",
+    yours: "Show us what guests can book, what you expected and the systems involved.",
     ours: "Propose the work and agree access, the result to check and who can approve changes.",
   },
   {
-    verb: "Diagnose. Correct only in an agreed repair.",
+    verb: "Investigate and agree any correction",
     yours: "Provide the agreed access, answer questions about the setup and approve, defer or reject each proposed change.",
     ours: "Trace the issue and explain the findings. Make a correction only inside an agreed repair and keep a way to reverse it.",
   },
   {
     verb: "Verify and hand over",
     yours: "Review the results and decide who will handle any remaining actions.",
-    ours: "Repeat the booking checks under the same conditions. Hand over what changed, what remains open and any agreed rechecks.",
+    ours: "After an agreed repair, repeat the booking checks under the same conditions. Hand over the findings, any changes, open issues and agreed rechecks.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function HowItWorksPage() {
       <PageHero eyebrow="How it works" title="We do the investigation. You decide what changes.">
         <p className="lede">
           {t(
-            "Your team shows us the page and opens the systems. We follow the disagreement. You approve every change. The booking result says whether the issue is finished."
+            "Your team provides the context and agreed access. We investigate across the relevant systems. If you commission a repair, you approve each change and we check the booking result."
           )}
         </p>
       </PageHero>
