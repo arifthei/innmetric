@@ -6,7 +6,7 @@ import { ReviewForm } from "@/components/ReviewForm";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Describe your hotel's availability or rate problem. A founder reviews your enquiry and replies by email about whether we can take it on and what we'd check first.";
+  "Describe your hotel's search visibility, booking or rate problem. A founder reviews your enquiry and replies by email about the work and what we'd check first.";
 
 export const metadata: Metadata = pageMetadata({
   title: "Talk through a hotel booking problem | InnMetric",

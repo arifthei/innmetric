@@ -6,6 +6,7 @@ Shared feedback and replies for InnMetric website work on `preview`. Mert is the
 
 | Thread | From | Next agent | Status | Next action |
 | --- | --- | --- | --- | --- |
+| [B2B-B2G-2026-11-15](#b2b-b2g-2026-11-15) | Codex | Frontend reviewer on a normal host | open verification only | Content implementation complete. Full production build and browser checks remain blocked locally; see Handoff. |
 | [AUDIT-2026-09-25](#audit-2026-09-25) | Cursor | Mert | responded | Copy revision on `copy/booking-page` merged to `main` at `467c9e2`. Confirm the live Netlify build. Targeting and live form delivery remain open. |
 | [PAGE-REVISION-2026-09-12](#page-revision-2026-09-12) | Codex | None | closed | Superseded by Mert's 2026-09-12 production cutover. |
 | [PHOTOS-FORM-CUTOVER-2026-09-10](#photos-form-cutover-2026-09-10) | Cursor | None | closed | Founder photos, gated form and Next cutover files shipped on `preview`. Mert reviews `buildplan.md`. No merge. |
@@ -26,6 +27,16 @@ Use `open` when a response is needed, `responded` when the next agent should rea
 Include replies with the related authorized code or documentation commit. Keep [HANDOFF.md](HANDOFF.md) to the current state and next action, [CHANGELOG.md](../CHANGELOG.md) to delivered changes and [RELEASE_NOTES.md](RELEASE_NOTES.md) to the preview candidate's scope. Add a new thread only for a distinct issue requiring another agent's response. Do not duplicate this discussion in NOTICE files, old branches or PR #1.
 
 Cursor's [project rule](../.cursor/rules/innmetric-handoff.mdc) makes this a startup instruction, using its documented [Always Apply rule format](https://cursor.com/docs/rules). Codex and other agents enter through `AGENTS.md`. This is a durable inbox, not a background watcher: an idle session must run and sync before it can read a new message. No automatic wake-up or acknowledgement is implied.
+
+## B2B-B2G-2026-11-15
+
+**From:** Codex. **Authority:** Mert's request to add the approved B2B/B2G one-page content verbatim, preserve design and existing context, then commit and push. **Baseline:** `f08dd3653e30733cfc4b959c0484c0b2fdd3f644`, verified on GitHub main and preview before editing. Work uses an isolated checkout; the earlier `copy/booking-page` checkout's local changes were preserved.
+
+Home presents the exact public infographic copy. Services and How it works retain their separate buying and delivery roles. A proposed Tourism programme page explains department custody, joint approvals, collected savings contributions, other hotels and paid suppliers. The latest user scope supersedes the old exclusions on search visibility and AI wording. Source editorial notes stay private.
+
+Content/source review is complete. It found a missing explicit joint-approval statement and a long narrow-screen link; both were corrected. Copy lint, ESLint, TypeScript, form tests and seven-route source rendering pass, including 23 exact-copy assertions. This is not a buyer or browser test.
+
+Verification remains open for the next frontend reviewer on a normal host: run the complete production build and inspect the seven sales pages at desktop/mobile, particularly the new overview, fund flow and navigation. Windows `EPERM` blocked nested static export writes; Chromium and local browser access were also blocked. Temporary worker settings were restored. Do not treat older screenshots as this revision's evidence or start another stylistic rewrite. Production cutover requires Mert's separate instruction under AGENTS.
 
 ## AUDIT-2026-09-25
 

@@ -1,7 +1,7 @@
 export const FAQ = [
   {
     q: "Why is my hotel booking engine showing no availability?",
-    a: "A room mapping, a restriction or an allotment can leave the page out of line with what you meant to sell. If the booking engine won't load, contact its provider. If it loads but omits rooms you expect to sell, compare the setup with the booking result. We investigate that gap with your team.",
+    a: "A room mapping, restriction or allotment can leave the page out of line with what you meant to sell. We compare the setup with the guest's booking steps. If a link, booking engine or checkout fails, we investigate the connection and coordinate any provider action. Your hotel approves live changes.",
   },
   {
     q: "Why are my hotel rates different on Booking.com?",
@@ -21,6 +21,6 @@ export const FAQ = [
   },
   {
     q: "Who can manage our hotel OTA listings?",
-    a: "For content, photos and visibility, look for an OTA listing management service. InnMetric checks rates, availability and mappings on agreed channels. Our ongoing service doesn't manage listings or ranking.",
+    a: "InnMetric checks rates, availability and mappings on agreed channels. We also work on direct search visibility, website room content and booking links. Full OTA listing management, photography and wider marketing campaigns need a separate provider. A higher search position or cheaper offer alone does not establish a fault.",
   },
 ];

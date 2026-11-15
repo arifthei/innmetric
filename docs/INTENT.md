@@ -1,16 +1,20 @@
 # Current InnMetric intent
 
-Updated 2026-10-28. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`. Website work lands on `preview` unless Mert names another branch and merges to `main` when Mert authorizes. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
+Updated 2026-11-15. Mert is the only authority. Canonical repository: `https://github.com/arifthei/innmetric.git`. Website work lands on `preview` unless Mert names another branch and merges to `main` when Mert authorizes. Latest explicit user instruction wins. [AGENTS.md](../AGENTS.md) owns Git and deployment procedure; this file owns current product and user decisions.
 
 ## The service and the reader
 
-InnMetric is a founder-delivered, vendor-neutral service for hotel distribution problems. It investigates the hotel's existing PMS, channel manager, booking engine and OTA accounts, makes agreed corrections with named approval, checks the guest-facing booking result and rechecks the outcomes included in the agreement.
+InnMetric provides founder-delivered hotel services and monitoring subscriptions. It investigates direct search visibility, booking failures and pricing errors across the hotel's website, PMS, channel manager, booking engine and OTA accounts. Specialists use manual checks and AI-assisted comparisons, make hotel-approved corrections and verify the results within the agreed scope.
 
 Write to the hotel owner, GM, commercial, revenue, distribution or operations decision maker. A chain operator should understand the offer too; that does not silently change the launch ICP. Internal ICP remains independent and small-group hotels in the GCC. Public fit is independent hotels, resorts, aparthotels and small groups selling direct and on at least two OTAs. Large international chains with their own central distribution team and individually listed homes outside hotel operations remain outside the launch fit.
 
-The first purchase is a service. Do not claim an AI product, SaaS, autonomous pricing, validated prices, customer outcomes, revenue recovery or a launch timetable. No public GCC hook, real prospect names or founder full names on the homepage. Founder biographies belong on About.
+The first purchase is a service. The approved overview now includes AI checks and monitoring subscriptions; it does not establish a fully autonomous SaaS product. Do not invent customer outcomes, measured savings, prices or a launch timetable. No public GCC hook, real prospect names or founder full names on the homepage. Founder biographies belong on About.
+
+The second phase is a proposed tourism programme. A tourism department would hold and administer collected contributions from verified hotel savings, including agreed deductions and payments to local suppliers. Funds may support the contributing hotel or another hotel needing assistance. InnMetric provides the service and joins approvals; it does not hold the pool. Existing departmental support budgets and InnMetric's separate commercial fees remain distinct. No formal department appointment, operating fund or pilot outcome is claimed.
 
 ## Decisions retained by Mert
+
+On 2026-11-15 Mert requested the approved B2B/B2G one-page content be added verbatim to the website, coherently with Services and How it works, preserving the design and existing service context. He authorized implementation, commit and push. This supersedes the blanket exclusions on search visibility and AI wording below the older briefs. Home carries the exact public infographic copy in `web/src/lib/overview.ts`; Services explains purchases, How it works explains responsibilities and `/tourism-programme/` explains the proposed institutional model. The source's internal editorial notes and local file paths are not public copy.
 
 On 2026-10-28 Mert requested revision of `copy/booking-page` according to Codex's comparison with main and production. This authorizes the clearer service and enquiry copy, retention of the four business cases without the carousel and an explicitly illustrative worked example. The revision retains the current service scope; it does not authorize installation, a targeting change or a production cutover.
 
@@ -32,7 +36,7 @@ The lede, closing bands, submit label and other supporting sentences are editabl
 
 - The hotel's existing systems remain in place. InnMetric is not a PMS, channel manager, booking engine, OTA or RMS replacement. No first-time system installation.
 - Hotel pricing, yield and rate decisions stay with the hotel. No revenue-management takeover, standalone rate-plan redesign or autonomous inventory/pricing bot.
-- No OTA content, photos, ranking, advertising, social media, SEO or review-response service.
+- Direct search visibility, booking links, website room content and booking/payment connections are now in scope when agreed. Full OTA listing management, photography, wider advertising campaigns, social media and review responses remain outside this service. No promise of search ranking or removal of every reseller.
 - Agree access before entering accounts and obtain named hotel approval before each live change. A first enquiry does not require an approver's name.
 - Observed symptoms are separate from causes. Match the room, dates, occupancy, terms, taxes, currency and promotions before interpreting a public rate difference. Confirm the hotel's intent before calling it a fault.
 - Do not promise a known cause, successful repair or permanent fix. Unresolved findings stay open. Rechecks cover agreed conditions and channels, not every future booking.
@@ -42,7 +46,7 @@ The lede, closing bands, submit label and other supporting sentences are editabl
 
 Keep the three offer names: Distribution Baseline Audit, Approved Repair Sprint and Ongoing Distribution Control. Name findings, approved changes with reversal, repeat booking checks and a handover with open items and agreed rechecks. Those are delivered as applicable to the selected scope; an audit does not imply completed repair work.
 
-The current structure stays: homepage hook, useful deliverables, offers, fit and invitation. No ticket row or homepage FAQ. How it works has three phases with Your team / InnMetric responsibilities and a static illustrative slip. FAQ keeps its six buyer-search questions. About puts the founders before repeated process explanations, retaining the portraits, sourced biography facts and responsive cards. Contact uses one focused column, with concise privacy information near consent and submission. [WRITING.md](WRITING.md) defines each page's job without forcing a visitor through every page or repeating the same closing headline everywhere.
+Home carries the approved three problem/fix/aim rows and both business phases, followed by the existing useful deliverables and fit. Services retains the three offers. How it works retains three phases with Your team / InnMetric responsibilities and a static illustrative slip, and explains net financial measurement. The Tourism programme page covers fund custody, joint review, realised and collected contributions, approved local provider work and separate commercial fees. Rates stay unset. Supplier completion is confirmed by the hotel, department and InnMetric. FAQ keeps its six buyer-search questions and is linked from the footer. About retains the founders, portraits and sourced biographies. Contact retains the hotel form; institutional enquiries use a direct email link. [WRITING.md](WRITING.md) defines each page's job.
 
 ## Form and privacy contract
 

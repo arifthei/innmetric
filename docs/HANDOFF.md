@@ -1,17 +1,20 @@
 # Current handoff
 
-Checkpoint: 2026-10-28. Last writer: Cursor. Next action: confirm innmetric.com built from `main` at `467c9e2`. Mert is the only authority.
+Checkpoint: 2026-11-15. Last writer: Codex. Current delivery: B2B/B2G website content on `preview`, based on GitHub `f08dd3653e30733cfc4b959c0484c0b2fdd3f644`. Mert is the only authority. Full production-build and browser verification remain open on a normal development host; production cutover is separate.
 
 ## Resume here
 
-Mert authorized the production cutover after Codex's commits were verified on GitHub `copy/booking-page`. `main` fast-forwarded to `467c9e2` (Codex copy `479dc71`, then Codex's validation record). Home explains the service and four problem types, Services clarifies the engagement choices and Contact explains the email reply. How it works contains a clearly illustrative investigation with an unresolved result. About and FAQ have distinct page roles. The carousel, English footer sentence and `/tr` redirects stay off. Existing service scope, fit lists, offer bodies, required form fields, Privacy and Terms remain intact. PR #1 was not merged.
+Mert requested the approved one-page B2B/B2G content be integrated verbatim, with the existing website context and design preserved, then committed and pushed. Home now carries the exact public overview in `web/src/lib/overview.ts`. Services retains the three named paid engagements; How it works retains approvals, investigation, reversal and verification, adding AI-assisted checks and financial measurement. `/tourism-programme/` explains the proposed department-held fund, joint approvals, collected contributions, supplier work and separate commercial fees. Navigation is Services, How it works, Tourism programme and About; FAQ remains in the footer. The hotel form adds search/link and checkout issue options without changing required fields or sending behavior. Institutional enquiries use email.
+
+The new brief supersedes the old blanket exclusions on search visibility and AI wording. Current boundaries are in Intent. The government programme remains a proposal. No pricing percentages, customer savings, automatic payback or official department relationship are claimed. About, Privacy, Terms, the form collector and the palette remain intact. Internal source notes are not published.
 
 ## Revision checks
 
-- Copy lint, ESLint and existing form tests passed. A separate editorial review found no factual or scope defects.
-- Source revision `479dc712b19531cf5e01aaf75ce7afb01594b8fc` was checked in the local browser: all six sales pages at 1440px and 390px, with About also at 1920px. DOM width checks and visual inspection of Home, Contact and the worked example found two narrow-screen issues; the delivery corrects founder paragraph wrapping and the example grid. Both were rechecked with no remaining horizontal overflow. Kaki status retained.
-- Production build compilation and TypeScript checks passed, but static generation failed with Windows `EPERM` while creating generated `.segments` directories. A fresh temporary output directory and a single-worker retry produced the same class of error. Temporary config and TypeScript changes were restored; no build configuration change ships. A complete production build remains unverified.
-- No production form submission, merge or deployment was performed. The existing live notification/delivery check remains open.
+- Copy lint, ESLint, TypeScript and existing form tests passed. React server rendering of all seven sales routes passed, including canonical paths and one H1 per page. The source-render check verified all 23 approved public overview phrases verbatim against the local source document after whitespace normalization. This is a content check, not browser validation.
+- Independent source review found two issues: the proposed fund needed explicit joint approval, and a long link risked overflow at 320px. Both are corrected. The existing palette, Figtree, wordmark, reduced-motion behavior and kaki status color are retained.
+- Production compilation and TypeScript passed. Static generation fails with Windows `EPERM` creating nested `.segments` directories, including unrelated existing pages. A scoped output-directory permission and a temporary single-worker/thread retry did not resolve it. The original Next config was restored; no environment workaround ships.
+- Browser QA remains open. The local Chromium process was denied by Windows; the in-app browser could not reach the local server and explicitly blocked local-file navigation. No viewport or screenshot pass is claimed for this revision. Reviewer: the next frontend reviewer with a working local browser, before production cutover. Check Home and Tourism programme at 1440px, 1024px, 390px and 320px, then navigation and the unchanged form contract.
+- No production form submission, main merge or deployment was performed. The existing live notification/delivery check remains open. Prior screenshots do not verify this revision.
 
 ## Delivered
 

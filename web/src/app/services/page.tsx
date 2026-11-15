@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Compare InnMetric's hotel distribution audit, approved repair sprint and scheduled checks. See the deliverables, responsibilities and service limits.";
+  "Compare InnMetric's hotel audit, approved repairs and monitoring subscriptions for search visibility, booking failures and pricing errors.";
 
 export const metadata: Metadata = pageMetadata({
   title: "Hotel distribution audit, repair and control | InnMetric",
@@ -41,10 +41,10 @@ export default function ServicesPage() {
   return (
     <>
       <JsonLd data={SERVICES_SCHEMA} />
-      <PageHero eyebrow="Services" title="Choose an audit, a repair or ongoing checks.">
+      <PageHero eyebrow="B2B / Hotel services" title="Choose an audit, a repair or ongoing checks.">
         <p className="lede">
           {t(
-            "Each service works with your existing systems. An audit gives you findings; live corrections need an agreed repair. Scheduled checks look for new and returning problems on agreed channels."
+            "Hotels pay for fixes and monitoring subscriptions. An audit gives you findings; an agreed repair covers live corrections. Each service works with your existing systems."
           )}
         </p>
         <nav className="section-links" aria-label="Compare services">
@@ -98,6 +98,15 @@ export default function ServicesPage() {
               ))}
             </ul>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section wash tight">
+        <div className="frame intro">
+          <span className="label">Tourism teams</span>
+          <h2>{t("Hotel services and the proposed fund stay separate.")}</h2>
+          <p>{t("InnMetric's paid work is separate from the pool a tourism department would hold and allocate.")}</p>
+              <Link className="inline" href="/tourism-programme/">Explore the proposed programme</Link>
         </div>
       </section>
 

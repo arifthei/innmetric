@@ -7,7 +7,7 @@ import { RecordSlip } from "@/components/RecordSlip";
 import { t } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "See how InnMetric investigates hotel distribution problems, agrees access and approvals with your team and checks the booking result after an agreed repair.";
+  "See how InnMetric combines hotel specialists and AI-assisted checks, obtains hotel approval for changes and verifies booking results and measured savings.";
 
 export const metadata: Metadata = pageMetadata({
   title: "How InnMetric works with your hotel team | InnMetric",
@@ -40,7 +40,7 @@ export default function HowItWorksPage() {
       <PageHero eyebrow="How it works" title="We do the investigation. You decide what changes.">
         <p className="lede">
           {t(
-            "Your team provides the context and agreed access. We investigate across the relevant systems. If you commission a repair, you approve each change and we check the booking result."
+            "Your team provides context and agreed access. Our specialists use manual checks and AI-assisted comparisons to investigate. You approve live corrections and we repeat the booking checks."
           )}
         </p>
       </PageHero>
@@ -83,6 +83,19 @@ export default function HowItWorksPage() {
                 <RecordSlip />
               </div>
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section" id="measuring-results">
+        <div className="frame stack">
+          <Reveal className="intro">
+            <span className="label">Measuring the benefit</span>
+            <h2>{t("Check what changed in bookings and costs.")}</h2>
+            <p className="section-lead">
+              {t("Agree a baseline using your hotel records. Compare completed bookings and net room revenue after commissions, marketing, booking and payment costs, discounts and InnMetric fees.")}
+            </p>
+            <p>{t("Account for seasonality and price changes before attributing an improvement. A public booking error alone cannot tell us how much money was lost or saved.")}</p>
           </Reveal>
         </div>
       </section>

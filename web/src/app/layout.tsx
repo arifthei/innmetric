@@ -27,7 +27,7 @@ const GA_ENABLED = process.env.CONTEXT === "production";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hotel availability and rate problems, investigated | InnMetric",
+    default: "More bookings. Lower selling costs. | InnMetric",
     template: "%s",
   },
   description: SITE_DESCRIPTION,
@@ -80,7 +80,7 @@ const siteGraph = [
     },
     image: `${SITE_URL}/opengraph-image/`,
     description: SITE_DESCRIPTION,
-    slogan: "You have rooms to sell. The booking page says otherwise.",
+    slogan: "More bookings. Lower selling costs.",
     knowsAbout: [
       "Hotel distribution",
       "Hotel booking engine availability",

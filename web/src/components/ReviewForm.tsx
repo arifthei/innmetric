@@ -25,6 +25,8 @@ const SYSTEMS = [
 ];
 
 const PROBLEMS = [
+  "Guests cannot find our direct booking link",
+  "A booking link or checkout step fails",
   "Available rooms cannot be booked online",
   "A public rate differs from what we expected",
   "Reopened dates still show closed on a channel",
