@@ -9,8 +9,8 @@ import { CONTACT_CTA } from "@/lib/copy";
 const NAV = [
   { href: "/services/", label: "Services" },
   { href: "/how-it-works/", label: "How it works" },
+  { href: "/tourism-programme/", label: "Tourism programme" },
   { href: "/about/", label: "About" },
-  { href: "/faq/", label: "FAQ" },
 ];
 
 function withSlash(path: string) {

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "InnMetric: You have rooms to sell. The booking page says otherwise.";
+  "InnMetric: More bookings. Lower selling costs.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,11 +43,10 @@ export default function Image() {
               maxWidth: 1000,
             }}
           >
-            You have rooms to sell. The booking page says otherwise.
+            More bookings. Lower selling costs.
           </div>
           <div style={{ fontSize: 30, color: MUTED, maxWidth: 960 }}>
-            Hotel availability and rate problems, traced through your existing
-            systems and checked after every approved change.
+            We find and fix where hotels lose bookings and margin.
           </div>
         </div>
         <div

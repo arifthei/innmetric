@@ -3,10 +3,10 @@ export const SERVICE_OFFERS = [
     id: "baseline",
     index: "01",
     title: "Distribution Baseline Audit",
-    state: "The booking result is wrong. The cause is unclear.",
-    body: "We follow the affected room or rate through your setup and compare it with what guests see. You get findings to act on; live corrections are a separate scope.",
+    state: "Guests struggle to find you, book or get the right price.",
+    body: "We follow the affected search link, booking step or rate through your setup and compare it with what guests see. You get findings to act on; live corrections are a separate scope.",
     points: [
-      "Relevant systems, channel connections, mappings and restrictions reviewed",
+      "Agreed search links, website content, system connections, mappings and restrictions reviewed",
       "Booking evidence with the room, dates, occupancy and terms recorded",
       "Prioritized actions, unanswered questions and checks for any proposed correction",
     ],
@@ -28,9 +28,9 @@ export const SERVICE_OFFERS = [
     index: "03",
     title: "Ongoing Distribution Control",
     state: "You need to catch problems that return.",
-    body: "We check agreed channels on a set schedule and compare each result with what your hotel intends to sell. New and returning issues go into the record for follow-up.",
+    body: "A monitoring subscription checks agreed links and channels on a set schedule. Our specialists use manual checks and AI-assisted comparisons to flag new and returning issues for review.",
     points: [
-      "Agreed rates, availability and mappings checked",
+      "Agreed booking steps, rates, availability and mappings checked",
       "A dated history of findings and verified corrections",
       "Check frequency, channels and any tools specified in your agreement",
     ],
@@ -46,20 +46,20 @@ export const FIT = [
 export const NOT_FIT = [
   "Large international chains whose central team already owns distribution",
   "Individually listed homes that are not hotel-operated",
-  "Teams seeking system installation, revenue management or OTA content and marketing",
+  "Teams seeking first-time system installation or a revenue-management takeover",
 ];
 
 export const SERVICE_BOUNDARIES = [
   {
     title: "Your setup stays in place",
-    body: "We work in your existing PMS, channel manager, booking engine and OTA accounts. First-time installation and system replacement are outside this service.",
+    body: "We work with your website, PMS, channel manager, booking engine and OTA accounts. Booking and payment-provider issues are investigated with the relevant vendor. First-time installation and system replacement remain outside this service.",
   },
   {
     title: "Your hotel sets the rates",
     body: "Pricing, yield and revenue management stay with your team. We don't offer standalone rate-plan redesign.",
   },
   {
-    title: "We focus on bookability",
-    body: "OTA listing content, photos, ranking, advertising, social media and review responses need a different service.",
+    title: "The direct booking path is part of the work",
+    body: "We improve direct search visibility and links, correct website room content and repair booking connections within the agreed scope. Wider advertising campaigns, photography, social media and review responses need a separate provider.",
   },
 ];

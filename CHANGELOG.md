@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-11-15: hotel services and proposed tourism programme
+
+Requested by Mert, based on `f08dd3653e30733cfc4b959c0484c0b2fdd3f644`, delivered on `preview`.
+
+- Added the approved one-page copy verbatim to Home as responsive search, booking and pricing rows, with hotel services and the proposed department-held fund.
+- Retained the three service offers, existing systems, approval/reversal rules, repeat checks, unresolved findings and fit. Aligned Services, How it works, FAQ and machine-readable text with direct search/link work, AI-assisted checks and monitoring subscriptions.
+- Added `/tourism-programme/`, institutional email contact and navigation. FAQ moved to the footer. The programme explains joint approvals, collected contributions, separate budgets/fees and confirmed local provider work.
+- Updated metadata, share-image wording, sitemap and two hotel enquiry problem options. The form's required fields, sending gate, privacy terms, founders and Sanzo Wada tokens remain unchanged.
+
+Validation: copy lint, ESLint, TypeScript, existing form tests and seven-route React source rendering passed. All 23 approved public overview phrases were checked against the source. Production compilation passed, but Windows denied nested static-export directory creation. Browser verification is open because local Chromium and preview access were blocked. No main merge or deployment is claimed; see HANDOFF for the exact limits.
+
 A commit on `preview` is not automatically live. innmetric.com follows `main`.
 
 ## Unreleased

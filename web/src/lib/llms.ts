@@ -20,13 +20,17 @@ export function llmsSummary() {
 
 > ${SITE_DESCRIPTION}
 
-InnMetric is a founder-led hotel distribution service. When a hotel has rooms to sell but its booking engine, channel manager or OTA listings show something different, InnMetric traces the availability or rate problem through the hotel's existing systems, makes the corrections the hotel approves and checks what guests can book afterwards.
+InnMetric provides hotel services and monitoring subscriptions for direct search visibility, booking failures and pricing errors. Hotel specialists use manual checks and AI-assisted comparisons, investigate the cause and make hotel-approved corrections in existing systems. The work includes missing availability, mappings, restrictions, reopened dates, checkout failures and recurring problems.
 
-InnMetric does not sell software, install systems, set prices or manage OTA content.
+The hotel keeps pricing decisions and approves live changes. An audit provides findings; repairs are a separate scope. InnMetric does not install replacement systems or promise savings without hotel booking and cost records.
 
 ## Services
 
 ${SERVICE_OFFERS.map((offer) => `- [${offer.title}](${SITE_URL}/services/#${offer.id}): ${offer.state} ${offer.body}`).join("\n")}
+
+## Proposed tourism programme
+
+The B2G programme is proposed. A tourism department would hold collected, agreed contributions from verified savings and allocate them to approved hotel improvements and local suppliers. InnMetric provides services and joins the review; it does not hold the pool. Paid hotel services remain separate. Existing departmental support budgets would be tracked separately from savings-funded contributions.
 
 ## Who it is for
 
@@ -41,6 +45,7 @@ ${list(NOT_FIT)}
 - [Home](${SITE_URL}/): What InnMetric does and who it works with
 - [Services](${SITE_URL}/services/): Audit, repair and ongoing checks with deliverables and limits
 - [How it works](${SITE_URL}/how-it-works/): The three phases and who does what
+- [Tourism programme](${SITE_URL}/tourism-programme/): Proposed department-held fund for hotel improvements and local suppliers
 - [FAQ](${SITE_URL}/faq/): Booking engine availability, OTA rate differences and service scope
 - [About](${SITE_URL}/about/): The founders, Tunahan Aras and Mert Carikci
 - [Contact](${SITE_URL}/contact/): Describe the booking problem; a founder replies
@@ -75,6 +80,8 @@ ${SERVICE_BOUNDARIES.map((item) => `- ${item.title}: ${item.body}`).join("\n")}
 ## How it works
 
 ${list(PHASES)}
+
+Manual checks and AI-assisted comparisons support the specialists' investigation. The hotel approves changes. Financial measurement uses hotel records to compare completed bookings and net room revenue after commissions, marketing, booking and payment costs, discounts and InnMetric fees. Seasonality and price changes must be considered before attributing an improvement.
 
 ## Frequently asked questions
 

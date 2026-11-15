@@ -9,6 +9,8 @@ export function SiteFooter() {
           <SiteLogo compact />
         </Link>
         <nav className="footer-links" aria-label="Footer">
+          <Link href="/faq/">FAQ</Link>
+          <Link href="/tourism-programme/">Tourism programme</Link>
           <Link href="/privacy/">Privacy</Link>
           <Link href="/terms/">Terms</Link>
           <Link href="/contact/">Contact</Link>

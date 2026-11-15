@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/PageChrome";
+import { BookingProblems, TourismFlow } from "@/components/BusinessOverview";
 import { Reveal } from "@/components/Reveal";
 import { CONTACT_CTA } from "@/lib/copy";
 import { FIT, NOT_FIT } from "@/lib/services";
+import { OVERVIEW } from "@/lib/overview";
 import { pageMetadata } from "@/lib/site";
 import { t, TAIL } from "@/lib/typeset";
 
 const DESCRIPTION =
-  "Rooms available but missing online? InnMetric traces hotel availability and rate problems in your existing systems, makes approved fixes and checks the result.";
+  "InnMetric investigates search visibility, booking failures and pricing errors for independent hotels. Hotel specialists, AI checks and hotel-approved fixes.";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Hotel availability and rate problems, traced | InnMetric",
+  title: "More bookings. Lower selling costs. | InnMetric",
   description: DESCRIPTION,
   path: "/",
 });
@@ -62,25 +64,18 @@ const OFFERS = [
 export default function HomePage() {
   return (
     <>
-      <section className="section hero">
+      <section className="section hero overview-hero">
         <div className="frame">
           <div className="hero-copy">
-            <span className="label">Hotel distribution support</span>
+            <span className="label">Independent hotels</span>
             <h1>
               {t(
-                "You have rooms to sell. The booking page says otherwise.",
+                OVERVIEW.headline,
                 TAIL.heading
               )}
             </h1>
             <p className="lede">
-              {t(
-                "We trace availability and rate problems through your existing hotel systems. Then we make the changes you approve and check what guests can book."
-              )}
-            </p>
-            <p>
-              {t(
-                "We investigate missing availability, unexpected rates, dates still closed after reopening and booking problems that return after a correction."
-              )}
+              {t(OVERVIEW.intro)}
             </p>
             <div className="hero-actions">
               <Link className="button lg" href="/contact/">
@@ -91,10 +86,46 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+          <BookingProblems />
         </div>
       </section>
 
-      <section className="section" id="deliverables">
+      <section className="section wash" id="services">
+        <div className="frame stack">
+          <Reveal className="intro">
+            <span className="label">{OVERVIEW.hotelLabel}</span>
+            <h2>{t(OVERVIEW.hotelBody)}</h2>
+            <p className="section-lead">{t("Start with an audit, bring findings for repair or arrange ongoing checks. Each is a separate service.")}</p>
+          </Reveal>
+          <Reveal index={1}>
+            <div className="rows">
+              {OFFERS.map((offer) => (
+                <article className="row" key={offer.index}>
+                  <span className="row-index" aria-hidden="true">{offer.index}</span>
+                  <div><h3>{t(offer.title)}</h3><p>{t(offer.body)}</p></div>
+                  <Link className="inline" href={offer.href}>{offer.link}</Link>
+                </article>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section" id="tourism">
+        <div className="frame stack">
+          <div className="intro">
+            <span className="label">{OVERVIEW.tourismLabel}</span>
+            <h2>{t(OVERVIEW.question)}</h2>
+          </div>
+          <TourismFlow />
+          <div className="intro">
+            <p>{t(OVERVIEW.fundNote)}</p>
+            <Link className="inline" href="/tourism-programme/">Explore the proposed programme</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section wash" id="deliverables">
         <div className="frame stack">
           <Reveal className="intro">
             <span className="label">What you get</span>
@@ -115,42 +146,6 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section wash" id="services">
-        <div className="frame stack">
-          <Reveal className="intro">
-            <span className="label">Ways to work with us</span>
-            <h2>
-              {t(
-                "Bring us in to investigate, repair or recheck."
-              )}
-            </h2>
-            <p className="section-lead">
-              {t(
-                "Each is a separate service. You can start with the findings your team already has."
-              )}
-            </p>
-          </Reveal>
-          <Reveal index={1}>
-            <div className="rows">
-              {OFFERS.map((offer) => (
-                <article className="row" key={offer.index}>
-                  <span className="row-index" aria-hidden="true">
-                    {offer.index}
-                  </span>
-                  <div>
-                    <h3>{t(offer.title)}</h3>
-                    <p>{t(offer.body)}</p>
-                  </div>
-                  <Link className="inline" href={offer.href}>
-                    {offer.link}
-                  </Link>
-                </article>
-              ))}
-            </div>
           </Reveal>
         </div>
       </section>

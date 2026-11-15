@@ -5,12 +5,13 @@ export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 export const SITE_DESCRIPTION =
-  "InnMetric traces hotel booking problems, makes approved changes in your existing systems and checks the result, with a record your team can follow.";
+  "InnMetric investigates search visibility, booking failures and pricing errors in existing hotel systems, makes approved changes and measures the result.";
 
 export const PAGES = [
   { path: "/", name: "Home", priority: 1 },
   { path: "/services/", name: "Services", priority: 0.9 },
   { path: "/how-it-works/", name: "How it works", priority: 0.8 },
+  { path: "/tourism-programme/", name: "Tourism programme", priority: 0.8 },
   { path: "/faq/", name: "FAQ", priority: 0.8 },
   { path: "/about/", name: "About", priority: 0.7 },
   { path: "/contact/", name: "Contact", priority: 0.8 },
@@ -24,7 +25,7 @@ const OG_IMAGE = {
   url: "/opengraph-image/",
   width: 1200,
   height: 630,
-  alt: "InnMetric: You have rooms to sell. The booking page says otherwise.",
+  alt: "InnMetric: More bookings. Lower selling costs.",
 };
 
 export function pageMetadata({

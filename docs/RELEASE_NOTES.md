@@ -1,5 +1,13 @@
 # Release notes
 
+## 2026-11-15: B2B and proposed B2G website content
+
+Home now contains the approved one-page wording, with three problem/fix/aim rows and both business phases. Services remains the buying page and How it works remains the responsibility and verification page. The new Tourism programme page explains how a department would administer collected contributions from verified savings for hotel improvements and local suppliers. Hotel fees and monitoring subscriptions remain separate.
+
+The existing Sanzo Wada palette, Figtree, wordmark, named services, founder content and form contract are preserved. Navigation adds Tourism programme and moves FAQ to the footer. Related service scope, FAQ, metadata, machine-readable text and current intent are reconciled.
+
+Copy lint, ESLint, TypeScript, form tests and source rendering pass. Static generation and browser checks remain unverified due to Windows filesystem/process restrictions and blocked local preview access. Delivery is to `preview`; production remains on `main`.
+
 Current status is in [HANDOFF.md](HANDOFF.md). Entries below describe their own delivery, not instructions to restore older copy.
 
 ## 2026-10-28: booking-page audit revision

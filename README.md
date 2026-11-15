@@ -37,7 +37,7 @@ npm run dev
 
 Open http://localhost:3000. Localhost builds do not send the form.
 
-Routes: `/`, `/services/`, `/how-it-works/`, `/about/`, `/faq/`, `/privacy/`, `/terms/`, `/contact/`, `/thanks/`.
+Routes: `/`, `/services/`, `/how-it-works/`, `/tourism-programme/`, `/about/`, `/faq/`, `/privacy/`, `/terms/`, `/contact/`, `/thanks/`.
 
 ## Deploy
 
