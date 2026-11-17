@@ -7,6 +7,7 @@
     "predev": "node scripts/prepare-forms.mjs",
     "prebuild": "node scripts/prepare-forms.mjs",
     "build": "next build",
+    "stage:collab": "node scripts/stage-collab.mjs",
     "start": "next start",
     "lint": "eslint",
     "test:forms": "node scripts/test-forms.mjs",

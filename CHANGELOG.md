@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-17: guided demo at /collab/
+
+Built on `preview` at `8087072`, on branch `collab/partner-demo`. Not on `main`; nothing is live until Mert authorizes a merge.
+
+- `web/scripts/stage-collab.mjs` builds the InnMetric guided demo from `arifthei/innmetric-replit` at the commit pinned in `web/collab.source.json` (`5931a00`, branch `collab/partner-framework`) with base `/collab/`, and stages it into `web/public/collab/` before `next build`. The output is gitignored.
+- `netlify.toml`: the build command runs the stage step; `/collab/api/*` is proxied to the Replit API; three narrow 200 rewrites serve `/collab/` and the two partner routes; a small edge function redirects the slash-less forms to the canonical slash URLs; `/collab/*` gets `X-Robots-Tag: noindex, nofollow` and hashed assets are cached as immutable. Existing site routes and the site's own `/api/*` are unchanged.
+- The demo adds a Partner Framework group with Ireckonu and Torus Legacy proposal pages, each with a Present mode and no dependency on the programme API.
+
+Validation: in a Linux x64 container the full Netlify build command passed (copy lint, pinned clone, frozen install, demo build, `next build`), and ESLint passed on the new files. Against a local host mirroring these rules with the pinned API, the demo's browser journeys and API integration test passed through `/collab/api`. Netlify Deploy Preview checks remain open: see HANDOFF.
+
 ## 2026-11-15: hotel services and proposed tourism programme
 
 Requested by Mert, based on `f08dd3653e30733cfc4b959c0484c0b2fdd3f644`, delivered on `preview`.

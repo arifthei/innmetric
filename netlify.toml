@@ -1,7 +1,9 @@
 [build]
   base = "web"
-  command = "npm --prefix .. run lint:copy && npm run build"
+  # stage:collab builds the pinned guided demo into web/public/collab/ (see web/collab.source.json).
+  command = "npm --prefix .. run lint:copy && npm run stage:collab && npm run build"
   publish = ".next"
+  edge_functions = "netlify/edge-functions"
 
 [build.environment]
   NODE_VERSION = "22"
@@ -11,6 +13,20 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Guided demo at /collab/: canonical URLs end in a slash. A redirect rule cannot add it (Netlify matches
+# /path and /path/ alike, so the rule would loop); the edge function only runs on these three paths.
+[[edge_functions]]
+  function = "collab-trailing-slash"
+  path = "/collab"
+
+[[edge_functions]]
+  function = "collab-trailing-slash"
+  path = "/collab/partners/ireckonu"
+
+[[edge_functions]]
+  function = "collab-trailing-slash"
+  path = "/collab/partners/torus-legacy"
 
 [[headers]]
   for = "/*"
@@ -27,6 +43,16 @@
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
     X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/collab/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/collab/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/robots.txt"
@@ -49,6 +75,31 @@
   to = "https://innmetric.com/:splat"
   status = 301
   force = true
+
+# Guided demo programme API. Only /collab/api/* is proxied; the site's own /api/* is untouched.
+# Methods, bodies, query strings and request headers (X-Demo-Session) pass through. The API marks
+# session responses Cache-Control: private, no-store so no shared cache keeps them.
+[[redirects]]
+  from = "/collab/api/*"
+  to = "https://inn-metric-programme-planning.replit.app/api/:splat"
+  status = 200
+  force = true
+
+# Known demo entry points only. No /collab/* fallback, so a missing asset stays a 404.
+[[redirects]]
+  from = "/collab/"
+  to = "/collab/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/collab/partners/ireckonu/"
+  to = "/collab/partners/ireckonu/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/collab/partners/torus-legacy/"
+  to = "/collab/partners/torus-legacy/index.html"
+  status = 200
 
 [[redirects]]
   from = "/archive/*"

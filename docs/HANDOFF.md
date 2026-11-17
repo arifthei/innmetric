@@ -2,6 +2,14 @@
 
 Checkpoint: 2026-11-15. Last writer: Codex. Current delivery: B2B/B2G website content on `preview`, based on GitHub `f08dd3653e30733cfc4b959c0484c0b2fdd3f644`. Mert is the only authority. Full production-build and browser verification remain open on a normal development host; production cutover is separate.
 
+## Guided demo at /collab/ (2026-11-17, branch `collab/partner-demo`)
+
+Requested: publish the InnMetric guided demo, with new Ireckonu and Torus Legacy partner pitches, at `https://innmetric.com/collab/` through this Netlify site. The branch adds the build step, proxy, rewrites, edge function and headers (see CHANGELOG). Open before production:
+
+1. The Replit API at `inn-metric-programme-planning.replit.app` serves an older revision: it has no hotel service state, so the B2B steps fail through `/collab/api` until that Replit deployment is republished from the pinned demo commit. The same republish adds `Cache-Control: private, no-store` to session responses.
+2. Deploy Preview checks: direct load and refresh of `/collab/`, `/collab/partners/ireckonu/` and `/collab/partners/torus-legacy/`, slash-less redirects, assets, 1440px and 390px, Present mode, the B2B/B2G walkthrough, actions and export, two isolated demo sessions, partner pages with `/collab/api` blocked, and the rest of the site.
+3. Rollback: revert the merge commit on `main`, or publish the previous production deploy in Netlify. Bumping `web/collab.source.json` to another demo commit changes only the demo.
+
 ## Resume here
 
 Mert requested the approved one-page B2B/B2G content be integrated verbatim, with the existing website context and design preserved, then committed and pushed. Home now carries the exact public overview in `web/src/lib/overview.ts`. Services retains the three named paid engagements; How it works retains approvals, investigation, reversal and verification, adding AI-assisted checks and financial measurement. `/tourism-programme/` explains the proposed department-held fund, joint approvals, collected contributions, supplier work and separate commercial fees. Navigation is Services, How it works, Tourism programme and About; FAQ remains in the footer. The hotel form adds search/link and checkout issue options without changing required fields or sending behavior. Institutional enquiries use email.
