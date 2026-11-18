@@ -53,10 +53,17 @@ let commit = "unknown";
 try {
   commit = execFileSync("git", ["-C", sourceDir, "rev-parse", "HEAD"], { encoding: "utf8" }).trim();
 } catch {}
-const pinned = commit === config.commit;
+let dirty = false;
+if (localSource) {
+  try {
+    dirty = execFileSync("git", ["-C", sourceDir, "status", "--porcelain"], { encoding: "utf8" }).trim() !== "";
+  } catch {}
+}
+// A local checkout with uncommitted changes is never the pinned revision, even at the pinned commit.
+const pinned = commit === config.commit && !dirty;
 if (!localSource && !pinned) fail(`Fetched ${commit}, expected ${config.commit}.`);
 if (localSource && !pinned) {
-  console.warn(`[stage-collab] ${sourceDir} is at ${commit}, not the pinned ${config.commit}. Do not deploy this build.`);
+  console.warn(`[stage-collab] ${sourceDir} is at ${commit}${dirty ? " with uncommitted changes" : ""}, not the pinned ${config.commit}. Do not deploy this build.`);
 }
 
 const pnpm = ["--yes", `pnpm@${config.pnpm}`];
