@@ -2,7 +2,7 @@
 
 Checkpoint: 2026-11-15. Last writer: Codex. Current delivery: B2B/B2G website content on `preview`, based on GitHub `f08dd3653e30733cfc4b959c0484c0b2fdd3f644`. Mert is the only authority. Full production-build and browser verification remain open on a normal development host; production cutover is separate.
 
-## Guided demo at /collab/ (2026-11-17, branch `collab/partner-demo`)
+## Guided demo at /collab/ (2026-11-18, branch `collab/demo-release`)
 
 Requested: publish the InnMetric guided demo, with new Ireckonu and Torus Legacy partner pitches, at `https://innmetric.com/collab/` through this Netlify site. The branch adds the build step, proxy, rewrites, edge function and headers (see CHANGELOG). Open before production:
 
