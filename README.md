@@ -46,3 +46,7 @@ Routes: `/`, `/services/`, `/how-it-works/`, `/tourism-programme/`, `/about/`, `
 `netlify.toml` builds the Next app (base `web`, publish `.next` with `@netlify/plugin-nextjs`). Ordinary localhost and deploy-preview builds stay non-sending.
 
 `.\deploy.ps1` and `npm run deploy` run `netlify deploy --prod --build`. Do not pass `--dir .`.
+
+### Guided demo at /collab/
+
+The Netlify build stages the guided demo from `arifthei/innmetric-replit` into `web/public/collab/` (`npm run stage:collab` in `web/`). The demo commit is pinned in `web/collab.source.json`; change it to publish a different demo revision. `/collab/api/*` is proxied to the demo's Replit API, which must run the same revision. Locally, `COLLAB_SOURCE_DIR=<checkout> npm run stage:collab` builds an existing checkout (the workspace installs Linux x64 binaries only, so use Linux or a container).

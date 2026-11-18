@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/arifthei/innmetric-replit.git",
+  "commit": "63a24ff587166a7c97c587289928e2c450832b6a",
+  "package": "@workspace/innmetric-pitch",
+  "dist": "artifacts/innmetric-pitch/dist/public",
+  "basePath": "/collab/",
+  "apiBase": "/collab/api",
+  "entryRoutes": ["partners/ireckonu", "partners/torus-legacy"],
+  "port": 4173,
+  "pnpm": "10.34.9"
+}
