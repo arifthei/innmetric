@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-20 · Collaboration demo
+
+Shortened the hotel, tourism and partner pitches. Netlify now builds the hotel case and its API from the same source revision.
+
+
 ## 2026-11-17: guided demo at /collab/
 
 Built on `main` at `7bff60f`, on branch `collab/demo-release`, released through a pull request after a Netlify Deploy Preview check. Site pages are unchanged; only `/collab/` is added.

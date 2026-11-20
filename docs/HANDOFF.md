@@ -1,5 +1,10 @@
 # Current handoff
 
+## Current collaboration demo · 2026-11-20
+
+This release replaces the older Replit API proxy described in the historical notes below. The Netlify build stages the UI, domain rules and fixtures at the revision in web/collab.source.json. The department alone records pool payments. Hotels contract with InnMetric separately.
+
+
 Checkpoint: 2026-11-15. Last writer: Codex. Current delivery: B2B/B2G website content on `preview`, based on GitHub `f08dd3653e30733cfc4b959c0484c0b2fdd3f644`. Mert is the only authority. Full production-build and browser verification remain open on a normal development host; production cutover is separate.
 
 ## Guided demo at /collab/ (2026-11-18, branch `collab/demo-release`)

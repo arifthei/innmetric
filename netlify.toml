@@ -3,10 +3,14 @@
   # stage:collab builds the pinned guided demo into web/public/collab/ (see web/collab.source.json).
   command = "npm --prefix .. run lint:copy && npm run stage:collab && npm run build"
   publish = ".next"
+  functions = "netlify/functions"
   edge_functions = "netlify/edge-functions"
 
 [build.environment]
   NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
 
 [context.production.environment]
   INNMETRIC_FORMS_ENABLED = "true"
@@ -76,14 +80,7 @@
   status = 301
   force = true
 
-# Guided demo programme API. Only /collab/api/* is proxied; the site's own /api/* is untouched.
-# Methods, bodies, query strings and request headers (X-Demo-Session) pass through. The API marks
-# session responses Cache-Control: private, no-store so no shared cache keeps them.
-[[redirects]]
-  from = "/collab/api/*"
-  to = "https://inn-metric-programme-planning.replit.app/api/:splat"
-  status = 200
-  force = true
+# The collab-demo function owns the three demo API routes and uses this release's fixtures.
 
 # Known demo entry points only. No /collab/* fallback, so a missing asset stays a 404.
 [[redirects]]

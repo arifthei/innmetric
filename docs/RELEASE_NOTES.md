@@ -1,5 +1,10 @@
 # Release notes
 
+## 2026-11-20 · Meeting demo
+
+Start at /collab/ for the hotel and department examples. Each partner has a direct presentation link. Netlify stores simulated actions per session. A first visit to this release opens a fresh demo even if that tab used the older Replit-backed version.
+
+
 ## 2026-11-15: B2B and proposed B2G website content
 
 Home now contains the approved one-page wording, with three problem/fix/aim rows and both business phases. Services remains the buying page and How it works remains the responsibility and verification page. The new Tourism programme page explains how a department would administer collected contributions from verified savings for hotel improvements and local suppliers. Hotel fees and monitoring subscriptions remain separate.

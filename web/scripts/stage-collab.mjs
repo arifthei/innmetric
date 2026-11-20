@@ -108,6 +108,19 @@ writeFileSync(
   `${JSON.stringify({ repository: config.repository, commit, pinned, basePath: config.basePath, apiBase: config.apiBase }, null, 2)}\n`,
 );
 
+// The Netlify API and UI use the same rules, role projections, fixtures and action schema.
+const runtime = path.join(webDir, "netlify", "collab-runtime");
+mkdirSync(runtime, { recursive: true });
+for (const [source, output] of [
+  ["artifacts/api-server/src/demo/domain.ts", "domain.ts"],
+  ["artifacts/api-server/src/demo/projection.ts", "projection.ts"],
+  ["lib/api-zod/src/generated/api.ts", "schema.ts"],
+  ["fixtures/programme-demo.json", "programme-demo.json"],
+  ["fixtures/hotel-service.json", "hotel-service.json"],
+]) {
+  cpSync(path.join(sourceDir, source), path.join(runtime, output));
+}
+
 if (tempDir) rmSync(tempDir, { recursive: true, force: true });
 
 const assets = readdirSync(path.join(target, "assets")).length;

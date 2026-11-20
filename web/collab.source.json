@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/arifthei/innmetric-replit.git",
-  "commit": "63a24ff587166a7c97c587289928e2c450832b6a",
+  "commit": "778835c5fc2cbfabd23f563dc12d907f0eb33422",
   "package": "@workspace/innmetric-pitch",
   "dist": "artifacts/innmetric-pitch/dist/public",
   "basePath": "/collab/",

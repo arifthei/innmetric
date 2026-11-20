@@ -21,3 +21,4 @@ web/public/__forms.html
 signatures/
 # Built from innmetric-replit by web/scripts/stage-collab.mjs during the Netlify build.
 web/public/collab/
+web/netlify/collab-runtime/
